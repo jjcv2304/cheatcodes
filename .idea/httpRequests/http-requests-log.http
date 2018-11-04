@@ -1,0 +1,48 @@
+GET http://localhost:61185/Values
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:61115/Values
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:61115/Values
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:61115/Values
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:5000/Values
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:5000
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:5000/resources
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:8080/resources
+Accept: */*
+Cache-Control: no-cache
+
+###
+
