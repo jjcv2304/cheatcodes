@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Application.Categories.Queries;
+using Application.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -30,8 +32,8 @@ namespace CheatCodes.WebApi
 //            optionsBuilder
 //                .UseSqlServer(connectionString, providerOptions=>providerOptions.CommandTimeout(60))
 //                .UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
-
-            
+            services.AddScoped<IGetCategories, GetCategories>();
+            services.AddScoped<IDatabaseService, DatabaseService>();
             services.AddMvc();
         }
 

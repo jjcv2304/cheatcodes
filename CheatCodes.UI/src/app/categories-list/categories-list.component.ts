@@ -16,7 +16,7 @@ export class CategoriesListComponent implements OnInit {
   }
 
   getCategory() {
-    this.categoriesService.getById(3)
+    this.categoriesService.getById(2)
       .subscribe((data: ICategory) => {
         this.category = { ...data };
       });
