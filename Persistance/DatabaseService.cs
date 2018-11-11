@@ -1,16 +1,16 @@
+using Application.Interfaces;
+using Domain.Categories;
+using Domain.ItemCategory;
+using Domain.Items;
 using Microsoft.EntityFrameworkCore;
 
-namespace CheatCodes.WebApi.Models
+namespace Persistance
 {
-    public class CheatCodesDb: DbContext
+    public class DatabaseService: DbContext, IDatabaseService
     {
 
-        public CheatCodesDb(DbContextOptions<CheatCodesDb> options)
-            : base(options)
-        {
- 
-            
-        }
+        public DatabaseService(DbContextOptions<DatabaseService> options)
+            : base(options){}
         
         public DbSet<Item> Items { get; set; }
         public DbSet<Category> Categories { get; set; }

@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
+using Domain.Common;
 
-namespace CheatCodes.WebApi.Models
+namespace Domain.Categories
 {
-    public class Category
+    public class Category: IEntity
     {
         public int Id { get; set; }
         public string Name { get; set; }
@@ -12,13 +13,6 @@ namespace CheatCodes.WebApi.Models
         public Category ParentCategory { get; set; }
         public ICollection<Category> ChildCategories { get; set; }
 
-        public ICollection<ItemCategory> ItemCategories { get; set; }
-    }
-    public class CategoryVM
-    {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
-        
+        public ICollection<ItemCategory.ItemCategory> ItemCategories { get; set; }
     }
 }

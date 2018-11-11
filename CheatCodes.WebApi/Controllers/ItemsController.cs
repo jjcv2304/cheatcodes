@@ -1,4 +1,4 @@
-using CheatCodes.WebApi.Models;
+using Domain.Categories;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CheatCodes.WebApi.Controllers

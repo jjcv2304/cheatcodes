@@ -1,8 +1,8 @@
-using System.Collections.Generic;
+using Domain.Common;
 
-namespace CheatCodes.WebApi.Models
+namespace Domain.Items
 {
-    public class Item
+    public class Item: IEntity
     {
         public int Id { get; set; }
         public string Name { get; set; }
