@@ -1,11 +1,10 @@
 ﻿using System.Collections.Generic;
-using Domain.Common;
+using Common.Utils;
 
 namespace Domain.Categories
 {
-    public class Category: IEntity
+    public class Category: Entity
     {
-        public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         
@@ -13,6 +12,5 @@ namespace Domain.Categories
         public Category ParentCategory { get; set; }
         public ICollection<Category> ChildCategories { get; set; }
 
-        public ICollection<ItemCategory.ItemCategory> ItemCategories { get; set; }
     }
 }

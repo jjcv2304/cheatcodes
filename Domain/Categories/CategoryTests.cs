@@ -16,15 +16,6 @@ namespace Domain.Categories
         }
 
         [Test]
-        public void TestSetAndGetId()
-        {
-            _category.Id = Id;
-
-            Assert.That(_category.Id, 
-                Is.EqualTo(Id));
-        }
-
-        [Test]
         public void TestSetAndGetName()
         {
             _category.Name = Name;

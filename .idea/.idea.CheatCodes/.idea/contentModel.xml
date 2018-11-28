@@ -14,6 +14,7 @@
           </e>
         </e>
         <e p="Interfaces" t="Include">
+          <e p="ICategoryRepository.cs" t="Include" />
           <e p="IDatabaseService.cs" t="Include" />
         </e>
         <e p="Items" t="Include">
@@ -91,36 +92,8 @@
         <e p="typescript\lib\lib.webworker.d.ts" t="IncludeRecursive" />
         <e p="zone.js" t="IncludeRecursive" />
       </e>
-      <e p="CheatCodes.WebApi" t="IncludeRecursive">
-        <e p="appsettings.Development.json" t="Include" />
-        <e p="appsettings.json" t="Include" />
-        <e p="Bin" t="ExcludeRecursive" />
-        <e p="categories" t="Include">
-          <e p="CategoriesController.cs" t="Include" />
-        </e>
-        <e p="CheatCodes.WebApi.csproj" t="IncludeRecursive" />
-        <e p="Controllers" t="Include">
-          <e p="ItemsController.cs" t="Include" />
-          <e p="ValuesController.cs" t="Include" />
-        </e>
-        <e p="Models" t="Include" />
-        <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
-            <e p="netcoreapp2.1" t="Include">
-              <e p="CheatCodes.WebApi.AssemblyInfo.cs" t="Include" />
-            </e>
-          </e>
-        </e>
-        <e p="Program.cs" t="Include" />
-        <e p="Properties" t="Include">
-          <e p="launchSettings.json" t="Include" />
-        </e>
-        <e p="Startup.cs" t="Include" />
-        <e p="wwwroot" t="Include" />
-      </e>
       <e p="common" t="IncludeRecursive">
         <e p="Bin" t="ExcludeRecursive" />
-        <e p="Class1.cs" t="Include" />
         <e p="Common.csproj" t="IncludeRecursive" />
         <e p="Dates" t="Include" />
         <e p="Mocks" t="Include" />
@@ -131,6 +104,9 @@
             </e>
           </e>
         </e>
+        <e p="Utils" t="Include">
+          <e p="Entity.cs" t="Include" />
+        </e>
       </e>
       <e p="Domain" t="IncludeRecursive">
         <e p="Bin" t="ExcludeRecursive" />
@@ -138,13 +114,8 @@
           <e p="Category.cs" t="Include" />
           <e p="CategoryTests.cs" t="Include" />
         </e>
-        <e p="common" t="Include">
-          <e p="IEntity.cs" t="Include" />
-        </e>
+        <e p="common" t="Include" />
         <e p="Domain.csproj" t="IncludeRecursive" />
-        <e p="ItemCategory" t="Include">
-          <e p="ItemCategory.cs" t="Include" />
-        </e>
         <e p="Items" t="Include">
           <e p="Item.cs" t="Include" />
         </e>
@@ -158,28 +129,18 @@
         </e>
       </e>
       <e p="Infrastructure" t="IncludeRecursive">
-        <e p="Bin" t="ExcludeRecursive" />
         <e p="Infrastructure.csproj" t="IncludeRecursive" />
-        <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
-            <e p="netcoreapp2.1" t="Include">
-              <e p="Infrastructure.AssemblyInfo.cs" t="Include" />
-            </e>
-          </e>
-        </e>
       </e>
       <e p="packages" t="ExcludeRecursive" />
       <e p="Persistance" t="IncludeRecursive">
         <e p="Bin" t="ExcludeRecursive" />
-        <e p="categories" t="Include" />
-        <e p="DatabaseInitializer.cs" t="Include" />
-        <e p="DatabaseService.cs" t="Include" />
-        <e p="Items" t="Include" />
-        <e p="Migrations" t="Include">
-          <e p="20181111154816_InitialMigration.cs" t="Include" />
-          <e p="20181111154816_InitialMigration.Designer.cs" t="Include" />
-          <e p="DatabaseServiceModelSnapshot.cs" t="Include" />
+        <e p="categories" t="Include">
+          <e p="CategoryRepository.cs" t="Include" />
         </e>
+        <e p="common" t="Include">
+          <e p="Repository.cs" t="Include" />
+        </e>
+        <e p="Items" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp2.1" t="Include">
@@ -188,6 +149,32 @@
           </e>
         </e>
         <e p="Persistance.csproj" t="IncludeRecursive" />
+        <e p="Utils" t="Include">
+          <e p="SessionFactory.cs" t="Include" />
+          <e p="UnitOfWork.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Presentation" t="IncludeRecursive">
+        <e p="appsettings.Development.json" t="Include" />
+        <e p="appsettings.json" t="Include" />
+        <e p="Bin" t="ExcludeRecursive" />
+        <e p="categories" t="Include">
+          <e p="CategoriesController.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.1" t="Include">
+              <e p="Presentation.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Presentation.csproj" t="IncludeRecursive" />
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="launchSettings.json" t="Include" />
+        </e>
+        <e p="Startup.cs" t="Include" />
+        <e p="wwwroot" t="Include" />
       </e>
     </e>
     <e p="C:\Users\jjcv2\.nuget\packages\nunit3testadapter\3.11.0\build\netcoreapp1.0\nunit.engine.netstandard.dll" t="Include" />

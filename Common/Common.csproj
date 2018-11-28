@@ -9,4 +9,10 @@
       <Folder Include="Mocks" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Reference Include="NHibernate, Version=5.1.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4">
+        <HintPath>..\..\..\Users\jjcv2\.nuget\packages\nhibernate\5.1.3\lib\netcoreapp2.0\NHibernate.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
 </Project>

@@ -1,15 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3faa2e43-d490-49eb-a9b8-ac54012f984c" name="Default Changelist" comment="">
+    <list default="true" id="3faa2e43-d490-49eb-a9b8-ac54012f984c" name="Default Changelist" comment="Removing insecure dependencies">
+      <change afterPath="$PROJECT_DIR$/Application/Interfaces/ICategoryRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Common/Utils/Entity.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Infrastructure/readmeorno.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Persistance/Categories/CategoryRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Persistance/Common/Repository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Persistance/Utils/SessionFactory.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Persistance/Utils/UnitOfWork.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CheatCodes/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CheatCodes/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CheatCodes/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CheatCodes/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CheatCodes.UI/.angular-cli.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CheatCodes.UI/karma.conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/CheatCodes.UI/karma.conf.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CheatCodes.UI/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CheatCodes.UI/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/CheatCodes.UI/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CheatCodes.UI/src/tsconfig.spec.json" beforeDir="false" afterPath="$PROJECT_DIR$/CheatCodes.UI/src/tsconfig.spec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CheatCodes.UI/tslint.json" beforeDir="false" afterPath="$PROJECT_DIR$/CheatCodes.UI/tslint.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/Categories/Queries/CategoryVM.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Categories/Queries/CategoryVM.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/Categories/Queries/GetCategories.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Categories/Queries/GetCategories.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheatCodes.WebApi/Categories/CategoriesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Presentation/Categories/CategoriesController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheatCodes.WebApi/CheatCodes.WebApi.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/CheatCodes.WebApi/CheatCodes.WebApi.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheatCodes.WebApi/Controllers/ValuesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CheatCodes.WebApi/Controllers/ValuesController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheatCodes.WebApi/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CheatCodes.WebApi/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheatCodes.WebApi/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CheatCodes.WebApi/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheatCodes.sln" beforeDir="false" afterPath="$PROJECT_DIR$/CheatCodes.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/Common.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Categories/Category.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Categories/Category.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Categories/CategoryTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Categories/CategoryTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Common/IEntity.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Domain.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Domain.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/ItemCategory/ItemCategory.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Items/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Items/Item.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Persistance/DatabaseInitializer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Persistance/DatabaseService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Persistance/Migrations/20181111154816_InitialMigration.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Persistance/Migrations/20181111154816_InitialMigration.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Persistance/Migrations/DatabaseServiceModelSnapshot.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Persistance/Persistance.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Persistance/Persistance.csproj" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
     <ignored path="Persistance/obj/" />
@@ -64,77 +87,82 @@
     <session id="482171777">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="15" />
-          <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.10" value="1" />
-          <entry key="project.open.time.11" value="1" />
+          <entry key="project.closed" value="21" />
+          <entry key="project.open.time.0" value="2" />
+          <entry key="project.open.time.10" value="2" />
+          <entry key="project.open.time.11" value="3" />
           <entry key="project.open.time.12" value="4" />
           <entry key="project.open.time.13" value="1" />
-          <entry key="project.open.time.14" value="2" />
+          <entry key="project.open.time.14" value="3" />
           <entry key="project.open.time.16" value="2" />
           <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.20" value="1" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="2" />
-          <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="17" />
+          <entry key="project.open.time.9" value="2" />
+          <entry key="project.opened" value="25" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="UI" value="1" />
-          <entry key="categories" value="6" />
-          <entry key="cs" value="89" />
-          <entry key="csproj" value="28" />
-          <entry key="html" value="11" />
-          <entry key="items" value="2" />
+          <entry key="categories" value="7" />
+          <entry key="cs" value="133" />
+          <entry key="csproj" value="45" />
+          <entry key="html" value="15" />
+          <entry key="itemcategory" value="1" />
+          <entry key="items" value="3" />
           <entry key="js" value="2" />
-          <entry key="json" value="28" />
+          <entry key="json" value="30" />
           <entry key="md" value="1" />
-          <entry key="sln" value="11" />
-          <entry key="sql" value="5" />
-          <entry key="ts" value="23" />
+          <entry key="readmeorno" value="2" />
+          <entry key="sln" value="18" />
+          <entry key="sql" value="6" />
+          <entry key="ts" value="26" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="C#" value="89" />
-          <entry key="Csproj" value="28" />
-          <entry key="Database Element" value="8" />
-          <entry key="HTML" value="11" />
-          <entry key="JSON" value="28" />
+          <entry key="C#" value="133" />
+          <entry key="Csproj" value="45" />
+          <entry key="Database Element" value="11" />
+          <entry key="HTML" value="15" />
+          <entry key="JSON" value="30" />
           <entry key="JavaScript" value="2" />
-          <entry key="PLAIN_TEXT" value="1" />
-          <entry key="SQL" value="2" />
+          <entry key="PLAIN_TEXT" value="3" />
+          <entry key="SQL" value="3" />
           <entry key="Scratch" value="3" />
-          <entry key="Solution File" value="11" />
-          <entry key="TypeScript" value="23" />
+          <entry key="Solution File" value="18" />
+          <entry key="TypeScript" value="26" />
           <entry key="UML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
         <counts>
-          <entry key="Angular2LanguageService" value="7" />
+          <entry key="Angular2LanguageService" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cell" value="21" />
-          <entry key="cs" value="1304" />
-          <entry key="csproj" value="2" />
+          <entry key="cell" value="51" />
+          <entry key="cs" value="1396" />
+          <entry key="csproj" value="7" />
           <entry key="html" value="141" />
-          <entry key="json" value="74" />
+          <entry key="json" value="89" />
+          <entry key="readmeorno" value="33" />
           <entry key="ts" value="844" />
-          <entry key="txt" value="37" />
+          <entry key="txt" value="69" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="C#" value="1304" />
-          <entry key="Csproj" value="2" />
+          <entry key="C#" value="1396" />
+          <entry key="Csproj" value="7" />
           <entry key="HTML" value="141" />
-          <entry key="JSON" value="74" />
-          <entry key="PLAIN_TEXT" value="37" />
-          <entry key="Scratch" value="21" />
+          <entry key="JSON" value="89" />
+          <entry key="PLAIN_TEXT" value="102" />
+          <entry key="Scratch" value="51" />
           <entry key="TypeScript" value="844" />
         </counts>
       </usages-collector>
@@ -143,375 +171,125 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CheatCodes.UI/package.json">
+        <entry file="file://$PROJECT_DIR$/Application/Categories/Queries/GetCategories.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="35" column="26" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="26" />
+            <state relative-caret-position="360">
+              <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
               <folding>
-                <element signature="n#!!block;n#scripts#0;n#!!top" />
+                <marker date="1543443122709" expanded="false" signature="6:164" ph="..." />
+                <marker date="1543443122709" expanded="true" signature="206:845" ph="{...}" />
+                <marker date="1543443122709" expanded="true" signature="255:843" ph="{...}" />
+                <marker date="1543443122709" expanded="true" signature="397:471" ph="{...}" />
+                <marker date="1543443122709" expanded="true" signature="522:837" ph="{...}" />
+                <marker date="1543443122709" expanded="true" signature="652:785" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Common/Utils/Entity.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+              <folding>
+                <marker date="1543442485038" expanded="false" signature="6:37" ph="..." />
+                <marker date="1543442485038" expanded="true" signature="61:1309" ph="{...}" />
+                <marker date="1543442485038" expanded="true" signature="96:1307" ph="{...}" />
+                <marker date="1543442485038" expanded="true" signature="206:612" ph="{...}" />
+                <marker date="1543442485038" expanded="true" signature="672:925" ph="{...}" />
+                <marker date="1543442485038" expanded="true" signature="985:1035" ph="{...}" />
+                <marker date="1543442485038" expanded="true" signature="1078:1164" ph="{...}" />
+                <marker date="1543442485038" expanded="true" signature="1200:1301" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/CheatCodes.UI/package-lock.json">
+        <entry file="file://$PROJECT_DIR$/Persistance/Categories/CategoryRepository.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="8068" column="33" lean-forward="true" selection-start-line="8068" selection-start-column="33" selection-end-line="8068" selection-end-column="33" />
+            <state relative-caret-position="210">
+              <caret line="14" column="8" lean-forward="true" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
               <folding>
-                <element signature="e#149#885#0" />
-                <element signature="e#430#504#0" />
-                <element signature="e#528#879#0" />
-                <element signature="e#546#871#0" />
-                <element signature="e#819#861#0" />
-                <element signature="e#924#18805#0" />
-                <element signature="e#1211#2989#0" />
-                <element signature="e#3013#18799#0" />
-                <element signature="e#3052#3447#0" />
-                <element signature="e#3351#3437#0" />
-                <element signature="e#3481#3917#0" />
-                <element signature="e#3770#3907#0" />
-                <element signature="e#3934#4331#0" />
-                <element signature="e#4142#4321#0" />
-                <element signature="e#4353#4731#0" />
-                <element signature="e#4634#4721#0" />
-                <element signature="e#4753#4958#0" />
-                <element signature="e#4984#5197#0" />
-                <element signature="e#5217#6275#0" />
-                <element signature="e#5494#5870#0" />
-                <element signature="e#5898#6265#0" />
-                <element signature="e#5930#6253#0" />
-                <element signature="e#6181#6239#0" />
-                <element signature="e#6297#7055#0" />
-                <element signature="e#6578#7045#0" />
-                <element signature="e#7084#10729#0" />
-                <element signature="e#7317#7588#0" />
-                <element signature="e#7616#10719#0" />
-                <element signature="e#7649#7974#0" />
-                <element signature="e#7902#7960#0" />
-                <element signature="e#8006#8329#0" />
-                <element signature="e#8257#8315#0" />
-                <element signature="e#8369#9116#0" />
-                <element signature="e#8636#8688#0" />
-                <element signature="e#8720#9102#0" />
-                <element signature="e#8749#9086#0" />
-                <element signature="e#9006#9068#0" />
-                <element signature="e#9152#9891#0" />
-                <element signature="e#9411#9463#0" />
-                <element signature="e#9495#9877#0" />
-                <element signature="e#9524#9861#0" />
-                <element signature="e#9781#9843#0" />
-                <element signature="e#9922#10397#0" />
-                <element signature="e#10233#10383#0" />
-                <element signature="e#10422#10707#0" />
-                <element signature="e#10750#12101#0" />
-                <element signature="e#11029#11338#0" />
-                <element signature="e#11366#12091#0" />
-                <element signature="e#11399#11724#0" />
-                <element signature="e#11652#11710#0" />
-                <element signature="e#11756#12079#0" />
-                <element signature="e#12007#12065#0" />
-                <element signature="e#12125#12915#0" />
-                <element signature="e#12348#12510#0" />
-                <element signature="e#12538#12905#0" />
-                <element signature="e#12570#12893#0" />
-                <element signature="e#12821#12879#0" />
-                <element signature="e#12940#13627#0" />
-                <element signature="e#13165#13246#0" />
-                <element signature="e#13274#13617#0" />
-                <element signature="e#13299#13605#0" />
-                <element signature="e#13536#13591#0" />
-                <element signature="e#13663#14026#0" />
-                <element signature="e#13972#14016#0" />
-                <element signature="e#14058#14413#0" />
-                <element signature="e#14359#14403#0" />
-                <element signature="e#14440#14875#0" />
-                <element signature="e#14731#14865#0" />
-                <element signature="e#14899#15108#0" />
-                <element signature="e#15129#15403#0" />
-                <element signature="e#15346#15393#0" />
-                <element signature="e#15426#16071#0" />
-                <element signature="e#15647#15691#0" />
-                <element signature="e#15719#16061#0" />
-                <element signature="e#15744#16049#0" />
-                <element signature="e#15981#16035#0" />
-                <element signature="e#16093#16298#0" />
-                <element signature="e#16319#16584#0" />
-                <element signature="e#16608#17373#0" />
-                <element signature="e#16895#17363#0" />
-                <element signature="e#17391#17716#0" />
-                <element signature="e#17664#17706#0" />
-                <element signature="e#17748#18501#0" />
-                <element signature="e#18049#18132#0" />
-                <element signature="e#18160#18491#0" />
-                <element signature="e#18188#18479#0" />
-                <element signature="e#18521#18791#0" />
-                <element signature="e#18736#18781#0" />
-                <element signature="e#18846#19609#0" />
-                <element signature="e#19137#19276#0" />
-                <element signature="e#19300#19603#0" />
-                <element signature="e#19324#19595#0" />
-                <element signature="e#19639#34840#0" />
-                <element signature="e#19908#20072#0" />
-                <element signature="e#20096#34834#0" />
-                <element signature="e#20113#20573#0" />
-                <element signature="e#20384#20563#0" />
-                <element signature="e#20595#20973#0" />
-                <element signature="e#20876#20963#0" />
-                <element signature="e#20995#21200#0" />
-                <element signature="e#21226#21439#0" />
-                <element signature="e#21459#22517#0" />
-                <element signature="e#21736#22112#0" />
-                <element signature="e#22140#22507#0" />
-                <element signature="e#22172#22495#0" />
-                <element signature="e#22423#22481#0" />
-                <element signature="e#22539#23297#0" />
-                <element signature="e#22820#23287#0" />
-                <element signature="e#23326#26971#0" />
-                <element signature="e#23559#23830#0" />
-                <element signature="e#23858#26961#0" />
-                <element signature="e#23891#24216#0" />
-                <element signature="e#24144#24202#0" />
-                <element signature="e#24248#24571#0" />
-                <element signature="e#24499#24557#0" />
-                <element signature="e#24611#25358#0" />
-                <element signature="e#24878#24930#0" />
-                <element signature="e#24962#25344#0" />
-                <element signature="e#24991#25328#0" />
-                <element signature="e#25248#25310#0" />
-                <element signature="e#25394#26133#0" />
-                <element signature="e#25653#25705#0" />
-                <element signature="e#25737#26119#0" />
-                <element signature="e#25766#26103#0" />
-                <element signature="e#26023#26085#0" />
-                <element signature="e#26164#26639#0" />
-                <element signature="e#26475#26625#0" />
-                <element signature="e#26664#26949#0" />
-                <element signature="e#26992#28343#0" />
-                <element signature="e#27271#27580#0" />
-                <element signature="e#27608#28333#0" />
-                <element signature="e#27641#27966#0" />
-                <element signature="e#27894#27952#0" />
-                <element signature="e#27998#28321#0" />
-                <element signature="e#28249#28307#0" />
-                <element signature="e#28372#28591#0" />
-                <element signature="e#28615#29405#0" />
-                <element signature="e#28838#29000#0" />
-                <element signature="e#29028#29395#0" />
-                <element signature="e#29060#29383#0" />
-                <element signature="e#29311#29369#0" />
-                <element signature="e#29430#30117#0" />
-                <element signature="e#29655#29736#0" />
-                <element signature="e#29764#30107#0" />
-                <element signature="e#29789#30095#0" />
-                <element signature="e#30026#30081#0" />
-                <element signature="e#30153#30516#0" />
-                <element signature="e#30462#30506#0" />
-                <element signature="e#30548#30903#0" />
-                <element signature="e#30849#30893#0" />
-                <element signature="e#30930#31365#0" />
-                <element signature="e#31221#31355#0" />
-                <element signature="e#31389#31598#0" />
-                <element signature="e#31619#31893#0" />
-                <element signature="e#31836#31883#0" />
-                <element signature="e#31916#32561#0" />
-                <element signature="e#32137#32181#0" />
-                <element signature="e#32209#32551#0" />
-                <element signature="e#32234#32539#0" />
-                <element signature="e#32471#32525#0" />
-                <element signature="e#32583#32788#0" />
-                <element signature="e#32822#33113#0" />
-                <element signature="e#33134#33399#0" />
-                <element signature="e#33423#34188#0" />
-                <element signature="e#33710#34178#0" />
-                <element signature="e#34206#34531#0" />
-                <element signature="e#34479#34521#0" />
-                <element signature="e#34555#34826#0" />
-                <element signature="e#34876#35612#0" />
-                <element signature="e#35157#35231#0" />
-                <element signature="e#35255#35606#0" />
-                <element signature="e#35273#35598#0" />
-                <element signature="e#35546#35588#0" />
-                <element signature="e#35641#35938#0" />
-                <element signature="e#35898#35932#0" />
-                <element signature="e#35960#37906#0" />
-                <element signature="e#36610#37900#0" />
-                <element signature="e#36627#36950#0" />
-                <element signature="e#36897#36940#0" />
-                <element signature="e#36968#37293#0" />
-                <element signature="e#37241#37283#0" />
-                <element signature="e#37313#37576#0" />
-                <element signature="e#37607#37892#0" />
-                <element signature="e#37931#38220#0" />
-                <element signature="e#38180#38214#0" />
-                <element signature="e#38247#38540#0" />
-                <element signature="e#38500#38534#0" />
-                <element signature="e#38571#39248#0" />
-                <element signature="e#38851#38984#0" />
-                <element signature="e#39008#39242#0" />
-                <element signature="e#39030#39234#0" />
-                <element signature="e#39271#39556#0" />
-                <element signature="e#39516#39550#0" />
-                <element signature="e#39580#39867#0" />
-                <element signature="e#39827#39861#0" />
-                <element signature="e#39890#40175#0" />
-                <element signature="e#40135#40169#0" />
-                <element signature="e#40210#40484#0" />
-                <element signature="e#40519#40828#0" />
-                <element signature="e#40788#40822#0" />
-                <element signature="e#40871#41196#0" />
-                <element signature="e#41156#41190#0" />
-                <element signature="e#41221#41510#0" />
-                <element signature="e#41470#41504#0" />
-                <element signature="e#41536#56516#0" />
-                <element signature="e#41804#41919#0" />
-                <element signature="e#41943#56510#0" />
-                <element signature="e#41977#42413#0" />
-                <element signature="e#42266#42403#0" />
-                <element signature="e#42430#42827#0" />
-                <element signature="e#42638#42817#0" />
-                <element signature="e#42849#43227#0" />
-                <element signature="e#43130#43217#0" />
-                <element signature="e#43249#43454#0" />
-                <element signature="e#43480#43693#0" />
-                <element signature="e#43713#44771#0" />
-                <element signature="e#43990#44366#0" />
-                <element signature="e#44394#44761#0" />
-                <element signature="e#44426#44749#0" />
-                <element signature="e#44677#44735#0" />
-                <element signature="e#44793#45551#0" />
-                <element signature="e#45074#45541#0" />
-                <element signature="e#45580#49225#0" />
-                <element signature="e#45813#46084#0" />
-                <element signature="e#46112#49215#0" />
-                <element signature="e#46145#46470#0" />
-                <element signature="e#46398#46456#0" />
-                <element signature="e#46502#46825#0" />
-                <element signature="e#46753#46811#0" />
-                <element signature="e#46865#47612#0" />
-                <element signature="e#47132#47184#0" />
-                <element signature="e#47216#47598#0" />
-                <element signature="e#47245#47582#0" />
-                <element signature="e#47502#47564#0" />
-                <element signature="e#47648#48387#0" />
-                <element signature="e#47907#47959#0" />
-                <element signature="e#47991#48373#0" />
-                <element signature="e#48020#48357#0" />
-                <element signature="e#48277#48339#0" />
-                <element signature="e#48418#48893#0" />
-                <element signature="e#48729#48879#0" />
-                <element signature="e#48918#49203#0" />
-                <element signature="e#49246#50597#0" />
-                <element signature="e#49525#49834#0" />
-                <element signature="e#49862#50587#0" />
-                <element signature="e#49895#50220#0" />
-                <element signature="e#50148#50206#0" />
-                <element signature="e#50252#50575#0" />
-                <element signature="e#50503#50561#0" />
-                <element signature="e#50621#51411#0" />
-                <element signature="e#50844#51006#0" />
-                <element signature="e#51034#51401#0" />
-                <element signature="e#51066#51389#0" />
-                <element signature="e#51317#51375#0" />
-                <element signature="e#51436#52123#0" />
-                <element signature="e#51661#51742#0" />
-                <element signature="e#51770#52113#0" />
-                <element signature="e#51795#52101#0" />
-                <element signature="e#52032#52087#0" />
-                <element signature="e#52159#52522#0" />
-                <element signature="e#52468#52512#0" />
-                <element signature="e#52554#52909#0" />
-                <element signature="e#52855#52899#0" />
-                <element signature="e#52936#53371#0" />
-                <element signature="e#53227#53361#0" />
-                <element signature="e#53395#53604#0" />
-                <element signature="e#53625#53899#0" />
-                <element signature="e#53842#53889#0" />
-                <element signature="e#53922#54567#0" />
-                <element signature="e#54143#54187#0" />
-                <element signature="e#54215#54557#0" />
-                <element signature="e#54240#54545#0" />
-                <element signature="e#54477#54531#0" />
-                <element signature="e#54589#54794#0" />
-                <element signature="e#54815#55080#0" />
-                <element signature="e#55104#55869#0" />
-                <element signature="e#55391#55859#0" />
-                <element signature="e#55887#56212#0" />
-                <element signature="e#56160#56202#0" />
-                <element signature="e#56232#56502#0" />
-                <element signature="e#56447#56492#0" />
-                <element signature="e#56545#57276#0" />
-                <element signature="e#56816#56943#0" />
-                <element signature="e#56967#57270#0" />
-                <element signature="e#56991#57262#0" />
-                <element signature="e#57304#58464#0" />
-                <element signature="e#57575#57800#0" />
-                <element signature="e#57824#58458#0" />
-                <element signature="e#57842#58167#0" />
-                <element signature="e#58115#58157#0" />
-                <element signature="e#58187#58450#0" />
-                <element signature="e#58488#58742#0" />
-                <element signature="e#58769#59091#0" />
-                <element signature="e#59041#59085#0" />
-                <element signature="e#59112#59362#0" />
-                <element signature="e#59380#59559#0" />
-                <element signature="e#59594#59872#0" />
-                <element signature="e#59898#60091#0" />
-                <element signature="e#60127#60405#0" />
-                <element signature="e#60433#61522#0" />
-                <element signature="e#60699#60870#0" />
-                <element signature="e#60894#61516#0" />
-                <element signature="e#60913#61237#0" />
-                <element signature="e#61188#61227#0" />
-                <element signature="e#61253#61508#0" />
-                <element signature="e#61572#61868#0" />
-                <element signature="e#61906#62878#0" />
-                <element signature="e#62192#62226#0" />
-                <element signature="e#62250#62872#0" />
-                <element signature="e#62269#62593#0" />
-                <element signature="e#62544#62583#0" />
-                <element signature="e#62609#62864#0" />
-                <element signature="e#62920#63276#0" />
-                <element signature="e#63214#63270#0" />
-                <element signature="e#63311#63577#0" />
-                <element signature="e#63622#63908#0" />
-                <element signature="e#63952#65124#0" />
-                <element signature="e#64250#64472#0" />
-                <element signature="e#64496#65118#0" />
-                <element signature="e#64515#64839#0" />
-                <element signature="e#64790#64829#0" />
-                <element signature="e#64855#65110#0" />
-                <element signature="e#65155#65465#0" />
-                <element signature="e#65427#65459#0" />
-                <element signature="e#65500#65833#0" />
-                <element signature="e#65780#65827#0" />
-                <element signature="e#65867#67213#0" />
-                <element signature="e#66145#66561#0" />
-                <element signature="e#66585#67207#0" />
-                <element signature="e#66604#66928#0" />
-                <element signature="e#66879#66918#0" />
-                <element signature="e#66944#67199#0" />
-                <element signature="e#67246#67673#0" />
-                <element signature="e#67522#67667#0" />
-                <element signature="e#67706#68847#0" />
-                <element signature="e#67982#68195#0" />
-                <element signature="e#68219#68841#0" />
-                <element signature="e#68238#68562#0" />
-                <element signature="e#68513#68552#0" />
-                <element signature="e#68578#68833#0" />
-                <element signature="e#68883#69397#0" />
-                <element signature="e#69165#69391#0" />
-                <element signature="e#69433#69987#0" />
-                <element signature="e#69715#69981#0" />
-                <element signature="e#70024#70433#0" />
-                <element signature="e#70308#70427#0" />
-                <element signature="e#70449#70630#0" />
-                <element signature="e#70647#70921#0" />
-                <element signature="e#70844#70915#0" />
-                <element signature="e#70936#71177#0" />
-                <element signature="e#71207#71532#0" />
-                <element signature="e#71492#71526#0" />
+                <marker date="1543443161160" expanded="true" signature="6:158" ph="..." />
+                <marker date="1543443161160" expanded="true" signature="192:521" ph="{...}" />
+                <marker date="1543443161160" expanded="true" signature="274:519" ph="{...}" />
+                <marker date="1543443161160" expanded="true" signature="356:376" ph="{...}" />
+                <marker date="1543443161160" expanded="true" signature="434:513" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Persistance/Common/Repository.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+              <folding>
+                <marker date="1543442548884" expanded="true" signature="6:44" ph="..." />
+                <marker date="1543442548884" expanded="true" signature="74:516" ph="{...}" />
+                <marker date="1543442548884" expanded="true" signature="141:514" ph="{...}" />
+                <marker date="1543442548884" expanded="true" signature="251:309" ph="{...}" />
+                <marker date="1543442548884" expanded="true" signature="344:407" ph="{...}" />
+                <marker date="1543442548884" expanded="true" signature="442:508" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Domain/Categories/CategoryTests.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
+              <folding>
+                <marker date="1543442302742" expanded="true" signature="51:520" ph="{...}" />
+                <marker date="1543442302742" expanded="true" signature="102:518" ph="{...}" />
+                <marker date="1543442302742" expanded="true" signature="264:324" ph="{...}" />
+                <marker date="1543442302742" expanded="true" signature="380:512" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Domain/Categories/Category.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
+              <folding>
+                <marker date="1543442616586" expanded="true" signature="6:53" ph="..." />
+                <marker date="1543442616586" expanded="true" signature="82:402" ph="{...}" />
+                <marker date="1543442616586" expanded="true" signature="118:400" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Domain/Items/Item.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+              <folding>
+                <marker date="1543442519830" expanded="true" signature="44:216" ph="{...}" />
+                <marker date="1543442519830" expanded="true" signature="76:214" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/Interfaces/IDatabaseService.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+              <folding>
+                <marker date="1541934692851" expanded="false" signature="6:70" ph="..." />
+                <marker date="1541934692851" expanded="true" signature="104:220" ph="{...}" />
+                <marker date="1541934692851" expanded="true" signature="144:218" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -539,6 +317,7 @@
       <find>karma</find>
       <find>cry</find>
       <find>loggly</find>
+      <find>57243</find>
     </findStrings>
     <dirStrings>
       <dir>C:\GIT\CheatCodes\CheatCodes.UI</dir>
@@ -548,35 +327,30 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Domain/Items/Item.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Domain/Common/IEntity.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Persistance/Migrations/20181111154816_InitialMigration.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Domain/Categories/Category.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/CheatCodes.WebApi/Categories/CategoriesController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/CheatCodes.WebApi/Controllers/ValuesController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Application/Interfaces/ICategoryRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Application/Categories/Queries/IGetCategories.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/CheatCodes.WebApi/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Application/Categories/Queries/GetCategories.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Persistance/Categories/CategoryRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common/Utils/Entity.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Persistance/Common/Repository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Domain/Items/Item.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Persistance/Utils/UnitOfWork.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Persistance/Utils/SessionFactory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Domain/Categories/Category.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Presentation/Categories/CategoriesController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CheatCodes.WebApi/Controllers/ValuesController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CheatCodes.WebApi/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Application/Categories/Queries/CategoryVM.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Application/Interfaces/IDatabaseService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/CheatCodes.WebApi/Startup.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Domain/ItemCategory/ItemCategory.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Common/Class1.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Persistance/DatabaseService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CheatCodes.WebApi/Startup.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Presentation/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Presentation/Startup.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CheatCodes.WebApi/Controllers/ItemsController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Persistance/DatabaseInitializer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Domain/Categories/CategoryTests.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/CheatCodes.UI/src/app/app.component.html" />
-        <option value="$PROJECT_DIR$/CheatCodes.UI/src/app/app.module.ts" />
-        <option value="$PROJECT_DIR$/CheatCodes.UI/proxy.conf.json" />
-        <option value="$PROJECT_DIR$/CheatCodes.WebApi/Controllers/ValuesController.cs" />
-        <option value="$PROJECT_DIR$/CheatCodes.WebApi/Controllers/Category.cs" />
-        <option value="$PROJECT_DIR$/CheatCodes.WebApi/Controllers/ItemController.cs" />
-        <option value="$PROJECT_DIR$/CheatCodes.WebApi/Models/CheatCodesDB.cs" />
         <option value="$PROJECT_DIR$/CheatCodes.WebApi/appsettings.json" />
         <option value="$PROJECT_DIR$/CheatCodes.WebApi/Models/ItemCategory.cs" />
         <option value="$PROJECT_DIR$/CheatCodes.WebApi/Models/Item.cs" />
@@ -593,28 +367,41 @@
         <option value="$PROJECT_DIR$/Infrastructure/Class1.cs" />
         <option value="$PROJECT_DIR$/Domain/Class1.cs" />
         <option value="$PROJECT_DIR$/Common/Class1.cs" />
-        <option value="$PROJECT_DIR$/Common/Common.csproj" />
         <option value="$PROJECT_DIR$/Application/Class1.cs" />
         <option value="$PROJECT_DIR$/Application/Application.csproj" />
         <option value="$PROJECT_DIR$/CheatCodes.WebApi/Models/CategoryVM.cs" />
-        <option value="$PROJECT_DIR$/CheatCodes.WebApi/CheatCodes.WebApi.csproj" />
         <option value="$PROJECT_DIR$/Domain/Common/IEntity.cs" />
-        <option value="$PROJECT_DIR$/Domain/Categories/Category.cs" />
-        <option value="$PROJECT_DIR$/Domain/Items/Item.cs" />
         <option value="$PROJECT_DIR$/Domain/ItemCategory/ItemCategory.cs" />
         <option value="$PROJECT_DIR$/Application/Interfaces/IDatabaseService.cs" />
         <option value="$PROJECT_DIR$/Persistance/DatabaseService.cs" />
-        <option value="$PROJECT_DIR$/Domain/Categories/CategoryTests.cs" />
         <option value="$PROJECT_DIR$/Domain/Domain.csproj" />
         <option value="$PROJECT_DIR$/Application/Categories/Queries/IGetCategories.cs" />
-        <option value="$PROJECT_DIR$/Application/Categories/Queries/GetCategories.cs" />
-        <option value="$PROJECT_DIR$/Persistance/Persistance.csproj" />
         <option value="$PROJECT_DIR$/Infrastructure/Infrastructure.csproj" />
         <option value="$PROJECT_DIR$/CheatCodes.WebApi/Categories/CategoriesController.cs" />
-        <option value="$PROJECT_DIR$/CheatCodes.WebApi/Startup.cs" />
         <option value="$PROJECT_DIR$/CheatCodes.UI/src/app/categories-list/categories-list.component.ts" />
         <option value="$PROJECT_DIR$/CheatCodes.UI/package-lock.json" />
         <option value="$PROJECT_DIR$/CheatCodes.UI/package.json" />
+        <option value="$PROJECT_DIR$/CheatCodes.WebApi/CheatCodes.WebApi.csproj" />
+        <option value="$PROJECT_DIR$/CheatCodes.WebApi/Startup.cs" />
+        <option value="$PROJECT_DIR$/Presentation/Presentation.csproj" />
+        <option value="$PROJECT_DIR$/Infrastructure/readmeorno" />
+        <option value="$PROJECT_DIR$/Persistance/UnitOfWork.cs" />
+        <option value="$PROJECT_DIR$/Persistance/SessionFactory.cs" />
+        <option value="$PROJECT_DIR$/Persistance/Persistance.csproj" />
+        <option value="$PROJECT_DIR$/Persistance/Common/Entity.cs" />
+        <option value="$PROJECT_DIR$/Presentation/appsettings.json" />
+        <option value="$PROJECT_DIR$/Presentation/Startup.cs" />
+        <option value="$PROJECT_DIR$/Domain/Common/Entity.cs" />
+        <option value="$PROJECT_DIR$/Domain/Categories/CategoryTests.cs" />
+        <option value="$PROJECT_DIR$/Common/Common.csproj" />
+        <option value="$PROJECT_DIR$/Common/Utils/Entity.cs" />
+        <option value="$PROJECT_DIR$/Domain/Items/Item.cs" />
+        <option value="$PROJECT_DIR$/Persistance/Common/Repository.cs" />
+        <option value="$PROJECT_DIR$/Domain/Categories/Category.cs" />
+        <option value="$PROJECT_DIR$/Application/Interfaces/ICategoryRepository.cs" />
+        <option value="$PROJECT_DIR$/Application/Categories/Queries/GetCategories.cs" />
+        <option value="$PROJECT_DIR$/Application/Categories/Queries/CategoryVM.cs" />
+        <option value="$PROJECT_DIR$/Persistance/Categories/CategoryRepository.cs" />
       </list>
     </option>
   </component>
@@ -652,6 +439,27 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="FileSystemExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Project" type="161ac34:FileSystemExplorerRootNode" />
+              <item name="CheatCodes" type="34e6ba20:FileSystemExplorerNode" />
+            </path>
+            <path>
+              <item name="Project" type="161ac34:FileSystemExplorerRootNode" />
+              <item name="CheatCodes" type="34e6ba20:FileSystemExplorerNode" />
+              <item name="CheatCodes.UI" type="34e6ba20:FileSystemExplorerNode" />
+            </path>
+            <path>
+              <item name="Project" type="161ac34:FileSystemExplorerRootNode" />
+              <item name="CheatCodes" type="34e6ba20:FileSystemExplorerNode" />
+              <item name="Infrastructure" type="34e6ba20:FileSystemExplorerNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="SolutionExplorer">
         <subPane>
           <expand>
@@ -668,22 +476,6 @@
         </subPane>
         <option name="show-all-files" value="false" />
       </pane>
-      <pane id="FileSystemExplorer">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Project" type="161ac34:FileSystemExplorerRootNode" />
-              <item name="CheatCodes" type="34e6ba20:FileSystemExplorerNode" />
-            </path>
-            <path>
-              <item name="Project" type="161ac34:FileSystemExplorerRootNode" />
-              <item name="CheatCodes" type="34e6ba20:FileSystemExplorerNode" />
-              <item name="CheatCodes.UI" type="34e6ba20:FileSystemExplorerNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -696,9 +488,10 @@
     <property name="RiderNuGetCacheManager.AutoClear.temp" value="1" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/CheatCodes.UI" />
+    <property name="full.screen.before.presentation.mode" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../PLURALSIGHT/refactoring-anemic-domain-model/07/demos/Demos/OnlineTheater.sln" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="database.main" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="ts.external.directory.path" value="C:\GIT\CheatCodes\CheatCodes.UI\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
@@ -786,9 +579,9 @@
   </component>
   <component name="RunManager" selected=".NET Project.Default">
     <configuration name="Default" type="DotNetProject" factoryName=".NET Project">
-      <option name="EXE_PATH" value="$PROJECT_DIR$/CheatCodes.WebApi/bin/Debug/netcoreapp2.0/CheatCodes.WebApi.dll" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/Presentation/bin/Debug/netcoreapp2.1/Presentation.dll" />
       <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CheatCodes.WebApi" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Presentation" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <envs>
         <env name="ASPNETCORE_ENVIRONMENT" value="Development" />
@@ -797,13 +590,13 @@
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <option name="USE_MONO" value="0" />
       <option name="RUNTIME_ARGUMENTS" value="" />
-      <option name="PROJECT_PATH" value="$PROJECT_DIR$/CheatCodes.WebApi/CheatCodes.WebApi.csproj" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/Presentation/Presentation.csproj" />
       <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
       <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
       <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
       <option name="PROJECT_KIND" value="DotNetCore" />
-      <option name="PROJECT_TFM" value=".NETCoreApp,Version=v2.0" />
-      <browser url="http://localhost:5000" />
+      <option name="PROJECT_TFM" value=".NETCoreApp,Version=v2.1" />
+      <browser start="true" url="https://localhost:5001" />
       <method v="2">
         <option name="Build" enabled="true" />
       </method>
@@ -863,7 +656,15 @@
       <workItem from="1541616687944" duration="594000" />
       <workItem from="1541875687212" duration="602000" />
       <workItem from="1541920329148" duration="24159000" />
-      <workItem from="1542139728662" duration="827000" />
+      <workItem from="1542139728662" duration="1941000" />
+      <workItem from="1542219206492" duration="1223000" />
+      <workItem from="1542220566164" duration="4497000" />
+      <workItem from="1542426208645" duration="294000" />
+      <workItem from="1542747827600" duration="847000" />
+      <workItem from="1543049146274" duration="597000" />
+      <workItem from="1543054723815" duration="1608000" />
+      <workItem from="1543137637556" duration="6307000" />
+      <workItem from="1543438084174" duration="5058000" />
     </task>
     <task id="LOCAL-00001" summary="Infrastructure refactor">
       <created>1541936350455</created>
@@ -879,11 +680,18 @@
       <option name="project" value="LOCAL" />
       <updated>1541966382037</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Removing insecure dependencies">
+      <created>1542142062932</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1542142062932</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62012000" />
+    <option name="totallyTimeSpent" value="83557000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -900,10 +708,40 @@
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info id="Structure" order="1" sideWeight="0.5016611" side_tool="true" weight="0.24296676" />
-      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.49833888" visible="true" weight="0.24615385" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.49833888" visible="true" weight="0.28502023" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32890365" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.40925267" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.40925267" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.48932385" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="NuGet" order="7" weight="0.52846974" />
+      <window_info anchor="bottom" id="Docker" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.46975088" />
+      <window_info anchor="bottom" id="Database Changes" order="10" weight="0.3291815" />
+      <window_info anchor="bottom" id="Unit Tests" order="11" weight="0.3291815" />
+      <window_info anchor="bottom" id="REST Client" order="12" weight="0.4900332" />
+      <window_info anchor="bottom" id="Terminal" order="13" weight="0.32740214" />
+      <window_info anchor="bottom" id="Event Log" order="14" side_tool="true" weight="0.3291815" />
+      <window_info anchor="bottom" id="TypeScript" order="15" />
+      <window_info anchor="bottom" id="Build" order="16" weight="0.2580071" />
+      <window_info anchor="bottom" id="Database Console" order="17" show_stripe_button="false" weight="0.3291815" />
+      <window_info anchor="bottom" id="SQL Generator" order="18" show_stripe_button="false" weight="0.3291815" />
+      <window_info anchor="right" id="Errors In Solution" order="0" />
+      <window_info anchor="right" id="Database" order="1" weight="0.2194332" />
+      <window_info anchor="right" id="Unit Tests Coverage" order="2" weight="0.32955465" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="3" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="4" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="5" weight="0.25" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Favorites" order="0" side_tool="true" />
+      <window_info id="Structure" order="1" sideWeight="0.5016611" side_tool="true" weight="0.24296676" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.49833888" visible="true" weight="0.2504052" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32890365" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.40925267" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.7707641" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -926,7 +764,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="3" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="4" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="5" weight="0.25" />
-    </layout>
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -981,7 +819,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Infrastructure refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="Infrastructure refactor" />
+    <MESSAGE value="Removing insecure dependencies" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removing insecure dependencies" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -990,58 +829,6 @@
           <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
           <option name="timeStamp" value="1" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/CheatCodes.WebApi/Categories/CategoriesController.cs</url>
-          <line>19</line>
-          <properties documentPath="$PROJECT_DIR$/CheatCodes.WebApi/Categories/CategoriesController.cs" initialLine="16">
-            <startOffsets>
-              <option value="487" />
-            </startOffsets>
-            <endOffsets>
-              <option value="488" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/CheatCodes.WebApi/Categories/CategoriesController.cs</url>
-          <line>26</line>
-          <properties documentPath="$PROJECT_DIR$/CheatCodes.WebApi/Categories/CategoriesController.cs" initialLine="26">
-            <startOffsets>
-              <option value="666" />
-            </startOffsets>
-            <endOffsets>
-              <option value="667" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/CheatCodes.WebApi/Categories/CategoriesController.cs</url>
-          <line>12</line>
-          <properties documentPath="$PROJECT_DIR$/CheatCodes.WebApi/Categories/CategoriesController.cs" initialLine="12">
-            <startOffsets>
-              <option value="344" />
-            </startOffsets>
-            <endOffsets>
-              <option value="345" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/CheatCodes.WebApi/Categories/CategoriesController.cs</url>
-          <line>27</line>
-          <properties documentPath="$PROJECT_DIR$/CheatCodes.WebApi/Categories/CategoriesController.cs" initialLine="27">
-            <startOffsets>
-              <option value="680" />
-            </startOffsets>
-            <endOffsets>
-              <option value="739" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
@@ -1049,145 +836,10 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/CheatCodes.WebApi/Migrations/20181104100349_Initial.cs" />
-    <entry file="file://$PROJECT_DIR$/CheatCodes.WebApi/Migrations/20181104101254_Initial.cs" />
-    <entry file="file://$PROJECT_DIR$/CheatCodes.WebApi/Migrations/20181104101445_Initial.cs" />
-    <entry file="file://$PROJECT_DIR$/Persistance/Migrations/20181104101639_Initial.cs" />
-    <entry file="file://$PROJECT_DIR$/CheatCodes.WebApi/appsettings.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="111" selection-start-line="2" selection-start-column="111" selection-end-line="2" selection-end-column="111" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CheatCodes.UI/src/app/categories-list/categories-list.component.spec.ts">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CheatCodes.UI/src/app/models/category.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Common/Class1.cs">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Common/Common.csproj">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Class1.cs" />
-    <entry file="file://$PROJECT_DIR$/CheatCodes.WebApi/Service/ICategoryService.cs" />
-    <entry file="file://$PROJECT_DIR$/CheatCodes.WebApi/Service/CategoryService.cs" />
-    <entry file="file://$PROJECT_DIR$/Domain/Common/IEntity.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Domain/ItemCategory/ItemCategory.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="49" selection-start-line="2" selection-start-column="49" selection-end-line="2" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Persistance/Class1.cs" />
-    <entry file="file://$PROJECT_DIR$/CheatCodes.WebApi/Models/CheatCodesDb.cs" />
-    <entry file="file://$PROJECT_DIR$/Domain/Items/Item.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Infrastructure/Class1.cs" />
-    <entry file="file://$PROJECT_DIR$/Domain/Class1.cs" />
-    <entry file="file://$PROJECT_DIR$/CheatCodes.WebApi/Controllers/CategoriesController.cs" />
-    <entry file="file://$PROJECT_DIR$/Domain/Domain.csproj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Domain/Categories/CategoryTests.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Persistance/DatabaseInitializer.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/861beb1b-4be0-4fe2-bec9-0d22c61ef7e1/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/9b7e732a-390d-42bc-8016-5fe4d1f8f11d/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/02878dbe-18c7-4485-a679-7a3a36a007f5/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Persistance/Migrations/20181111154816_InitialMigration.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-918" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Persistance/DatabaseService.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="25" column="50" selection-start-line="25" selection-start-column="50" selection-end-line="25" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Interfaces/IDatabaseService.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Categories/Queries/CategoryVM.cs">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Domain/Categories/Category.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Persistance/Persistance.csproj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Infrastructure/Infrastructure.csproj">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Application.csproj">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="das://02878dbe-18c7-4485-a679-7a3a36a007f5/database/cheatcodesdatabase/schema/dbo/table/categories.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://02878dbe-18c7-4485-a679-7a3a36a007f5/database/cheatcodesdatabase/schema/dbo/table/items">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -1198,66 +850,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://02878dbe-18c7-4485-a679-7a3a36a007f5/database/cheatcodesdatabase/schema/dbo/table/categories">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CheatCodes.WebApi/Controllers/ItemsController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" selection-start-line="5" selection-end-line="5" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CheatCodes.WebApi/Controllers/ValuesController.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
           <caret line="26" column="1" selection-start-line="26" selection-start-column="1" selection-end-line="31" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CheatCodes.WebApi/CheatCodes.WebApi.csproj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="15" lean-forward="true" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Categories/Queries/GetCategories.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CheatCodes.WebApi/Startup.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="15" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Categories/Queries/IGetCategories.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CheatCodes.WebApi/Categories/CategoriesController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-45">
-          <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
-          <folding>
-            <marker date="1541964823906" expanded="true" signature="6:88" ph="..." />
-            <marker date="1541964823906" expanded="true" signature="212:755" ph="{...}" />
-            <marker date="1541964823906" expanded="true" signature="335:393" ph="{...}" />
-            <marker date="1541964823906" expanded="true" signature="478:556" ph="{...}" />
-            <marker date="1541964823906" expanded="true" signature="657:749" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1275,383 +871,389 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CheatCodes.sln">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CheatCodes.UI/README.md">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/CheatCodes.UI/package-lock.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="8079" column="24" lean-forward="true" selection-start-line="8079" selection-start-column="24" selection-end-line="8079" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/CheatCodes.UI/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
+        <state relative-caret-position="214">
           <caret line="35" column="26" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CheatCodes.WebApi/Controllers/ItemsController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" selection-start-line="5" selection-end-line="5" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Presentation/Controllers/ValuesController.cs" />
+    <entry file="file://$PROJECT_DIR$/CheatCodes.WebApi/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Presentation/Program.cs">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CheatCodes.WebApi/CheatCodes.WebApi.csproj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CheatCodes.WebApi/Startup.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="44" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://02878dbe-18c7-4485-a679-7a3a36a007f5/database/cheatcodesdatabase/schema/dbo/table/items.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://02878dbe-18c7-4485-a679-7a3a36a007f5/database/cheatcodesdatabase/schema/dbo/table/items">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://02878dbe-18c7-4485-a679-7a3a36a007f5/database/cheatcodesdatabase/schema/dbo/table/itemcategory">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://02878dbe-18c7-4485-a679-7a3a36a007f5/database/cheatcodesdatabase/schema/dbo/table/categories">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CheatCodes.UI/src/app/app.component.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CheatCodes.UI/src/index.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CheatCodes.UI/src/main.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CheatCodes.UI/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CheatCodes.UI/src/app/app.component.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Domain/Domain.csproj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Infrastructure/readmeorno.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="10" lean-forward="true" selection-start-column="10" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Common/Class1.cs" />
+    <entry file="file://$PROJECT_DIR$/Presentation/Presentation.csproj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Application.csproj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Infrastructure/Infrastructure.csproj">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Persistance/Utils/UnitOfWork.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="12" column="37" lean-forward="true" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
           <folding>
-            <element signature="n#!!block;n#scripts#0;n#!!top" />
+            <marker date="1543440510464" expanded="false" signature="6:70" ph="..." />
+            <marker date="1543440510464" expanded="true" signature="98:1645" ph="{...}" />
+            <marker date="1543440510464" expanded="true" signature="142:1643" ph="{...}" />
+            <marker date="1543440510464" expanded="false" signature="375:532" ph="{...}" />
+            <marker date="1543440510464" expanded="false" signature="563:947" ph="{...}" />
+            <marker date="1543440510464" expanded="false" signature="672:813" ph="{...}" />
+            <marker date="1543440510464" expanded="false" signature="720:799" ph="{...}" />
+            <marker date="1543440510464" expanded="false" signature="833:937" ph="{...}" />
+            <marker date="1543440510464" expanded="false" signature="977:1082" ph="{...}" />
+            <marker date="1543440510464" expanded="false" signature="1146:1206" ph="{...}" />
+            <marker date="1543440510464" expanded="false" signature="1255:1318" ph="{...}" />
+            <marker date="1543440510464" expanded="false" signature="1361:1418" ph="{...}" />
+            <marker date="1543440510464" expanded="false" signature="1459:1519" ph="{...}" />
+            <marker date="1543440510464" expanded="false" signature="1570:1637" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CheatCodes.UI/package-lock.json">
+    <entry file="file://$PROJECT_DIR$/Persistance/Utils/SessionFactory.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="8068" column="33" lean-forward="true" selection-start-line="8068" selection-start-column="33" selection-end-line="8068" selection-end-column="33" />
+        <state relative-caret-position="119">
+          <caret line="22" column="9" lean-forward="true" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
           <folding>
-            <element signature="e#149#885#0" />
-            <element signature="e#430#504#0" />
-            <element signature="e#528#879#0" />
-            <element signature="e#546#871#0" />
-            <element signature="e#819#861#0" />
-            <element signature="e#924#18805#0" />
-            <element signature="e#1211#2989#0" />
-            <element signature="e#3013#18799#0" />
-            <element signature="e#3052#3447#0" />
-            <element signature="e#3351#3437#0" />
-            <element signature="e#3481#3917#0" />
-            <element signature="e#3770#3907#0" />
-            <element signature="e#3934#4331#0" />
-            <element signature="e#4142#4321#0" />
-            <element signature="e#4353#4731#0" />
-            <element signature="e#4634#4721#0" />
-            <element signature="e#4753#4958#0" />
-            <element signature="e#4984#5197#0" />
-            <element signature="e#5217#6275#0" />
-            <element signature="e#5494#5870#0" />
-            <element signature="e#5898#6265#0" />
-            <element signature="e#5930#6253#0" />
-            <element signature="e#6181#6239#0" />
-            <element signature="e#6297#7055#0" />
-            <element signature="e#6578#7045#0" />
-            <element signature="e#7084#10729#0" />
-            <element signature="e#7317#7588#0" />
-            <element signature="e#7616#10719#0" />
-            <element signature="e#7649#7974#0" />
-            <element signature="e#7902#7960#0" />
-            <element signature="e#8006#8329#0" />
-            <element signature="e#8257#8315#0" />
-            <element signature="e#8369#9116#0" />
-            <element signature="e#8636#8688#0" />
-            <element signature="e#8720#9102#0" />
-            <element signature="e#8749#9086#0" />
-            <element signature="e#9006#9068#0" />
-            <element signature="e#9152#9891#0" />
-            <element signature="e#9411#9463#0" />
-            <element signature="e#9495#9877#0" />
-            <element signature="e#9524#9861#0" />
-            <element signature="e#9781#9843#0" />
-            <element signature="e#9922#10397#0" />
-            <element signature="e#10233#10383#0" />
-            <element signature="e#10422#10707#0" />
-            <element signature="e#10750#12101#0" />
-            <element signature="e#11029#11338#0" />
-            <element signature="e#11366#12091#0" />
-            <element signature="e#11399#11724#0" />
-            <element signature="e#11652#11710#0" />
-            <element signature="e#11756#12079#0" />
-            <element signature="e#12007#12065#0" />
-            <element signature="e#12125#12915#0" />
-            <element signature="e#12348#12510#0" />
-            <element signature="e#12538#12905#0" />
-            <element signature="e#12570#12893#0" />
-            <element signature="e#12821#12879#0" />
-            <element signature="e#12940#13627#0" />
-            <element signature="e#13165#13246#0" />
-            <element signature="e#13274#13617#0" />
-            <element signature="e#13299#13605#0" />
-            <element signature="e#13536#13591#0" />
-            <element signature="e#13663#14026#0" />
-            <element signature="e#13972#14016#0" />
-            <element signature="e#14058#14413#0" />
-            <element signature="e#14359#14403#0" />
-            <element signature="e#14440#14875#0" />
-            <element signature="e#14731#14865#0" />
-            <element signature="e#14899#15108#0" />
-            <element signature="e#15129#15403#0" />
-            <element signature="e#15346#15393#0" />
-            <element signature="e#15426#16071#0" />
-            <element signature="e#15647#15691#0" />
-            <element signature="e#15719#16061#0" />
-            <element signature="e#15744#16049#0" />
-            <element signature="e#15981#16035#0" />
-            <element signature="e#16093#16298#0" />
-            <element signature="e#16319#16584#0" />
-            <element signature="e#16608#17373#0" />
-            <element signature="e#16895#17363#0" />
-            <element signature="e#17391#17716#0" />
-            <element signature="e#17664#17706#0" />
-            <element signature="e#17748#18501#0" />
-            <element signature="e#18049#18132#0" />
-            <element signature="e#18160#18491#0" />
-            <element signature="e#18188#18479#0" />
-            <element signature="e#18521#18791#0" />
-            <element signature="e#18736#18781#0" />
-            <element signature="e#18846#19609#0" />
-            <element signature="e#19137#19276#0" />
-            <element signature="e#19300#19603#0" />
-            <element signature="e#19324#19595#0" />
-            <element signature="e#19639#34840#0" />
-            <element signature="e#19908#20072#0" />
-            <element signature="e#20096#34834#0" />
-            <element signature="e#20113#20573#0" />
-            <element signature="e#20384#20563#0" />
-            <element signature="e#20595#20973#0" />
-            <element signature="e#20876#20963#0" />
-            <element signature="e#20995#21200#0" />
-            <element signature="e#21226#21439#0" />
-            <element signature="e#21459#22517#0" />
-            <element signature="e#21736#22112#0" />
-            <element signature="e#22140#22507#0" />
-            <element signature="e#22172#22495#0" />
-            <element signature="e#22423#22481#0" />
-            <element signature="e#22539#23297#0" />
-            <element signature="e#22820#23287#0" />
-            <element signature="e#23326#26971#0" />
-            <element signature="e#23559#23830#0" />
-            <element signature="e#23858#26961#0" />
-            <element signature="e#23891#24216#0" />
-            <element signature="e#24144#24202#0" />
-            <element signature="e#24248#24571#0" />
-            <element signature="e#24499#24557#0" />
-            <element signature="e#24611#25358#0" />
-            <element signature="e#24878#24930#0" />
-            <element signature="e#24962#25344#0" />
-            <element signature="e#24991#25328#0" />
-            <element signature="e#25248#25310#0" />
-            <element signature="e#25394#26133#0" />
-            <element signature="e#25653#25705#0" />
-            <element signature="e#25737#26119#0" />
-            <element signature="e#25766#26103#0" />
-            <element signature="e#26023#26085#0" />
-            <element signature="e#26164#26639#0" />
-            <element signature="e#26475#26625#0" />
-            <element signature="e#26664#26949#0" />
-            <element signature="e#26992#28343#0" />
-            <element signature="e#27271#27580#0" />
-            <element signature="e#27608#28333#0" />
-            <element signature="e#27641#27966#0" />
-            <element signature="e#27894#27952#0" />
-            <element signature="e#27998#28321#0" />
-            <element signature="e#28249#28307#0" />
-            <element signature="e#28372#28591#0" />
-            <element signature="e#28615#29405#0" />
-            <element signature="e#28838#29000#0" />
-            <element signature="e#29028#29395#0" />
-            <element signature="e#29060#29383#0" />
-            <element signature="e#29311#29369#0" />
-            <element signature="e#29430#30117#0" />
-            <element signature="e#29655#29736#0" />
-            <element signature="e#29764#30107#0" />
-            <element signature="e#29789#30095#0" />
-            <element signature="e#30026#30081#0" />
-            <element signature="e#30153#30516#0" />
-            <element signature="e#30462#30506#0" />
-            <element signature="e#30548#30903#0" />
-            <element signature="e#30849#30893#0" />
-            <element signature="e#30930#31365#0" />
-            <element signature="e#31221#31355#0" />
-            <element signature="e#31389#31598#0" />
-            <element signature="e#31619#31893#0" />
-            <element signature="e#31836#31883#0" />
-            <element signature="e#31916#32561#0" />
-            <element signature="e#32137#32181#0" />
-            <element signature="e#32209#32551#0" />
-            <element signature="e#32234#32539#0" />
-            <element signature="e#32471#32525#0" />
-            <element signature="e#32583#32788#0" />
-            <element signature="e#32822#33113#0" />
-            <element signature="e#33134#33399#0" />
-            <element signature="e#33423#34188#0" />
-            <element signature="e#33710#34178#0" />
-            <element signature="e#34206#34531#0" />
-            <element signature="e#34479#34521#0" />
-            <element signature="e#34555#34826#0" />
-            <element signature="e#34876#35612#0" />
-            <element signature="e#35157#35231#0" />
-            <element signature="e#35255#35606#0" />
-            <element signature="e#35273#35598#0" />
-            <element signature="e#35546#35588#0" />
-            <element signature="e#35641#35938#0" />
-            <element signature="e#35898#35932#0" />
-            <element signature="e#35960#37906#0" />
-            <element signature="e#36610#37900#0" />
-            <element signature="e#36627#36950#0" />
-            <element signature="e#36897#36940#0" />
-            <element signature="e#36968#37293#0" />
-            <element signature="e#37241#37283#0" />
-            <element signature="e#37313#37576#0" />
-            <element signature="e#37607#37892#0" />
-            <element signature="e#37931#38220#0" />
-            <element signature="e#38180#38214#0" />
-            <element signature="e#38247#38540#0" />
-            <element signature="e#38500#38534#0" />
-            <element signature="e#38571#39248#0" />
-            <element signature="e#38851#38984#0" />
-            <element signature="e#39008#39242#0" />
-            <element signature="e#39030#39234#0" />
-            <element signature="e#39271#39556#0" />
-            <element signature="e#39516#39550#0" />
-            <element signature="e#39580#39867#0" />
-            <element signature="e#39827#39861#0" />
-            <element signature="e#39890#40175#0" />
-            <element signature="e#40135#40169#0" />
-            <element signature="e#40210#40484#0" />
-            <element signature="e#40519#40828#0" />
-            <element signature="e#40788#40822#0" />
-            <element signature="e#40871#41196#0" />
-            <element signature="e#41156#41190#0" />
-            <element signature="e#41221#41510#0" />
-            <element signature="e#41470#41504#0" />
-            <element signature="e#41536#56516#0" />
-            <element signature="e#41804#41919#0" />
-            <element signature="e#41943#56510#0" />
-            <element signature="e#41977#42413#0" />
-            <element signature="e#42266#42403#0" />
-            <element signature="e#42430#42827#0" />
-            <element signature="e#42638#42817#0" />
-            <element signature="e#42849#43227#0" />
-            <element signature="e#43130#43217#0" />
-            <element signature="e#43249#43454#0" />
-            <element signature="e#43480#43693#0" />
-            <element signature="e#43713#44771#0" />
-            <element signature="e#43990#44366#0" />
-            <element signature="e#44394#44761#0" />
-            <element signature="e#44426#44749#0" />
-            <element signature="e#44677#44735#0" />
-            <element signature="e#44793#45551#0" />
-            <element signature="e#45074#45541#0" />
-            <element signature="e#45580#49225#0" />
-            <element signature="e#45813#46084#0" />
-            <element signature="e#46112#49215#0" />
-            <element signature="e#46145#46470#0" />
-            <element signature="e#46398#46456#0" />
-            <element signature="e#46502#46825#0" />
-            <element signature="e#46753#46811#0" />
-            <element signature="e#46865#47612#0" />
-            <element signature="e#47132#47184#0" />
-            <element signature="e#47216#47598#0" />
-            <element signature="e#47245#47582#0" />
-            <element signature="e#47502#47564#0" />
-            <element signature="e#47648#48387#0" />
-            <element signature="e#47907#47959#0" />
-            <element signature="e#47991#48373#0" />
-            <element signature="e#48020#48357#0" />
-            <element signature="e#48277#48339#0" />
-            <element signature="e#48418#48893#0" />
-            <element signature="e#48729#48879#0" />
-            <element signature="e#48918#49203#0" />
-            <element signature="e#49246#50597#0" />
-            <element signature="e#49525#49834#0" />
-            <element signature="e#49862#50587#0" />
-            <element signature="e#49895#50220#0" />
-            <element signature="e#50148#50206#0" />
-            <element signature="e#50252#50575#0" />
-            <element signature="e#50503#50561#0" />
-            <element signature="e#50621#51411#0" />
-            <element signature="e#50844#51006#0" />
-            <element signature="e#51034#51401#0" />
-            <element signature="e#51066#51389#0" />
-            <element signature="e#51317#51375#0" />
-            <element signature="e#51436#52123#0" />
-            <element signature="e#51661#51742#0" />
-            <element signature="e#51770#52113#0" />
-            <element signature="e#51795#52101#0" />
-            <element signature="e#52032#52087#0" />
-            <element signature="e#52159#52522#0" />
-            <element signature="e#52468#52512#0" />
-            <element signature="e#52554#52909#0" />
-            <element signature="e#52855#52899#0" />
-            <element signature="e#52936#53371#0" />
-            <element signature="e#53227#53361#0" />
-            <element signature="e#53395#53604#0" />
-            <element signature="e#53625#53899#0" />
-            <element signature="e#53842#53889#0" />
-            <element signature="e#53922#54567#0" />
-            <element signature="e#54143#54187#0" />
-            <element signature="e#54215#54557#0" />
-            <element signature="e#54240#54545#0" />
-            <element signature="e#54477#54531#0" />
-            <element signature="e#54589#54794#0" />
-            <element signature="e#54815#55080#0" />
-            <element signature="e#55104#55869#0" />
-            <element signature="e#55391#55859#0" />
-            <element signature="e#55887#56212#0" />
-            <element signature="e#56160#56202#0" />
-            <element signature="e#56232#56502#0" />
-            <element signature="e#56447#56492#0" />
-            <element signature="e#56545#57276#0" />
-            <element signature="e#56816#56943#0" />
-            <element signature="e#56967#57270#0" />
-            <element signature="e#56991#57262#0" />
-            <element signature="e#57304#58464#0" />
-            <element signature="e#57575#57800#0" />
-            <element signature="e#57824#58458#0" />
-            <element signature="e#57842#58167#0" />
-            <element signature="e#58115#58157#0" />
-            <element signature="e#58187#58450#0" />
-            <element signature="e#58488#58742#0" />
-            <element signature="e#58769#59091#0" />
-            <element signature="e#59041#59085#0" />
-            <element signature="e#59112#59362#0" />
-            <element signature="e#59380#59559#0" />
-            <element signature="e#59594#59872#0" />
-            <element signature="e#59898#60091#0" />
-            <element signature="e#60127#60405#0" />
-            <element signature="e#60433#61522#0" />
-            <element signature="e#60699#60870#0" />
-            <element signature="e#60894#61516#0" />
-            <element signature="e#60913#61237#0" />
-            <element signature="e#61188#61227#0" />
-            <element signature="e#61253#61508#0" />
-            <element signature="e#61572#61868#0" />
-            <element signature="e#61906#62878#0" />
-            <element signature="e#62192#62226#0" />
-            <element signature="e#62250#62872#0" />
-            <element signature="e#62269#62593#0" />
-            <element signature="e#62544#62583#0" />
-            <element signature="e#62609#62864#0" />
-            <element signature="e#62920#63276#0" />
-            <element signature="e#63214#63270#0" />
-            <element signature="e#63311#63577#0" />
-            <element signature="e#63622#63908#0" />
-            <element signature="e#63952#65124#0" />
-            <element signature="e#64250#64472#0" />
-            <element signature="e#64496#65118#0" />
-            <element signature="e#64515#64839#0" />
-            <element signature="e#64790#64829#0" />
-            <element signature="e#64855#65110#0" />
-            <element signature="e#65155#65465#0" />
-            <element signature="e#65427#65459#0" />
-            <element signature="e#65500#65833#0" />
-            <element signature="e#65780#65827#0" />
-            <element signature="e#65867#67213#0" />
-            <element signature="e#66145#66561#0" />
-            <element signature="e#66585#67207#0" />
-            <element signature="e#66604#66928#0" />
-            <element signature="e#66879#66918#0" />
-            <element signature="e#66944#67199#0" />
-            <element signature="e#67246#67673#0" />
-            <element signature="e#67522#67667#0" />
-            <element signature="e#67706#68847#0" />
-            <element signature="e#67982#68195#0" />
-            <element signature="e#68219#68841#0" />
-            <element signature="e#68238#68562#0" />
-            <element signature="e#68513#68552#0" />
-            <element signature="e#68578#68833#0" />
-            <element signature="e#68883#69397#0" />
-            <element signature="e#69165#69391#0" />
-            <element signature="e#69433#69987#0" />
-            <element signature="e#69715#69981#0" />
-            <element signature="e#70024#70433#0" />
-            <element signature="e#70308#70427#0" />
-            <element signature="e#70449#70630#0" />
-            <element signature="e#70647#70921#0" />
-            <element signature="e#70844#70915#0" />
-            <element signature="e#70936#71177#0" />
-            <element signature="e#71207#71532#0" />
-            <element signature="e#71492#71526#0" />
+            <marker date="1543440628044" expanded="false" signature="6:314" ph="..." />
+            <marker date="1543440628044" expanded="true" signature="343:2614" ph="{...}" />
+            <marker date="1543440628044" expanded="true" signature="377:2612" ph="{...}" />
+            <marker date="1543440628044" expanded="true" signature="490:572" ph="{...}" />
+            <marker date="1543440628044" expanded="true" signature="613:676" ph="{...}" />
+            <marker date="1543440628044" expanded="true" signature="761:1534" ph="{...}" />
+            <marker date="1543440628044" expanded="true" signature="1618:2110" ph="{...}" />
+            <marker date="1543440628044" expanded="true" signature="1697:1879" ph="{...}" />
+            <marker date="1543440628044" expanded="true" signature="1939:2100" ph="{...}" />
+            <marker date="1543440628044" expanded="true" signature="2172:2333" ph="{...}" />
+            <marker date="1543440628044" expanded="true" signature="2237:2323" ph="{...}" />
+            <marker date="1543440628044" expanded="true" signature="2387:2606" ph="{...}" />
+            <marker date="1543440628044" expanded="true" signature="2455:2596" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Persistance/Persistance.csproj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="29" lean-forward="true" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CheatCodes.sln">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="37" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Persistance/DatabaseService.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Persistance/DatabaseInitializer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Presentation/appsettings.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Presentation/Startup.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="41" column="9" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
+          <folding>
+            <marker date="1543441012651" expanded="true" signature="6:551" ph="..." />
+            <marker date="1543441012651" expanded="true" signature="575:1860" ph="{...}" />
+            <marker date="1543441012651" expanded="true" signature="602:1858" ph="{...}" />
+            <marker date="1543441012651" expanded="true" signature="661:724" ph="{...}" />
+            <marker date="1543441012651" expanded="true" signature="947:1388" ph="{...}" />
+            <marker date="1543441012651" expanded="true" signature="1576:1852" ph="{...}" />
+            <marker date="1543441012651" expanded="true" signature="1623:1700" ph="{...}" />
+            <marker date="1543441012651" expanded="true" signature="1717:1776" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Categories/Queries/IGetCategories.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+          <folding>
+            <marker date="1541960888643" expanded="true" signature="75:167" ph="{...}" />
+            <marker date="1541960888643" expanded="true" signature="113:165" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Presentation/Categories/CategoriesController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="13" column="37" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
+          <folding>
+            <marker date="1542221272448" expanded="false" signature="6:88" ph="..." />
+            <marker date="1542221272448" expanded="true" signature="128:757" ph="{...}" />
+            <marker date="1542221272448" expanded="true" signature="212:755" ph="{...}" />
+            <marker date="1542221272448" expanded="true" signature="335:393" ph="{...}" />
+            <marker date="1542221272448" expanded="true" signature="478:556" ph="{...}" />
+            <marker date="1542221272448" expanded="true" signature="657:749" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Domain/Common/IEntity.cs">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Domain/Categories/CategoryTests.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <marker date="1543442302742" expanded="true" signature="51:520" ph="{...}" />
+            <marker date="1543442302742" expanded="true" signature="102:518" ph="{...}" />
+            <marker date="1543442302742" expanded="true" signature="264:324" ph="{...}" />
+            <marker date="1543442302742" expanded="true" signature="380:512" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Common/Common.csproj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Domain/Items/Item.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+          <folding>
+            <marker date="1543442519830" expanded="true" signature="44:216" ph="{...}" />
+            <marker date="1543442519830" expanded="true" signature="76:214" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Persistance/Common/Repository.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+          <folding>
+            <marker date="1543442548884" expanded="true" signature="6:44" ph="..." />
+            <marker date="1543442548884" expanded="true" signature="74:516" ph="{...}" />
+            <marker date="1543442548884" expanded="true" signature="141:514" ph="{...}" />
+            <marker date="1543442548884" expanded="true" signature="251:309" ph="{...}" />
+            <marker date="1543442548884" expanded="true" signature="344:407" ph="{...}" />
+            <marker date="1543442548884" expanded="true" signature="442:508" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Domain/Categories/Category.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+          <folding>
+            <marker date="1543442616586" expanded="true" signature="6:53" ph="..." />
+            <marker date="1543442616586" expanded="true" signature="82:402" ph="{...}" />
+            <marker date="1543442616586" expanded="true" signature="118:400" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Interfaces/IDatabaseService.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+          <folding>
+            <marker date="1541934692851" expanded="false" signature="6:70" ph="..." />
+            <marker date="1541934692851" expanded="true" signature="104:220" ph="{...}" />
+            <marker date="1541934692851" expanded="true" signature="144:218" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Interfaces/ICategoryRepository.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="40" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="40" />
+          <folding>
+            <marker date="1543443023060" expanded="true" signature="6:58" ph="..." />
+            <marker date="1543443023060" expanded="true" signature="92:192" ph="{...}" />
+            <marker date="1543443023060" expanded="true" signature="135:190" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Common/Utils/Entity.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+          <folding>
+            <marker date="1543442485038" expanded="false" signature="6:37" ph="..." />
+            <marker date="1543442485038" expanded="true" signature="61:1309" ph="{...}" />
+            <marker date="1543442485038" expanded="true" signature="96:1307" ph="{...}" />
+            <marker date="1543442485038" expanded="true" signature="206:612" ph="{...}" />
+            <marker date="1543442485038" expanded="true" signature="672:925" ph="{...}" />
+            <marker date="1543442485038" expanded="true" signature="985:1035" ph="{...}" />
+            <marker date="1543442485038" expanded="true" signature="1078:1164" ph="{...}" />
+            <marker date="1543442485038" expanded="true" signature="1200:1301" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Categories/Queries/CategoryVM.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+          <folding>
+            <marker date="1543443130707" expanded="true" signature="40:219" ph="{...}" />
+            <marker date="1543443130707" expanded="true" signature="70:217" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Categories/Queries/GetCategories.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+          <folding>
+            <marker date="1543443122709" expanded="false" signature="6:164" ph="..." />
+            <marker date="1543443122709" expanded="true" signature="206:845" ph="{...}" />
+            <marker date="1543443122709" expanded="true" signature="255:843" ph="{...}" />
+            <marker date="1543443122709" expanded="true" signature="397:471" ph="{...}" />
+            <marker date="1543443122709" expanded="true" signature="522:837" ph="{...}" />
+            <marker date="1543443122709" expanded="true" signature="652:785" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Persistance/Categories/CategoryRepository.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="8" lean-forward="true" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+          <folding>
+            <marker date="1543443161160" expanded="true" signature="6:158" ph="..." />
+            <marker date="1543443161160" expanded="true" signature="192:521" ph="{...}" />
+            <marker date="1543443161160" expanded="true" signature="274:519" ph="{...}" />
+            <marker date="1543443161160" expanded="true" signature="356:376" ph="{...}" />
+            <marker date="1543443161160" expanded="true" signature="434:513" ph="{...}" />
           </folding>
         </state>
       </provider>

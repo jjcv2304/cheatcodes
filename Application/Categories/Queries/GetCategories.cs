@@ -8,15 +8,16 @@ namespace Application.Categories.Queries
 {
     public class GetCategories: IGetCategories
     {
-        private readonly IDatabaseService _databaseService;
+        private readonly ICategoryRepository _categoryRepository;
 
-        public GetCategories(IDatabaseService databaseService)
+        public GetCategories(ICategoryRepository categoryRepository)
         {
-            _databaseService = databaseService;
+            _categoryRepository = categoryRepository;
         }
+        
         public List<CategoryVM> Execute()
         {
-            var categories = _databaseService.Set<Category>()
+            var categories = _categoryRepository.GetList()
                 .Select(c => new CategoryVM
                 {
                     Id = c.Id,

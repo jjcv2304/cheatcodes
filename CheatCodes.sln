@@ -1,7 +1,5 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheatCodes.WebApi", "CheatCodes.WebApi\CheatCodes.WebApi.csproj", "{5987D8B4-D17B-4AE8-A6A4-C4CC034ADE5E}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistance", "Persistance\Persistance.csproj", "{D3E96283-44F6-4EFC-9746-E5F33D8C7A9B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{BCEE5FD7-6815-47AE-B802-468F4B4A347E}"
@@ -12,16 +10,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{042ABA13-C8F2-4984-A26C-A0185CDF51BE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presentation", "Presentation\Presentation.csproj", "{667A5777-A78E-489E-AAAF-650C6DF707A6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{5987D8B4-D17B-4AE8-A6A4-C4CC034ADE5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5987D8B4-D17B-4AE8-A6A4-C4CC034ADE5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5987D8B4-D17B-4AE8-A6A4-C4CC034ADE5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5987D8B4-D17B-4AE8-A6A4-C4CC034ADE5E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D3E96283-44F6-4EFC-9746-E5F33D8C7A9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D3E96283-44F6-4EFC-9746-E5F33D8C7A9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D3E96283-44F6-4EFC-9746-E5F33D8C7A9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -42,5 +38,9 @@ Global
 		{042ABA13-C8F2-4984-A26C-A0185CDF51BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{042ABA13-C8F2-4984-A26C-A0185CDF51BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{042ABA13-C8F2-4984-A26C-A0185CDF51BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{667A5777-A78E-489E-AAAF-650C6DF707A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{667A5777-A78E-489E-AAAF-650C6DF707A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{667A5777-A78E-489E-AAAF-650C6DF707A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{667A5777-A78E-489E-AAAF-650C6DF707A6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
