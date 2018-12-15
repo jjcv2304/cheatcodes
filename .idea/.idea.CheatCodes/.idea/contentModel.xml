@@ -16,6 +16,7 @@
         <e p="Interfaces" t="Include">
           <e p="ICategoryRepository.cs" t="Include" />
           <e p="IDatabaseService.cs" t="Include" />
+          <e p="IRepository.cs" t="Include" />
         </e>
         <e p="Items" t="Include">
           <e p="Commands" t="Include" />
@@ -135,12 +136,15 @@
       <e p="Persistance" t="IncludeRecursive">
         <e p="Bin" t="ExcludeRecursive" />
         <e p="categories" t="Include">
+          <e p="CategoryMap.cs" t="Include" />
           <e p="CategoryRepository.cs" t="Include" />
         </e>
         <e p="common" t="Include">
           <e p="Repository.cs" t="Include" />
         </e>
-        <e p="Items" t="Include" />
+        <e p="Items" t="Include">
+          <e p="ItemMap.cs" t="Include" />
+        </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp2.1" t="Include">
@@ -174,6 +178,10 @@
           <e p="launchSettings.json" t="Include" />
         </e>
         <e p="Startup.cs" t="Include" />
+        <e p="Utils" t="Include">
+          <e p="BaseController.cs" t="Include" />
+          <e p="Envelope.cs" t="Include" />
+        </e>
         <e p="wwwroot" t="Include" />
       </e>
     </e>

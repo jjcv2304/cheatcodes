@@ -17,6 +17,7 @@ namespace Application.Categories.Queries
         
         public List<CategoryVM> Execute()
         {
+            seed();
             var categories = _categoryRepository.GetList()
                 .Select(c => new CategoryVM
                 {
@@ -25,6 +26,24 @@ namespace Application.Categories.Queries
                     Name = c.Name
                 });
             return categories.ToList();
+        }
+        
+        private void seed()
+        {
+            var parentCat = new Category()
+            {
+                Name = "Parent",
+            };
+            parentCat.ChildCategories.Add(new Category()
+            {
+                Name = "Child1"
+            });   
+            parentCat.ChildCategories.Add(new Category()
+            {
+                Name = "Child2"
+            });  
+            
+            _categoryRepository.Add(parentCat);
         }
     }
 }

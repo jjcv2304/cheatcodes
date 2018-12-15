@@ -14,6 +14,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Persistance;
+using Persistance.Categories;
 using Persistance.Utils;
 
 namespace Presentation
@@ -31,14 +32,13 @@ namespace Presentation
         public void ConfigureServices(IServiceCollection services)
         {
           
-            
             services.AddScoped<IGetCategories, GetCategories>();
             
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             
-            services.AddSingleton(new SessionFactory(Configuration.GetConnectionString("CheatCodesDatabase")));
+            services.AddSingleton(new SessionFactory(Configuration.GetConnectionString("CheatCodesDatabase"), false, true));
             services.AddScoped<UnitOfWork>();
-//            services.AddTransient<CustomerRepository>();
+            services.AddTransient<ICategoryRepository, CategoryRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

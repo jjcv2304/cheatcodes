@@ -3,8 +3,7 @@ using Persistance.Utils;
 
 namespace Persistance.Common
 {
-    public abstract class Repository<T>
-        where T : Entity
+    public abstract class Repository<T> where T : Entity
     {
         protected readonly UnitOfWork _unitOfWork;
 
