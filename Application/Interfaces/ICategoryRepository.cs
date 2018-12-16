@@ -1,13 +1,13 @@
+using System.Collections;
 using System.Collections.Generic;
 using Common.Utils;
 using Domain.Categories;
-using Persistance.Common;
 
 namespace Application.Interfaces
 {
     public interface ICategoryRepository: IRepository<Category>
     {
-        IReadOnlyList<Category> GetList();
-        
+        IList<Category> GetByPartialName(string categoryName);
+        IList<Category> GetByExactName(string categoryName);
     }
 }

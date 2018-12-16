@@ -1,0 +1,21 @@
+using System.Collections.Generic;
+using System.Linq;
+
+namespace Persistance.Utils
+{
+    public interface IUnitOfWork
+    {
+        void Dispose();
+        void Commit();
+
+        List<T> Get<T>()
+            where T : class;
+
+        T Get<T>(long id)
+            where T : class;
+
+        void SaveOrUpdate<T>(T entity);
+        void Delete<T>(T entity);
+        IQueryable<T> Query<T>();
+    }
+}

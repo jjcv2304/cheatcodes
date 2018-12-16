@@ -32,7 +32,7 @@ namespace Presentation
         public void ConfigureServices(IServiceCollection services)
         {
           
-            services.AddScoped<IGetCategories, GetCategories>();
+            services.AddScoped<ICategoryQuery, CategoryQuery>();
             
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             

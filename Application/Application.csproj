@@ -21,4 +21,11 @@
       </Reference>
     </ItemGroup>
 
+    <ItemGroup>
+      <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.9.0" />
+      <PackageReference Include="Moq" Version="4.10.1" />
+      <PackageReference Include="NuGet.Core" Version="2.14.0" />
+      <PackageReference Include="NUnit3TestAdapter" Version="3.11.2" />
+    </ItemGroup>
+
 </Project>

@@ -1,11 +1,13 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using NHibernate;
 
 namespace Persistance.Utils
 {
-    public class UnitOfWork : IDisposable
+    public class UnitOfWork : IDisposable, IUnitOfWork
     {
         private readonly ISession _session;
         private readonly ITransaction _transaction;
@@ -47,18 +49,24 @@ namespace Persistance.Utils
             _isCommitted = true;
         }
 
-        internal T Get<T>(long id)
+        public List<T> Get<T>()
+            where T : class
+        {
+            return _session.Query<T>().ToList();
+        }
+
+        public T Get<T>(long id)
             where T : class
         {
             return _session.Get<T>(id);
         }
 
-        internal void SaveOrUpdate<T>(T entity)
+        public void SaveOrUpdate<T>(T entity)
         {
             _session.SaveOrUpdate(entity);
         }
 
-        internal void Delete<T>(T entity)
+        public void Delete<T>(T entity)
         {
             _session.Delete(entity);
         }
@@ -68,9 +76,9 @@ namespace Persistance.Utils
             return _session.Query<T>();
         }
 
-        public ISQLQuery CreateSQLQuery(string q)
-        {
-            return _session.CreateSQLQuery(q);
-        }
+//        public ISQLQuery CreateSQLQuery(string q)
+//        {
+//            return _session.CreateSQLQuery(q);
+//        }
     }
 }
