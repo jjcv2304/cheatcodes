@@ -12,8 +12,8 @@
             <e p="ICategoryQuery.cs" t="Include" />
           </e>
           <e p="Tests" t="Include">
+            <e p="CategoryBuilderTest.cs" t="Include" />
             <e p="CategoryQueryTest.cs" t="Include" />
-            <e p="TestableCategoryBuilder.cs" t="Include" />
           </e>
           <e p="ViewModels" t="Include">
             <e p="CategoryVM.cs" t="Include" />
@@ -23,6 +23,10 @@
           <e p="ICategoryRepository.cs" t="Include" />
           <e p="IDatabaseService.cs" t="Include" />
           <e p="IRepository.cs" t="Include" />
+          <e p="Tests" t="Include">
+            <e p="InMemoryCategoryRepository.cs" t="Include" />
+            <e p="RepositoryMock.cs" t="Include" />
+          </e>
         </e>
         <e p="Items" t="Include">
           <e p="Commands" t="Include" />
@@ -104,7 +108,9 @@
         <e p="Bin" t="ExcludeRecursive" />
         <e p="Common.csproj" t="IncludeRecursive" />
         <e p="Dates" t="Include" />
-        <e p="Mocks" t="Include" />
+        <e p="Mocks" t="Include">
+          <e p="MockEntity.cs" t="Include" />
+        </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp2.1" t="Include">

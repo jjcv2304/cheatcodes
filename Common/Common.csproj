@@ -6,7 +6,6 @@
 
     <ItemGroup>
       <Folder Include="Dates" />
-      <Folder Include="Mocks" />
     </ItemGroup>
 
     <ItemGroup>
