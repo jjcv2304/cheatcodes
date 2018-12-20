@@ -2,6 +2,7 @@ import {Injectable} from '@angular/core';
 import {HttpClient, HttpErrorResponse, HttpHeaders} from '@angular/common/http';
 import {Category, ICategory} from "../models/category";
 import { Observable } from 'rxjs';
+import {Envelope} from "../models/envelope";
 
 @Injectable()
 export class CategoriesService {
@@ -22,7 +23,7 @@ export class CategoriesService {
   };
 
   getById(categoryId: number) {
-    return this.http.get<ICategory>(this.categoryUrl + '/' + categoryId);
+    return this.http.get<Envelope<ICategory>>(this.categoryUrl + '/' + categoryId);
   };
 
   addCategory (category: Category) : Observable<Category> {

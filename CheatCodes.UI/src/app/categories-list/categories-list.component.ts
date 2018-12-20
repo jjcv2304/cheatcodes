@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {CategoriesService} from "../categories/categories.service";
 import {Category, ICategory} from "../models/category";
+import {Envelope} from "../models/envelope";
 
 @Component({
   selector: 'app-categories-list',
@@ -16,9 +17,10 @@ export class CategoriesListComponent implements OnInit {
   }
 
   getCategory() {
-    this.categoriesService.getById(2)
-      .subscribe((data: ICategory) => {
-        this.category = { ...data };
+    this.categoriesService.getById(4)
+      .subscribe((data: Envelope<ICategory>) => {
+        console.dir(data.result);
+        this.category = { ...data.result };
       });
   }
 

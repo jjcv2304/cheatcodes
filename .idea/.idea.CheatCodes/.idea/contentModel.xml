@@ -6,7 +6,10 @@
         <e p="Application.csproj" t="IncludeRecursive" />
         <e p="Bin" t="ExcludeRecursive" />
         <e p="categories" t="Include">
-          <e p="Commands" t="Include" />
+          <e p="Commands" t="Include">
+            <e p="CategoryCommand.cs" t="Include" />
+            <e p="ICategoryCommand.cs" t="Include" />
+          </e>
           <e p="Queries" t="Include">
             <e p="CategoryQuery.cs" t="Include" />
             <e p="ICategoryQuery.cs" t="Include" />

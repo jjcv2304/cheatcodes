@@ -33,6 +33,22 @@ namespace Application.Categories.ViewModels
             return categories.Select(TransformToVM).ToList();
         }
 
+        public static Category TransformFromVM(CategoryVM categoryVM)
+        {
+            return new Category()
+            {
+                Id = categoryVM.Id,
+                Description = categoryVM.Description,
+                Name = categoryVM.Name,
+                ChildCategories = TransformFromVM(categoryVM.ChildCategories.ToList())
+            };
+        }
+
+        public static List<Category> TransformFromVM(IEnumerable<CategoryVM> categoriesVM)
+        {
+            return categoriesVM.Select(TransformFromVM).ToList();
+        }
+
         #endregion
     }
 }

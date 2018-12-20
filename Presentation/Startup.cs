@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Application.Categories.Commands;
 using Application.Categories.Queries;
 using Application.Interfaces;
 using Microsoft.AspNetCore.Builder;
@@ -33,6 +34,7 @@ namespace Presentation
         {
           
             services.AddScoped<ICategoryQuery, CategoryQuery>();
+            services.AddScoped<ICategoryCommand, CategoryCommand>();
             
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             
