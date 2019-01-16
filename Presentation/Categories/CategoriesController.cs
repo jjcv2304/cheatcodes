@@ -49,7 +49,7 @@ namespace Presentation.Categories
         }
 
         [HttpPost]
-        public IActionResult Post(CategoryVM categoryVM)
+        public IActionResult Post([FromBody]CategoryVM categoryVM)
         {
             _categoryCommand.Add(categoryVM);
             return Ok();

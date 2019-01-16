@@ -2,6 +2,7 @@ export interface ICategory {
   id: number;
   name: string;
   description: string;
+  childcategories: ICategory[];
 }
 
 export class Category implements ICategory {
@@ -12,5 +13,6 @@ export class Category implements ICategory {
   id: number = null;
   name: string = null;
   description: string = '';
+  childcategories: Category[] = [];
 
 }

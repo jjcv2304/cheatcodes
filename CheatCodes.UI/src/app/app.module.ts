@@ -6,12 +6,16 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { CategoriesListComponent } from './categories-list/categories-list.component';
 import {CategoriesService} from "./categories/categories.service";
+import { MainMenuComponent } from './main-menu/main-menu.component';
+import { CategoryCardComponent } from './category-card/category-card.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    CategoriesListComponent
+    CategoriesListComponent,
+    MainMenuComponent,
+    CategoryCardComponent
   ],
   imports: [
     BrowserModule,

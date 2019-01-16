@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,eAAe;EACb,MAAM,EAAE,KAAK;EACb,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,eACV",
+"sources": ["category-card.component.scss"],
+"names": [],
+"file": "category-card.component.css"
+}

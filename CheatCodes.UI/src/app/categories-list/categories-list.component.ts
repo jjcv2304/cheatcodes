@@ -10,10 +10,15 @@ import {Envelope} from "../models/envelope";
 })
 export class CategoriesListComponent implements OnInit {
   public category: ICategory;
-
+  cards : any;
   constructor(private categoriesService:CategoriesService) { }
 
   ngOnInit() {
+    let card1 = { name:'card1', description:'card 1 desc', order: 1, color: 'red'};
+    let card2 = { name:'card2', description:'card 2 desc', order: 2, color: 'blue'};
+    this.cards = [];
+    this.cards.push(card1);
+    this.cards.push(card2);
   }
 
   getCategory() {

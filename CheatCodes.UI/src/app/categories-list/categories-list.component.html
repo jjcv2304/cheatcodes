@@ -1,12 +1,6 @@
 <p>
   categories-list works!
 </p>
-<div>
-  <button (click)="getCategory()">Test API</button>
+<div class="cards-container">
+  <app-category-card [card]="card" *ngFor="let card of cards"></app-category-card>
 </div>
-<div *ngIf="category">{{category.id}} , {{category.name}}</div>
-
-<div>
-  <button (click)="addCategory()">Test API Add</button>
-</div>
-<div *ngIf="category">{{category.id}} , {{category.name}}</div>
