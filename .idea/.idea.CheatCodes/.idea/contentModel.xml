@@ -72,6 +72,7 @@
         <e p="karma-coverage-istanbul-reporter" t="IncludeRecursive" />
         <e p="karma-jasmine" t="IncludeRecursive" />
         <e p="karma-jasmine-html-reporter" t="IncludeRecursive" />
+        <e p="ngx-flip" t="IncludeRecursive" />
         <e p="protractor" t="IncludeRecursive" />
         <e p="rxjs" t="IncludeRecursive" />
         <e p="ts-node" t="IncludeRecursive" />

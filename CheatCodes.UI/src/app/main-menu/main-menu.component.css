@@ -1,5 +1,5 @@
 .menu-container {
-  background-color: darkviolet;
+  background-color: rgba(148, 255, 211, 0.2);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,11 +20,10 @@ a {
   padding: 20px 30px; }
 
 a.button {
-  color: rgba(255, 255, 0, 0.7);
   box-shadow: rgba(30, 22, 54, 0.4) 0 0px 0px 2px inset; }
 
 a.button:hover {
   color: white;
-  box-shadow: rgba(30, 22, 54, 0.7) 0 0px 0px 40px inset; }
+  box-shadow: rgba(200, 220, 54, 0.7) 0 0px 0px 40px inset; }
 
 /*# sourceMappingURL=main-menu.component.css.map */

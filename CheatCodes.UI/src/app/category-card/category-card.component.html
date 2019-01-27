@@ -1,4 +1,44 @@
-<div class="card-container"  [ngStyle]="{'background-color': card.color}">
-  {{card.name}}
-  {{card.description}}
+<div class="card-container" [ngStyle]="{'background-color': card.color}">
+  <div class="front" [hidden]="flipDiv">
+    <div class="front-container">
+      <div class="card-header text-shadow">{{card.name}}</div>
+      <div class="card-description" (focusout)="saveDescription($event.target.innerText)"
+           contenteditable="true">{{card.description}}</div>
+      <div class="card-footer">
+        <div class="card-deep-navigation">
+          <div class="fas fa-angle-double-up" (click)="deepNavigationUp()"></div>
+          <div class="fas fa-angle-double-down" (click)="deepNavigationDown()"></div>
+        </div>
+        <div class="card-menu">
+          <div class="fas fa-atom"></div>
+          <div class="fas fa-asterisk"></div>
+          <div class="fas fa-bars"></div>
+        </div>
+        <div class="card-side-navigation">
+          <div class="fas fa-angle-double-left" (click)="sideNavigationLeft()"></div>
+          <div class="fas fa-angle-double-right" (click)="sideNavigationRight()"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="back" [hidden]="!flipDiv">
+    <div class="back-container">
+      <div class="card-header text-shadow">{{card.name}}</div>
+      <div class="card-description">...</div>
+      <div class="card-footer">
+        <div class="card-deep-navigation">
+
+        </div>
+        <div class="card-menu">
+          <div class="fas fa-atom"></div>
+          <div class="fas fa-asterisk"></div>
+          <div class="fas fa-bars"></div>
+        </div>
+        <div class="card-side-navigation">
+          <div class="fas fa-angle-double-left" (click)="sideNavigationLeft()"></div>
+          <div class="fas fa-angle-double-right" (click)="sideNavigationRight()"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
