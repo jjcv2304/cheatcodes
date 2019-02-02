@@ -168,6 +168,8 @@
         </e>
         <e p="Persistance.csproj" t="IncludeRecursive" />
         <e p="Utils" t="Include">
+          <e p="CheatCodesDatabase - Copy.db" t="Include" />
+          <e p="CheatCodesDatabase.db" t="Include" />
           <e p="IUnitOfWork.cs" t="Include" />
           <e p="SessionFactory.cs" t="Include" />
           <e p="UnitOfWork.cs" t="Include" />

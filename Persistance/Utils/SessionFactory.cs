@@ -32,7 +32,7 @@ namespace Persistance.Utils
         private static ISessionFactory BuildSessionFactory(string connectionString, bool create = false, bool update = false)
         {
             FluentConfiguration configuration = Fluently.Configure()
-                .Database(MsSqlConfiguration.MsSql2012.ConnectionString(connectionString))
+                .Database(SQLiteConfiguration.Standard.ConnectionString(connectionString))
                 .Mappings(m => m.FluentMappings
                     .AddFromAssembly(Assembly.GetExecutingAssembly())
                     .Conventions.Add(

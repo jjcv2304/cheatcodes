@@ -8,6 +8,9 @@ import { CategoriesListComponent } from './categories-list/categories-list.compo
 import {CategoriesService} from "./categories/categories.service";
 import { MainMenuComponent } from './main-menu/main-menu.component';
 import { CategoryCardComponent } from './category-card/category-card.component';
+import { CategoryEditComponent } from './category-edit/category-edit.component';
+import { AppRoutingModule } from './app-routing.module';
+import {FormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -15,12 +18,15 @@ import { CategoryCardComponent } from './category-card/category-card.component';
     AppComponent,
     CategoriesListComponent,
     MainMenuComponent,
-    CategoryCardComponent
+    CategoryCardComponent,
+    CategoryEditComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FlipModule,
+    AppRoutingModule,
+    FormsModule,
   ],
   providers: [CategoriesService],
   bootstrap: [AppComponent]

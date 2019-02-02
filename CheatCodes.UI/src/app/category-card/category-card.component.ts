@@ -38,5 +38,10 @@ export class CategoryCardComponent implements OnInit {
     console.log(editedDescription);
   }
 
+  private saveHeader(editedHeader) {
+    console.log(editedHeader);
+  }
+
+
 
 }

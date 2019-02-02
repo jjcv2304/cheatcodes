@@ -11,7 +11,8 @@
   flex-shrink: 0; }
 
 .card-description {
-  flex-grow: 1; }
+  flex-grow: 1;
+  margin: 10px; }
 
 .card-footer {
   display: flex;

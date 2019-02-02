@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="ServerSide" pattern="file[riderModule]:Application//*||file[riderModule]:Common//*||file[riderModule]:Domain//*||file[riderModule]:Persistance//*||file[riderModule]:Presentation//*" />
+</component>

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,WAAW;EACT,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM",
+"sources": ["category-edit.component.scss"],
+"names": [],
+"file": "category-edit.component.css"
+}

@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainMenuComponent implements OnInit {
 
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  newCard() {
+
+  }
 }

@@ -33,6 +33,7 @@ namespace Presentation
         public void ConfigureServices(IServiceCollection services)
         {
           
+            
             services.AddScoped<ICategoryQuery, CategoryQuery>();
             services.AddScoped<ICategoryCommand, CategoryCommand>();
             
