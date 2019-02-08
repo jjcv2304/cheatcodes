@@ -20,5 +20,15 @@ namespace Application.Interfaces.Tests
                 .Where(cat => cat.Name == categoryName)
                 .ToList();
         }
+
+        public IList<Category> GetAllParents()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public IList<Category> GetAllChilds(int categoryParentId)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

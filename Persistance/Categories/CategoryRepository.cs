@@ -29,5 +29,15 @@ namespace Persistance.Categories
                 .Where(cat => cat.Name == categoryName)
                 .ToList();
         }
+
+        public IList<Category> GetAllParents()
+        {
+            return UnitOfWork.GetP();
+        }
+
+        public IList<Category> GetAllChilds(int categoryParentId)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

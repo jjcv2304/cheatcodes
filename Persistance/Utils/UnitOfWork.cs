@@ -3,7 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using Domain.Categories;
 using NHibernate;
+using NHibernate.Criterion;
 
 namespace Persistance.Utils
 {
@@ -74,6 +76,30 @@ namespace Persistance.Utils
         public IQueryable<T> Query<T>()
         {
             return _session.Query<T>();
+        }
+
+        public IList<Category> GetP()
+        {
+            var sql =
+                "SELECT c.* FROM  Category c Left Join CategoryLinks cl ON c.CategoryID=cl.childId Where cl.parentId is null ";
+            var result = _session.CreateSQLQuery(sql)
+                .AddEntity(typeof(Category))
+                .List<Category>();
+
+
+            return  result;
+            
+            /*
+             *var query = "SELECT TOP 10000 o.* "
+            + " from ORDERS o where o.Year in (:orderYear));";
+
+var session = sessionFactory.OpenSession();
+var result =session.CreateSQLQuery(query)
+                .AddEntity(typeof(Order))
+                .SetInt32("orderYear",2012)
+                .List<Order>();
+             * 
+             */
         }
 
 //        public ISQLQuery CreateSQLQuery(string q)

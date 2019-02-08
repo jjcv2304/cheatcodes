@@ -9,5 +9,7 @@ namespace Application.Interfaces
     {
         IList<Category> GetByPartialName(string categoryName);
         IList<Category> GetByExactName(string categoryName);
+        IList<Category> GetAllParents();
+        IList<Category> GetAllChilds(int categoryParentId);
     }
 }

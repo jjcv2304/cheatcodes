@@ -25,7 +25,7 @@ namespace Presentation.Categories
         [HttpGet]
         public IActionResult Get()
         {
-            var result= _categoryQuery.All();
+            var result= _categoryQuery.AllParents();
             return Ok(result);
         }
 

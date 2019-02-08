@@ -52,5 +52,22 @@ namespace Application.Categories.Queries
 
             return categoriesVM;
         }
+        public List<CategoryVM> AllParents()
+        {
+            var categories = _categoryRepository.GetAllParents();
+
+            var categoriesVM = CategoryVM.TransformToVM(categories);
+
+            return categoriesVM;
+        }
+
+        public List<CategoryVM> GetAllChilds(int categoryParentId)
+        {
+            var categories = _categoryRepository.GetAllChilds(categoryParentId);
+
+            var categoriesVM = CategoryVM.TransformToVM(categories);
+
+            return categoriesVM;
+        }
     }
 }
