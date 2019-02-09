@@ -1,3 +1,6 @@
+.card-container {
+  margin: 10px; }
+
 .card-container, .front-container, .back-container {
   height: 200px;
   width: 200px;

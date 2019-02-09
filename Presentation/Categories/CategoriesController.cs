@@ -62,8 +62,17 @@ namespace Presentation.Categories
             return Ok();
         }
         
+        // GET api/values/5
+        [HttpDelete("{id}")]
+        public IActionResult Delete(int id)
+        {
+            var categoryToDelete = _categoryQuery.ById(id);
+            _categoryCommand.Delete(categoryToDelete);
+            return Ok();
+        }
+        
         [HttpDelete]
-        public IActionResult Delete(CategoryVM categoryVM)
+        public IActionResult Delete([FromBody]CategoryVM categoryVM)
         {
             _categoryCommand.Delete(categoryVM);
             return Ok();

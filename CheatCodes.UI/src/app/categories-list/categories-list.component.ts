@@ -35,18 +35,15 @@ export class CategoriesListComponent implements OnInit {
         this.category = { ...data.result };
       });
   }
-
-  addCategory() {
-    let category = new Category({
-      description: ' new desd',
-      name : 'new name'
-    });
-
-    this.categoriesService.addCategory(category)
-      .subscribe((data: ICategory) => {
-        this.category = { ...data };
-      });
-  }
+  //
+  // addCategory() {
+  //   let category = new Category({
+  //     description: ' new desd',
+  //     name : 'new name'
+  //   });
+  //
+  //   this.categoriesService.addCategory(category);
+  // }
 
 
 }

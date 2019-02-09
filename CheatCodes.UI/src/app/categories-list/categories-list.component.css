@@ -5,6 +5,7 @@
   align-items: center;
   -webkit-border-radius: 80px;
   -moz-border-radius: 80px;
-  border-radius: 80px; }
+  border-radius: 80px;
+  margin: 10px; }
 
 /*# sourceMappingURL=categories-list.component.css.map */

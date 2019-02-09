@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AAAA,gBAAiB;EACf,OAAO,EAAE,IAAI;EACb,SAAS,EAAE,IAAI;EACf,eAAe,EAAE,KAAK;EACtB,WAAW,EAAE,MAAM;EACnB,qBAAqB,EAAE,IAAI;EAC3B,kBAAkB,EAAE,IAAI;EACxB,aAAa,EAAE,IAAI",
+"mappings": "AAAA,gBAAiB;EACf,OAAO,EAAE,IAAI;EACb,SAAS,EAAE,IAAI;EACf,eAAe,EAAE,KAAK;EACtB,WAAW,EAAE,MAAM;EACnB,qBAAqB,EAAE,IAAI;EAC3B,kBAAkB,EAAE,IAAI;EACxB,aAAa,EAAE,IAAI;EACnB,MAAM,EAAE,IAAI",
 "sources": ["categories-list.component.scss"],
 "names": [],
 "file": "categories-list.component.css"

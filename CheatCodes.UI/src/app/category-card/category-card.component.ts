@@ -1,4 +1,8 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {Category, ICategory} from "../models/category";
+import {CategoriesService} from "../categories/categories.service";
+import {Envelope} from "../models/envelope";
+import {Router} from "@angular/router";
 
 
 @Component({
@@ -10,7 +14,7 @@ export class CategoryCardComponent implements OnInit {
   flipDiv: boolean;
   @Input() card: any;
 
-  constructor() {
+  constructor(public router: Router, private categoriesService:CategoriesService) {
     this.flipDiv = false;
   }
 
@@ -42,6 +46,13 @@ export class CategoryCardComponent implements OnInit {
     console.log(editedHeader);
   }
 
-
-
+  private deleteCard(category: Category) {
+    this.categoriesService.deleteCategory(category)
+      .subscribe((data: Envelope<ICategory>) => {
+        if(data.errorMessage != null){
+          console.dir(data.result);
+        }
+        location.reload();
+      });
+  }
 }
