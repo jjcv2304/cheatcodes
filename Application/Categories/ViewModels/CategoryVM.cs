@@ -11,7 +11,10 @@ namespace Application.Categories.ViewModels
         public long Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-        public List<CategoryVM> ChildCategories { get; set; }
+        
+        public long? ParentId { get; set; }
+        public bool HasParent { get; set; }
+        public bool HasChild { get; set; }
 
         #endregion
 
@@ -24,7 +27,9 @@ namespace Application.Categories.ViewModels
                 Id = category.Id,
                 Description = category.Description,
                 Name = category.Name,
-                ChildCategories = TransformToVM(category.ChildCategories.ToList())
+                HasParent = category.ParentCategory != null,
+                ParentId = category.ParentCategory?.Id,
+                HasChild = category.ChildCategories.Any()
             };
         }
 
@@ -35,12 +40,12 @@ namespace Application.Categories.ViewModels
 
         public static Category TransformFromVM(CategoryVM categoryVM)
         {
+            if (categoryVM == null) return null;
             return new Category()
             {
                 Id = categoryVM.Id,
                 Description = categoryVM.Description,
                 Name = categoryVM.Name,
-                ChildCategories = TransformFromVM(categoryVM.ChildCategories.ToList())
             };
         }
 

@@ -11,5 +11,7 @@ namespace Application.Interfaces
         IList<Category> GetByExactName(string categoryName);
         IList<Category> GetAllParents();
         IList<Category> GetAllChilds(int categoryParentId);
+        IList<Category> GetSiblingsOf(int categoryId);
+        
     }
 }

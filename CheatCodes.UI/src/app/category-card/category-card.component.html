@@ -9,8 +9,18 @@
       </div>
       <div class="card-footer">
         <div class="card-deep-navigation">
-          <div class="fas fa-angle-double-up" (click)="deepNavigationUp()"></div>
-          <div class="fas fa-angle-double-down" (click)="deepNavigationDown()"></div>
+          <!--<div class="fas fa-angle-double-up" (click)="navigateUp()"></div>-->
+          <!--<div class="fas fa-angle-double-down" [disabled]="canNavigateDown()" (click)="deepNavigationDown()"></div>-->
+          <div (click)="canNavigateUp() ? navigateUp() : $event.stopPropagation(); canNavigateUp() ? null:false"
+               class="fas fa-angle-double-up"
+               [ngClass]="{'fa-disabled' : !canNavigateUp()}">
+
+          </div>
+          <div (click)="canNavigateDown() ? navigateDown() : $event.stopPropagation(); canNavigateDown() ? null:false"
+               class="fas fa-angle-double-down"
+               [ngClass]="{'fa-disabled' : !canNavigateDown()}">
+
+          </div>
         </div>
         <div class="card-menu">
           <div class="fas fa-trash-alt" (click)="deleteCard(card)"></div>

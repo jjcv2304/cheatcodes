@@ -32,12 +32,17 @@ namespace Persistance.Categories
 
         public IList<Category> GetAllParents()
         {
-            return UnitOfWork.GetP();
+            return UnitOfWork.GetParentCategories();
         }
 
         public IList<Category> GetAllChilds(int categoryParentId)
         {
-            throw new System.NotImplementedException();
+            return UnitOfWork.GetCategoriesByParent(categoryParentId);
         }
+        public IList<Category> GetSiblingsOf(int categoryChildId)
+        {
+            return UnitOfWork.GetSiblingsOSf(categoryChildId);
+        }
+        
     }
 }

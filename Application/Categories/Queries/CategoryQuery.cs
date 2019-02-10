@@ -69,5 +69,14 @@ namespace Application.Categories.Queries
 
             return categoriesVM;
         }
+        public List<CategoryVM> GetSiblingsOf(int categoryChildId)
+        {
+            var categories = _categoryRepository.GetSiblingsOf(categoryChildId);
+
+            var categoriesVM = CategoryVM.TransformToVM(categories);
+
+            return categoriesVM;
+        }
+        
     }
 }

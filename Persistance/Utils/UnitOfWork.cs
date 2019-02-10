@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using Domain.Categories;
+using Microsoft.EntityFrameworkCore.Internal;
 using NHibernate;
 using NHibernate.Criterion;
 
@@ -78,28 +79,46 @@ namespace Persistance.Utils
             return _session.Query<T>();
         }
 
-        public IList<Category> GetP()
+        public IList<Category> GetParentCategories()
         {
             var sql =
-                "SELECT c.* FROM  Category c Left Join CategoryLinks cl ON c.CategoryID=cl.childId Where cl.parentId is null ";
+                "SELECT c.* FROM  Category c Where c.parentId is null ";
             var result = _session.CreateSQLQuery(sql)
                 .AddEntity(typeof(Category))
                 .List<Category>();
+            return result;
+        }
 
+        public IList<Category> GetCategoriesByParent(int parentId)
+        {
+            var sql =
+                "SELECT c.* FROM  Category c Where c.parentId = :parentId ";
+            var result = _session.CreateSQLQuery(sql)
+                .AddEntity(typeof(Category))
+                .SetInt32("parentId", parentId)
+                .List<Category>();
+            return result;
+        }
 
-            return  result;
+        public IList<Category> GetSiblingsOSf(int categoryId)
+        {
+            var sql =
+                "SELECT cc.* " +
+                "FROM Category cp " +
+                "inner join Category cc on " +
+                "(CASE " +
+                "WHEN cp.ParentId is null " +
+                "THEN cc.ParentId is null " +
+                "Else cp.ParentId = cc.ParentId " +
+                "END) " +
+                "Where cp.CategoryID = :categoryId ";
             
-            /*
-             *var query = "SELECT TOP 10000 o.* "
-            + " from ORDERS o where o.Year in (:orderYear));";
+            var result = _session.CreateSQLQuery(sql)
+                .AddEntity(typeof(Category))
+                .SetInt32("categoryId", categoryId)
+                .List<Category>();
 
-var session = sessionFactory.OpenSession();
-var result =session.CreateSQLQuery(query)
-                .AddEntity(typeof(Order))
-                .SetInt32("orderYear",2012)
-                .List<Order>();
-             * 
-             */
+            return result;
         }
 
 //        public ISQLQuery CreateSQLQuery(string q)

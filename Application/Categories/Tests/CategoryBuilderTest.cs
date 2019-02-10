@@ -4,6 +4,7 @@ namespace Application.Categories.Tests
 {
     public static class CategoryBuilderTest
     {
+        //todo use the builder for testing
         public static Category BuildOne(
             long id = 1,
             string name = "TestCategory1",

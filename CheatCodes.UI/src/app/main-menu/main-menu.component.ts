@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from "@angular/router";
+import {CategoriesService} from "../categories/categories.service";
 
 @Component({
   selector: 'app-main-menu',
@@ -8,7 +10,9 @@ import { Component, OnInit } from '@angular/core';
 export class MainMenuComponent implements OnInit {
 
 
-  constructor() { }
+  constructor(public router: Router, private categoriesService:CategoriesService) {
+
+  }
 
   ngOnInit() {
   }
@@ -16,4 +20,5 @@ export class MainMenuComponent implements OnInit {
   newCard() {
 
   }
+
 }

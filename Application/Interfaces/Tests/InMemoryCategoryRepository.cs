@@ -30,5 +30,10 @@ namespace Application.Interfaces.Tests
         {
             throw new System.NotImplementedException();
         }
+
+        public IList<Category> GetSiblingsOf(int categoryId)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

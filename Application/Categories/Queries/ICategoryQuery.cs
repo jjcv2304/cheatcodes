@@ -13,5 +13,6 @@ namespace Application.Categories.Queries
         List<CategoryVM> All();
         List<CategoryVM> AllParents();
         List<CategoryVM> GetAllChilds(int categoryParentId);
+        List<CategoryVM> GetSiblingsOf(int categoryChildId);
     }
 }

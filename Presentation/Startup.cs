@@ -39,7 +39,8 @@ namespace Presentation
             
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             
-            services.AddSingleton(new SessionFactory(Configuration.GetConnectionString("CheatCodesDatabase"), false, true));
+            services.AddSingleton(new SessionFactory(Configuration.GetConnectionString("CheatCodesDatabase"),
+                false, true));
             services.AddScoped<UnitOfWork>();
             services.AddTransient<ICategoryRepository, CategoryRepository>();
         }

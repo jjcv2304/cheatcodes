@@ -1,14 +1,49 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpErrorResponse, HttpHeaders} from '@angular/common/http';
 import {Category, ICategory} from "../models/category";
-import {Observable} from 'rxjs';
+import {BehaviorSubject, Observable} from 'rxjs';
 import {Envelope} from "../models/envelope";
+import {CategoryFilter} from "../models/CategoryFilter";
 
 @Injectable()
 export class CategoriesService {
 
-  readonly categoryUrl: string;
-  readonly httpOptions = {
+  private currentCategoriesView: Category[];
+
+  get currentCategories(): Category[] {
+    return this.currentCategoriesView;
+  }
+
+  constructor(private http: HttpClient) {
+    this.currentCategoryFilter = new CategoryFilter();
+  };
+
+  /////////////////// Filter Region ///////////////////
+  private currentCategoryFilter: CategoryFilter;
+
+  public SetCategoryFilter(newCategoryFilter: CategoryFilter) {
+    this.currentCategoryFilter = newCategoryFilter;
+    this.getFilteredCategories();
+  }
+
+  public GetCategoryFilter(): CategoryFilter {
+    return this.currentCategoryFilter;
+  }
+
+  private getFilteredCategories() {
+    if (this.currentCategoryFilter.byParent) {
+      this.getChildsByParent(this.currentCategoryFilter.parentId);
+    } else if (this.currentCategoryFilter.byChild) {
+      this.getSiblingsOf(this.currentCategoryFilter.childId);
+    } else {
+      this.getAllCategories();
+    }
+  }
+
+  /////////////////// Http Region ///////////////////
+
+  private readonly categoryUrl: string = '/api/categories';
+  private readonly httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json'
     })
@@ -20,15 +55,27 @@ export class CategoriesService {
     body: {}
   };
 
-  constructor(private http: HttpClient) {
-    this.categoryUrl = '/api/categories';
+  public addCategory(category: Category): Observable<Category> {
+    return this.http.post<Category>(this.categoryUrl, category, this.httpOptions);
   };
 
-  getAllCategories() {
-    return this.http.get<Envelope<Array<ICategory>>>(this.categoryUrl);
+  public deleteCategory(category: Category) {
+    this.httpOptionsWithBody.body = category;
+    return this.http.delete<Envelope<ICategory>>(this.categoryUrl, this.httpOptionsWithBody);
   };
 
-  getAllCategories_InMemory(): any {
+  private getAllCategories() {
+    return this.http.get<Envelope<Array<ICategory>>>(this.categoryUrl).subscribe(
+      (data: Envelope<Array<ICategory>>) => {
+        this.currentCategoriesView = data.result;
+      },
+      () => {
+        console.log('Error loading categories. getAllCategories');
+      }
+    );
+  };
+
+  private getAllCategories_InMemory(): any {
     // return this.http.get<ICategory>(this.categoryUrl);
 
     let card1 = {name: 'card1', description: 'card 1 desc', order: 1, color: 'rgba(0, 255, 255, 0.2)'};
@@ -65,19 +112,31 @@ export class CategoriesService {
     return cards;
   };
 
-  getById(categoryId: number) {
+  private getById(categoryId: number) {
     return this.http.get<Envelope<ICategory>>(this.categoryUrl + '/' + categoryId);
   };
 
-  addCategory(category: Category): Observable<Category> {
-    return this.http.post<Category>(this.categoryUrl, category, this.httpOptions);
-  };
+  private getChildsByParent(categoryId: number) {
+    this.http.get<Envelope<Array<ICategory>>>(this.categoryUrl + '/GetChildsOf/' + categoryId).subscribe(
+      (data: Envelope<Array<ICategory>>) => {
+        this.currentCategoriesView = data.result;
+      },
+      () => {
+        console.log('Error loading categories. getAllCategories');
+      }
+    );
+  }
 
-  deleteCategory(category: Category) {
-    this.httpOptionsWithBody.body = category;
-    return this.http.delete<Envelope<ICategory>>(this.categoryUrl, this.httpOptionsWithBody);
-  };
+  private getSiblingsOf(categoryId: number) {
+    this.http.get<Envelope<Array<ICategory>>>(this.categoryUrl + '/GetSiblingsOf/' + categoryId).subscribe(
+      (data: Envelope<Array<ICategory>>) => {
+        this.currentCategoriesView = data.result;
+      },
+      () => {
+        console.log('Error loading categories. getParentsByChild');
+      }
+    );
+  }
 
-//todo add error handling
 }
 

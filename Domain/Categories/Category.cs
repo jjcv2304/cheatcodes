@@ -8,6 +8,8 @@ namespace Domain.Categories
     {
         public virtual string Name { get; set; }
         public virtual string Description { get; set; }
+
+        public virtual Category ParentCategory { get; set; }
         
         public virtual IList<Category> ChildCategories { get; set; }
 

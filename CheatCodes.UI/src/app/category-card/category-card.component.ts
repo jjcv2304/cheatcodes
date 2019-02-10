@@ -3,6 +3,7 @@ import {Category, ICategory} from "../models/category";
 import {CategoriesService} from "../categories/categories.service";
 import {Envelope} from "../models/envelope";
 import {Router} from "@angular/router";
+import {CategoryFilter} from "../models/CategoryFilter";
 
 
 @Component({
@@ -30,12 +31,22 @@ export class CategoryCardComponent implements OnInit {
     this.flipDiv = !this.flipDiv;
   }
 
-  private deepNavigationUp() {
-    console.log('nav up');
+  private canNavigateUp(){
+    return this.card.hasParent;
   }
 
-  private deepNavigationDown() {
-    console.log('nav down');
+  private navigateUp() {
+    let newFilter = CategoryFilter.FilterByChild(this.card.parentId);
+    this.categoriesService.SetCategoryFilter(newFilter);
+  }
+
+  private canNavigateDown(){
+    return this.card.hasChild;
+  }
+
+  private navigateDown() {
+    let newFilter = CategoryFilter.FilterByParent(this.card.id);
+    this.categoriesService.SetCategoryFilter(newFilter);
   }
 
   private saveDescription(editedDescription) {

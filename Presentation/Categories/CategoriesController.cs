@@ -29,6 +29,19 @@ namespace Presentation.Categories
             return Ok(result);
         }
 
+        [Route("[action]/{parentId}")]
+        public IActionResult GetChildsOf(int parentId)
+        {
+            var result= _categoryQuery.GetAllChilds(parentId);
+            return Ok(result);
+        }
+        [Route("[action]/{categoryId}")]
+        public IActionResult GetSiblingsOf(int categoryId)
+        {
+            var result= _categoryQuery.GetSiblingsOf(categoryId);
+            return Ok(result);
+        }
+        
         // GET api/values/5
         [HttpGet("{id}")]
         public IActionResult Get(int id)
@@ -59,15 +72,6 @@ namespace Presentation.Categories
         public IActionResult Put(CategoryVM categoryVM)
         {
             _categoryCommand.Update(categoryVM);
-            return Ok();
-        }
-        
-        // GET api/values/5
-        [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
-        {
-            var categoryToDelete = _categoryQuery.ById(id);
-            _categoryCommand.Delete(categoryToDelete);
             return Ok();
         }
         

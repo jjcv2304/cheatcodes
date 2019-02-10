@@ -2,7 +2,8 @@ export interface ICategory {
   id: number;
   name: string;
   description: string;
-  childcategories: ICategory[];
+  hasParent: boolean;
+  hasChild: boolean;
 }
 
 export class Category implements ICategory {
@@ -13,6 +14,7 @@ export class Category implements ICategory {
   id: number = null;
   name: string = null;
   description: string = '';
-  childcategories: Category[] = [];
+  hasParent: boolean = false;
+  hasChild: boolean = false;
 
 }
