@@ -1,13 +1,14 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using Common.Utils;
 
-namespace Domain.Categories
+namespace Domain
 {
     public class Category: Entity
     {
         public virtual string Name { get; set; }
         public virtual string Description { get; set; }
+        
+        public virtual IList<CategoryField> CategoryFields { get; set; }
 
         public virtual Category ParentCategory { get; set; }
         
@@ -16,6 +17,7 @@ namespace Domain.Categories
         public Category()
         {
             ChildCategories = new List<Category>();
+            CategoryFields = new List<CategoryField>();
         }
     }
 }

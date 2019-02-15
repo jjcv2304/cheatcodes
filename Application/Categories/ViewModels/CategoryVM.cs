@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using Domain.Categories;
+using Domain;
 
 namespace Application.Categories.ViewModels
 {

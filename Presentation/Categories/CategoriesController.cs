@@ -14,11 +14,10 @@ namespace Presentation.Categories
         private readonly ICategoryQuery _categoryQuery;
         private readonly ICategoryCommand _categoryCommand;
 
-        public CategoriesController(UnitOfWork unitOfWork, ICategoryQuery categoryQuery,
-            ICategoryCommand categoryCommand) : base(unitOfWork)
+        public CategoriesController(UnitOfWork unitOfWork) : base(unitOfWork)
         {
-            _categoryQuery = categoryQuery;
-            _categoryCommand = categoryCommand;
+            _categoryQuery = new CategoryQuery(unitOfWork);
+            _categoryCommand =  new CategoryCommand(unitOfWork);
         }
 
         // GET api/values

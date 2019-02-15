@@ -2,7 +2,6 @@ using System.Collections.Generic;
 using System.Linq;
 using Application.Categories.ViewModels;
 using Application.Interfaces;
-using Domain.Categories;
 using Microsoft.EntityFrameworkCore.Extensions.Internal;
 using NUnit.Framework;
 
@@ -12,9 +11,9 @@ namespace Application.Categories.Queries
     {
         private readonly ICategoryRepository _categoryRepository;
 
-        public CategoryQuery(ICategoryRepository categoryRepository)
+        public CategoryQuery(IUnitOfWork unitOfWork)
         {
-            _categoryRepository = categoryRepository;
+            _categoryRepository = unitOfWork.CategoryRepository;
         }
         
         public List<CategoryVM> ByExactName(string categoryName)
@@ -37,7 +36,7 @@ namespace Application.Categories.Queries
         
         public CategoryVM ById(long categoryId)
         {
-            var category = _categoryRepository.GetById(categoryId);
+            var category = _categoryRepository.Find(categoryId);
 
             var categoryVM = CategoryVM.TransformToVM(category);
 
@@ -46,7 +45,7 @@ namespace Application.Categories.Queries
 
         public List<CategoryVM> All()
         {
-            var categories = _categoryRepository.GetAll();
+            var categories = _categoryRepository.All();
 
             var categoriesVM = CategoryVM.TransformToVM(categories);
 

@@ -1,6 +1,5 @@
 using Application.Categories.ViewModels;
 using Application.Interfaces;
-using Domain.Categories;
 
 namespace Application.Categories.Commands
 {
@@ -8,9 +7,13 @@ namespace Application.Categories.Commands
     {
         private readonly ICategoryRepository _categoryRepository;
 
-        public CategoryCommand(ICategoryRepository categoryRepository)
+//        public CategoryCommand(ICategoryRepository categoryRepository)
+//        {
+//            _categoryRepository = categoryRepository;
+//        }
+        public CategoryCommand(IUnitOfWork unitOfWork)
         {
-            _categoryRepository = categoryRepository;
+            _categoryRepository = unitOfWork.CategoryRepository;
         }
         
         public void Add(CategoryVM categoryVM)
@@ -28,7 +31,7 @@ namespace Application.Categories.Commands
         public void Delete(CategoryVM categoryVM)
         {
             var category = CategoryVM.TransformFromVM(categoryVM);
-            _categoryRepository.Delete(category);
+           _categoryRepository.Remove(category);
         }
     }
 }

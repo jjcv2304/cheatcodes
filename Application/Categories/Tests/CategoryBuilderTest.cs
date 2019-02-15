@@ -1,4 +1,4 @@
-using Domain.Categories;
+using Domain;
 
 namespace Application.Categories.Tests
 {
