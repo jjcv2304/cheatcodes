@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
-using Application.Categories.ViewModels;
+using Application.Categories.Queries.ViewModels;
 using Application.Interfaces;
 using Microsoft.EntityFrameworkCore.Extensions.Internal;
 using NUnit.Framework;
@@ -20,7 +20,7 @@ namespace Application.Categories.Queries
         {
             var category = _categoryRepository.GetByExactName(categoryName);
 
-            var categoryVM = CategoryVM.TransformToVM(category);
+            var categoryVM = MapService.Map(category);
 
             return categoryVM;
         }
@@ -29,7 +29,7 @@ namespace Application.Categories.Queries
         {
             var category = _categoryRepository.GetByPartialName(categoryName);
 
-            var categoryVM = CategoryVM.TransformToVM(category);
+            var categoryVM = MapService.Map(category);
 
             return categoryVM;
         }
@@ -38,7 +38,7 @@ namespace Application.Categories.Queries
         {
             var category = _categoryRepository.Find(categoryId);
 
-            var categoryVM = CategoryVM.TransformToVM(category);
+            var categoryVM = MapService.Map(category);
 
             return categoryVM;
         }
@@ -47,7 +47,7 @@ namespace Application.Categories.Queries
         {
             var categories = _categoryRepository.All();
 
-            var categoriesVM = CategoryVM.TransformToVM(categories);
+            var categoriesVM = MapService.Map(categories);
 
             return categoriesVM;
         }
@@ -55,7 +55,7 @@ namespace Application.Categories.Queries
         {
             var categories = _categoryRepository.GetAllParents();
 
-            var categoriesVM = CategoryVM.TransformToVM(categories);
+            var categoriesVM = MapService.Map(categories);
 
             return categoriesVM;
         }
@@ -64,7 +64,7 @@ namespace Application.Categories.Queries
         {
             var categories = _categoryRepository.GetAllChilds(categoryParentId);
 
-            var categoriesVM = CategoryVM.TransformToVM(categories);
+            var categoriesVM = MapService.Map(categories);
 
             return categoriesVM;
         }
@@ -72,7 +72,7 @@ namespace Application.Categories.Queries
         {
             var categories = _categoryRepository.GetSiblingsOf(categoryChildId);
 
-            var categoriesVM = CategoryVM.TransformToVM(categories);
+            var categoriesVM = MapService.Map(categories);
 
             return categoriesVM;
         }

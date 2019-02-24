@@ -35,7 +35,15 @@
   <div class="back" [hidden]="!flipDiv">
     <div class="back-container">
       <div class="card-header text-shadow">{{card.name}}</div>
-      <div class="card-description">...</div>
+      <div class="card-description">
+        <div *ngFor="let field of card.categoryFieldValues">
+          <label>
+            {{field.fieldName}}
+          </label>
+            <input type="text" name="{{field.fieldName}}" value="{{field.value}}"/>
+
+        </div>
+      </div>
       <div class="card-footer">
         <div class="card-deep-navigation">
 

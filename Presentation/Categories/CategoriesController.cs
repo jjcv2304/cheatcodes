@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using Application.Categories.Commands;
 using Application.Categories.Queries;
-using Application.Categories.ViewModels;
+using Application.Categories.Queries.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Persistance.Utils;
 using Presentation.Utils;

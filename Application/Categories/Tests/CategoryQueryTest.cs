@@ -1,6 +1,5 @@
 using System.Linq;
 using Application.Categories.Queries;
-using Application.Categories.ViewModels;
 using Application.Interfaces;
 using Application.Interfaces.Tests;
 using Domain;

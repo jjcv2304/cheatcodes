@@ -13,13 +13,16 @@
           <e p="Queries" t="Include">
             <e p="CategoryQuery.cs" t="Include" />
             <e p="ICategoryQuery.cs" t="Include" />
+            <e p="ViewModels" t="Include">
+              <e p="CategoryFieldValueVM.cs" t="Include" />
+              <e p="CategoryVM.cs" t="Include" />
+              <e p="FieldVM.cs" t="Include" />
+              <e p="MapService.cs" t="Include" />
+            </e>
           </e>
           <e p="Tests" t="Include">
             <e p="CategoryBuilderTest.cs" t="Include" />
             <e p="CategoryQueryTest.cs" t="Include" />
-          </e>
-          <e p="ViewModels" t="Include">
-            <e p="CategoryVM.cs" t="Include" />
           </e>
         </e>
         <e p="Interfaces" t="Include">

@@ -13,7 +13,7 @@ import {CategoryFilter} from "../models/CategoryFilter";
 })
 export class CategoryCardComponent implements OnInit {
   flipDiv: boolean;
-  @Input() card: any;
+  @Input() card: Category;
 
   constructor(public router: Router, private categoriesService:CategoriesService) {
     this.flipDiv = false;

@@ -5,14 +5,14 @@ namespace Domain
 {
     public class Category: Entity
     {
-        public virtual string Name { get; set; }
-        public virtual string Description { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
         
-        public virtual IList<CategoryField> CategoryFields { get; set; }
+        public IList<CategoryField> CategoryFields { get; set; }
 
-        public virtual Category ParentCategory { get; set; }
+        public Category ParentCategory { get; set; }
         
-        public virtual IList<Category> ChildCategories { get; set; }
+        public IList<Category> ChildCategories { get; set; }
 
         public Category()
         {
