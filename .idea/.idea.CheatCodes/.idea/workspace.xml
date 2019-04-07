@@ -2,27 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3faa2e43-d490-49eb-a9b8-ac54012f984c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Application/Categories/Queries/ViewModels/CategoryFieldValueVM.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Categories/Queries/ViewModels/CategoryVM.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Categories/Queries/ViewModels/FieldVM.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Categories/Queries/ViewModels/MapService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CheatCodes.UI/src/app/models/categoryFieldValue.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.CheatCodes/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CheatCodes/.idea/contentModel.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.vs/VSWorkspaceState.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CheatCodes.UI/src/app/category-card/.sass-cache/87992336fede03285e07338d7ffcd74a0cde2f31/category-card.component.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Persistance/Persistance.csproj.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CheatCodes/.idea/scopes/ServerSide.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CheatCodes/.idea/scopes/UI_simple.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CheatCodes/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CheatCodes/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Categories/Commands/CategoryCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Categories/Commands/CategoryCommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Categories/Commands/ICategoryCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Categories/Commands/ICategoryCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/CheatCodes/v15/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/CheatCodes/v15/.suo" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Application/Categories/Queries/CategoryQuery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Categories/Queries/CategoryQuery.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Categories/Queries/ICategoryQuery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Categories/Queries/ICategoryQuery.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Categories/Tests/CategoryQueryTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Categories/Tests/CategoryQueryTest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Categories/ViewModels/CategoryVM.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheatCodes.UI/src/app/category-card/category-card.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/CheatCodes.UI/src/app/category-card/category-card.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheatCodes.UI/src/app/category-card/category-card.component.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/CheatCodes.UI/src/app/category-card/category-card.component.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CheatCodes.UI/src/app/category-card/category-card.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/CheatCodes.UI/src/app/category-card/category-card.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheatCodes.UI/src/app/category-card/category-card.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/CheatCodes.UI/src/app/category-card/category-card.component.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CheatCodes.UI/src/app/category-card/category-card.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/CheatCodes.UI/src/app/category-card/category-card.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CheatCodes.UI/src/app/models/category.ts" beforeDir="false" afterPath="$PROJECT_DIR$/CheatCodes.UI/src/app/models/category.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Category.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Category.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/CategoryField.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/CategoryField.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Persistance/CategoryRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Persistance/CategoryRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Persistance/Utils/CheatCodesDatabase.db" beforeDir="false" afterPath="$PROJECT_DIR$/Persistance/Utils/CheatCodesDatabase.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Presentation/Categories/CategoriesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Presentation/Categories/CategoriesController.cs" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
     <ignored path="Persistance/obj/" />
@@ -185,61 +182,45 @@
     </expand>
     <select />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="CheatCodes" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CheatCodes.UI/src/app/category-card/category-card.component.html">
+        <entry file="file://$PROJECT_DIR$/CheatCodes.UI/src/app/categories-list/categories-list.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="334">
-              <caret line="40" column="25" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
+            <state relative-caret-position="112">
+              <caret line="11" column="56" selection-start-line="11" selection-start-column="56" selection-end-line="11" selection-end-column="56" />
+              <folding>
+                <element signature="e#0#48#0" expanded="true" />
+              </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CheatCodes.UI/src/app/category-card/category-card.component.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="70">
+              <caret line="30" column="3" selection-start-line="30" selection-start-column="3" selection-end-line="30" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Persistance/Persistance.csproj.user">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.vs/ProjectSettings.json">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/CheatCodes.UI/src/app/models/categoryFieldValue.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/Categories/Queries/ViewModels/CategoryFieldValueVM.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-              <folding>
-                <marker date="1551007895103" expanded="true" signature="51:281" ph="{...}" />
-                <marker date="1551007895103" expanded="true" signature="91:279" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CheatCodes.UI/src/app/category-card/category-card.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="39" column="26" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="26" />
-              <folding>
-                <element signature="e#0#55#0" expanded="true" />
-                <element signature="n#!!block;n#sideNavigationLeft#0;n#CategoryCardComponent#0" />
-                <element signature="n#!!block;n#sideNavigationRight#0;n#CategoryCardComponent#0" />
-                <element signature="n#!!block;n#canNavigateDown#0;n#CategoryCardComponent#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CheatCodes.UI/src/app/models/category.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/.vs/VSWorkspaceState.json">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -356,7 +337,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Application/Categories/ViewModels/CategoryVM.cs" />
         <option value="$PROJECT_DIR$/Application/Interfaces/Tests/InMemoryCategoryRepository.cs" />
         <option value="$PROJECT_DIR$/Persistance/Categories/CategoryRepository.cs" />
         <option value="$PROJECT_DIR$/CheatCodes.UI/src/app/categories/categories.service.ts" />
@@ -386,8 +366,6 @@
         <option value="$PROJECT_DIR$/Presentation/Startup.cs" />
         <option value="$PROJECT_DIR$/Presentation/Categories/CategoriesController.cs" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/484cb57e-3155-497b-9db3-fc857becc17a/console.sql" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
-        <option value="$PROJECT_DIR$/Application/Categories/Queries/CategoryQuery.cs" />
         <option value="$PROJECT_DIR$/Application/ViewModels/TransformationService.cs" />
         <option value="$PROJECT_DIR$/Application/Categories/Commands/CategoryCommand.cs" />
         <option value="$PROJECT_DIR$/Application/ViewModels/FieldVM.cs" />
@@ -398,23 +376,25 @@
         <option value="$PROJECT_DIR$/Application/Categories/Queries/ViewModels/CategoryFieldVM.cs" />
         <option value="$PROJECT_DIR$/Application/Categories/Queries/ViewModels/CategoryFieldValueVM.cs" />
         <option value="$PROJECT_DIR$/Application/Categories/Queries/ViewModels/CategoryVM.cs" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/484cb57e-3155-497b-9db3-fc857becc17a/console_1.sql" />
         <option value="$PROJECT_DIR$/Domain/CategoryField.cs" />
         <option value="$PROJECT_DIR$/Application/Categories/Queries/ViewModels/MapService.cs" />
-        <option value="$PROJECT_DIR$/CheatCodes.UI/src/app/category-card/category-card.component.ts" />
         <option value="$PROJECT_DIR$/CheatCodes.UI/src/app/models/CategoryFieldValue.ts" />
-        <option value="$PROJECT_DIR$/Persistance/CategoryRepository.cs" />
         <option value="$PROJECT_DIR$/CheatCodes.UI/src/app/models/category.ts" />
-        <option value="$PROJECT_DIR$/CheatCodes.UI/src/app/category-card/category-card.component.html" />
         <option value="$PROJECT_DIR$/CheatCodes.UI/src/app/models/categoryFieldValue.ts" />
+        <option value="$PROJECT_DIR$/Application/Categories/Queries/CategoryQuery.cs" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/484cb57e-3155-497b-9db3-fc857becc17a/console_1.sql" />
+        <option value="$PROJECT_DIR$/Persistance/CategoryRepository.cs" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
+        <option value="$PROJECT_DIR$/CheatCodes.UI/src/app/category-card/category-card.component.html" />
+        <option value="$PROJECT_DIR$/CheatCodes.UI/src/app/category-card/category-card.component.ts" />
+        <option value="$PROJECT_DIR$/CheatCodes.UI/src/app/category-card/category-card.component.scss" />
       </list>
     </option>
   </component>
   <component name="NamedScopeManager">
-    <order>
-      <scope name="UI_simple" />
-      <scope name="ServerSide" />
-    </order>
+    <scope name="UI" pattern="file[riderModule]:CheatCodes.UI//*" />
+    <scope name="Persistance" pattern="file:Persistance/RepositoryBase.cs||file[riderModule]:Persistance//*" />
+    <scope name="test" pattern="file[riderModule]:Application/Categories//*" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-12" />
@@ -428,10 +408,10 @@
     <navigator currentView="SolutionExplorer" proportions="" version="1">
       <autoscrollToSource SolutionExplorer="true" />
       <autoscrollFromSource SolutionExplorer="true" />
-      <foldersAlwaysOnTop value="true" />
+      <foldersAlwaysOnTop value="false" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="AssemblyExplorer" />
       <pane id="FileSystemExplorer">
         <subPane>
           <expand>
@@ -439,10 +419,16 @@
               <item name="Project" type="161ac34:FileSystemExplorerRootNode" />
               <item name="CheatCodes" type="34e6ba20:FileSystemExplorerNode" />
             </path>
+            <path>
+              <item name="Project" type="161ac34:FileSystemExplorerRootNode" />
+              <item name="CheatCodes" type="34e6ba20:FileSystemExplorerNode" />
+              <item name="Persistance" type="34e6ba20:FileSystemExplorerNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="SolutionExplorer">
         <subPane>
           <expand>
@@ -452,97 +438,13 @@
             </path>
             <path>
               <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="CheatCodes" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Application" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="CheatCodes" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Application" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Categories" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="CheatCodes" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Application" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Categories" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Queries" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="CheatCodes" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Application" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Categories" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Queries" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="ViewModels" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="CheatCodes" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Presentation" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="CheatCodes" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Presentation" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Categories" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
               <item name="CheatCodes.UI" type="9a108dff:SolutionExplorerFileNode" />
-            </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="CheatCodes.UI" type="9a108dff:SolutionExplorerFileNode" />
-              <item name="src" type="9a108dff:SolutionExplorerFileNode" />
-            </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="CheatCodes.UI" type="9a108dff:SolutionExplorerFileNode" />
-              <item name="src" type="9a108dff:SolutionExplorerFileNode" />
-              <item name="app" type="9a108dff:SolutionExplorerFileNode" />
-            </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="CheatCodes.UI" type="9a108dff:SolutionExplorerFileNode" />
-              <item name="src" type="9a108dff:SolutionExplorerFileNode" />
-              <item name="app" type="9a108dff:SolutionExplorerFileNode" />
-              <item name="categories" type="9a108dff:SolutionExplorerFileNode" />
-            </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="CheatCodes.UI" type="9a108dff:SolutionExplorerFileNode" />
-              <item name="src" type="9a108dff:SolutionExplorerFileNode" />
-              <item name="app" type="9a108dff:SolutionExplorerFileNode" />
-              <item name="categories-list" type="9a108dff:SolutionExplorerFileNode" />
-            </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="CheatCodes.UI" type="9a108dff:SolutionExplorerFileNode" />
-              <item name="src" type="9a108dff:SolutionExplorerFileNode" />
-              <item name="app" type="9a108dff:SolutionExplorerFileNode" />
-              <item name="category-card" type="9a108dff:SolutionExplorerFileNode" />
-            </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="CheatCodes.UI" type="9a108dff:SolutionExplorerFileNode" />
-              <item name="src" type="9a108dff:SolutionExplorerFileNode" />
-              <item name="app" type="9a108dff:SolutionExplorerFileNode" />
-              <item name="main-menu" type="9a108dff:SolutionExplorerFileNode" />
-            </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="CheatCodes.UI" type="9a108dff:SolutionExplorerFileNode" />
-              <item name="src" type="9a108dff:SolutionExplorerFileNode" />
-              <item name="app" type="9a108dff:SolutionExplorerFileNode" />
-              <item name="models" type="9a108dff:SolutionExplorerFileNode" />
             </path>
           </expand>
           <select />
         </subPane>
         <option name="show-all-files" value="false" />
       </pane>
-      <pane id="AssemblyExplorer" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -563,7 +465,7 @@
     <property name="node.js.path.for.package.stylelint" value="project" />
     <property name="node.js.selected.package.stylelint" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="SQL Dialects" />
+    <property name="settings.editor.selected.configurable" value="project.scopes" />
     <property name="ts.external.directory.path" value="C:\GIT\CheatCodes\CheatCodes.UI\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
@@ -781,7 +683,15 @@
       <workItem from="1550923936591" duration="3133000" />
       <workItem from="1551006033083" duration="4441000" />
       <workItem from="1551023555348" duration="6668000" />
-      <workItem from="1551039526229" duration="1916000" />
+      <workItem from="1551039526229" duration="2137000" />
+      <workItem from="1551209610733" duration="3186000" />
+      <workItem from="1551217164939" duration="2322000" />
+      <workItem from="1551461148437" duration="5689000" />
+      <workItem from="1551816045223" duration="428000" />
+      <workItem from="1551819750235" duration="2252000" />
+      <workItem from="1554539429881" duration="1814000" />
+      <workItem from="1554565030959" duration="2112000" />
+      <workItem from="1554621562902" duration="762000" />
     </task>
     <task id="LOCAL-00001" summary="Infrastructure refactor">
       <created>1541936350455</created>
@@ -909,11 +819,18 @@
       <option name="project" value="LOCAL" />
       <updated>1550256220559</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Adding CategoryFields">
+      <created>1551041650064</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1551041650064</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="359597000" />
+    <option name="totallyTimeSpent" value="378383000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -926,41 +843,40 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="735" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.43781096" visible="true" weight="0.21052632" />
+      <window_info id="Favorites" order="0" sideWeight="0.5339967" side_tool="true" weight="0.2242915" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.46600333" visible="true" weight="0.19676113" />
       <window_info id="Unit Tests" order="2" weight="0.3748988" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32504147" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49919093" weight="0.6119403" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49919093" weight="0.6103448" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="5" weight="0.3283582" />
       <window_info anchor="bottom" id="NuGet" order="6" sideWeight="0.70873785" weight="0.52238804" />
       <window_info anchor="bottom" id="Docker" order="7" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.6069652" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="8" visible="true" weight="0.6068966" />
       <window_info anchor="bottom" id="Database Changes" order="9" weight="0.32890365" />
       <window_info anchor="bottom" id="REST Client" order="10" weight="0.48922056" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.44941956" />
       <window_info anchor="bottom" id="Event Log" order="12" show_stripe_button="false" sideWeight="0.29126215" side_tool="true" weight="0.5257048" />
       <window_info anchor="bottom" id="TypeScript" order="13" />
-      <window_info anchor="bottom" id="Build" order="14" sideWeight="0.49919093" weight="0.25538972" />
+      <window_info anchor="bottom" id="Build" order="14" sideWeight="0.49919093" weight="0.2551724" />
       <window_info anchor="bottom" id="Database Console" order="15" weight="0.34660032" />
       <window_info anchor="bottom" auto_hide="true" id="SQL Generator" order="16" show_stripe_button="false" type="SLIDING" weight="0.3283582" />
       <window_info anchor="bottom" id="Performance Profiler" order="17" show_stripe_button="false" weight="0.3283582" />
       <window_info anchor="bottom" id="Messages" order="18" />
       <window_info anchor="right" id="Errors In Solution" order="0" show_stripe_button="false" sideWeight="0.4991708" weight="0.32955465" />
-      <window_info anchor="right" id="Database" order="1" sideWeight="0.58043116" weight="0.20161943" />
+      <window_info anchor="right" id="Database" order="1" sideWeight="0.5711679" weight="0.4198988" />
       <window_info anchor="right" id="Unit Tests Coverage" order="2" sideWeight="0.4950166" weight="0.21376519" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="3" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="4" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="5" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info anchor="right" id="Debug" order="7" sideWeight="0.49585405" weight="0.44129553" />
-      <window_info anchor="right" x="487" y="209" width="307" height="303" id="Structure" order="8" sideWeight="0.56218904" side_tool="true" visible="true" weight="0.1708502" />
+      <window_info anchor="right" id="Debug" order="7" sideWeight="0.64842457" weight="0.44129553" />
+      <window_info anchor="right" x="487" y="209" width="307" height="303" id="Structure" order="8" sideWeight="0.4288321" side_tool="true" visible="true" weight="0.20161943" />
     </layout>
     <layout-to-restore>
       <window_info id="Favorites" order="0" side_tool="true" />
@@ -1118,7 +1034,8 @@
     <MESSAGE value="Delete Category" />
     <MESSAGE value="Add parent child navigation" />
     <MESSAGE value="Migrating to Dapper" />
-    <option name="LAST_COMMIT_MESSAGE" value="Migrating to Dapper" />
+    <MESSAGE value="Adding CategoryFields" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding CategoryFields" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1177,53 +1094,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Persistance/Utils/DalSession.cs" />
-    <entry file="file://$PROJECT_DIR$/Persistance/Utils/Repository.cs" />
-    <entry file="file://$PROJECT_DIR$/Persistance/Persistance.csproj">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Interfaces/Tests/RepositoryMock.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-112">
-          <caret line="6" column="38" lean-forward="true" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
-          <folding>
-            <marker date="1550182112748" expanded="false" signature="6:106" ph="..." />
-            <marker date="1550182112748" expanded="true" signature="217:1744" ph="{...}" />
-            <marker date="1550182112748" expanded="false" signature="298:353" ph="{...}" />
-            <marker date="1550182112748" expanded="false" signature="435:577" ph="{...}" />
-            <marker date="1550182112748" expanded="false" signature="614:1036" ph="{...}" />
-            <marker date="1550182112748" expanded="false" signature="658:796" ph="{...}" />
-            <marker date="1550182112748" expanded="false" signature="831:909" ph="{...}" />
-            <marker date="1550182112748" expanded="false" signature="961:1026" ph="{...}" />
-            <marker date="1550182112748" expanded="false" signature="1073:1142" ph="{...}" />
-            <marker date="1550182112748" expanded="false" signature="1174:1243" ph="{...}" />
-            <marker date="1550182112748" expanded="false" signature="1280:1349" ph="{...}" />
-            <marker date="1550182112748" expanded="false" signature="1387:1456" ph="{...}" />
-            <marker date="1550182112748" expanded="false" signature="1489:1535" ph="{...}" />
-            <marker date="1550182112748" expanded="false" signature="1575:1631" ph="{...}" />
-            <marker date="1550182112748" expanded="false" signature="1669:1738" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Persistance/Utils/DatabaseSetting.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
-          <folding>
-            <marker date="1550173909969" expanded="true" signature="62:252" ph="{...}" />
-            <marker date="1550173909969" expanded="true" signature="177:246" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8B4A3661-006B-44A3-A21B-AFDB05F47A3B/b0/1e0b38b7/IDbConnection.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1F65B0CE-6D66-4C59-8465-05966CFE2C86/df/0b84d0cb/CallSiteRuntimeResolver.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="141">
@@ -1239,28 +1109,6 @@
             <marker date="1541934692851" expanded="false" signature="6:70" ph="..." />
             <marker date="1541934692851" expanded="true" signature="104:220" ph="{...}" />
             <marker date="1541934692851" expanded="true" signature="144:218" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Interfaces/IRepository.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-          <folding>
-            <marker date="1550182014911" expanded="false" signature="6:53" ph="..." />
-            <marker date="1550182014911" expanded="true" signature="142:329" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Interfaces/ICategoryRepository.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="9" column="11" lean-forward="true" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
-          <folding>
-            <marker date="1550181989141" expanded="false" signature="6:93" ph="..." />
-            <marker date="1550181989141" expanded="true" signature="193:501" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1294,18 +1142,6 @@
             <marker date="1550092698564" expanded="true" signature="689:765" ph="{...}" />
             <marker date="1550092698564" expanded="true" signature="832:908" ph="{...}" />
             <marker date="1550092698564" expanded="true" signature="970:1046" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Persistance/RepositoryBase.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="9" column="15" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
-          <folding>
-            <marker date="1550184861202" expanded="true" signature="84:433" ph="{...}" />
-            <marker date="1550184861202" expanded="true" signature="302:361" ph="{...}" />
-            <marker date="1550184861202" expanded="true" signature="394:427" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1351,13 +1187,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://484cb57e-3155-497b-9db3-fc857becc17a/schema/main/table/Category">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Presentation/Startup.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
@@ -1393,9 +1222,6 @@
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/rest-api.http">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Application.csproj">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Categories/Commands/CategoryCommand.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
@@ -1425,23 +1251,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CheatCodes.sln">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="das://484cb57e-3155-497b-9db3-fc857becc17a/schema/main/table/Field">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://484cb57e-3155-497b-9db3-fc857becc17a/schema/main/table/CategoryField">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Categories/Queries/ViewModels/FieldVM.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="32">
@@ -1449,32 +1258,6 @@
           <folding>
             <marker date="1551007895083" expanded="true" signature="51:218" ph="{...}" />
             <marker date="1551007895083" expanded="true" signature="78:216" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/484cb57e-3155-497b-9db3-fc857becc17a/console_1.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="7" selection-start-column="7" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Categories/Queries/CategoryQuery.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-14">
-          <caret line="57" column="12" selection-start-line="57" selection-start-column="12" selection-end-line="57" selection-end-column="12" />
-          <folding>
-            <marker date="1551007895246" expanded="false" signature="6:211" ph="..." />
-            <marker date="1551007895246" expanded="true" signature="303:2240" ph="{...}" />
-            <marker date="1551007895246" expanded="true" signature="429:514" ph="{...}" />
-            <marker date="1551007895246" expanded="true" signature="588:773" ph="{...}" />
-            <marker date="1551007895246" expanded="true" signature="849:1036" ph="{...}" />
-            <marker date="1551007895246" expanded="true" signature="1093:1266" ph="{...}" />
-            <marker date="1551007895246" expanded="true" signature="1305:1475" ph="{...}" />
-            <marker date="1551007895246" expanded="true" signature="1520:1700" ph="{...}" />
-            <marker date="1551007895246" expanded="true" signature="1768:1963" ph="{...}" />
-            <marker date="1551007895246" expanded="true" signature="2030:2225" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1597,40 +1380,6 @@
     <entry file="file://$PROJECT_DIR$/Presentation/Presentation.csproj">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Persistance/CategoryRepository.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="105" column="43" lean-forward="true" selection-start-line="105" selection-start-column="43" selection-end-line="105" selection-end-column="43" />
-          <folding>
-            <marker date="1551033377650" expanded="false" signature="6:168" ph="..." />
-            <marker date="1551033377650" expanded="true" signature="267:10140" ph="{...}" />
-            <marker date="1551033377650" expanded="true" signature="355:375" ph="{...}" />
-            <marker date="1551033377650" expanded="true" signature="419:593" ph="{...}" />
-            <marker date="1551033377650" expanded="true" signature="632:891" ph="{...}" />
-            <marker date="1551033377650" expanded="true" signature="928:1145" ph="{...}" />
-            <marker date="1551033377650" expanded="true" signature="1190:1241" ph="{...}" />
-            <marker date="1551033377650" expanded="true" signature="1283:1548" ph="{...}" />
-            <marker date="1551033377650" expanded="true" signature="1593:1849" ph="{...}" />
-            <marker date="1551033377650" expanded="true" signature="1898:2141" ph="{...}" />
-            <marker date="1551033377650" expanded="true" signature="2211:2280" ph="{...}" />
-            <marker date="1551033377650" expanded="true" signature="2348:2417" ph="{...}" />
-            <marker date="1551033377650" expanded="true" signature="2465:4353" ph="{...}" />
-            <marker date="1551033377650" expanded="true" signature="3235:3746" ph="{...}" />
-            <marker date="1551033377650" expanded="true" signature="3930:4307" ph="{...}" />
-            <marker date="1551033377650" expanded="true" signature="4363:6154" ph="/* public IList&lt;Category&gt; GetAllParents() ... */" />
-            <marker date="1551033377650" expanded="true" signature="6229:7745" ph="{...}" />
-            <marker date="1551033377650" expanded="true" signature="6856:7215" ph="{...}" />
-            <marker date="1551033377650" expanded="true" signature="7051:7158" ph="{...}" />
-            <marker date="1551033377650" expanded="true" signature="7438:7724" ph="{...}" />
-            <marker date="1551033377650" expanded="true" signature="7807:10133" ph="{...}" />
-            <marker date="1551033377650" expanded="true" signature="9160:9615" ph="{...}" />
-            <marker date="1551033377650" expanded="true" signature="9221:9324" ph="{...}" />
-            <marker date="1551033377650" expanded="true" signature="9451:9558" ph="{...}" />
-            <marker date="1551033377650" expanded="true" signature="9826:10112" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Categories/Queries/ViewModels/MapService.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
@@ -1670,7 +1419,6 @@
           <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
           <folding>
             <marker date="1551007895191" expanded="false" signature="6:242" ph="..." />
-            <marker date="1551007895191" expanded="true" signature="277:2436" ph="{...}" />
             <marker date="1551007895191" expanded="true" signature="366:2434" ph="{...}" />
             <marker date="1551007895191" expanded="true" signature="567:712" ph="{...}" />
             <marker date="1551007895191" expanded="true" signature="792:896" ph="{...}" />
@@ -1712,28 +1460,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CheatCodes.UI/src/app/categories-list/categories-list.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#48#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CheatCodes.UI/src/app/category-card/category-card.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="39" column="26" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#55#0" expanded="true" />
-            <element signature="n#!!block;n#sideNavigationLeft#0;n#CategoryCardComponent#0" />
-            <element signature="n#!!block;n#sideNavigationRight#0;n#CategoryCardComponent#0" />
-            <element signature="n#!!block;n#canNavigateDown#0;n#CategoryCardComponent#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Categories/Queries/ViewModels/CategoryFieldValueVM.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -1745,10 +1471,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CheatCodes.UI/src/app/category-card/category-card.component.html">
+    <entry file="file://$PROJECT_DIR$/CheatCodes.UI/src/app/models/categoryFieldValue.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="40" column="25" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
+        <state relative-caret-position="176">
+          <caret line="11" column="3" lean-forward="true" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -1759,19 +1485,210 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CheatCodes.UI/src/app/models/categoryFieldValue.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+    <entry file="das://484cb57e-3155-497b-9db3-fc857becc17a/schema/main/table/Field">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Persistance/RepositoryBase.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+          <folding>
+            <marker date="1550184861202" expanded="true" signature="41:435" ph="{...}" />
+            <marker date="1550184861202" expanded="true" signature="84:433" ph="{...}" />
+            <marker date="1550184861202" expanded="true" signature="302:361" ph="{...}" />
+            <marker date="1550184861202" expanded="true" signature="394:427" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Interfaces/IRepository.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
+          <folding>
+            <marker date="1550182014911" expanded="false" signature="6:53" ph="..." />
+            <marker date="1550182014911" expanded="true" signature="87:331" ph="{...}" />
+            <marker date="1550182014911" expanded="true" signature="142:329" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Interfaces/ICategoryRepository.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="7" column="47" lean-forward="true" selection-start-line="7" selection-start-column="47" selection-end-line="7" selection-end-column="47" />
+          <folding>
+            <marker date="1550181989141" expanded="false" signature="6:93" ph="..." />
+            <marker date="1550181989141" expanded="true" signature="127:503" ph="{...}" />
+            <marker date="1550181989141" expanded="true" signature="193:501" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://484cb57e-3155-497b-9db3-fc857becc17a/schema/main/table/Category">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/484cb57e-3155-497b-9db3-fc857becc17a/console_1.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Categories/Queries/CategoryQuery.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="77" column="12" selection-start-line="77" selection-start-column="12" selection-end-line="77" selection-end-column="12" />
+          <folding>
+            <marker date="1551218503399" expanded="false" signature="6:211" ph="..." />
+            <marker date="1551218503399" expanded="true" signature="253:2251" ph="{...}" />
+            <marker date="1551218503399" expanded="true" signature="303:2249" ph="{...}" />
+            <marker date="1551218503399" expanded="true" signature="429:514" ph="{...}" />
+            <marker date="1551218503399" expanded="true" signature="588:773" ph="{...}" />
+            <marker date="1551218503399" expanded="true" signature="849:1036" ph="{...}" />
+            <marker date="1551218503399" expanded="true" signature="1093:1266" ph="{...}" />
+            <marker date="1551218503399" expanded="true" signature="1305:1475" ph="{...}" />
+            <marker date="1551218503399" expanded="true" signature="1529:1709" ph="{...}" />
+            <marker date="1551218503399" expanded="true" signature="1777:1972" ph="{...}" />
+            <marker date="1551218503399" expanded="true" signature="2039:2234" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://484cb57e-3155-497b-9db3-fc857becc17a/schema/main/table/CategoryField">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CheatCodes.UI/src/app/category-card/category-card.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="42" column="57" selection-start-line="42" selection-start-column="57" selection-end-line="42" selection-end-column="57" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#!!top" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#!!top" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" />
+            <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" />
+            <element signature="n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" />
+            <element signature="n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" />
+            <element signature="n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" />
+            <element signature="n#div#1;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" />
+            <element signature="n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" />
+            <element signature="n#div#2;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" />
+            <element signature="n#label#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" />
+            <element signature="n#div#2;n#div#0;n#div#1;n#div#0;n#!!top" />
+            <element signature="n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#!!top" />
+            <element signature="n#div#1;n#div#2;n#div#0;n#div#1;n#div#0;n#!!top" />
+            <element signature="n#div#2;n#div#2;n#div#0;n#div#1;n#div#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CheatCodes.UI/src/app/category-card/category-card.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="704">
+          <caret line="51" column="46" selection-start-line="51" selection-start-column="46" selection-end-line="51" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#55#0" expanded="true" />
+            <element signature="n#!!block;n#sideNavigationLeft#0;n#CategoryCardComponent#0" />
+            <element signature="n#!!block;n#sideNavigationRight#0;n#CategoryCardComponent#0" />
+            <element signature="n#!!block;n#canNavigateDown#0;n#CategoryCardComponent#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Persistance/Persistance.csproj">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Common/Common.csproj">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Persistance/CategoryRepository.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3024">
+          <caret line="210" column="25" selection-start-line="210" selection-start-column="25" selection-end-line="210" selection-end-column="25" />
+          <folding>
+            <marker date="1551462816421" expanded="false" signature="6:168" ph="..." />
+            <marker date="1551462816421" expanded="true" signature="191:9662" ph="{...}" />
+            <marker date="1551462816421" expanded="true" signature="267:9660" ph="{...}" />
+            <marker date="1551462816421" expanded="true" signature="355:375" ph="{...}" />
+            <marker date="1551462816421" expanded="true" signature="419:593" ph="{...}" />
+            <marker date="1551462816421" expanded="true" signature="632:891" ph="{...}" />
+            <marker date="1551462816421" expanded="true" signature="928:1145" ph="{...}" />
+            <marker date="1551462816421" expanded="true" signature="1190:1241" ph="{...}" />
+            <marker date="1551462816421" expanded="true" signature="1283:1548" ph="{...}" />
+            <marker date="1551462816421" expanded="true" signature="1593:1849" ph="{...}" />
+            <marker date="1551462816421" expanded="true" signature="1898:2141" ph="{...}" />
+            <marker date="1551462816421" expanded="true" signature="2211:2280" ph="{...}" />
+            <marker date="1551462816421" expanded="true" signature="2348:2417" ph="{...}" />
+            <marker date="1551462816421" expanded="true" signature="2465:4308" ph="{...}" />
+            <marker date="1551462816421" expanded="true" signature="3233:3677" ph="{...}" />
+            <marker date="1551462816421" expanded="true" signature="3861:4262" ph="{...}" />
+            <marker date="1551462816421" expanded="true" signature="4375:6575" ph="{...}" />
+            <marker date="1551462816421" expanded="true" signature="5306:5909" ph="{...}" />
+            <marker date="1551462816421" expanded="true" signature="5501:5608" ph="{...}" />
+            <marker date="1551462816421" expanded="true" signature="6156:6554" ph="{...}" />
+            <marker date="1551462816421" expanded="true" signature="6637:9654" ph="{...}" />
+            <marker date="1551462816421" expanded="true" signature="8301:9000" ph="{...}" />
+            <marker date="1551462816421" expanded="true" signature="8362:8465" ph="{...}" />
+            <marker date="1551462816421" expanded="true" signature="8592:8699" ph="{...}" />
+            <marker date="1551462816421" expanded="true" signature="9235:9633" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Application.csproj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="3" column="56" selection-start-line="3" selection-start-column="56" selection-end-line="3" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CheatCodes.sln">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CheatCodes.UI/src/app/categories-list/categories-list.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="11" column="56" selection-start-line="11" selection-start-column="56" selection-end-line="11" selection-end-column="56" />
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CheatCodes.UI/src/app/category-card/category-card.component.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70">
+          <caret line="30" column="3" selection-start-line="30" selection-start-column="3" selection-end-line="30" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Persistance/Persistance.csproj.user">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.vs/ProjectSettings.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.vs/VSWorkspaceState.json">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
   <component name="masterDetails">
     <states>
       <state key="ScopeChooserConfigurable.UI">
         <settings>
-          <last-edited>ServerSide</last-edited>
+          <last-edited>test</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1780,8 +1697,9 @@
             </option>
           </splitter-proportions>
           <order>
-            <scope name="UI_simple" />
-            <scope name="ServerSide" />
+            <scope name="UI" />
+            <scope name="Persistance" />
+            <scope name="test" />
           </order>
         </settings>
       </state>

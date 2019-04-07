@@ -5,7 +5,6 @@ import {Envelope} from "../models/envelope";
 import {Router} from "@angular/router";
 import {CategoryFilter} from "../models/CategoryFilter";
 
-
 @Component({
   selector: 'app-category-card',
   templateUrl: './category-card.component.html',
@@ -13,6 +12,12 @@ import {CategoryFilter} from "../models/CategoryFilter";
 })
 export class CategoryCardComponent implements OnInit {
   flipDiv: boolean;
+  cardWidth: string;
+  cardHeight: string;
+  minCardWidth = '200px';
+  maxCardWidth = '1000px';
+  minCardHeight = '200px';
+  maxCardHeight = '500px';
   @Input() card: Category;
 
   constructor(public router: Router, private categoriesService:CategoriesService) {
@@ -20,6 +25,7 @@ export class CategoryCardComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.cardWidth = this.minCardWidth;
   }
 
   private sideNavigationLeft() {
@@ -65,5 +71,22 @@ export class CategoryCardComponent implements OnInit {
         }
         location.reload();
       });
+  }
+
+  private autoGrowTextZone(e) {
+    e.target.style.overflow = 'hidden';
+    e.target.style.height = "0px";
+    e.target.style.height = (e.target.scrollHeight + 15)+"px";
+  }
+
+  private resizeCard() {
+    if(this.cardWidth == this.minCardWidth) {
+      this.cardWidth = this.maxCardWidth;
+      this.cardHeight = this.maxCardHeight;
+    } else {
+      this.cardWidth = this.minCardWidth;
+      this.cardHeight = this.minCardHeight;
+    }
+
   }
 }

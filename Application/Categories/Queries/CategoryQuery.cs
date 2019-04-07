@@ -51,6 +51,7 @@ namespace Application.Categories.Queries
 
             return categoriesVM;
         }
+        
         public List<CategoryVM> AllParents()
         {
             var categories = _categoryRepository.GetAllParents();
