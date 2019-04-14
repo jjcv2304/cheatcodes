@@ -1,9 +1,10 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpErrorResponse, HttpHeaders} from '@angular/common/http';
 import {Category, ICategory} from "../models/category";
-import {BehaviorSubject, Observable} from 'rxjs';
 import {Envelope} from "../models/envelope";
 import {CategoryFilter} from "../models/CategoryFilter";
+import {Observable} from 'rxjs';
+import {catchError} from 'rxjs/operators';
 
 @Injectable()
 export class CategoriesService {
@@ -57,6 +58,10 @@ export class CategoriesService {
 
   public addCategory(category: Category): Observable<Category> {
     return this.http.post<Category>(this.categoryUrl, category, this.httpOptions);
+  };
+
+  public updateCategory(category: Category): void {
+    this.http.put(this.categoryUrl, category, this.httpOptions).subscribe();
   };
 
   public deleteCategory(category: Category) {

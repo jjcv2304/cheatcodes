@@ -68,7 +68,7 @@ namespace Presentation.Categories
         }
 
         [HttpPut]
-        public IActionResult Put(CategoryVM categoryVM)
+        public IActionResult Put([FromBody]CategoryVM categoryVM)
         {
             _categoryCommand.Update(categoryVM);
             return Ok();

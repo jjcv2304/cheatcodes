@@ -16,18 +16,22 @@
   font-size: larger;
   text-align: center;
   flex-shrink: 0;
+  margin: 5px;
+  border:0;
 }
 
 .card-description {
   flex-grow: 1;
   margin: 5px;
   overflow: auto;
+  border: 0;
 }
 .card-description-field {
   display: flex;
   .input-field {
     flex-grow: 1;
     margin: 0 5px;
+    border: 0;
   }
 }
 

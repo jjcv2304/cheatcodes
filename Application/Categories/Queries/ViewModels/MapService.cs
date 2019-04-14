@@ -35,6 +35,7 @@ namespace Application.Categories.Queries.ViewModels
                 Id = categoryVM.Id,
                 Description = categoryVM.Description,
                 Name = categoryVM.Name,
+                CategoryFields = Map(categoryVM.CategoryFieldValues.ToList())
             };
         }
 

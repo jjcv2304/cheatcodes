@@ -1,31 +1,24 @@
 <div class="card-container" [ngStyle]="{'background-color': card.color, 'width': cardWidth, 'height': cardHeight}">
   <div class="front" [hidden]="flipDiv">
     <div class="front-container" [ngStyle]="{'width': cardWidth, 'height': cardHeight}">
-      <div class="card-header text-shadow" (focusout)="saveHeader($event.target.innerText)"
-           contenteditable="true">{{card.name}}
-      </div>
-      <div class="card-description" (focusout)="saveDescription($event.target.innerText)"
-           contenteditable="true">{{card.description}}
-      </div>
+      <input type="text" class="card-header text-shadow" [(ngModel)]="card.name">
+      <textarea type="text" class="card-description" [(ngModel)]="card.description" style="resize: none;"></textarea>
       <div class="card-footer">
         <div class="card-deep-navigation">
-          <!--<div class="fas fa-angle-double-up" (click)="navigateUp()"></div>-->
-          <!--<div class="fas fa-angle-double-down" [disabled]="canNavigateDown()" (click)="deepNavigationDown()"></div>-->
           <div (click)="canNavigateUp() ? navigateUp() : $event.stopPropagation(); canNavigateUp() ? null:false"
-               class="fas fa-angle-double-up"
-               [ngClass]="{'fa-disabled' : !canNavigateUp()}">
-
+               class="fas fa-angle-double-up" [ngClass]="{'fa-disabled' : !canNavigateUp()}">
           </div>
           <div (click)="canNavigateDown() ? navigateDown() : $event.stopPropagation(); canNavigateDown() ? null:false"
-               class="fas fa-angle-double-down"
-               [ngClass]="{'fa-disabled' : !canNavigateDown()}">
-
+               class="fas fa-angle-double-down" [ngClass]="{'fa-disabled' : !canNavigateDown()}">
           </div>
         </div>
         <div class="card-menu">
+          <div class="fas fa-save" (click)="saveCard()"></div>
+          <div class="fas fa-bars"></div>
           <div class="fas fa-trash-alt" (click)="deleteCard(card)"></div>
         </div>
         <div class="card-side-navigation">
+          <div class="fas fa-asterisk" (click)="resizeCard()"></div>
           <div class="fas fa-angle-double-left" (click)="sideNavigationLeft()"></div>
           <div class="fas fa-angle-double-right" (click)="sideNavigationRight()"></div>
         </div>
@@ -41,18 +34,19 @@
             {{field.fieldName}}
           </label>
           <textarea (keyup)="autoGrowTextZone($event)" type="text" name="{{field.fieldName}}"
-                    value="{{field.value}}" class="input-field"></textarea>
+                    [(ngModel)]="field.value" class="input-field"></textarea>
         </div>
       </div>
       <div class="card-footer">
         <div class="card-deep-navigation">
         </div>
         <div class="card-menu">
-          <div class="fas fa-atom"></div>
-          <div class="fas fa-asterisk" (click)="resizeCard()"></div>
+          <div class="fas fa-save" (click)="saveCard()"></div>
           <div class="fas fa-bars"></div>
+          <div class="fas fa-trash-alt" (click)="deleteCard(card)"></div>
         </div>
         <div class="card-side-navigation">
+          <div class="fas fa-asterisk" (click)="resizeCard()"></div>
           <div class="fas fa-angle-double-left" (click)="sideNavigationLeft()"></div>
           <div class="fas fa-angle-double-right" (click)="sideNavigationRight()"></div>
         </div>

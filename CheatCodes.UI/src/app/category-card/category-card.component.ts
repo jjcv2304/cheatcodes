@@ -5,6 +5,7 @@ import {Envelope} from "../models/envelope";
 import {Router} from "@angular/router";
 import {CategoryFilter} from "../models/CategoryFilter";
 
+
 @Component({
   selector: 'app-category-card',
   templateUrl: './category-card.component.html',
@@ -55,12 +56,8 @@ export class CategoryCardComponent implements OnInit {
     this.categoriesService.SetCategoryFilter(newFilter);
   }
 
-  private saveDescription(editedDescription) {
-    console.log(editedDescription);
-  }
-
-  private saveHeader(editedHeader) {
-    console.log(editedHeader);
+  private saveCard() {
+    this.categoriesService.updateCategory(this.card);
   }
 
   private deleteCard(category: Category) {

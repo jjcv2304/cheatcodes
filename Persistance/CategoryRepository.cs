@@ -58,12 +58,25 @@ namespace Persistance
         public void Update(Category entity)
         {
             Connection.Execute(
-                "UPDATE Category SET Name = @Name WHERE Id = @CategoryId",
-                param: new {Name = entity.Name, CategoryId = entity.Id},
+                "UPDATE Category SET Name = @Name, Description = @Description WHERE Id = @CategoryId",
+                param: new {Name = entity.Name, Description = entity.Description, CategoryId = entity.Id},
                 transaction: Transaction
             );
+            foreach (var categoryField in entity.CategoryFields)
+            {
+                updateCategoryField(categoryField);
+            }
         }
 
+        private void updateCategoryField(CategoryField entity)
+        {
+            Connection.Execute(
+                "UPDATE CategoryField SET Value = @Value  WHERE CategoryId = @CategoryId AND FieldId = @FieldId",
+                param: new {Value = entity.Value, CategoryId = entity.Category.Id, FieldId = entity.Field.Id},
+                transaction: Transaction
+            );
+        }        
+        
         public Category FindByName(string name)
         {
             return Connection.Query<Category>(
@@ -101,7 +114,10 @@ namespace Persistance
                     (cp, ch, cf, f) =>
                     {
                         cp.ChildCategories = cp.ChildCategories ?? new List<Category>();
-                        cp.ChildCategories.Add(ch);
+                        if (ch.Id > 0)
+                        {
+                            cp.ChildCategories.Add(ch);
+                        }
                         cp.CategoryFields = cp.CategoryFields ?? new List<CategoryField>();
                         cf.Field = f;
                         cf.Category = cp;
@@ -115,8 +131,10 @@ namespace Persistance
                 .Select(group =>
                 {
                     var categoryParent = group.First();
+                    if(categoryParent.ChildCategories.Any()){
                     categoryParent.ChildCategories =
                         group.Select(cp => cp.ChildCategories.Single()).Distinct().ToList();
+                    }
                     categoryParent.CategoryFields = group.Select(cp => cp.CategoryFields.Single()).Distinct().ToList();
                     return categoryParent;
                 }).ToList();
