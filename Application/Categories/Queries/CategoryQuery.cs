@@ -2,7 +2,6 @@ using System.Collections.Generic;
 using System.Linq;
 using Application.Categories.Queries.ViewModels;
 using Application.Interfaces;
-using Microsoft.EntityFrameworkCore.Extensions.Internal;
 using NUnit.Framework;
 
 namespace Application.Categories.Queries

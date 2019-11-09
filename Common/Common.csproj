@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
         <TargetFramework>netcoreapp2.1</TargetFramework>
@@ -6,6 +6,10 @@
 
     <ItemGroup>
       <Folder Include="Dates" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="NHibernate" Version="5.2.6" />
     </ItemGroup>
 
     <ItemGroup>
