@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using Application.Categories.Commands;
 using Application.Categories.Queries;
-using Application.Categories.ViewModels;
+using Application.Categories.Queries.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Persistance.Utils;
 using Presentation.Utils;
@@ -14,11 +14,10 @@ namespace Presentation.Categories
         private readonly ICategoryQuery _categoryQuery;
         private readonly ICategoryCommand _categoryCommand;
 
-        public CategoriesController(UnitOfWork unitOfWork, ICategoryQuery categoryQuery,
-            ICategoryCommand categoryCommand) : base(unitOfWork)
+        public CategoriesController(UnitOfWork unitOfWork) : base(unitOfWork)
         {
-            _categoryQuery = categoryQuery;
-            _categoryCommand = categoryCommand;
+            _categoryQuery = new CategoryQuery(unitOfWork);
+            _categoryCommand =  new CategoryCommand(unitOfWork);
         }
 
         // GET api/values
@@ -69,7 +68,7 @@ namespace Presentation.Categories
         }
 
         [HttpPut]
-        public IActionResult Put(CategoryVM categoryVM)
+        public IActionResult Put([FromBody]CategoryVM categoryVM)
         {
             _categoryCommand.Update(categoryVM);
             return Ok();

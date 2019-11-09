@@ -1,6 +1,5 @@
 using System.Collections.Generic;
-using Application.Categories.ViewModels;
-using Domain.Categories;
+using Application.Categories.Queries.ViewModels;
 using NUnit.Framework;
 
 namespace Application.Categories.Queries

@@ -1,7 +1,7 @@
 
 using Common.Utils;
 
-namespace Domain.Items
+namespace Domain
 {
     public class Item: Entity
     {

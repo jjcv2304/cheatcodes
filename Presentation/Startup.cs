@@ -15,7 +15,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Persistance;
-using Persistance.Categories;
 using Persistance.Utils;
 
 namespace Presentation
@@ -32,16 +31,15 @@ namespace Presentation
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-          
-            
-            services.AddScoped<ICategoryQuery, CategoryQuery>();
-            services.AddScoped<ICategoryCommand, CategoryCommand>();
+//            services.AddScoped<ICategoryQuery, CategoryQuery>();
+//            services.AddScoped<ICategoryCommand, CategoryCommand>();
             
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-            
-            services.AddSingleton(new SessionFactory(Configuration.GetConnectionString("CheatCodesDatabase"),
-                false, true));
+
+            var con = new DatabaseSetting(Configuration.GetConnectionString("CheatCodesDatabase"));
+            services.AddSingleton(con);
             services.AddScoped<UnitOfWork>();
+          //  services.AddSingleton<IUnitOfWork, UnitOfWork>();
             services.AddTransient<ICategoryRepository, CategoryRepository>();
         }
 

@@ -1,6 +1,6 @@
 using NUnit.Framework;
 
-namespace Domain.Categories
+namespace Domain
 {
     [TestFixture]
     public class CategoryTests

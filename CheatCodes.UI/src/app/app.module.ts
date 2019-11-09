@@ -1,15 +1,15 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
-import { FlipModule } from 'ngx-flip';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {HttpClientModule} from '@angular/common/http';
+import {FlipModule} from 'ngx-flip';
 
-import { AppComponent } from './app.component';
-import { CategoriesListComponent } from './categories-list/categories-list.component';
+import {AppComponent} from './app.component';
+import {CategoriesListComponent} from './categories-list/categories-list.component';
 import {CategoriesService} from "./categories/categories.service";
-import { MainMenuComponent } from './main-menu/main-menu.component';
-import { CategoryCardComponent } from './category-card/category-card.component';
-import { CategoryEditComponent } from './category-edit/category-edit.component';
-import { AppRoutingModule } from './app-routing.module';
+import {MainMenuComponent} from './main-menu/main-menu.component';
+import {CategoryCardComponent} from './category-card/category-card.component';
+import {CategoryEditComponent} from './category-edit/category-edit.component';
+import {AppRoutingModule} from './app-routing.module';
 import {FormsModule} from "@angular/forms";
 
 
@@ -31,4 +31,5 @@ import {FormsModule} from "@angular/forms";
   providers: [CategoriesService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

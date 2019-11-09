@@ -5,10 +5,11 @@ namespace Application.Interfaces
 {
     public interface IRepository<T> where T : Entity
     {
-        List<T> GetAll();
-        T GetById(long id);
         void Add(T entity);
-        void Delete(T entity);
+        IEnumerable<T> All();
+        T Find(long id);
+        void Remove(long id);
+        void Remove(T entity);
         void Update(T entity);
     }
 }

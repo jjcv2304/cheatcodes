@@ -13,13 +13,20 @@ import {CategoryFilter} from "../models/CategoryFilter";
 })
 export class CategoryCardComponent implements OnInit {
   flipDiv: boolean;
-  @Input() card: any;
+  cardWidth: string;
+  cardHeight: string;
+  minCardWidth = '200px';
+  maxCardWidth = '1000px';
+  minCardHeight = '200px';
+  maxCardHeight = '500px';
+  @Input() card: Category;
 
   constructor(public router: Router, private categoriesService:CategoriesService) {
     this.flipDiv = false;
   }
 
   ngOnInit() {
+    this.cardWidth = this.minCardWidth;
   }
 
   private sideNavigationLeft() {
@@ -49,12 +56,8 @@ export class CategoryCardComponent implements OnInit {
     this.categoriesService.SetCategoryFilter(newFilter);
   }
 
-  private saveDescription(editedDescription) {
-    console.log(editedDescription);
-  }
-
-  private saveHeader(editedHeader) {
-    console.log(editedHeader);
+  private saveCard() {
+    this.categoriesService.updateCategory(this.card);
   }
 
   private deleteCard(category: Category) {
@@ -65,5 +68,22 @@ export class CategoryCardComponent implements OnInit {
         }
         location.reload();
       });
+  }
+
+  private autoGrowTextZone(e) {
+    e.target.style.overflow = 'hidden';
+    e.target.style.height = "0px";
+    e.target.style.height = (e.target.scrollHeight + 15)+"px";
+  }
+
+  private resizeCard() {
+    if(this.cardWidth == this.minCardWidth) {
+      this.cardWidth = this.maxCardWidth;
+      this.cardHeight = this.maxCardHeight;
+    } else {
+      this.cardWidth = this.minCardWidth;
+      this.cardHeight = this.minCardHeight;
+    }
+
   }
 }

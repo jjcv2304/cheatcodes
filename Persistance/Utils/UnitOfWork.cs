@@ -1,129 +1,86 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using Domain.Categories;
-using Microsoft.EntityFrameworkCore.Internal;
-using NHibernate;
-using NHibernate.Criterion;
+using System.Data.SqlClient;
+using System.Data.SQLite;
+using Application.Interfaces;
 
 namespace Persistance.Utils
 {
-    public class UnitOfWork : IDisposable, IUnitOfWork
+public class UnitOfWork : IUnitOfWork
     {
-        private readonly ISession _session;
-        private readonly ITransaction _transaction;
-        private bool _isAlive = true;
-        private bool _isCommitted;
+        private IDbConnection _connection;
+        private IDbTransaction _transaction;
+        
+        private ICategoryRepository _categoryRepository;
+        private bool _disposed;
 
-        public UnitOfWork(SessionFactory sessionFactory)
+        public UnitOfWork(DatabaseSetting databaseSetting)
         {
-            _session = sessionFactory.OpenSession();
-            _transaction = _session.BeginTransaction(IsolationLevel.ReadCommitted);
+            _connection = new SQLiteConnection(databaseSetting.ConnectionString);
+            _connection.Open();
+            _transaction = _connection.BeginTransaction();
+            var init = CategoryRepository;
         }
 
-        public void Dispose()
+        public ICategoryRepository CategoryRepository
         {
-            if (!_isAlive)
-                return;
-
-            _isAlive = false;
-
-            try
-            {
-                if (_isCommitted)
-                {
-                    _transaction.Commit();
-                }
-            }
-            finally
-            {
-                _transaction.Dispose();
-                _session.Dispose();
-            }
+            get { return _categoryRepository ?? (_categoryRepository = new CategoryRepository(_transaction)); }
         }
 
         public void Commit()
         {
-            if (!_isAlive)
-                return;
-
-            _isCommitted = true;
+            try
+            {
+                _transaction.Commit();
+            }
+            catch
+            {
+                _transaction.Rollback();
+                throw;
+            }
+            finally
+            {
+                _transaction.Dispose();
+                _transaction = _connection.BeginTransaction();
+                resetRepositories();
+            }
         }
 
-        public List<T> Get<T>()
-            where T : class
+        private void resetRepositories()
         {
-            return _session.Query<T>().ToList();
+            _categoryRepository = null;
         }
 
-        public T Get<T>(long id)
-            where T : class
+        public void Dispose()
         {
-            return _session.Get<T>(id);
+            dispose(true);
+            GC.SuppressFinalize(this);
         }
 
-        public void SaveOrUpdate<T>(T entity)
+        private void dispose(bool disposing)
         {
-            _session.SaveOrUpdate(entity);
+            if (!_disposed)
+            {
+                if(disposing)
+                {
+                    if (_transaction != null)
+                    {
+                        _transaction.Dispose();
+                        _transaction = null;
+                    }
+                    if(_connection != null)
+                    {
+                        _connection.Dispose();
+                        _connection = null;
+                    }
+                }
+                _disposed = true;
+            }
         }
 
-        public void Delete<T>(T entity)
+        ~UnitOfWork()
         {
-            _session.Delete(entity);
+            dispose(false);
         }
-
-        public IQueryable<T> Query<T>()
-        {
-            return _session.Query<T>();
-        }
-
-        public IList<Category> GetParentCategories()
-        {
-            var sql =
-                "SELECT c.* FROM  Category c Where c.parentId is null ";
-            var result = _session.CreateSQLQuery(sql)
-                .AddEntity(typeof(Category))
-                .List<Category>();
-            return result;
-        }
-
-        public IList<Category> GetCategoriesByParent(int parentId)
-        {
-            var sql =
-                "SELECT c.* FROM  Category c Where c.parentId = :parentId ";
-            var result = _session.CreateSQLQuery(sql)
-                .AddEntity(typeof(Category))
-                .SetInt32("parentId", parentId)
-                .List<Category>();
-            return result;
-        }
-
-        public IList<Category> GetSiblingsOSf(int categoryId)
-        {
-            var sql =
-                "SELECT cc.* " +
-                "FROM Category cp " +
-                "inner join Category cc on " +
-                "(CASE " +
-                "WHEN cp.ParentId is null " +
-                "THEN cc.ParentId is null " +
-                "Else cp.ParentId = cc.ParentId " +
-                "END) " +
-                "Where cp.CategoryID = :categoryId ";
-            
-            var result = _session.CreateSQLQuery(sql)
-                .AddEntity(typeof(Category))
-                .SetInt32("categoryId", categoryId)
-                .List<Category>();
-
-            return result;
-        }
-
-//        public ISQLQuery CreateSQLQuery(string q)
-//        {
-//            return _session.CreateSQLQuery(q);
-//        }
     }
 }
