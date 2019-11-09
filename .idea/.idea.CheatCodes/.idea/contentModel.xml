@@ -13,19 +13,23 @@
           <e p="Queries" t="Include">
             <e p="CategoryQuery.cs" t="Include" />
             <e p="ICategoryQuery.cs" t="Include" />
+            <e p="ViewModels" t="Include">
+              <e p="CategoryFieldValueVM.cs" t="Include" />
+              <e p="CategoryVM.cs" t="Include" />
+              <e p="FieldVM.cs" t="Include" />
+              <e p="MapService.cs" t="Include" />
+            </e>
           </e>
           <e p="Tests" t="Include">
             <e p="CategoryBuilderTest.cs" t="Include" />
             <e p="CategoryQueryTest.cs" t="Include" />
-          </e>
-          <e p="ViewModels" t="Include">
-            <e p="CategoryVM.cs" t="Include" />
           </e>
         </e>
         <e p="Interfaces" t="Include">
           <e p="ICategoryRepository.cs" t="Include" />
           <e p="IDatabaseService.cs" t="Include" />
           <e p="IRepository.cs" t="Include" />
+          <e p="IUnitOfWork.cs" t="Include" />
           <e p="Tests" t="Include">
             <e p="InMemoryCategoryRepository.cs" t="Include" />
             <e p="RepositoryMock.cs" t="Include" />
@@ -128,15 +132,12 @@
       </e>
       <e p="Domain" t="IncludeRecursive">
         <e p="Bin" t="ExcludeRecursive" />
-        <e p="categories" t="Include">
-          <e p="Category.cs" t="Include" />
-          <e p="CategoryTests.cs" t="Include" />
-        </e>
-        <e p="common" t="Include" />
+        <e p="Category.cs" t="Include" />
+        <e p="CategoryField.cs" t="Include" />
+        <e p="CategoryTests.cs" t="Include" />
         <e p="Domain.csproj" t="IncludeRecursive" />
-        <e p="Items" t="Include">
-          <e p="Item.cs" t="Include" />
-        </e>
+        <e p="Field.cs" t="Include" />
+        <e p="Item.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp2.1" t="Include">
@@ -149,16 +150,7 @@
       <e p="packages" t="ExcludeRecursive" />
       <e p="Persistance" t="IncludeRecursive">
         <e p="Bin" t="ExcludeRecursive" />
-        <e p="categories" t="Include">
-          <e p="CategoryMap.cs" t="Include" />
-          <e p="CategoryRepository.cs" t="Include" />
-        </e>
-        <e p="common" t="Include">
-          <e p="Repository.cs" t="Include" />
-        </e>
-        <e p="Items" t="Include">
-          <e p="ItemMap.cs" t="Include" />
-        </e>
+        <e p="CategoryRepository.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp2.1" t="Include">
@@ -167,11 +159,11 @@
           </e>
         </e>
         <e p="Persistance.csproj" t="IncludeRecursive" />
+        <e p="RepositoryBase.cs" t="Include" />
         <e p="Utils" t="Include">
           <e p="CheatCodesDatabase - Copy.db" t="Include" />
           <e p="CheatCodesDatabase.db" t="Include" />
-          <e p="IUnitOfWork.cs" t="Include" />
-          <e p="SessionFactory.cs" t="Include" />
+          <e p="DatabaseSetting.cs" t="Include" />
           <e p="UnitOfWork.cs" t="Include" />
         </e>
       </e>

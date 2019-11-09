@@ -1,3 +1,0 @@
-<component name="DependencyValidationManager">
-  <scope name="UI_simple" pattern="file[riderModule]:CheatCodes.UI/src/app//*||file[riderModule]:CheatCodes.UI/src/assets//*||file[riderModule]:CheatCodes.UI/src/environments//*||file:CheatCodes.UI/src/index.html||file:CheatCodes.UI/src/main.ts||file:CheatCodes.UI/src/polyfills.ts||file:CheatCodes.UI/src/styles.scss" />
-</component>
