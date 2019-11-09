@@ -3,22 +3,36 @@
 }
 
 .card-container, .front-container, .back-container {
-  height: 200px;
-  width: 200px;
-  border: 1px solid black;
+  min-height: 200px;
+  min-width: 200px;
+  transition: height 0.7s ease-out, width 0.7s ease-out;
+  border: 0.4px solid black;
   display: flex;
   flex-flow: column;
+  border-radius: 15px;
 }
 
 .card-header {
   font-size: larger;
   text-align: center;
   flex-shrink: 0;
+  margin: 5px;
+  border:0;
 }
 
 .card-description {
   flex-grow: 1;
-  margin: 10px;
+  margin: 5px;
+  overflow: auto;
+  border: 0;
+}
+.card-description-field {
+  display: flex;
+  .input-field {
+    flex-grow: 1;
+    margin: 0 5px;
+    border: 0;
+  }
 }
 
 .card-footer {

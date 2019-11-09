@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Application.Categories.Tests;
-using Domain.Categories;
+using Domain;
 
 namespace Application.Interfaces.Tests
 {

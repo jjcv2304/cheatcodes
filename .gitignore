@@ -9,6 +9,17 @@ CheatCodes.WebApi/bin/Debug/netcoreapp2.0/CheatCodes.WebApi.pdb
 CheatCodes.WebApi/bin/Debug/netcoreapp2.0/CheatCodes.WebApi.dll
 CheatCodes.WebApi/bin/Debug/netcoreapp2.0/CheatCodes.WebApi.deps.json
 CheatCodes.WebApi/obj/
+/Presentation/bin/Debug/netcoreapp2.1
+/Presentation/obj
+/Persistance/bin/Debug/netcoreapp2.1
+/Persistance/obj
+/Domain/obj
+/Domain/bin/Debug/netcoreapp2.1
+/Common/bin/Debug/netcoreapp2.1
+/Common/obj
+/Application/bin/Debug/netcoreapp2.1
+/Application/obj
+/.vs/CheatCodes
 /Application/bin/Debug/netcoreapp2.1
 /Application/obj
 /.vs/CheatCodes

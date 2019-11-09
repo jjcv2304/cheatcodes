@@ -43,6 +43,26 @@ namespace Application.Interfaces.Tests
             }
         }
 
+        public IEnumerable<T> All()
+        {
+            throw new NotImplementedException();
+        }
+
+        public T Find(long id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Remove(long id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Remove(T entity)
+        {
+            throw new NotImplementedException();
+        }
+
         public List<T> GetAll()
         {
             return Items;

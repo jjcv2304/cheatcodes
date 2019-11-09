@@ -1,4 +1,4 @@
-using Application.Categories.ViewModels;
+using Application.Categories.Queries.ViewModels;
 
 namespace Application.Categories.Commands
 {
