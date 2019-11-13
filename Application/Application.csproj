@@ -5,8 +5,9 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Items\Commands" />
-      <Folder Include="Items\Queries" />
+      <Compile Remove="Items\**" />
+      <EmbeddedResource Remove="Items\**" />
+      <None Remove="Items\**" />
     </ItemGroup>
 
     <ItemGroup>
