@@ -1,5 +1,5 @@
-using Application.Categories.Queries.ViewModels;
 using Application.Interfaces;
+using Dtos;
 
 namespace Application.Categories.Commands
 {
@@ -11,22 +11,21 @@ namespace Application.Categories.Commands
         {
             _categoryRepository = unitOfWork.CategoryRepository;
         }
-        
-        public void Add(CategoryVM categoryVM)
+        public void Add(CategoryDto categoryDto)
         {
-            var category = MapService.Map(categoryVM);
+            var category = MapService.Map(categoryDto);
             _categoryRepository.Add(category);
         }
         
-        public void Update(CategoryVM categoryVM)
+        public void Update(CategoryDto categoryDto)
         {
-            var category = MapService.Map(categoryVM);
+            var category = MapService.Map(categoryDto);
             _categoryRepository.Update(category);
         }
         
-        public void Delete(CategoryVM categoryVM)
+        public void Delete(CategoryDto categoryDto)
         {
-            var category = MapService.Map(categoryVM);
+            var category = MapService.Map(categoryDto);
            _categoryRepository.Remove(category);
         }
     }

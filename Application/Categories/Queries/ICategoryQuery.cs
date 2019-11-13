@@ -1,17 +1,17 @@
 using System.Collections.Generic;
-using Application.Categories.Queries.ViewModels;
+using Dtos;
 using NUnit.Framework;
 
 namespace Application.Categories.Queries
 {
     public interface ICategoryQuery
     {
-        CategoryVM ById(long categoryId);
-        List<CategoryVM> ByPartialName(string categoryName);
-        List<CategoryVM> ByExactName(string categoryName);
-        List<CategoryVM> All();
-        List<CategoryVM> AllParents();
-        List<CategoryVM> GetAllChilds(int categoryParentId);
-        List<CategoryVM> GetSiblingsOf(int categoryChildId);
+        CategoryDto ById(long categoryId);
+        List<CategoryDto> ByPartialName(string categoryName);
+        List<CategoryDto> ByExactName(string categoryName);
+        List<CategoryDto> All();
+        List<CategoryDto> AllParents();
+        List<CategoryDto> GetAllChilds(int categoryParentId);
+        List<CategoryDto> GetSiblingsOf(int categoryChildId);
     }
 }

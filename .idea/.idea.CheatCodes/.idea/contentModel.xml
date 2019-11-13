@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\GIT\CheatCodes" t="IncludeFlat">
+    <e p="C:\Users\jjcv2\.nuget\packages\microsoft.net.test.sdk\16.4.0\build\netcoreapp2.1" t="Include">
+      <e p="Microsoft.NET.Test.Sdk.Program.cs" t="Include" />
+    </e>
+    <e p="C:\Users\jjcv2\.nuget\packages\microsoft.testplatform.testhost\16.4.0\build\netcoreapp2.1\x64\testhost.dll" t="Include" />
+    <e p="C:\Users\jjcv2\.nuget\packages\microsoft.testplatform.testhost\16.4.0\build\netcoreapp2.1\x64\testhost.exe" t="Include" />
+    <e p="C:\Users\jjcv2\.nuget\packages\nunit3testadapter\3.15.1\build\netcoreapp2.0\nunit.engine.api.dll" t="Include" />
+    <e p="C:\Users\jjcv2\.nuget\packages\nunit3testadapter\3.15.1\build\netcoreapp2.0\nunit.engine.dll" t="Include" />
+    <e p="C:\Users\jjcv2\.nuget\packages\nunit3testadapter\3.15.1\build\netcoreapp2.0\NUnit3.TestAdapter.dll" t="Include" />
+    <e p="C:\Users\jjcv2\.nuget\packages\nunit3testadapter\3.15.1\build\netcoreapp2.0\NUnit3.TestAdapter.pdb" t="Include" />
+    <e p="C:\Users\jjcv2\.Rider2019.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\jjcv2\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_CheatCodes.467908422.00" t="ExcludeRecursive" />
+    <e p="D:\GIT\CheatCodes" t="IncludeFlat">
       <e p="Application" t="IncludeRecursive">
         <e p="Application.csproj" t="IncludeRecursive" />
         <e p="Bin" t="ExcludeRecursive" />
@@ -10,15 +21,10 @@
             <e p="CategoryCommand.cs" t="Include" />
             <e p="ICategoryCommand.cs" t="Include" />
           </e>
+          <e p="MapService.cs" t="Include" />
           <e p="Queries" t="Include">
             <e p="CategoryQuery.cs" t="Include" />
             <e p="ICategoryQuery.cs" t="Include" />
-            <e p="ViewModels" t="Include">
-              <e p="CategoryFieldValueVM.cs" t="Include" />
-              <e p="CategoryVM.cs" t="Include" />
-              <e p="FieldVM.cs" t="Include" />
-              <e p="MapService.cs" t="Include" />
-            </e>
           </e>
           <e p="Tests" t="Include">
             <e p="CategoryBuilderTest.cs" t="Include" />
@@ -35,83 +41,97 @@
             <e p="RepositoryMock.cs" t="Include" />
           </e>
         </e>
-        <e p="Items" t="Include">
-          <e p="Commands" t="Include" />
-          <e p="Queries" t="Include" />
-        </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp2.1" t="Include">
               <e p="Application.AssemblyInfo.cs" t="Include" />
-              <e p="Application.Program.cs" t="Include" />
             </e>
           </e>
         </e>
       </e>
       <e p="CheatCodes.sln" t="IncludeFlat" />
-      <e p="CheatCodes.UI\node_modules" t="ExcludeRecursive">
-        <e p="@angular\animations" t="IncludeRecursive" />
-        <e p="@angular\cli" t="IncludeRecursive" />
-        <e p="@angular\common" t="IncludeRecursive" />
-        <e p="@angular\compiler" t="IncludeRecursive" />
-        <e p="@angular\compiler-cli" t="IncludeRecursive" />
-        <e p="@angular\core" t="IncludeRecursive" />
-        <e p="@angular\forms" t="IncludeRecursive" />
-        <e p="@angular\http" t="IncludeRecursive" />
-        <e p="@angular\platform-browser" t="IncludeRecursive" />
-        <e p="@angular\platform-browser-dynamic" t="IncludeRecursive" />
-        <e p="@angular\router" t="IncludeRecursive" />
-        <e p="@angular-devkit\build-angular" t="IncludeRecursive" />
-        <e p="@types" t="IncludeRecursive">
-          <e p="jasmine" t="IncludeRecursive" />
-          <e p="jasminewd2" t="IncludeRecursive" />
-          <e p="node" t="IncludeRecursive" />
-        </e>
-        <e p="codelyzer" t="IncludeRecursive" />
-        <e p="core-js" t="IncludeRecursive" />
-        <e p="jasmine-core" t="IncludeRecursive" />
-        <e p="jasmine-spec-reporter" t="IncludeRecursive" />
-        <e p="karma" t="IncludeRecursive" />
-        <e p="karma-chrome-launcher" t="IncludeRecursive" />
-        <e p="karma-coverage-istanbul-reporter" t="IncludeRecursive" />
-        <e p="karma-jasmine" t="IncludeRecursive" />
-        <e p="karma-jasmine-html-reporter" t="IncludeRecursive" />
-        <e p="ngx-flip" t="IncludeRecursive" />
-        <e p="protractor" t="IncludeRecursive" />
-        <e p="rxjs" t="IncludeRecursive" />
-        <e p="ts-node" t="IncludeRecursive" />
-        <e p="tslint" t="IncludeRecursive" />
-        <e p="typescript\lib\lib.d.ts" t="IncludeRecursive" />
-        <e p="typescript\lib\lib.dom.d.ts" t="IncludeRecursive" />
-        <e p="typescript\lib\lib.dom.iterable.d.ts" t="IncludeRecursive" />
-        <e p="typescript\lib\lib.es2015.collection.d.ts" t="IncludeRecursive" />
-        <e p="typescript\lib\lib.es2015.core.d.ts" t="IncludeRecursive" />
-        <e p="typescript\lib\lib.es2015.d.ts" t="IncludeRecursive" />
-        <e p="typescript\lib\lib.es2015.generator.d.ts" t="IncludeRecursive" />
-        <e p="typescript\lib\lib.es2015.iterable.d.ts" t="IncludeRecursive" />
-        <e p="typescript\lib\lib.es2015.promise.d.ts" t="IncludeRecursive" />
-        <e p="typescript\lib\lib.es2015.proxy.d.ts" t="IncludeRecursive" />
-        <e p="typescript\lib\lib.es2015.reflect.d.ts" t="IncludeRecursive" />
-        <e p="typescript\lib\lib.es2015.symbol.d.ts" t="IncludeRecursive" />
-        <e p="typescript\lib\lib.es2015.symbol.wellknown.d.ts" t="IncludeRecursive" />
-        <e p="typescript\lib\lib.es2016.array.include.d.ts" t="IncludeRecursive" />
-        <e p="typescript\lib\lib.es2016.d.ts" t="IncludeRecursive" />
-        <e p="typescript\lib\lib.es2016.full.d.ts" t="IncludeRecursive" />
-        <e p="typescript\lib\lib.es2017.d.ts" t="IncludeRecursive" />
-        <e p="typescript\lib\lib.es2017.full.d.ts" t="IncludeRecursive" />
-        <e p="typescript\lib\lib.es2017.intl.d.ts" t="IncludeRecursive" />
-        <e p="typescript\lib\lib.es2017.object.d.ts" t="IncludeRecursive" />
-        <e p="typescript\lib\lib.es2017.sharedmemory.d.ts" t="IncludeRecursive" />
-        <e p="typescript\lib\lib.es2017.string.d.ts" t="IncludeRecursive" />
-        <e p="typescript\lib\lib.es5.d.ts" t="IncludeRecursive" />
-        <e p="typescript\lib\lib.es6.d.ts" t="IncludeRecursive" />
-        <e p="typescript\lib\lib.esnext.asynciterable.d.ts" t="IncludeRecursive" />
-        <e p="typescript\lib\lib.esnext.d.ts" t="IncludeRecursive" />
-        <e p="typescript\lib\lib.esnext.full.d.ts" t="IncludeRecursive" />
-        <e p="typescript\lib\lib.scripthost.d.ts" t="IncludeRecursive" />
-        <e p="typescript\lib\lib.webworker.d.ts" t="IncludeRecursive" />
-        <e p="zone.js" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\@angular\animations" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\@angular\cli" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\@angular\common" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\@angular\compiler" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\@angular\compiler-cli" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\@angular\core" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\@angular\forms" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\@angular\http" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\@angular\platform-browser" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\@angular\platform-browser-dynamic" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\@angular\router" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\@angular-devkit\architect" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\@angular-devkit\build-angular" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\@angular-devkit\build-optimizer" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\@angular-devkit\core" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\@ngtools\webpack" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\@types" t="IncludeRecursive">
+        <e p="jasmine" t="IncludeRecursive" />
+        <e p="jasminewd2" t="IncludeRecursive" />
+        <e p="node" t="IncludeRecursive" />
       </e>
+      <e p="CheatCodes.UI\node_modules\ajv" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\blocking-proxy" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\chalk" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\codelyzer" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\commander" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\core-js" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\fast-deep-equal" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\jasmine-core" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\jasmine-spec-reporter" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\karma" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\karma-chrome-launcher" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\karma-coverage-istanbul-reporter" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\karma-jasmine" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\karma-jasmine-html-reporter" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\license-webpack-plugin" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\ngx-flip" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\portfinder" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\postcss" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\protractor" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\reflect-metadata" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\rxjs" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\source-map" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\symbol-observable" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\tree-kill" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\ts-node" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\tsconfig" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\tsickle" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\tslib" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\tslint" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\typescript\lib\lib.d.ts" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\typescript\lib\lib.dom.d.ts" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\typescript\lib\lib.dom.iterable.d.ts" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\typescript\lib\lib.es2015.collection.d.ts" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\typescript\lib\lib.es2015.core.d.ts" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\typescript\lib\lib.es2015.d.ts" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\typescript\lib\lib.es2015.generator.d.ts" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\typescript\lib\lib.es2015.iterable.d.ts" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\typescript\lib\lib.es2015.promise.d.ts" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\typescript\lib\lib.es2015.proxy.d.ts" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\typescript\lib\lib.es2015.reflect.d.ts" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\typescript\lib\lib.es2015.symbol.d.ts" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\typescript\lib\lib.es2015.symbol.wellknown.d.ts" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\typescript\lib\lib.es2016.array.include.d.ts" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\typescript\lib\lib.es2016.d.ts" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\typescript\lib\lib.es2016.full.d.ts" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\typescript\lib\lib.es2017.d.ts" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\typescript\lib\lib.es2017.full.d.ts" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\typescript\lib\lib.es2017.intl.d.ts" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\typescript\lib\lib.es2017.object.d.ts" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\typescript\lib\lib.es2017.sharedmemory.d.ts" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\typescript\lib\lib.es2017.string.d.ts" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\typescript\lib\lib.es5.d.ts" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\typescript\lib\lib.es6.d.ts" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\typescript\lib\lib.esnext.asynciterable.d.ts" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\typescript\lib\lib.esnext.d.ts" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\typescript\lib\lib.esnext.full.d.ts" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\typescript\lib\lib.scripthost.d.ts" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\typescript\lib\lib.webworker.d.ts" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\uri-js" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\webdriver-js-extender" t="IncludeRecursive" />
+      <e p="CheatCodes.UI\node_modules\zone.js" t="IncludeRecursive" />
       <e p="common" t="IncludeRecursive">
         <e p="Bin" t="ExcludeRecursive" />
         <e p="Common.csproj" t="IncludeRecursive" />
@@ -142,7 +162,20 @@
           <e p="Debug" t="Include">
             <e p="netcoreapp2.1" t="Include">
               <e p="Domain.AssemblyInfo.cs" t="Include" />
-              <e p="Domain.Program.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="Dtos" t="IncludeRecursive">
+        <e p="Bin" t="ExcludeRecursive" />
+        <e p="CategoryDto.cs" t="Include" />
+        <e p="CategoryFieldValueDto.cs" t="Include" />
+        <e p="Dtos.csproj" t="IncludeRecursive" />
+        <e p="FieldDto.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.1" t="Include">
+              <e p="Dtos.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
         </e>
@@ -191,19 +224,7 @@
           <e p="BaseController.cs" t="Include" />
           <e p="Envelope.cs" t="Include" />
         </e>
-        <e p="wwwroot" t="Include" />
       </e>
     </e>
-    <e p="C:\Users\jjcv2\.nuget\packages\nunit3testadapter\3.11.0\build\netcoreapp1.0\nunit.engine.netstandard.dll" t="Include" />
-    <e p="C:\Users\jjcv2\.nuget\packages\nunit3testadapter\3.11.0\build\netcoreapp1.0\NUnit3.TestAdapter.dll" t="Include" />
-    <e p="C:\Users\jjcv2\.nuget\packages\nunit3testadapter\3.11.0\build\netcoreapp1.0\NUnit3.TestAdapter.pdb" t="Include" />
-    <e p="C:\Users\jjcv2\.nuget\packages\nunit3testadapter\3.11.2\build\netcoreapp1.0\nunit.engine.netstandard.dll" t="Include" />
-    <e p="C:\Users\jjcv2\.nuget\packages\nunit3testadapter\3.11.2\build\netcoreapp1.0\NUnit3.TestAdapter.dll" t="Include" />
-    <e p="C:\Users\jjcv2\.nuget\packages\nunit3testadapter\3.11.2\build\netcoreapp1.0\NUnit3.TestAdapter.pdb" t="Include" />
-    <e p="C:\Users\jjcv2\.Rider2018.3\config\consoles\db" t="IncludeRecursive" />
-    <e p="C:\Users\jjcv2\.Rider2018.3\config\extensions" t="IncludeRecursive" />
-    <e p="C:\Users\jjcv2\.Rider2018.3\config\scratches" t="IncludeRecursive" />
-    <e p="C:\Users\jjcv2\.Rider2018.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\jjcv2\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_CheatCodes.-1816955033.00" t="ExcludeRecursive" />
   </component>
 </project>

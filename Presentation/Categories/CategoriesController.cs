@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using Application.Categories.Commands;
 using Application.Categories.Queries;
-using Application.Categories.Queries.ViewModels;
+using Dtos;
 using Microsoft.AspNetCore.Mvc;
 using Persistance.Utils;
 using Presentation.Utils;
@@ -61,23 +61,23 @@ namespace Presentation.Categories
         }
 
         [HttpPost]
-        public IActionResult Post([FromBody]CategoryVM categoryVM)
+        public IActionResult Post([FromBody]CategoryDto categoryDto)
         {
-            _categoryCommand.Add(categoryVM);
+            _categoryCommand.Add(categoryDto);
             return Ok();
         }
 
         [HttpPut]
-        public IActionResult Put([FromBody]CategoryVM categoryVM)
+        public IActionResult Put([FromBody]CategoryDto categoryDto)
         {
-            _categoryCommand.Update(categoryVM);
+            _categoryCommand.Update(categoryDto);
             return Ok();
         }
         
         [HttpDelete]
-        public IActionResult Delete([FromBody]CategoryVM categoryVM)
+        public IActionResult Delete([FromBody]CategoryDto categoryDto)
         {
-            _categoryCommand.Delete(categoryVM);
+            _categoryCommand.Delete(categoryDto);
             return Ok();
         }
     }

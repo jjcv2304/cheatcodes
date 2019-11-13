@@ -1,6 +1,6 @@
-namespace Application.Categories.Queries.ViewModels
+namespace Dtos
 {
-    public class CategoryFieldValueVM
+    public class CategoryFieldValueDto
     {
         public long FieldId { get; set; }
         public long  CategoryId { get; set; }

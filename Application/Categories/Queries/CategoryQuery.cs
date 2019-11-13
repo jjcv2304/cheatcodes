@@ -1,8 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
-using Application.Categories.Queries.ViewModels;
 using Application.Interfaces;
-using NUnit.Framework;
+using Dtos;
 
 namespace Application.Categories.Queries
 {
@@ -15,66 +14,66 @@ namespace Application.Categories.Queries
             _categoryRepository = unitOfWork.CategoryRepository;
         }
         
-        public List<CategoryVM> ByExactName(string categoryName)
+        public List<CategoryDto> ByExactName(string categoryName)
         {
             var category = _categoryRepository.GetByExactName(categoryName);
 
-            var categoryVM = MapService.Map(category);
+            var categoryDto = MapService.Map(category);
 
-            return categoryVM;
+            return categoryDto;
         }
         
-        public List<CategoryVM> ByPartialName(string categoryName)
+        public List<CategoryDto> ByPartialName(string categoryName)
         {
             var category = _categoryRepository.GetByPartialName(categoryName);
 
-            var categoryVM = MapService.Map(category);
+            var categoryDto = MapService.Map(category);
 
-            return categoryVM;
+            return categoryDto;
         }
         
-        public CategoryVM ById(long categoryId)
+        public CategoryDto ById(long categoryId)
         {
             var category = _categoryRepository.Find(categoryId);
 
-            var categoryVM = MapService.Map(category);
+            var categoryDto = MapService.Map(category);
 
-            return categoryVM;
+            return categoryDto;
         }
 
-        public List<CategoryVM> All()
+        public List<CategoryDto> All()
         {
             var categories = _categoryRepository.All();
 
-            var categoriesVM = MapService.Map(categories);
+            var categorieDtos = MapService.Map(categories);
 
-            return categoriesVM;
+            return categorieDtos;
         }
         
-        public List<CategoryVM> AllParents()
+        public List<CategoryDto> AllParents()
         {
             var categories = _categoryRepository.GetAllParents();
 
-            var categoriesVM = MapService.Map(categories);
+            var categorieDtos = MapService.Map(categories);
 
-            return categoriesVM;
+            return categorieDtos;
         }
 
-        public List<CategoryVM> GetAllChilds(int categoryParentId)
+        public List<CategoryDto> GetAllChilds(int categoryParentId)
         {
             var categories = _categoryRepository.GetAllChilds(categoryParentId);
 
-            var categoriesVM = MapService.Map(categories);
+            var categorieDtos = MapService.Map(categories);
 
-            return categoriesVM;
+            return categorieDtos;
         }
-        public List<CategoryVM> GetSiblingsOf(int categoryChildId)
+        public List<CategoryDto> GetSiblingsOf(int categoryChildId)
         {
             var categories = _categoryRepository.GetSiblingsOf(categoryChildId);
 
-            var categoriesVM = MapService.Map(categories);
+            var categorieDtos = MapService.Map(categories);
 
-            return categoriesVM;
+            return categorieDtos;
         }
         
     }

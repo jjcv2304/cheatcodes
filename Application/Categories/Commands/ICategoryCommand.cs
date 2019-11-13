@@ -1,11 +1,11 @@
-using Application.Categories.Queries.ViewModels;
+using Dtos;
 
 namespace Application.Categories.Commands
 {
     public interface ICategoryCommand
     {
-        void Add(CategoryVM categoryVM);
-        void Update(CategoryVM categoryVM);
-        void Delete(CategoryVM categoryVM);
+        void Add(CategoryDto categoryDto);
+        void Update(CategoryDto categoryDto);
+        void Delete(CategoryDto categoryDto);
     }
 }
