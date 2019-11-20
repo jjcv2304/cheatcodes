@@ -2,7 +2,7 @@ using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Data.SQLite;
-using Application.Interfaces;
+using Application.Utils.Interfaces;
 
 namespace Persistance.Utils
 {

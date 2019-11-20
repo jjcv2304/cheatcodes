@@ -1,7 +1,6 @@
-using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
-namespace Application.Interfaces
+namespace Application.Utils.Interfaces
 {
     public interface IDatabaseService
     {

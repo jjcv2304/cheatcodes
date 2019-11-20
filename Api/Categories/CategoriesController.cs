@@ -1,46 +1,50 @@
 using System.Collections.Generic;
-using Application.Categories.Commands;
+using Application;
 using Application.Categories.Queries;
+using Application.Utils;
+using CSharpFunctionalExtensions;
 using Dtos;
 using Microsoft.AspNetCore.Mvc;
 using Persistance.Utils;
 using Presentation.Utils;
+// ReSharper disable SuggestVarOrType_SimpleTypes
 
 namespace Presentation.Categories
 {
     [Route("api/[controller]")]
     public class CategoriesController : BaseController
     {
+        private readonly Messages _messages;
         private readonly ICategoryQuery _categoryQuery;
-        private readonly ICategoryCommand _categoryCommand;
 
-        public CategoriesController(UnitOfWork unitOfWork) : base(unitOfWork)
+        public CategoriesController(UnitOfWork unitOfWork, Messages messages) : base(unitOfWork)
         {
+            _messages = messages;
             _categoryQuery = new CategoryQuery(unitOfWork);
-            _categoryCommand =  new CategoryCommand(unitOfWork);
         }
 
         // GET api/values
         [HttpGet]
         public IActionResult Get()
         {
-            var result= _categoryQuery.AllParents();
+            var result = _categoryQuery.AllParents();
             return Ok(result);
         }
 
         [Route("[action]/{parentId}")]
         public IActionResult GetChildsOf(int parentId)
         {
-            var result= _categoryQuery.GetAllChilds(parentId);
+            var result = _categoryQuery.GetAllChilds(parentId);
             return Ok(result);
         }
+
         [Route("[action]/{categoryId}")]
         public IActionResult GetSiblingsOf(int categoryId)
         {
-            var result= _categoryQuery.GetSiblingsOf(categoryId);
+            var result = _categoryQuery.GetSiblingsOf(categoryId);
             return Ok(result);
         }
-        
+
         // GET api/values/5
         [HttpGet("{id}")]
         public IActionResult Get(int id)
@@ -61,24 +65,27 @@ namespace Presentation.Categories
         }
 
         [HttpPost]
-        public IActionResult Post([FromBody]CategoryDto categoryDto)
+        public IActionResult Create([FromBody]CategoryCreateDto categoryCreateDto)
         {
-            _categoryCommand.Add(categoryDto);
-            return Ok();
+            CategoryCreateCommand categoryCreateCommand = MapService.Map(categoryCreateDto);
+            Result result = _messages.Dispatch(categoryCreateCommand);
+            return FromResult(result);
         }
 
         [HttpPut]
-        public IActionResult Put([FromBody]CategoryDto categoryDto)
+        public IActionResult Update([FromBody]CategoryUpdateDto categoryUpdateDto)
         {
-            _categoryCommand.Update(categoryDto);
-            return Ok();
+            CategoryUpdateCommand categoryUpdateCommand = MapService.Map(categoryUpdateDto);
+            Result result = _messages.Dispatch(categoryUpdateCommand);
+            return FromResult(result);
         }
-        
+
         [HttpDelete]
-        public IActionResult Delete([FromBody]CategoryDto categoryDto)
+        public IActionResult Delete([FromBody]CategoryDeleteDto categoryDeleteDto)
         {
-            _categoryCommand.Delete(categoryDto);
-            return Ok();
+            CategoryDeleteCommand categoryDeleteCommand = MapService.Map(categoryDeleteDto);
+            Result result = _messages.Dispatch(categoryDeleteCommand);
+            return FromResult(result);
         }
     }
 }

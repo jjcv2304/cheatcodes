@@ -2,6 +2,7 @@
 
     <PropertyGroup>
         <TargetFramework>netcoreapp2.1</TargetFramework>
+        <RootNamespace>Presentation</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
@@ -13,6 +14,8 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Application\Application.csproj" />
+      <ProjectReference Include="..\Common\Common.csproj" />
+      <ProjectReference Include="..\Domain\Domain.csproj" />
       <ProjectReference Include="..\Dtos\Dtos.csproj" />
       <ProjectReference Include="..\Persistance\Persistance.csproj" />
     </ItemGroup>

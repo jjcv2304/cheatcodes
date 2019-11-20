@@ -5,7 +5,7 @@ namespace Common.Utils
 {
     public abstract class Entity
     {
-        public virtual long Id { get; set; }
+        public virtual int Id { get; set; }
 
         public override bool Equals(object obj)
         {

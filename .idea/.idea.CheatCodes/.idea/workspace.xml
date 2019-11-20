@@ -2,26 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3faa2e43-d490-49eb-a9b8-ac54012f984c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.CheatCodes/.idea/projectSettingsUpdater.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.CheatCodes/.idea/scopes/Domain.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CheatCodes/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CheatCodes/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CheatCodes/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CheatCodes/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CheatCodes/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CheatCodes/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.CheatCodes/riderModule.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CheatCodes/riderModule.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Application.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Categories/Commands/CategoryCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Categories/Commands/CategoryCommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Categories/Commands/ICategoryCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Categories/Commands/ICategoryCommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Categories/Queries/CategoryQuery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Categories/Queries/CategoryQuery.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Categories/Queries/ICategoryQuery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Categories/Queries/ICategoryQuery.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Categories/Queries/ViewModels/CategoryFieldValueVM.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Categories/Queries/ViewModels/CategoryVM.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Categories/Queries/ViewModels/FieldVM.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Categories/Queries/ViewModels/MapService.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/CheatCodes.sln" beforeDir="false" afterPath="$PROJECT_DIR$/CheatCodes.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/Common.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dtos/Class1.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dtos/Dtos.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Dtos/Dtos.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dtos/Dtos.csproj.user" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Presentation/Categories/CategoriesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Presentation/Categories/CategoriesController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Presentation/Presentation.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Presentation/Presentation.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Presentation/Categories/CategoriesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Categories/CategoriesController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Presentation/Presentation.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Api.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Presentation/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Presentation/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Properties/launchSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Presentation/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Presentation/Utils/BaseController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Utils/BaseController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Presentation/Utils/Envelope.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Utils/Envelope.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Presentation/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/Api/appsettings.Development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Presentation/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Api/appsettings.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -86,7 +81,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/CheatCodes.WebApi/Startup.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Presentation/Utils/Envelope.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Api/Utils/Envelope.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CheatCodes.WebApi/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Application/Categories/MapService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Application/Categories/Tests/CategoryQueryTest.cs" root0="FORCE_HIGHLIGHTING" />
@@ -117,16 +112,15 @@
     <setting file="file://$USER_HOME$/AppData/Roaming/NuGet/NuGet.Config" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Persistance/Utils/UnitOfWork.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Persistance/Utils/DatabaseSetting.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Presentation/Startup.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Presentation/Program.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Presentation/Categories/CategoriesController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Presentation/Utils/BaseController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Api/Startup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Api/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Api/Categories/CategoriesController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Api/Utils/BaseController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Persistance/CategoryRepository.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Domain/Fields.cs" />
         <option value="$PROJECT_DIR$/Domain/CategoryFields.cs" />
         <option value="$PROJECT_DIR$/Persistance/FieldsMap.cs" />
         <option value="$PROJECT_DIR$/Persistance/FieldMap.cs" />
@@ -177,19 +171,22 @@
         <option value="$PROJECT_DIR$/Dtos/CategoryFieldValueDto.cs" />
         <option value="$PROJECT_DIR$/Application/Categories/MapService.cs" />
         <option value="$PROJECT_DIR$/Application/Categories/Queries/CategoryQuery.cs" />
+        <option value="$PROJECT_DIR$/Api/Categories/CategoriesController.cs" />
       </list>
     </option>
   </component>
   <component name="NamedScopeManager">
-    <scope name="UI" pattern="file[riderModule]:CheatCodes.UI//*" />
-    <scope name="Persistance" pattern="file:Persistance/RepositoryBase.cs||file[riderModule]:Persistance//*" />
-    <scope name="test" pattern="file[riderModule]:Application/Categories//*" />
+    <scope name="Dtos" pattern="file[riderModule]:Dtos//*||file[riderModule]:Dtos/*" />
+    <order>
+      <scope name="Domain" />
+    </order>
   </component>
   <component name="ProjectId" id="1TZJwKzp18L6SZ8SOYW8z4cmVdo" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="sqlserver&#10;sqlite" />
     <property name="NewWatcherDialog.advanced.open" value="true" />
     <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
@@ -205,11 +202,17 @@
     <property name="editor.config.ad.shown" value="true" />
     <property name="full.screen.before.presentation.mode" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Presentation/bin" />
+    <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.stylelint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.stylelint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.stylelint" value="" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="ts.external.directory.path" value="D:\GIT\CheatCodes\CheatCodes.UI\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
@@ -308,7 +311,7 @@
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <option name="USE_MONO" value="0" />
       <option name="RUNTIME_ARGUMENTS" value="" />
-      <option name="PROJECT_PATH" value="$PROJECT_DIR$/Presentation/Presentation.csproj" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/Api/Api.csproj" />
       <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
       <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
       <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
@@ -439,7 +442,8 @@
       <workItem from="1554835675683" duration="647000" />
       <workItem from="1555152489276" duration="634000" />
       <workItem from="1555232062553" duration="5810000" />
-      <workItem from="1573661939577" duration="1301000" />
+      <workItem from="1573661939577" duration="4071000" />
+      <workItem from="1573666194834" duration="1361000" />
     </task>
     <task id="LOCAL-00001" summary="Infrastructure refactor">
       <created>1541936350455</created>
@@ -581,7 +585,14 @@
       <option name="project" value="LOCAL" />
       <updated>1554623002520</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Separating dtos">
+      <created>1573663651661</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1573663651661</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -633,7 +644,7 @@
       <select />
     </coverage-tree-state>
   </component>
-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -696,35 +707,22 @@
     <MESSAGE value="Migrating to Dapper" />
     <MESSAGE value="Adding CategoryFields" />
     <MESSAGE value="Expand Card basic functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="Expand Card basic functionality" />
+    <MESSAGE value="Separating dtos" />
+    <option name="LAST_COMMIT_MESSAGE" value="Separating dtos" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Presentation/Categories/CategoriesController.cs</url>
-          <line>46</line>
-          <properties documentPath="$PROJECT_DIR$/Presentation/Categories/CategoriesController.cs" initialLine="42">
-            <startOffsets>
-              <option value="1398" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1399" />
-            </endOffsets>
-          </properties>
+          <url>file://$PROJECT_DIR$/Api/Categories/CategoriesController.cs</url>
+          <line>47</line>
+          <properties documentPath="$PROJECT_DIR$/Presentation/Categories/CategoriesController.cs" initialLine="42" />
           <option name="timeStamp" value="53" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Presentation/Utils/BaseController.cs</url>
+          <url>file://$PROJECT_DIR$/Api/Utils/BaseController.cs</url>
           <line>29</line>
-          <properties documentPath="$PROJECT_DIR$/Presentation/Utils/BaseController.cs" initialLine="29">
-            <startOffsets>
-              <option value="702" />
-            </startOffsets>
-            <endOffsets>
-              <option value="750" />
-            </endOffsets>
-          </properties>
+          <properties documentPath="$PROJECT_DIR$/Presentation/Utils/BaseController.cs" initialLine="29" />
           <option name="timeStamp" value="58" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
@@ -752,6 +750,19 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="67" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Api/Categories/CategoriesController.cs</url>
+          <line>17</line>
+          <properties documentPath="$PROJECT_DIR$/Api/Categories/CategoriesController.cs" initialLine="17">
+            <startOffsets>
+              <option value="539" />
+            </startOffsets>
+            <endOffsets>
+              <option value="540" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="68" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
-using Application.Interfaces;
+using Application.Utils.Interfaces;
 using Dapper;
 using Domain;
 using Persistance.Utils;
@@ -15,15 +15,7 @@ namespace Persistance
         {
         }
 
-        public IEnumerable<Category> All()
-        {
-            return Connection.Query<Category>(
-                "SELECT * FROM Category",
-                transaction: Transaction
-            ).ToList();
-        }
-
-        public Category Find(long id)
+        public Category GetById(int id)
         {
             return Connection.Query<Category>(
                 "SELECT * FROM Category WHERE CategoryId = @CategoryId",
@@ -41,16 +33,16 @@ namespace Persistance
             );
         }
 
-        public void Remove(Category entity)
+        public void Delete(Category entity)
         {
             Remove(entity.Id);
         }
 
-        public void Add(Category entity)
+        public void Create(Category entity)
         {
             entity.Id = Connection.ExecuteScalar<int>(
                 "INSERT INTO Category(Name) VALUES(@Name); SELECT SCOPE_IDENTITY()",
-                param: new {Name = entity.Name},
+                param: new { Name = entity.Name },
                 transaction: Transaction
             );
         }
@@ -64,26 +56,17 @@ namespace Persistance
             );
             foreach (var categoryField in entity.CategoryFields)
             {
-                updateCategoryField(categoryField);
+                UpdateCategoryField(categoryField);
             }
         }
 
-        private void updateCategoryField(CategoryField entity)
+        private void UpdateCategoryField(CategoryField entity)
         {
             Connection.Execute(
                 "UPDATE CategoryField SET Value = @Value  WHERE CategoryId = @CategoryId AND FieldId = @FieldId",
                 param: new {Value = entity.Value, CategoryId = entity.Category.Id, FieldId = entity.Field.Id},
                 transaction: Transaction
             );
-        }        
-        
-        public Category FindByName(string name)
-        {
-            return Connection.Query<Category>(
-                "SELECT * FROM Category WHERE Name = @Name",
-                param: new {Name = name},
-                transaction: Transaction
-            ).FirstOrDefault();
         }
 
         public IList<Category> GetByPartialName(string categoryName)

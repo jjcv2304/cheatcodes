@@ -3,8 +3,7 @@ using System.Linq;
 using Domain;
 using Dtos;
 
-
-namespace Application.Categories
+namespace Application.Utils
 {
     public static class MapService
     {
@@ -45,6 +44,64 @@ namespace Application.Categories
         {
             return categoriesVM.Select(Map).ToList();
         }
+
+        public static Category Map(CategoryCreateCommand categoryCreateCommand)
+        {
+            if (categoryCreateCommand == null) return null;
+            return new Category()
+            {
+                Description = categoryCreateCommand.Description,
+                Name = categoryCreateCommand.Name
+            };
+        }
+
+        public static Category Map(CategoryUpdateCommand categoryUpdateCommand)
+        {
+            if (categoryUpdateCommand == null) return null;
+            return new Category()
+            {
+                Id = categoryUpdateCommand.Id,
+                Description = categoryUpdateCommand.Description,
+                Name = categoryUpdateCommand.Name
+            };
+        }
+
+        public static Category Map(CategoryDeleteCommand categoryDeleteCommand)
+        {
+            if (categoryDeleteCommand == null) return null;
+            return new Category()
+            {
+                Id = categoryDeleteCommand.Id
+            };
+        }
+
+        public static CategoryCreateCommand Map(CategoryCreateDto categoryCreateDto)
+        {
+            if (categoryCreateDto == null) return null;
+            return new CategoryCreateCommand(
+                categoryCreateDto.Description,
+                categoryCreateDto.Name
+            );
+        }
+
+        public static CategoryUpdateCommand Map(CategoryUpdateDto categoryUpdateDto)
+        {
+            if (categoryUpdateDto == null) return null;
+            return new CategoryUpdateCommand(
+                categoryUpdateDto.Id,
+                categoryUpdateDto.Description,
+                categoryUpdateDto.Name
+            );
+        }
+        
+        public static CategoryDeleteCommand Map(CategoryDeleteDto categoryDeleteDto)
+        {
+            if (categoryDeleteDto == null) return null;
+            return new CategoryDeleteCommand(
+                categoryDeleteDto.Id
+            );
+        }
+
 
         #endregion
 

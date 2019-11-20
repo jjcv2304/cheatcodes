@@ -38,3 +38,6 @@ CheatCodes.WebApi/obj/
 /Common/bin/Debug/netcoreapp2.2
 /Dtos/obj/Debug/netcoreapp3.0
 /Dtos/obj
+/Dtos/bin/Debug/netcoreapp2.1/
+/Api/obj
+/Api/bin/Debug/netcoreapp2.1

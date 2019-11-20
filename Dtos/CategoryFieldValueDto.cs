@@ -7,4 +7,11 @@ namespace Dtos
         public string FieldName { get; set; }
         public string Value { get; set; }
     }
+
+    public class CategoryFieldValueCreateDto
+    {
+        public long FieldId { get; set; }
+        public long CategoryId { get; set; }
+        public string Value { get; set; }
+    }
 }

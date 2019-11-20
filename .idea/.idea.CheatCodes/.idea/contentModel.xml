@@ -13,6 +13,31 @@
     <e p="C:\Users\jjcv2\.Rider2019.2\system\extResources" t="IncludeRecursive" />
     <e p="C:\Users\jjcv2\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_CheatCodes.467908422.00" t="ExcludeRecursive" />
     <e p="D:\GIT\CheatCodes" t="IncludeFlat">
+      <e p="Api" t="IncludeRecursive">
+        <e p="Api.csproj" t="IncludeRecursive" />
+        <e p="appsettings.Development.json" t="Include" />
+        <e p="appsettings.json" t="Include" />
+        <e p="Bin" t="ExcludeRecursive" />
+        <e p="categories" t="Include">
+          <e p="CategoriesController.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.1" t="Include">
+              <e p="Api.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="launchSettings.json" t="Include" />
+        </e>
+        <e p="Startup.cs" t="Include" />
+        <e p="Utils" t="Include">
+          <e p="BaseController.cs" t="Include" />
+          <e p="Envelope.cs" t="Include" />
+        </e>
+      </e>
       <e p="Application" t="IncludeRecursive">
         <e p="Application.csproj" t="IncludeRecursive" />
         <e p="Bin" t="ExcludeRecursive" />
@@ -198,31 +223,6 @@
           <e p="CheatCodesDatabase.db" t="Include" />
           <e p="DatabaseSetting.cs" t="Include" />
           <e p="UnitOfWork.cs" t="Include" />
-        </e>
-      </e>
-      <e p="Presentation" t="IncludeRecursive">
-        <e p="appsettings.Development.json" t="Include" />
-        <e p="appsettings.json" t="Include" />
-        <e p="Bin" t="ExcludeRecursive" />
-        <e p="categories" t="Include">
-          <e p="CategoriesController.cs" t="Include" />
-        </e>
-        <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
-            <e p="netcoreapp2.1" t="Include">
-              <e p="Presentation.AssemblyInfo.cs" t="Include" />
-            </e>
-          </e>
-        </e>
-        <e p="Presentation.csproj" t="IncludeRecursive" />
-        <e p="Program.cs" t="Include" />
-        <e p="Properties" t="Include">
-          <e p="launchSettings.json" t="Include" />
-        </e>
-        <e p="Startup.cs" t="Include" />
-        <e p="Utils" t="Include">
-          <e p="BaseController.cs" t="Include" />
-          <e p="Envelope.cs" t="Include" />
         </e>
       </e>
     </e>

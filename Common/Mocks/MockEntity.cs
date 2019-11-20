@@ -4,7 +4,7 @@ namespace Common.Mocks
 {
     public class MockEntity: Entity
     {
-        public long TestableId { 
+        public int TestableId { 
             get => Id;
             set => Id = value;
         }
