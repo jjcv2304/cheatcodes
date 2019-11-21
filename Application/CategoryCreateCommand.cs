@@ -1,4 +1,5 @@
-﻿using Application.Utils;
+﻿using Application.Decorators;
+using Application.Utils;
 using Application.Utils.Interfaces;
 using CSharpFunctionalExtensions;
 
@@ -15,6 +16,7 @@ namespace Application
             Description = description;
         }
 
+        [AuditLog]
         internal sealed class CategoryCreateCommandHandler: ICommandHandler<CategoryCreateCommand>
         {
             private readonly IUnitOfWork _unitOfWork;

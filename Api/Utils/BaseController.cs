@@ -1,17 +1,13 @@
 using CSharpFunctionalExtensions;
-using Presentation.Utils;
 using Microsoft.AspNetCore.Mvc;
-using Persistance.Utils;
 
 namespace Presentation.Utils
 {
     public class BaseController : Controller
     {
-        protected readonly UnitOfWork _unitOfWork;
 
-        public BaseController(UnitOfWork unitOfWork)
+        public BaseController()
         {
-            _unitOfWork = unitOfWork;
         }
 
         protected new IActionResult Ok()

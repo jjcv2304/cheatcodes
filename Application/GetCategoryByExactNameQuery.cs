@@ -1,22 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using Application.Utils;
 using Application.Utils.Interfaces;
 using Dtos;
 
 namespace Application
 {
-    public sealed class GetCategoryByExactName : IQuery<List<CategoryDto>>
+    public sealed class GetCategoryByExactNameQuery : IQuery<List<CategoryDto>>
     {
         public string CategoryName { get; }
 
-        public GetCategoryByExactName(string categoryName)
+        public GetCategoryByExactNameQuery(string categoryName)
         {
             CategoryName = categoryName;
         }
 
-        internal sealed class GetCategoryByExactNameHandler : IQueryHandler<GetCategoryByExactName, List<CategoryDto>>
+        internal sealed class GetCategoryByExactNameHandler : IQueryHandler<GetCategoryByExactNameQuery, List<CategoryDto>>
         {
             private readonly IUnitOfWork _unitOfWork;
 
@@ -25,7 +23,7 @@ namespace Application
                 _unitOfWork = unitOfWork;
             }
 
-            public List<CategoryDto> Handle(GetCategoryByExactName query)
+            public List<CategoryDto> Handle(GetCategoryByExactNameQuery query)
             {
                 var categoryRepository = _unitOfWork.CategoryRepository;
                 var categories = categoryRepository.GetByExactName(query.CategoryName);

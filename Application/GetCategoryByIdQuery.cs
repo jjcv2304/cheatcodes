@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Application.Utils;
+﻿using Application.Utils;
 using Application.Utils.Interfaces;
 using Dtos;
 

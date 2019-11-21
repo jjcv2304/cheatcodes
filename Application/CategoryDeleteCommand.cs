@@ -6,9 +6,9 @@ namespace Application
 {
     public sealed class CategoryDeleteCommand : ICommand
     {
-        public long Id { get; set; }
+        public int Id { get; set; }
 
-        public CategoryDeleteCommand(long id)
+        public CategoryDeleteCommand(int id)
         {
             Id = id;
         }

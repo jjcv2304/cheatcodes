@@ -1,22 +1,20 @@
 ﻿using System.Collections.Generic;
 using Application.Utils;
 using Application.Utils.Interfaces;
-using CSharpFunctionalExtensions;
 using Dtos;
-using NHibernate.Mapping;
 
 namespace Application
 {
-    public sealed class GetCategoryAllChilds : IQuery<List<CategoryDto>>
+    public sealed class GetCategoryAllChildsQuery : IQuery<List<CategoryDto>>
     {
         public int Id { get; }
 
-        public GetCategoryAllChilds(int id)
+        public GetCategoryAllChildsQuery(int id)
         {
             Id = id;
         }
 
-        internal sealed class GetCategoryAllChildsHandler : IQueryHandler<GetCategoryAllChilds, List<CategoryDto>>
+        internal sealed class GetCategoryAllChildsHandler : IQueryHandler<GetCategoryAllChildsQuery, List<CategoryDto>>
         {
             private readonly IUnitOfWork _unitOfWork;
 
@@ -25,7 +23,7 @@ namespace Application
                 _unitOfWork = unitOfWork;
             }
 
-            public List<CategoryDto> Handle(GetCategoryAllChilds query)
+            public List<CategoryDto> Handle(GetCategoryAllChildsQuery query)
             {
                 var categoryRepository = _unitOfWork.CategoryRepository;
                 var categories = categoryRepository.GetAllChilds(query.Id);

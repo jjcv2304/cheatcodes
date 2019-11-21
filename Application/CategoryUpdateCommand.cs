@@ -6,11 +6,11 @@ namespace Application
 {
     public sealed class CategoryUpdateCommand : ICommand
     {
-        public long Id { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
 
-        public CategoryUpdateCommand(long id, string name, string description)
+        public CategoryUpdateCommand(int id, string name, string description)
         {
             Id = id;
             Name = name;

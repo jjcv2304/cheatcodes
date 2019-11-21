@@ -5,16 +5,16 @@ using Dtos;
 
 namespace Application
 {
-    public sealed class GetCategorySiblings : IQuery<List<CategoryDto>>
+    public sealed class GetCategorySiblingsQuery : IQuery<List<CategoryDto>>
     {
         public int Id { get; }
 
-        public GetCategorySiblings(int Id)
+        public GetCategorySiblingsQuery(int Id)
         {
             Id = Id;
         }
 
-        internal sealed class GetCategorySiblingsHandler : IQueryHandler<GetCategorySiblings, List<CategoryDto>>
+        internal sealed class GetCategorySiblingsHandler : IQueryHandler<GetCategorySiblingsQuery, List<CategoryDto>>
         {
             private readonly IUnitOfWork _unitOfWork;
 
@@ -23,7 +23,7 @@ namespace Application
                 _unitOfWork = unitOfWork;
             }
 
-            public List<CategoryDto> Handle(GetCategorySiblings query)
+            public List<CategoryDto> Handle(GetCategorySiblingsQuery query)
             {
                 var categoryRepository = _unitOfWork.CategoryRepository;
                 var categories = categoryRepository.GetSiblingsOf(query.Id);

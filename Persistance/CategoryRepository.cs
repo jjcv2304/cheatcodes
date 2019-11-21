@@ -5,7 +5,6 @@ using System.Linq;
 using Application.Utils.Interfaces;
 using Dapper;
 using Domain;
-using Persistance.Utils;
 
 namespace Persistance
 {

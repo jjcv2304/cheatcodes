@@ -1,6 +1,5 @@
 using System;
 using System.Data;
-using System.Data.SqlClient;
 using System.Data.SQLite;
 using Application.Utils.Interfaces;
 
@@ -41,7 +40,7 @@ public class UnitOfWork : IUnitOfWork
             finally
             {
                 _transaction.Dispose();
-                _transaction = _connection.BeginTransaction();
+               // _transaction = _connection.BeginTransaction();
                 resetRepositories();
             }
         }

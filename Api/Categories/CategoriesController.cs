@@ -1,11 +1,8 @@
-using System.Collections.Generic;
 using Application;
-using Application.Categories.Queries;
 using Application.Utils;
 using CSharpFunctionalExtensions;
 using Dtos;
 using Microsoft.AspNetCore.Mvc;
-using Persistance.Utils;
 using Presentation.Utils;
 // ReSharper disable SuggestVarOrType_SimpleTypes
 
@@ -15,33 +12,31 @@ namespace Presentation.Categories
     public class CategoriesController : BaseController
     {
         private readonly Messages _messages;
-        private readonly ICategoryQuery _categoryQuery;
 
-        public CategoriesController(UnitOfWork unitOfWork, Messages messages) : base(unitOfWork)
+        public CategoriesController(Messages messages) : base()
         {
             _messages = messages;
-            _categoryQuery = new CategoryQuery(unitOfWork);
         }
 
         // GET api/values
         [HttpGet]
         public IActionResult Get()
         {
-            var result = _categoryQuery.AllParents();
+            var result = _messages.Dispatch(new GetCategoryAllParentsQuery());
             return Ok(result);
         }
 
         [Route("[action]/{parentId}")]
         public IActionResult GetChildsOf(int parentId)
         {
-            var result = _categoryQuery.GetAllChilds(parentId);
+            var result = _messages.Dispatch(new GetCategoryAllChildsQuery(parentId));
             return Ok(result);
         }
 
         [Route("[action]/{categoryId}")]
         public IActionResult GetSiblingsOf(int categoryId)
         {
-            var result = _categoryQuery.GetSiblingsOf(categoryId);
+            var result = _messages.Dispatch(new GetCategorySiblingsQuery(categoryId));
             return Ok(result);
         }
 
@@ -49,8 +44,7 @@ namespace Presentation.Categories
         [HttpGet("{id}")]
         public IActionResult Get(int id)
         {
-            var result = _categoryQuery.ById(id);
-            base._unitOfWork.Commit();
+            var result = _messages.Dispatch(new GetCategoryByIdQuery(id));
             return Ok(result);
         }
 
@@ -58,9 +52,10 @@ namespace Presentation.Categories
         [HttpGet("{name}")]
         public IActionResult Get(string name, bool exactMatch = true)
         {
-            var result = exactMatch
-                ? _categoryQuery.ByExactName(name)
-                : _categoryQuery.ByPartialName(name);
+            var result = exactMatch ? 
+                _messages.Dispatch(new GetCategoryByExactNameQuery(name)) : 
+                _messages.Dispatch(new GetCategoryByPartialNameQuery(name));
+
             return Ok(result);
         }
 

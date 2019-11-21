@@ -1,20 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Application.Categories.Queries;
+﻿using System.Collections.Generic;
+using Application;
+using Application.Utils;
 using Application.Utils.Interfaces;
+using Dtos;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 using Persistance;
 using Persistance.Utils;
+using Presentation.Utils;
 
 namespace Presentation
 {
@@ -30,16 +26,18 @@ namespace Presentation
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-//            services.AddScoped<ICategoryQuery, CategoryQuery>();
-//            services.AddScoped<ICategoryCommand, CategoryCommand>();
-            
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             var con = new DatabaseSetting(Configuration.GetConnectionString("CheatCodesDatabase"));
             services.AddSingleton(con);
-            services.AddScoped<UnitOfWork>();
-          //  services.AddSingleton<IUnitOfWork, UnitOfWork>();
+            services.AddTransient<IUnitOfWork, UnitOfWork>();
             services.AddTransient<ICategoryRepository, CategoryRepository>();
+
+            services.AddSingleton<Messages>();
+            services.AddHandlers();
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
