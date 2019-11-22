@@ -16,17 +16,16 @@ namespace Application
 
         internal sealed class GetCategoryByPartialNameQueryHandler : IQueryHandler<GetCategoryByPartialNameQuery, List<CategoryDto>>
         {
-            private readonly IUnitOfWork _unitOfWork;
+            private ICategoryQueryRepository _categoryQueryRepository;
 
-            public GetCategoryByPartialNameQueryHandler(IUnitOfWork unitOfWork)
+            public GetCategoryByPartialNameQueryHandler(ICategoryQueryRepository categoryQueryRepository)
             {
-                _unitOfWork = unitOfWork;
+                _categoryQueryRepository = categoryQueryRepository;
             }
 
             public List<CategoryDto> Handle(GetCategoryByPartialNameQuery query)
             {
-                var categoryRepository = _unitOfWork.CategoryRepository;
-                var categories = categoryRepository.GetByPartialName(query.CategoryName);
+                var categories = _categoryQueryRepository.GetByPartialName(query.CategoryName);
                 var categoriesDtos = MapService.Map(categories);
 
                 return categoriesDtos;

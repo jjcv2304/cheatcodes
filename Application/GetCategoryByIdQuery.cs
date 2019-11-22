@@ -15,17 +15,16 @@ namespace Application
 
         internal sealed class GetCategoryByIdQueryHandler : IQueryHandler<GetCategoryByIdQuery, CategoryDto>
         {
-            private readonly IUnitOfWork _unitOfWork;
+            private ICategoryQueryRepository _categoryQueryRepository;
 
-            public GetCategoryByIdQueryHandler(IUnitOfWork unitOfWork)
+            public GetCategoryByIdQueryHandler(ICategoryQueryRepository categoryQueryRepository)
             {
-                _unitOfWork = unitOfWork;
+                _categoryQueryRepository = categoryQueryRepository;
             }
 
             public CategoryDto Handle(GetCategoryByIdQuery query)
             {
-                var categoryRepository = _unitOfWork.CategoryRepository;
-                var category = categoryRepository.GetById(query.Id);
+                var category = _categoryQueryRepository.GetById(query.Id);
                 var categoryDto = MapService.Map(category);
 
                 return categoryDto;

@@ -15,19 +15,17 @@ namespace Application
 
         public sealed class GetCategoryAllParentsQueryHandler : IQueryHandler<GetCategoryAllParentsQuery, List<CategoryDto>>
         {
-            private readonly IUnitOfWork _unitOfWork;
+            private readonly ICategoryQueryRepository _categoryQueryRepository;
 
-            public GetCategoryAllParentsQueryHandler(IUnitOfWork unitOfWork)
+            public GetCategoryAllParentsQueryHandler(ICategoryQueryRepository categoryQueryRepository)
             {
-                _unitOfWork = unitOfWork;
+                _categoryQueryRepository = categoryQueryRepository;
             }
 
             public List<CategoryDto> Handle(GetCategoryAllParentsQuery query)
             {
-                var categoryRepository = _unitOfWork.CategoryRepository;
-                var categories = categoryRepository.GetAllParents();
+                var categories = _categoryQueryRepository.GetAllParents();
                 var categoriesDtos = MapService.Map(categories);
-                _unitOfWork.Commit();
                 return categoriesDtos;
             }
         }

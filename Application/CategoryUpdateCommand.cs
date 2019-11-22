@@ -28,7 +28,7 @@ namespace Application
 
             public Result Handle(CategoryUpdateCommand categoryUpdateCommand)
             {
-                var categoryRepository = _unitOfWork.CategoryRepository;
+                var categoryRepository = _unitOfWork.CategoryCommandRepository;
                 var category = MapService.Map(categoryUpdateCommand);
                 categoryRepository.Update(category);
 

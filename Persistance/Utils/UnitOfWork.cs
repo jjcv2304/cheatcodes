@@ -10,7 +10,7 @@ public class UnitOfWork : IUnitOfWork
         private IDbConnection _connection;
         private IDbTransaction _transaction;
         
-        private ICategoryRepository _categoryRepository;
+        private ICategoryCommandRepository _categoryCommandRepository;
         private bool _disposed;
 
         public UnitOfWork(DatabaseSetting databaseSetting)
@@ -18,12 +18,12 @@ public class UnitOfWork : IUnitOfWork
             _connection = new SQLiteConnection(databaseSetting.ConnectionString);
             _connection.Open();
             _transaction = _connection.BeginTransaction();
-            var init = CategoryRepository;
+            var init = CategoryCommandRepository;
         }
 
-        public ICategoryRepository CategoryRepository
+        public ICategoryCommandRepository CategoryCommandRepository
         {
-            get { return _categoryRepository ?? (_categoryRepository = new CategoryRepository(_transaction)); }
+            get { return _categoryCommandRepository ?? (_categoryCommandRepository = new CategoryCommandRepository(_transaction)); }
         }
 
         public void Commit()
@@ -47,7 +47,7 @@ public class UnitOfWork : IUnitOfWork
 
         private void resetRepositories()
         {
-            _categoryRepository = null;
+            _categoryCommandRepository = null;
         }
 
         public void Dispose()

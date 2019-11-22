@@ -4,7 +4,7 @@ namespace Application.Utils.Interfaces
 {
     public interface IUnitOfWork : IDisposable
     {
-        ICategoryRepository CategoryRepository { get; }
+        ICategoryCommandRepository CategoryCommandRepository { get; }
 
         void Commit();
     }

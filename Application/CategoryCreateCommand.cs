@@ -28,7 +28,7 @@ namespace Application
 
             public Result Handle(CategoryCreateCommand categoryCreateCommand)
             {
-                var categoryRepository = _unitOfWork.CategoryRepository;
+                var categoryRepository = _unitOfWork.CategoryCommandRepository;
                 var category = MapService.Map(categoryCreateCommand);
                 categoryRepository.Create(category);
 

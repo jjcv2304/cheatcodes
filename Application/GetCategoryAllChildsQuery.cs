@@ -16,17 +16,16 @@ namespace Application
 
         internal sealed class GetCategoryAllChildsHandler : IQueryHandler<GetCategoryAllChildsQuery, List<CategoryDto>>
         {
-            private readonly IUnitOfWork _unitOfWork;
+            private ICategoryQueryRepository _categoryQueryRepository;
 
-            public GetCategoryAllChildsHandler(IUnitOfWork unitOfWork)
+            public GetCategoryAllChildsHandler(ICategoryQueryRepository categoryQueryRepository)
             {
-                _unitOfWork = unitOfWork;
+                _categoryQueryRepository = categoryQueryRepository;
             }
 
             public List<CategoryDto> Handle(GetCategoryAllChildsQuery query)
             {
-                var categoryRepository = _unitOfWork.CategoryRepository;
-                var categories = categoryRepository.GetAllChilds(query.Id);
+                var categories = _categoryQueryRepository.GetAllChilds(query.Id);
                 var categoriesDtos = MapService.Map(categories);
 
                 return categoriesDtos;

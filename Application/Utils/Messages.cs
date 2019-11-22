@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using Application.Utils.Interfaces;
 using CSharpFunctionalExtensions;
 
@@ -35,6 +36,16 @@ namespace Application.Utils
             T result = handler.Handle((dynamic)query);
 
             return result;
+        }
+
+        public async Task DispatchAsync(ICommand command)
+        {
+            var type = typeof(ICommandHandler<>);
+            Type[] typeArgs = { command.GetType() };
+            var handlerType = type.MakeGenericType(typeArgs);
+
+            dynamic handler = _provider.GetService(handlerType);
+            await handler.HandleAsync((dynamic)command);
         }
     }
 }

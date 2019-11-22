@@ -3,7 +3,7 @@ using Domain;
 
 namespace Application.Utils.Interfaces
 {
-    public interface ICategoryRepository
+    public interface ICategoryQueryRepository
     {
         IList<Category> GetByPartialName(string categoryName);
 
@@ -17,10 +17,5 @@ namespace Application.Utils.Interfaces
 
         Category GetById(int id);
 
-        void Create(Category category);
-
-        void Update(Category category);
-
-        void Delete(Category category);
     }
 }

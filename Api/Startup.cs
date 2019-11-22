@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿
+using System.Collections.Generic;
 using Application;
 using Application.Utils;
 using Application.Utils.Interfaces;
@@ -29,10 +30,14 @@ namespace Presentation
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-            var con = new DatabaseSetting(Configuration.GetConnectionString("CheatCodesDatabase"));
+            var connectionString = Configuration.GetConnectionString("CheatCodesDatabase");
+            var con = new DatabaseSetting(connectionString);
             services.AddSingleton(con);
+            var queriesConnectionString = new QueriesConnectionString(connectionString);
+            services.AddSingleton(queriesConnectionString);
             services.AddTransient<IUnitOfWork, UnitOfWork>();
-            services.AddTransient<ICategoryRepository, CategoryRepository>();
+            services.AddTransient<ICategoryQueryRepository, CategoryQueryRepository>();
+            services.AddTransient<ICategoryCommandRepository, CategoryCommandRepository>();
 
             services.AddSingleton<Messages>();
             services.AddHandlers();

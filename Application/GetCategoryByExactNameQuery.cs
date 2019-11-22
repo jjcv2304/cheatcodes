@@ -16,17 +16,16 @@ namespace Application
 
         internal sealed class GetCategoryByExactNameHandler : IQueryHandler<GetCategoryByExactNameQuery, List<CategoryDto>>
         {
-            private readonly IUnitOfWork _unitOfWork;
+            private ICategoryQueryRepository _categoryQueryRepository;
 
-            public GetCategoryByExactNameHandler(IUnitOfWork unitOfWork)
+            public GetCategoryByExactNameHandler(ICategoryQueryRepository categoryQueryRepository)
             {
-                _unitOfWork = unitOfWork;
+                _categoryQueryRepository = categoryQueryRepository;
             }
 
             public List<CategoryDto> Handle(GetCategoryByExactNameQuery query)
             {
-                var categoryRepository = _unitOfWork.CategoryRepository;
-                var categories = categoryRepository.GetByExactName(query.CategoryName);
+                var categories = _categoryQueryRepository.GetByExactName(query.CategoryName);
                 var categoriesDtos = MapService.Map(categories);
 
                 return categoriesDtos;

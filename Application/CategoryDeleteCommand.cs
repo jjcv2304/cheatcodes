@@ -24,7 +24,7 @@ namespace Application
 
             public Result Handle(CategoryDeleteCommand categoryDeleteCommand)
             {
-                var categoryRepository = _unitOfWork.CategoryRepository;
+                var categoryRepository = _unitOfWork.CategoryCommandRepository;
                 var category = MapService.Map(categoryDeleteCommand);
                 categoryRepository.Delete(category);
 
