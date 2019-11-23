@@ -26,6 +26,7 @@ namespace Presentation.Categories
             return Ok(result);
         }
 
+        [HttpGet]
         [Route("[action]/{parentId}")]
         public IActionResult GetChildsOf(int parentId)
         {
@@ -33,6 +34,12 @@ namespace Presentation.Categories
             return Ok(result);
         }
 
+        /// <summary>
+        /// Get categories that are located at the same tree level
+        /// </summary>
+        /// <param name="categoryId"></param>
+        /// <returns></returns>
+        [HttpGet]
         [Route("[action]/{categoryId}")]
         public IActionResult GetSiblingsOf(int categoryId)
         {
