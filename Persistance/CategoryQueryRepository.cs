@@ -25,7 +25,7 @@ namespace Persistance
             using (SQLiteConnection connection = new SQLiteConnection(_connectionString.Value))
             {
                 return connection.Query<Category>(
-                    "SELECT * FROM Category WHERE CategoryId = @CategoryId",
+                    "SELECT * FROM Category WHERE Id = @CategoryId",
                     param: new { CategoryId = id }
 
                 ).FirstOrDefault();

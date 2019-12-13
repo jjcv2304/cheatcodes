@@ -13,7 +13,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "Application\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api", "Api\Api.csproj", "{667A5777-A78E-489E-AAAF-650C6DF707A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dtos", "Dtos\Dtos.csproj", "{825EA062-0587-4EBF-A64B-3C98C7C8BA33}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dtos", "Dtos\Dtos.csproj", "{825EA062-0587-4EBF-A64B-3C98C7C8BA33}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{524D2CB4-17FE-40F1-AC98-82982FC9F624}"
+	ProjectSection(SolutionItems) = preProject
+		Postman\CheatCodes API.postman_collection.json = Postman\CheatCodes API.postman_collection.json
+		Postman\CheatCodes Dev.postman_environment.json = Postman\CheatCodes Dev.postman_environment.json
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

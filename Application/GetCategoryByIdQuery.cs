@@ -8,9 +8,9 @@ namespace Application
     {
         public int Id { get; }
 
-        public GetCategoryByIdQuery(int Id)
+        public GetCategoryByIdQuery(int id)
         {
-            Id = Id;
+            Id = id;
         }
 
         internal sealed class GetCategoryByIdQueryHandler : IQueryHandler<GetCategoryByIdQuery, CategoryDto>
