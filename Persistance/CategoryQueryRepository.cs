@@ -5,18 +5,22 @@ using System.Data.SQLite;
 using System.Linq;
 using Application.Utils;
 using Application.Utils.Interfaces;
+using Castle.Core.Logging;
 using Dapper;
 using Domain;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 
 namespace Persistance
 {
     public class CategoryQueryRepository : ICategoryQueryRepository
     {
         private readonly QueriesConnectionString _connectionString;
+        private readonly ILogger<CategoryQueryRepository> _logger;
 
-        public CategoryQueryRepository(QueriesConnectionString connectionString)
+        public CategoryQueryRepository(QueriesConnectionString connectionString, ILogger<CategoryQueryRepository> logger)
         {
+            _logger = logger;
             _connectionString = connectionString;
         }
 

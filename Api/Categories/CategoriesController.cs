@@ -1,8 +1,10 @@
 using Application;
 using Application.Utils;
+using Castle.Core.Logging;
 using CSharpFunctionalExtensions;
 using Dtos;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using Presentation.Utils;
 // ReSharper disable SuggestVarOrType_SimpleTypes
 
@@ -12,9 +14,11 @@ namespace Presentation.Categories
     public class CategoriesController : BaseController
     {
         private readonly Messages _messages;
+        private ILogger<CategoriesController> _logger;
 
-        public CategoriesController(Messages messages) : base()
+        public CategoriesController(Messages messages, ILogger<CategoriesController> logger) : base()
         {
+            _logger = logger;
             _messages = messages;
         }
 
@@ -22,6 +26,12 @@ namespace Presentation.Categories
         [HttpGet]
         public IActionResult Get()
         {
+            _logger.LogDebug("CategoriesController Get Debug");
+            _logger.LogInformation("CategoriesController Get Information");
+            _logger.LogWarning("CategoriesController Get Warning");
+            _logger.LogError("CategoriesController Get Error");
+
+
             var result = _messages.Dispatch(new GetCategoryAllParentsQuery());
             return Ok(result);
         }
