@@ -21,6 +21,33 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Postman\CheatCodes Dev.postman_environment.json = Postman\CheatCodes Dev.postman_environment.json
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Reports", "Reports", "{F6C04AA7-DCDE-4B35-A943-9FFF6B733E02}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MainApp", "MainApp", "{35280129-14A9-4D7B-BBBD-2046E87B29FD}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Reports.All", "Reports.All\Reports.All.fsproj", "{8C28FC74-BE64-49D0-9276-82062CC34869}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "CheatCodes.UI", "CheatCodes.UI\", "{B711190E-2D10-4846-8186-04BE83CF8807}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_58063"
+		Debug.AspNetCompiler.PhysicalPath = "CheatCodes.UI\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_58063\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_58063"
+		Release.AspNetCompiler.PhysicalPath = "CheatCodes.UI\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_58063\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "58063"
+		SlnRelativePath = "CheatCodes.UI\"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,9 +78,26 @@ Global
 		{825EA062-0587-4EBF-A64B-3C98C7C8BA33}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{825EA062-0587-4EBF-A64B-3C98C7C8BA33}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{825EA062-0587-4EBF-A64B-3C98C7C8BA33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C28FC74-BE64-49D0-9276-82062CC34869}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C28FC74-BE64-49D0-9276-82062CC34869}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C28FC74-BE64-49D0-9276-82062CC34869}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C28FC74-BE64-49D0-9276-82062CC34869}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B711190E-2D10-4846-8186-04BE83CF8807}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B711190E-2D10-4846-8186-04BE83CF8807}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B711190E-2D10-4846-8186-04BE83CF8807}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{B711190E-2D10-4846-8186-04BE83CF8807}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D3E96283-44F6-4EFC-9746-E5F33D8C7A9B} = {35280129-14A9-4D7B-BBBD-2046E87B29FD}
+		{4562ACCC-CBD0-4973-A80F-1558E77C9D43} = {35280129-14A9-4D7B-BBBD-2046E87B29FD}
+		{989D36CB-7DBA-4B06-8474-99507B295739} = {35280129-14A9-4D7B-BBBD-2046E87B29FD}
+		{042ABA13-C8F2-4984-A26C-A0185CDF51BE} = {35280129-14A9-4D7B-BBBD-2046E87B29FD}
+		{667A5777-A78E-489E-AAAF-650C6DF707A6} = {35280129-14A9-4D7B-BBBD-2046E87B29FD}
+		{825EA062-0587-4EBF-A64B-3C98C7C8BA33} = {35280129-14A9-4D7B-BBBD-2046E87B29FD}
+		{8C28FC74-BE64-49D0-9276-82062CC34869} = {F6C04AA7-DCDE-4B35-A943-9FFF6B733E02}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9E304F39-739C-48FA-A247-4309BFC306EE}
