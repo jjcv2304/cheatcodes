@@ -1,3 +1,5 @@
+bin/
+obj/
 CheatCodes.WebApi/bin/Debug/netcoreapp2.1/CheatCodes.WebApi.runtimeconfig.json
 CheatCodes.WebApi/bin/Debug/netcoreapp2.1/CheatCodes.WebApi.runtimeconfig.dev.json
 CheatCodes.WebApi/bin/Debug/netcoreapp2.1/CheatCodes.WebApi.pdb
@@ -20,21 +22,10 @@ CheatCodes.WebApi/obj/
 /Application/bin/Debug/netcoreapp2.1
 /Application/obj
 /.vs/CheatCodes
-/Application/bin/Debug/netcoreapp2.1
-/Application/obj
-/.vs/CheatCodes
-/Common/bin/Debug/netcoreapp2.1
 /Common/obj/Debug/netcoreapp2.1
-/Common/obj
-/Domain/bin/Debug/netcoreapp2.1
 /Domain/obj/Debug/netcoreapp2.1
-/Domain/obj
-/Persistance/bin/Debug/netcoreapp2.1
 /Persistance/obj/Debug/netcoreapp2.1
-/Persistance/obj
-/Presentation/bin/Debug/netcoreapp2.1
 /Presentation/obj/Debug/netcoreapp2.1
-/Presentation/obj
 /Common/bin/Debug/netcoreapp2.2
 /Dtos/obj/Debug/netcoreapp3.0
 /Dtos/obj
@@ -42,3 +33,4 @@ CheatCodes.WebApi/obj/
 /Api/obj
 /Api/bin/Debug/netcoreapp2.1
 /Reports.All/obj/
+/Reports.All.Tests/obj/
