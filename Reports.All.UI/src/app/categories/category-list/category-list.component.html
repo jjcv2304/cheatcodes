@@ -1,12 +1,6 @@
 <div class="row">
-  <div class="col-xs-12">
-    <a href="#" class="list-group-item clearfix" *ngFor="let cat of categories">
-      <div class="pull-left">
-        <h4 class="list-group-item-heading">{{ cat.name }}</h4>
-        <p class="list-group-item-text">{{ cat.description }}</p>
-      </div>
-    </a>
-    <app-category-item></app-category-item>
+  <div class="col-xs-12" >
+    <app-category-item *ngFor="let category of categories" [cat]="category" (categorySelected)="onCategorySelected(category)"></app-category-item>
   </div>
 </div>
 

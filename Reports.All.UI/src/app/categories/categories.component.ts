@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Category} from './category.model';
 
 @Component({
   selector: 'app-categories',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./categories.component.scss']
 })
 export class CategoriesComponent implements OnInit {
-
+  categorySelected: Category;
   constructor() { }
 
   ngOnInit() {

@@ -1,8 +1,11 @@
 <div class="row">
   <div class="col-md-5">
-    <app-category-list></app-category-list>
+    <app-category-list (categoryWasSelected)="categorySelected = $event"></app-category-list>
   </div>
   <div class="col-md-7">
-    <app-category-detail></app-category-detail>
+    <app-category-detail *ngIf="categorySelected; else infoText" [category]="categorySelected"></app-category-detail>
+    <ng-template #infoText>
+      <p>Please select a category!</p>
+    </ng-template>
   </div>
 </div>
