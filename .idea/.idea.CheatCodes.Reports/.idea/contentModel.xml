@@ -66,9 +66,16 @@
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
-        <e p="CheatCodesReportsDatabase.db" t="Include" />
         <e p="Controllers" t="Include">
+          <e p="CategoriesController.fs" t="Include" />
           <e p="ValuesController.fs" t="Include" />
+        </e>
+        <e p="DatabaseAccess" t="Include">
+          <e p="CheatCodesReportsDatabase.db" t="Include" />
+          <e p="Database.fs" t="Include" />
+        </e>
+        <e p="Models" t="Include">
+          <e p="Category.fs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive" />
         <e p="Program.fs" t="Include" />

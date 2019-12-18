@@ -6,16 +6,26 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="CheatCodesReportsDatabase.db" />
+    <Compile Include="Models\Category.fs" />
+    <Compile Include="DatabaseAccess\Database.fs" />
     <Compile Include="Controllers/ValuesController.fs" />
+    <Compile Include="Controllers\CategoriesController.fs" />
     <Compile Include="Startup.fs" />
+    <None Include="DatabaseAccess\CheatCodesReportsDatabase.db" />
     <Compile Include="Program.fs" />
+    
   </ItemGroup>
 
   <ItemGroup />
 
   <ItemGroup>
+    <PackageReference Include="Dapper">
+      <Version>2.0.30</Version>
+    </PackageReference>
     <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="System.Data.SQLite">
+      <Version>1.0.112</Version>
+    </PackageReference>
   </ItemGroup>
 
 </Project>
