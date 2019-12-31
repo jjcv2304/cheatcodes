@@ -23,7 +23,8 @@ type ValuesController () =
 
     [<HttpPost>]
     member this.Post([<FromBody>] value:string) =
-        ()
+        //this.StatusCode(202)
+        this.Accepted()
 
     [<HttpPut("{id}")>]
     member this.Put(id:int, [<FromBody>] value:string ) =

@@ -50,39 +50,38 @@ module Database =
 
         
 
-(*
--- we don't know how to generate root <with-no-name> (class Root) :(
-create table Category
-(
-    Id integer
-        primary key autoincrement,
-    Name TEXT not null,
-    Description TEXT,
-    ParentId BIGINT
-        references Category
-);
+//
+//create table Category
+//(
+//    Id integer
+//        primary key autoincrement,
+//    Name TEXT not null,
+//    Description TEXT,
+//    ParentId BIGINT
+//        references Category
+//);
+//
+//create table Field
+//(
+//    Id integer not null
+//        constraint Field_pk
+//            primary key autoincrement,
+//    Name text not null,
+//    Description text
+//);
+//
+//create table CategoryField
+//(
+//    CategoryId integer not null
+//        references Category,
+//    FieldId integer not null
+//        references Field,
+//    Value text not null,
+//    constraint CategoryField_pk
+//        primary key (CategoryId, FieldId)
+//);
+//
+//create unique index Field_Id_uindex
+//    on Field (Id);
 
-create table Field
-(
-    Id integer not null
-        constraint Field_pk
-            primary key autoincrement,
-    Name text not null,
-    Description text
-);
 
-create table CategoryField
-(
-    CategoryId integer not null
-        references Category,
-    FieldId integer not null
-        references Field,
-    Value text not null,
-    constraint CategoryField_pk
-        primary key (CategoryId, FieldId)
-);
-
-create unique index Field_Id_uindex
-    on Field (Id);
-
-*)
