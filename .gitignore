@@ -1,5 +1,6 @@
 bin/
 obj/
+.vs/
 CheatCodes.WebApi/bin/Debug/netcoreapp2.1/CheatCodes.WebApi.runtimeconfig.json
 CheatCodes.WebApi/bin/Debug/netcoreapp2.1/CheatCodes.WebApi.runtimeconfig.dev.json
 CheatCodes.WebApi/bin/Debug/netcoreapp2.1/CheatCodes.WebApi.pdb
