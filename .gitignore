@@ -22,7 +22,6 @@ CheatCodes.WebApi/obj/
 /Common/obj
 /Application/bin/Debug/netcoreapp2.1
 /Application/obj
-/.vs/CheatCodes
 /Common/obj/Debug/netcoreapp2.1
 /Domain/obj/Debug/netcoreapp2.1
 /Persistance/obj/Debug/netcoreapp2.1
