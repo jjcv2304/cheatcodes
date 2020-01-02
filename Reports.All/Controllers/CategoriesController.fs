@@ -11,11 +11,11 @@ open Reports.All.Models
 
 [<Route("api/[controller]")>]
 [<ApiController>]
-type CategoriesController () =
+type CategoriesController() =
     inherit ControllerBase()
 
     let connectionString = "Data Source=D:\\GIT\CheatCodes\\Reports.All\\DatabaseAccess\\CheatCodesReportsDatabase.db"
-    
+
     [<HttpGet>]
     member this.Get() =
         let asyncCategories = Database.list connectionString
@@ -23,7 +23,7 @@ type CategoriesController () =
         ActionResult<Category list>(categories)
 
     [<HttpGet("{id}")>]
-    member this.Get(id:int) =
+    member this.Get(id: int) =
         let asyncCategory = Database.get connectionString id
         let category = Async.RunSynchronously asyncCategory
         ActionResult<Category option>(category)

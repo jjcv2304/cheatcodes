@@ -7,48 +7,39 @@ open Reports.All.Models
 
 
 module Database =
-    
+
     let inline (=>) a b = a, box b
 
     let private mapRowsToRecords (reader: IDataReader): Category list =
         let idIndex = reader.GetOrdinal "Id"
         let nameIndex = reader.GetOrdinal "Name"
         let descriptionIndex = reader.GetOrdinal "Description"
-        [
-            while reader.Read() do
-                yield {
-                    Id = reader.GetInt32 idIndex
+        [ while reader.Read() do
+            yield { Id = reader.GetInt32 idIndex
                     Name = reader.GetString nameIndex
-                    Description = reader.GetString descriptionIndex
-                }
-        ]
-        
+                    Description = reader.GetString descriptionIndex } ]
+
     let get (connStr: string) (id: int): Async<Category option> =
         let sql = "SELECT * FROM CATEGORY WHERE [Id] = @id"
-        let data = [
-            "Id" => id
-        ]
-        let goodData = dict [
-            "Id", box id
-        ]
+        let data = [ "Id" => id ]
+        let goodData = dict [ "Id", box id ]
         async {
             use conn = new SQLiteConnection(connStr)
             use! reader = conn.ExecuteReaderAsync(sql, goodData) |> Async.AwaitTask
 
             return mapRowsToRecords reader |> Seq.tryHead
-        }     
-            
-    let list (connStr: string): Async<Category list> =        
+        }
+
+    let list (connStr: string): Async<Category list> =
         let sql = "SELECT * FROM CATEGORY"
-        
-        async {            
+
+        async {
             use conn = new SQLiteConnection(connStr)
             use! reader = conn.ExecuteReaderAsync(sql) |> Async.AwaitTask
-            
+
             return mapRowsToRecords reader
         }
 
-        
 
 //
 //create table Category
@@ -83,5 +74,3 @@ module Database =
 //
 //create unique index Field_Id_uindex
 //    on Field (Id);
-
-
