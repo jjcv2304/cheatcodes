@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using Application;
 using Application.Utils;
@@ -15,8 +14,11 @@ using Persistance;
 using Persistance.Utils;
 using Presentation.Utils;
 using System;
+using System.Data.SqlClient;
 using System.Reflection;
 using System.IO;
+using Microsoft.AspNetCore.Http;
+using Presentation.Logs.Middleware;
 
 namespace Presentation
 {
@@ -32,7 +34,9 @@ namespace Presentation
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
+            //services.AddMvc(options =>
+            //    options.Filters.Add(typeof(TrackActionPerformanceFilter))
+            //).SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             var connectionString = Configuration.GetConnectionString("CheatCodesDatabase");
@@ -72,31 +76,40 @@ namespace Presentation
                 var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
                 c.IncludeXmlComments(xmlPath);
             });
-
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             app.UseStaticFiles();
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
-            else
-            {
-                app.UseHsts();
-            }
+            //if (env.IsDevelopment())
+            //{
+            //    app.UseDeveloperExceptionPage();
+            //}
+            //else
+            //{
+            //    app.UseHsts();
+            //}
+            app.UseApiExceptionHandler(options => options.AddResponseDetails = UpdateApiErrorResponse);
+
+            app.UseHsts();
 
             app.UseSwagger();
-            app.UseSwaggerUI(c =>
-            {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
-            });
+            app.UseSwaggerUI(c => { c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1"); });
 
 
             app.UseHttpsRedirection();
             app.UseMvc();
+        }
+
+        private void UpdateApiErrorResponse(HttpContext context, Exception ex, ApiError error)
+        {
+            if (ex.GetType().Name == typeof(SqlException).Name)
+            {
+                error.Detail = "Exception was a database exception!";
+            }
+
+            //error.Links = "https://gethelpformyerror.com/";
         }
     }
 }

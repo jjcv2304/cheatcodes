@@ -5,11 +5,13 @@ using CSharpFunctionalExtensions;
 using Dtos;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Presentation.Logs.Attributes;
 using Presentation.Utils;
 // ReSharper disable SuggestVarOrType_SimpleTypes
 
 namespace Presentation.Categories
 {
+    [TypeFilter(typeof(TrackPerformance))]
     [Route("api/[controller]")]
     public class CategoriesController : BaseController
     {
@@ -99,5 +101,7 @@ namespace Presentation.Categories
             Result result = _messages.Dispatch(categoryDeleteCommand);
             return FromResult(result);
         }
+
+
     }
 }
