@@ -33,6 +33,7 @@ namespace Presentation.Logs.Filters
                 { "OAuth2 Scopes", string.Join(",",
                     context.HttpContext.User.Claims.Where(c => c.Type == "scope")?.Select(c => c.Value)) }
             };
+            //userDict.Add("Email", MaskEmailAddress(context.HttpContext.User.FindFirst("email")?.Value));
             _userScope = _logger.BeginScope(userDict);
             _hostScope = _logger.BeginScope(_scopeInfo.HostScopeInfo);
 
@@ -51,6 +52,17 @@ namespace Presentation.Logs.Filters
             _userScope?.Dispose();
             _hostScope?.Dispose();
         }
+        private string MaskEmailAddress(string emailAddress)
+        {
+            var atIndex = emailAddress?.IndexOf('@');
+            if (atIndex > 1)
+            {
+                return string.Format("{0}{1}***{2}", emailAddress[0], emailAddress[1],
+                    emailAddress.Substring(atIndex.Value));
+            }
+            return emailAddress;
+        }
+
     }
 }
 
