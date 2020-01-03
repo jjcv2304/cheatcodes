@@ -18,6 +18,8 @@ using System.Data.SqlClient;
 using System.Reflection;
 using System.IO;
 using Microsoft.AspNetCore.Http;
+using Presentation.Logs.Extensions;
+using Presentation.Logs.Filters;
 using Presentation.Logs.Middleware;
 
 namespace Presentation
@@ -34,10 +36,12 @@ namespace Presentation
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //services.AddMvc(options =>
-            //    options.Filters.Add(typeof(TrackActionPerformanceFilter))
-            //).SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddSingleton<IScopeInformation, ScopeInformation>();
+
+            services.AddMvc(options =>
+                options.Filters.Add(typeof(TrackActionPerformanceFilter))
+            ).SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            //services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             var connectionString = Configuration.GetConnectionString("CheatCodesDatabase");
             var con = new DatabaseSetting(connectionString);

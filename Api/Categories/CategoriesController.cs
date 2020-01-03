@@ -11,7 +11,7 @@ using Presentation.Utils;
 
 namespace Presentation.Categories
 {
-    [TypeFilter(typeof(TrackPerformance))]
+    //[TypeFilter(typeof(TrackPerformance))]
     [Route("api/[controller]")]
     public class CategoriesController : BaseController
     {

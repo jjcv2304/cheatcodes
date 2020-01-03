@@ -2,23 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3faa2e43-d490-49eb-a9b8-ac54012f984c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.CheatCodes/.idea/scopes/Domain.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Api/Filters/LogMessages.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Api/Filters/TrackActionPerformanceFilter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Api/Middleware/ApiError.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Api/Middleware/ApiExceptionMiddleware.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Api/Middleware/ApiExceptionMiddlewareExtensions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Api/Middleware/ApiExceptionOptions.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CheatCodes/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CheatCodes/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.CheatCodes/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CheatCodes/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CheatCodes/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CheatCodes/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/Api.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Api.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/Api.csproj.user" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Api.csproj.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/Categories/CategoriesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Categories/CategoriesController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Startup.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CheatCodes.sln" beforeDir="false" afterPath="$PROJECT_DIR$/CheatCodes.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Presentation/Categories/CategoriesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Categories/CategoriesController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Presentation/Presentation.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Api.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Presentation/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Presentation/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Properties/launchSettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Presentation/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Presentation/Utils/BaseController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Utils/BaseController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Presentation/Utils/Envelope.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Utils/Envelope.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Presentation/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/Api/appsettings.Development.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Presentation/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Api/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/Common.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.csproj" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -81,55 +79,43 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/CheatCodes.WebApi/Startup.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Api/Utils/Envelope.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/CheatCodes.WebApi/Program.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Application/Categories/MapService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Application/Categories/Tests/CategoryQueryTest.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Application/Categories/Tests/CategoryBuilderTest.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Common/Mocks/MockEntity.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Application/Categories/Queries/CategoryQuery.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Common/Utils/Entity.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/CheatCodes.WebApi/Controllers/ValuesController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/CheatCodes.WebApi/Controllers/ItemsController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Domain/Field.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Application/Categories/Queries/ICategoryQuery.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Domain/CategoryTests.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Application/Categories/Commands/ICategoryCommand.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Dtos/FieldDto.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Application/Categories/Commands/CategoryCommand.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Dtos/CategoryFieldValueDto.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Application/Interfaces/IRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Dtos/CategoryDto.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Domain/Item.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Application/Interfaces/ICategoryRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Domain/CategoryField.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Application/Interfaces/IUnitOfWork.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Domain/Category.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Application/Interfaces/IDatabaseService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Application/Interfaces/Tests/RepositoryMock.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Application/Interfaces/Tests/InMemoryCategoryRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Persistance/RepositoryBase.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/AppData/Roaming/NuGet/NuGet.Config" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Persistance/Utils/UnitOfWork.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Persistance/Utils/DatabaseSetting.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CheatCodes.WebApi/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CheatCodes.WebApi/Controllers/ValuesController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CheatCodes.WebApi/Controllers/ItemsController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Api/Startup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Api/Categories/ApiTestController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Application/Decorators/AuditLogAttribute.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Application/Decorators/AuditLoggingDecorator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Persistance/RepositoryBase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Application/CategoryCreateCommand.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Api/Program.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Api/Categories/CategoriesController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Api/Utils/BaseController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Persistance/CategoryRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Application/GetCategoryByIdQuery.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Api/Utils/Envelope.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Dtos/FieldDto.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Dtos/CategoryFieldValueDto.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Dtos/CategoryDto.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Api/Filters/TrackActionPerformanceFilter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Roaming/NuGet/NuGet.Config" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Api/Filters/LogMessages.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Api/Categories/CategoriesController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common/Mocks/MockEntity.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common/Utils/Entity.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Domain/Field.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Domain/CategoryTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Domain/Item.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Domain/CategoryField.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Domain/Category.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Api/Middleware/ApiExceptionMiddleware.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Api/Middleware/ApiExceptionMiddlewareExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Api/Middleware/ApiError.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Api/Middleware/ApiExceptionOptions.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Domain/CategoryFields.cs" />
-        <option value="$PROJECT_DIR$/Persistance/FieldsMap.cs" />
-        <option value="$PROJECT_DIR$/Persistance/FieldMap.cs" />
-        <option value="$PROJECT_DIR$/Persistance/CategoryMap.cs" />
-        <option value="$PROJECT_DIR$/Persistance/CategoryFieldMap.cs" />
-        <option value="$PROJECT_DIR$/Persistance/Utils/SessionFactory.cs" />
-        <option value="$PROJECT_DIR$/Persistance/Utils/DatabaseSetting.cs" />
-        <option value="$PROJECT_DIR$/Persistance/Utils/DalSession.cs" />
-        <option value="$PROJECT_DIR$/Persistance/Utils/IUnitOfWork.cs" />
         <option value="$PROJECT_DIR$/Persistance/Utils/Repository.cs" />
         <option value="$PROJECT_DIR$/Persistance/Utils/RepositoryBase.cs" />
         <option value="$PROJECT_DIR$/Application/Interfaces/ICategoryRepository.cs" />
@@ -172,6 +158,15 @@
         <option value="$PROJECT_DIR$/Application/Categories/MapService.cs" />
         <option value="$PROJECT_DIR$/Application/Categories/Queries/CategoryQuery.cs" />
         <option value="$PROJECT_DIR$/Api/Categories/CategoriesController.cs" />
+        <option value="$PROJECT_DIR$/Api/Middleware/ApiError.cs" />
+        <option value="$PROJECT_DIR$/Common/Middleware/ApiExceptionMiddleware.cs" />
+        <option value="$PROJECT_DIR$/Application/Middleware/ApiExceptionMiddleware.cs" />
+        <option value="$PROJECT_DIR$/Api/Middleware/ApiExceptionOptions.cs" />
+        <option value="$PROJECT_DIR$/Api/Middleware/ApiExceptionMiddlewareExtensions.cs" />
+        <option value="$PROJECT_DIR$/Api/Middleware/ApiExceptionMiddleware.cs" />
+        <option value="$PROJECT_DIR$/Api/Filters/TrackActionPerformanceFilter.cs" />
+        <option value="$PROJECT_DIR$/Api/Startup.cs" />
+        <option value="$PROJECT_DIR$/Api/Filters/LogMessages.cs" />
       </list>
     </option>
   </component>
@@ -185,6 +180,12 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="sqlserver&#10;sqlite" />
@@ -196,6 +197,7 @@
     <property name="RiderNuGetCacheManager.AutoClear.packages-cache" value="2" />
     <property name="RiderNuGetCacheManager.AutoClear.temp" value="1" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="TWShift.4" value="true" />
     <property name="ToolWindowProject.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="false" />
@@ -212,7 +214,7 @@
     <property name="node.js.selected.package.stylelint" value="" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.smartKeys_rider" />
     <property name="ts.external.directory.path" value="D:\GIT\CheatCodes\CheatCodes.UI\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
@@ -286,18 +288,6 @@
       </list>
     </option>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
   <component name="RunManager" selected=".NET Project.ServerSide">
     <configuration name="ServerSide" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="$PROJECT_DIR$/Presentation/bin/Debug/netcoreapp2.1/Presentation.dll" />
@@ -325,6 +315,7 @@
     <configuration name="CategoriesListComponent" type="JavaScriptTestRunnerKarma" temporary="true" nameIsGenerated="true">
       <config-file value="$PROJECT_DIR$/CheatCodes.UI/karma.conf.js" />
       <karma-package-dir value="$PROJECT_DIR$/CheatCodes.UI/node_modules/@angular/cli" />
+      <working-directory value="$PROJECT_DIR$/CheatCodes.UI" />
       <node-interpreter value="project" />
       <envs />
       <scope-kind value="SUITE" />
@@ -353,6 +344,18 @@
         <item itemvalue="Karma.CategoriesListComponent" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="StructureViewFactory">
     <option name="AUTOSCROLL_FROM_SOURCE" value="true" />
@@ -444,6 +447,8 @@
       <workItem from="1555232062553" duration="5810000" />
       <workItem from="1573661939577" duration="4071000" />
       <workItem from="1573666194834" duration="1361000" />
+      <workItem from="1577765638951" duration="375000" />
+      <workItem from="1577819535956" duration="6555000" />
     </task>
     <task id="LOCAL-00001" summary="Infrastructure refactor">
       <created>1541936350455</created>
@@ -691,7 +696,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="true" />
     <MESSAGE value="Infrastructure refactor" />
     <MESSAGE value="Removing insecure dependencies" />
     <MESSAGE value="Migrating to NHibernate" />
@@ -709,6 +713,100 @@
     <MESSAGE value="Expand Card basic functionality" />
     <MESSAGE value="Separating dtos" />
     <option name="LAST_COMMIT_MESSAGE" value="Separating dtos" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1237" height="144" key="GridCell.Tab.0.bottom" timestamp="1577835389361">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="1237" height="144" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1577835389361" />
+    <state width="1236" height="144" key="GridCell.Tab.0.bottom/0.0.1280.720/-1920.0.1474.864@0.0.1280.720" timestamp="1577827817503" />
+    <state width="1237" height="144" key="GridCell.Tab.0.center" timestamp="1577835389360">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="1237" height="144" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1577835389360" />
+    <state width="1236" height="144" key="GridCell.Tab.0.center/0.0.1280.720/-1920.0.1474.864@0.0.1280.720" timestamp="1577827817503" />
+    <state width="1237" height="144" key="GridCell.Tab.0.left" timestamp="1577835389360">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="1237" height="144" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1577835389360" />
+    <state width="1236" height="144" key="GridCell.Tab.0.left/0.0.1280.720/-1920.0.1474.864@0.0.1280.720" timestamp="1577827817502" />
+    <state width="1237" height="144" key="GridCell.Tab.0.right" timestamp="1577835389361">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="1237" height="144" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1577835389361" />
+    <state width="1236" height="144" key="GridCell.Tab.0.right/0.0.1280.720/-1920.0.1474.864@0.0.1280.720" timestamp="1577827817503" />
+    <state width="334" height="621" key="GridCell.Tab.1.bottom" timestamp="1577827773726">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="334" height="621" key="GridCell.Tab.1.bottom/0.0.1280.720/-1920.0.1474.864@0.0.1280.720" timestamp="1577827773726" />
+    <state width="334" height="621" key="GridCell.Tab.1.center" timestamp="1577827773726">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="334" height="621" key="GridCell.Tab.1.center/0.0.1280.720/-1920.0.1474.864@0.0.1280.720" timestamp="1577827773726" />
+    <state width="334" height="621" key="GridCell.Tab.1.left" timestamp="1577827773725">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="334" height="621" key="GridCell.Tab.1.left/0.0.1280.720/-1920.0.1474.864@0.0.1280.720" timestamp="1577827773725" />
+    <state width="334" height="621" key="GridCell.Tab.1.right" timestamp="1577827773726">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="334" height="621" key="GridCell.Tab.1.right/0.0.1280.720/-1920.0.1474.864@0.0.1280.720" timestamp="1577827773726" />
+    <state width="334" height="621" key="GridCell.Tab.2.bottom" timestamp="1577827773726">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="334" height="621" key="GridCell.Tab.2.bottom/0.0.1280.720/-1920.0.1474.864@0.0.1280.720" timestamp="1577827773726" />
+    <state width="334" height="621" key="GridCell.Tab.2.center" timestamp="1577827773726">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="334" height="621" key="GridCell.Tab.2.center/0.0.1280.720/-1920.0.1474.864@0.0.1280.720" timestamp="1577827773726" />
+    <state width="334" height="621" key="GridCell.Tab.2.left" timestamp="1577827773726">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="334" height="621" key="GridCell.Tab.2.left/0.0.1280.720/-1920.0.1474.864@0.0.1280.720" timestamp="1577827773726" />
+    <state width="334" height="621" key="GridCell.Tab.2.right" timestamp="1577827773726">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="334" height="621" key="GridCell.Tab.2.right/0.0.1280.720/-1920.0.1474.864@0.0.1280.720" timestamp="1577827773726" />
+    <state width="334" height="621" key="GridCell.Tab.3.bottom" timestamp="1577827773727">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="334" height="621" key="GridCell.Tab.3.bottom/0.0.1280.720/-1920.0.1474.864@0.0.1280.720" timestamp="1577827773727" />
+    <state width="334" height="621" key="GridCell.Tab.3.center" timestamp="1577827773727">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="334" height="621" key="GridCell.Tab.3.center/0.0.1280.720/-1920.0.1474.864@0.0.1280.720" timestamp="1577827773727" />
+    <state width="334" height="621" key="GridCell.Tab.3.left" timestamp="1577827773726">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="334" height="621" key="GridCell.Tab.3.left/0.0.1280.720/-1920.0.1474.864@0.0.1280.720" timestamp="1577827773726" />
+    <state width="334" height="621" key="GridCell.Tab.3.right" timestamp="1577827773727">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="334" height="621" key="GridCell.Tab.3.right/0.0.1280.720/-1920.0.1474.864@0.0.1280.720" timestamp="1577827773727" />
+    <state width="334" height="621" key="GridCell.Tab.4.bottom" timestamp="1577827773727">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="334" height="621" key="GridCell.Tab.4.bottom/0.0.1280.720/-1920.0.1474.864@0.0.1280.720" timestamp="1577827773727" />
+    <state width="334" height="621" key="GridCell.Tab.4.center" timestamp="1577827773727">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="334" height="621" key="GridCell.Tab.4.center/0.0.1280.720/-1920.0.1474.864@0.0.1280.720" timestamp="1577827773727" />
+    <state width="334" height="621" key="GridCell.Tab.4.left" timestamp="1577827773727">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="334" height="621" key="GridCell.Tab.4.left/0.0.1280.720/-1920.0.1474.864@0.0.1280.720" timestamp="1577827773727" />
+    <state width="334" height="621" key="GridCell.Tab.4.right" timestamp="1577827773727">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="334" height="621" key="GridCell.Tab.4.right/0.0.1280.720/-1920.0.1474.864@0.0.1280.720" timestamp="1577827773727" />
+    <state x="-1756" y="25" width="1118" height="708" key="SettingsEditor" timestamp="1577823479553">
+      <screen x="-1920" y="0" width="1474" height="864" />
+    </state>
+    <state x="-1756" y="25" width="1118" height="708" key="SettingsEditor/0.0.1280.720/-1920.0.1474.864@0.0.1280.720" timestamp="1577823479553" />
+    <state x="303" y="41" width="672" height="678" key="search.everywhere.popup" timestamp="1577826772559">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="303" y="41" width="672" height="678" key="search.everywhere.popup/0.0.1280.720/-1920.0.1474.864@0.0.1280.720" timestamp="1577826772559" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -728,27 +826,13 @@
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Persistance/CategoryRepository.cs</url>
           <line>64</line>
-          <properties documentPath="$PROJECT_DIR$/Persistance/CategoryRepository.cs" initialLine="64">
-            <startOffsets>
-              <option value="1914" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1966" />
-            </endOffsets>
-          </properties>
+          <properties documentPath="$PROJECT_DIR$/Persistance/CategoryRepository.cs" initialLine="64" />
           <option name="timeStamp" value="66" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Persistance/CategoryRepository.cs</url>
           <line>58</line>
-          <properties documentPath="$PROJECT_DIR$/Persistance/CategoryRepository.cs" initialLine="58">
-            <startOffsets>
-              <option value="1602" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1603" />
-            </endOffsets>
-          </properties>
+          <properties documentPath="$PROJECT_DIR$/Persistance/CategoryRepository.cs" initialLine="58" />
           <option name="timeStamp" value="67" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
@@ -763,6 +847,19 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="68" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Api/Filters/TrackActionPerformanceFilter.cs</url>
+          <line>17</line>
+          <properties documentPath="$PROJECT_DIR$/Api/Filters/TrackActionPerformanceFilter.cs" initialLine="17">
+            <startOffsets>
+              <option value="543" />
+            </startOffsets>
+            <endOffsets>
+              <option value="568" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="69" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
