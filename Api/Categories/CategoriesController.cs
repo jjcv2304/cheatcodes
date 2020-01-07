@@ -15,7 +15,6 @@ namespace Api.Categories
     public class CategoriesController : BaseController
     {
         private readonly Messages _messages;
-        private readonly ILogger<CategoriesController> _logger;
        
         public CategoriesController(Messages messages) : base()
         {
