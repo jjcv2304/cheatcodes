@@ -36,8 +36,9 @@ namespace Api
 
             services.AddMvc(options =>
                 options.Filters.Add(typeof(TrackActionPerformanceFilter))
+
             ).SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-            //services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
 
             var connectionString = Configuration.GetConnectionString("CheatCodesDatabase");
             var con = new DatabaseSetting(connectionString);
@@ -49,6 +50,9 @@ namespace Api
             services.AddTransient<ICategoryCommandRepository, CategoryCommandRepository>();
 
             services.AddSingleton<Messages>();
+
+            
+
             services.AddHandlers();
 
             // Register the Swagger generator, defining 1 or more Swagger documents
@@ -76,6 +80,7 @@ namespace Api
                 var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
                 c.IncludeXmlComments(xmlPath);
             });
+            ConfigureAdditionalServices(services);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -101,7 +106,9 @@ namespace Api
             app.UseHttpsRedirection();
             app.UseMvc();
         }
-
+        protected virtual void ConfigureAdditionalServices(IServiceCollection services)
+        {
+        }
         private void UpdateApiErrorResponse(HttpContext context, Exception ex, ApiError error)
         {
             if (ex.GetType().Name == typeof(SqlException).Name)

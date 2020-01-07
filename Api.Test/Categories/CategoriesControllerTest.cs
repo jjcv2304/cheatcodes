@@ -1,17 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using Api.Categories;
-using Api.Utils;
 using Application.Utils;
 using Application.Utils.Interfaces;
 using Domain;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Moq;
-using Persistance;
 using Xunit;
 
 namespace Api.Test.Categories
