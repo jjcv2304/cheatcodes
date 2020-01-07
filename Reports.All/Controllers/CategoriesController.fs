@@ -14,7 +14,7 @@ open Reports.All.Models
 type CategoriesController() =
     inherit ControllerBase()
 
-    let connectionString = "Data Source=D:\\GIT\CheatCodes\\Reports.All\\DatabaseAccess\\CheatCodesReportsDatabase.db"
+    let connectionString = "Data Source=/home/juan/GIT/CheatCodes/Reports.All/DatabaseAccess/CheatCodesReportsDatabase.db"
 
     [<HttpGet>]
     member this.Get() =
