@@ -16,11 +16,9 @@ namespace Persistance
     public class CategoryQueryRepository : ICategoryQueryRepository
     {
         private readonly QueriesConnectionString _connectionString;
-        private readonly ILogger<CategoryQueryRepository> _logger;
 
-        public CategoryQueryRepository(QueriesConnectionString connectionString, ILogger<CategoryQueryRepository> logger)
+        public CategoryQueryRepository(QueriesConnectionString connectionString)
         {
-            _logger = logger;
             _connectionString = connectionString;
         }
 

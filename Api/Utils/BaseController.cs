@@ -1,7 +1,7 @@
 using CSharpFunctionalExtensions;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Presentation.Utils
+namespace Api.Utils
 {
     public class BaseController : Controller
     {

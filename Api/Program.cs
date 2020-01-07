@@ -6,7 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Serilog;
 using Serilog.Formatting.Json;
 
-namespace Presentation
+namespace Api
 {
     public class Program
     {

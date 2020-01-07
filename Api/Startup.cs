@@ -1,26 +1,24 @@
 ﻿using System;
-using System.Collections.Generic;
-using Application;
+using System.Data.SqlClient;
+using System.IO;
+using System.Reflection;
+using Api.Logs.Extensions;
+using Api.Logs.Filters;
+using Api.Logs.Middleware;
+using Api.Utils;
 using Application.Utils;
 using Application.Utils.Interfaces;
-using Dtos;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
 using Persistance;
 using Persistance.Utils;
-using Presentation.Utils;
-using System;
-using System.Data.SqlClient;
-using System.Reflection;
-using System.IO;
-using Microsoft.AspNetCore.Http;
-using Presentation.Logs.Middleware;
 
-namespace Presentation
+namespace Api
 {
     public class Startup
     {
@@ -34,10 +32,13 @@ namespace Presentation
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //services.AddMvc(options =>
-            //    options.Filters.Add(typeof(TrackActionPerformanceFilter))
-            //).SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddSingleton<IScopeInformation, ScopeInformation>();
+
+            services.AddMvc(options =>
+                options.Filters.Add(typeof(TrackActionPerformanceFilter))
+
+            ).SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
 
             var connectionString = Configuration.GetConnectionString("CheatCodesDatabase");
             var con = new DatabaseSetting(connectionString);
@@ -49,6 +50,9 @@ namespace Presentation
             services.AddTransient<ICategoryCommandRepository, CategoryCommandRepository>();
 
             services.AddSingleton<Messages>();
+
+            
+
             services.AddHandlers();
 
             // Register the Swagger generator, defining 1 or more Swagger documents
@@ -76,6 +80,7 @@ namespace Presentation
                 var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
                 c.IncludeXmlComments(xmlPath);
             });
+            ConfigureAdditionalServices(services);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -101,7 +106,9 @@ namespace Presentation
             app.UseHttpsRedirection();
             app.UseMvc();
         }
-
+        protected virtual void ConfigureAdditionalServices(IServiceCollection services)
+        {
+        }
         private void UpdateApiErrorResponse(HttpContext context, Exception ex, ApiError error)
         {
             if (ex.GetType().Name == typeof(SqlException).Name)

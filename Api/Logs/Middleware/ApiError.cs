@@ -1,4 +1,4 @@
-namespace Presentation.Logs.Middleware
+namespace Api.Logs.Middleware
 {
     public class ApiError
     {
