@@ -1,28 +1,24 @@
 ﻿using System;
-using System.Collections.Generic;
-using Application;
+using System.Data.SqlClient;
+using System.IO;
+using System.Reflection;
+using Api.Logs.Extensions;
+using Api.Logs.Filters;
+using Api.Logs.Middleware;
+using Api.Utils;
 using Application.Utils;
 using Application.Utils.Interfaces;
-using Dtos;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
 using Persistance;
 using Persistance.Utils;
-using Presentation.Utils;
-using System;
-using System.Data.SqlClient;
-using System.Reflection;
-using System.IO;
-using Microsoft.AspNetCore.Http;
-using Presentation.Logs.Extensions;
-using Presentation.Logs.Filters;
-using Presentation.Logs.Middleware;
 
-namespace Presentation
+namespace Api
 {
     public class Startup
     {

@@ -2,12 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using System.Threading.Tasks;
 using Application.Decorators;
 using Application.Utils.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Presentation.Utils
+namespace Api.Utils
 {
     public static class HandlerRegistration
     {

@@ -1,9 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc.Filters;
+﻿using System.Diagnostics;
+using Api.Logs.Filters;
+using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.Extensions.Logging;
-using System.Diagnostics;
-using Presentation.Logs.Filters;
 
-namespace Presentation.Logs.Attributes
+namespace Api.Logs.Attributes
 {
     public class TrackPerformance : ActionFilterAttribute
     {

@@ -1,7 +1,7 @@
 using System;
 using Microsoft.AspNetCore.Builder;
 
-namespace Presentation.Logs.Middleware
+namespace Api.Logs.Middleware
 {
     public static class ApiExceptionMiddlewareExtensions
     {        

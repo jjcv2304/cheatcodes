@@ -1,6 +1,6 @@
 using System;
 
-namespace Presentation.Utils
+namespace Api.Utils
 {
     public class Envelope<T>
     {

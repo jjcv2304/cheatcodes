@@ -25,7 +25,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Reports", "Reports", "{F6C0
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MainApp", "MainApp", "{35280129-14A9-4D7B-BBBD-2046E87B29FD}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Reports.All", "Reports.All\Reports.All.fsproj", "{8C28FC74-BE64-49D0-9276-82062CC34869}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Reports.All", "Reports.All\Reports.All.fsproj", "{8C28FC74-BE64-49D0-9276-82062CC34869}"
 EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "CheatCodes.UI", "CheatCodes.UI\", "{B711190E-2D10-4846-8186-04BE83CF8807}"
 	ProjectSection(WebsiteProperties) = preProject
@@ -47,6 +47,8 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "CheatCodes.UI", "CheatCodes
 		VWDPort = "58063"
 		SlnRelativePath = "CheatCodes.UI\"
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.Test", "Api.Test\Api.Test.csproj", "{2631318D-2499-4B04-AD88-248CBDCC1BFD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -85,6 +87,10 @@ Global
 		{B711190E-2D10-4846-8186-04BE83CF8807}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B711190E-2D10-4846-8186-04BE83CF8807}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{B711190E-2D10-4846-8186-04BE83CF8807}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{2631318D-2499-4B04-AD88-248CBDCC1BFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2631318D-2499-4B04-AD88-248CBDCC1BFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2631318D-2499-4B04-AD88-248CBDCC1BFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2631318D-2499-4B04-AD88-248CBDCC1BFD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -97,6 +103,7 @@ Global
 		{667A5777-A78E-489E-AAAF-650C6DF707A6} = {35280129-14A9-4D7B-BBBD-2046E87B29FD}
 		{825EA062-0587-4EBF-A64B-3C98C7C8BA33} = {35280129-14A9-4D7B-BBBD-2046E87B29FD}
 		{8C28FC74-BE64-49D0-9276-82062CC34869} = {F6C04AA7-DCDE-4B35-A943-9FFF6B733E02}
+		{2631318D-2499-4B04-AD88-248CBDCC1BFD} = {35280129-14A9-4D7B-BBBD-2046E87B29FD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9E304F39-739C-48FA-A247-4309BFC306EE}

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Reflection;
 
-namespace Presentation.Logs.Extensions
+namespace Api.Logs.Extensions
 {
     public interface IScopeInformation
     {

@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 
-namespace Presentation.Logs.Middleware
+namespace Api.Logs.Middleware
 {
     public class ApiExceptionMiddleware
     {

@@ -1,12 +1,12 @@
-using Microsoft.AspNetCore.Mvc.Filters;
-using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using Presentation.Logs.Extensions;
+using Api.Logs.Extensions;
+using Microsoft.AspNetCore.Mvc.Filters;
+using Microsoft.Extensions.Logging;
 
-namespace Presentation.Logs.Filters
+namespace Api.Logs.Filters
 {
     public class TrackActionPerformanceFilter : IActionFilter
     {
