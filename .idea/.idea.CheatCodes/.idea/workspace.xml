@@ -1,24 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3faa2e43-d490-49eb-a9b8-ac54012f984c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.CheatCodes/.idea/scopes/Domain.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="3faa2e43-d490-49eb-a9b8-ac54012f984c" name="Default Changelist" comment="Separating dtos">
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.CheatCodes.dir/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.CheatCodes.dir/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CheatCodes.Reports/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CheatCodes.Reports/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CheatCodes/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CheatCodes/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.CheatCodes/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CheatCodes/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CheatCodes/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CheatCodes/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CheatCodes.sln" beforeDir="false" afterPath="$PROJECT_DIR$/CheatCodes.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Presentation/Categories/CategoriesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Categories/CategoriesController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Presentation/Presentation.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Api.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Presentation/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Presentation/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Properties/launchSettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Presentation/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Presentation/Utils/BaseController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Utils/BaseController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Presentation/Utils/Envelope.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Utils/Envelope.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Presentation/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/Api/appsettings.Development.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Presentation/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Api/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CheatCodes/riderModule.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CheatCodes/riderModule.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/Api.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Api.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Api/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reports.All/Controllers/CategoriesController.fs" beforeDir="false" afterPath="$PROJECT_DIR$/Reports.All/Controllers/CategoriesController.fs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reports.All/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Reports.All/Properties/launchSettings.json" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -78,53 +73,50 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/CheatCodes.WebApi/Startup.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Api/Utils/Envelope.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/CheatCodes.WebApi/Program.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Application/Categories/MapService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Application/Categories/Tests/CategoryQueryTest.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Application/Categories/Tests/CategoryBuilderTest.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Common/Mocks/MockEntity.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Application/Categories/Queries/CategoryQuery.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Common/Utils/Entity.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/CheatCodes.WebApi/Controllers/ValuesController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/CheatCodes.WebApi/Controllers/ItemsController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Domain/Field.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Application/Categories/Queries/ICategoryQuery.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Domain/CategoryTests.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Application/Categories/Commands/ICategoryCommand.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Dtos/FieldDto.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Application/Categories/Commands/CategoryCommand.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Dtos/CategoryFieldValueDto.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Application/Interfaces/IRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Dtos/CategoryDto.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Domain/Item.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Application/Interfaces/ICategoryRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Domain/CategoryField.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Application/Interfaces/IUnitOfWork.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Domain/Category.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Application/Interfaces/IDatabaseService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Application/Interfaces/Tests/RepositoryMock.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Application/Interfaces/Tests/InMemoryCategoryRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Persistance/RepositoryBase.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/AppData/Roaming/NuGet/NuGet.Config" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Persistance/Utils/UnitOfWork.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Persistance/Utils/DatabaseSetting.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Api/Startup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Reports.All/Startup.fs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Application/GetCategoryAllParentsQuery.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Reports.All/Properties/launchSettings.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Application/Utils/Messages.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Application/Utils/ConnectionString.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Api/appsettings.Development.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Reports.All/DatabaseAccess/Database.fs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Api/Program.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Api/Categories/CategoriesController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CheatCodes.WebApi/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Api/Startup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CheatCodes.WebApi/Startup.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Application/Utils/Interfaces/ICategoryQueryRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/751B0FA9-0E94-4DF7-82D9-2609EC984002/C5/ControllerActionInvoker.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CheatCodes.WebApi/Controllers/ItemsController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CheatCodes.WebApi/Controllers/ValuesController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Api/Utils/BaseController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Persistance/CategoryRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Domain/Category.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Api/Utils/Envelope.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Domain/CategoryTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Domain/Item.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Domain/CategoryField.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Domain/Field.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Api/Categories/CategoriesController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/BC250F5D-671A-4A79-AFBB-71270EE807DC/4/Binder.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Api/Properties/launchSettings.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/AD9E177D-C239-415B-A6FA-46AF783792B4/A/CallSite.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Api/appsettings.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/BC250F5D-671A-4A79-AFBB-71270EE807DC/6/CSharpArgumentInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common/Mocks/MockEntity.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common/Utils/Entity.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Persistance/RepositoryBase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Persistance/CategoryQueryRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Persistance/Utils/DatabaseSetting.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Dtos/CategoryFieldValueDto.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Persistance/Utils/UnitOfWork.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Dtos/CategoryDto.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Dtos/FieldDto.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Domain/CategoryFields.cs" />
-        <option value="$PROJECT_DIR$/Persistance/FieldsMap.cs" />
-        <option value="$PROJECT_DIR$/Persistance/FieldMap.cs" />
-        <option value="$PROJECT_DIR$/Persistance/CategoryMap.cs" />
         <option value="$PROJECT_DIR$/Persistance/CategoryFieldMap.cs" />
         <option value="$PROJECT_DIR$/Persistance/Utils/SessionFactory.cs" />
         <option value="$PROJECT_DIR$/Persistance/Utils/DatabaseSetting.cs" />
@@ -172,6 +164,10 @@
         <option value="$PROJECT_DIR$/Application/Categories/MapService.cs" />
         <option value="$PROJECT_DIR$/Application/Categories/Queries/CategoryQuery.cs" />
         <option value="$PROJECT_DIR$/Api/Categories/CategoriesController.cs" />
+        <option value="$PROJECT_DIR$/Api/appSettings.json" />
+        <option value="$PROJECT_DIR$/Api/Properties/launchSettings.json" />
+        <option value="$PROJECT_DIR$/Api/Program.cs" />
+        <option value="$PROJECT_DIR$/Reports.All/Properties/launchSettings.json" />
       </list>
     </option>
   </component>
@@ -185,6 +181,11 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="sqlserver&#10;sqlite" />
@@ -195,13 +196,15 @@
     <property name="RiderNuGetCacheManager.AutoClear.http-cache" value="2" />
     <property name="RiderNuGetCacheManager.AutoClear.packages-cache" value="2" />
     <property name="RiderNuGetCacheManager.AutoClear.temp" value="1" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="TWShift.4" value="true" />
     <property name="ToolWindowProject.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="editor.config.ad.shown" value="true" />
     <property name="full.screen.before.presentation.mode" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Presentation/bin" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/CheatCodes.Reports.sln" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.stylelint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -212,7 +215,7 @@
     <property name="node.js.selected.package.stylelint" value="" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C#" />
     <property name="ts.external.directory.path" value="D:\GIT\CheatCodes\CheatCodes.UI\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
@@ -286,19 +289,7 @@
       </list>
     </option>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected=".NET Project.ServerSide">
+  <component name="RunManager" selected="npm.start">
     <configuration name="ServerSide" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="$PROJECT_DIR$/Presentation/bin/Debug/netcoreapp2.1/Presentation.dll" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -325,6 +316,7 @@
     <configuration name="CategoriesListComponent" type="JavaScriptTestRunnerKarma" temporary="true" nameIsGenerated="true">
       <config-file value="$PROJECT_DIR$/CheatCodes.UI/karma.conf.js" />
       <karma-package-dir value="$PROJECT_DIR$/CheatCodes.UI/node_modules/@angular/cli" />
+      <working-directory value="$PROJECT_DIR$/CheatCodes.UI" />
       <node-interpreter value="project" />
       <envs />
       <scope-kind value="SUITE" />
@@ -332,6 +324,37 @@
         <test-name value="CategoriesListComponent" />
       </test-names>
       <method v="2" />
+    </configuration>
+    <configuration name="Reports.All: IIS Express (1)" type="LaunchSettings" factoryName=".NET Launch Settings Profile" temporary="true">
+      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/Reports.All/Reports.All.fsproj" />
+      <option name="LAUNCH_PROFILE_TFM" value=".NETCoreApp,Version=v2.2" />
+      <option name="LAUNCH_PROFILE_NAME" value="IIS Express" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="GENERATE_APPLICATIONHOST_CONFIG" value="1" />
+      <option name="SHOW_IIS_EXPRESS_OUTPUT" value="0" />
+      <option name="SEND_DEBUG_REQUEST" value="1" />
+      <option name="ADDITIONAL_IIS_EXPRESS_ARGUMENTS" value="" />
+      <method v="2">
+        <option name="Build" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Reports.All: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile" temporary="true">
+      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/Reports.All/Reports.All.fsproj" />
+      <option name="LAUNCH_PROFILE_TFM" value=".NETCoreApp,Version=v2.2" />
+      <option name="LAUNCH_PROFILE_NAME" value="IIS Express" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <browser name="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+      <option name="GENERATE_APPLICATIONHOST_CONFIG" value="1" />
+      <option name="SHOW_IIS_EXPRESS_OUTPUT" value="0" />
+      <option name="SEND_DEBUG_REQUEST" value="1" />
+      <option name="ADDITIONAL_IIS_EXPRESS_ARGUMENTS" value="" />
+      <method v="2">
+        <option name="Build" enabled="true" />
+      </method>
     </configuration>
     <configuration name="start" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/CheatCodes.UI/package.json" />
@@ -344,15 +367,31 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue=".NET Launch Settings Profile.Reports.All: IIS Express" />
+      <item itemvalue=".NET Launch Settings Profile.Reports.All: IIS Express (1)" />
       <item itemvalue=".NET Project.ServerSide" />
       <item itemvalue="Karma.CategoriesListComponent" />
       <item itemvalue="npm.start" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue=".NET Launch Settings Profile.Reports.All: IIS Express (1)" />
+        <item itemvalue=".NET Launch Settings Profile.Reports.All: IIS Express" />
         <item itemvalue="Karma.CategoriesListComponent" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="StructureViewFactory">
     <option name="AUTOSCROLL_FROM_SOURCE" value="true" />
@@ -444,6 +483,9 @@
       <workItem from="1555232062553" duration="5810000" />
       <workItem from="1573661939577" duration="4071000" />
       <workItem from="1573666194834" duration="1361000" />
+      <workItem from="1578160978636" duration="3872000" />
+      <workItem from="1578164919845" duration="1899000" />
+      <workItem from="1578407502911" duration="1628000" />
     </task>
     <task id="LOCAL-00001" summary="Infrastructure refactor">
       <created>1541936350455</created>
@@ -691,7 +733,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="true" />
     <MESSAGE value="Infrastructure refactor" />
     <MESSAGE value="Removing insecure dependencies" />
     <MESSAGE value="Migrating to NHibernate" />
@@ -710,85 +751,159 @@
     <MESSAGE value="Separating dtos" />
     <option name="LAST_COMMIT_MESSAGE" value="Separating dtos" />
   </component>
+  <component name="WindowStateProjectService">
+    <state x="501" y="57" width="978" height="999" key="#Reports.All:_IIS_Express" timestamp="1578166664643">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="501" y="57" width="978" height="999" key="#Reports.All:_IIS_Express/70.27.1850.1053@70.27.1850.1053" timestamp="1578166664643" />
+    <state x="501" y="57" width="978" height="999" key="#Reports.All:_IIS_Express_(1)" timestamp="1578166802647">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="501" y="57" width="978" height="999" key="#Reports.All:_IIS_Express_(1)/70.27.1850.1053@70.27.1850.1053" timestamp="1578166802647" />
+    <state x="865" y="254" width="708" height="605" key="#xdebugger.XInspectDialog" timestamp="1578164100793">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="865" y="254" width="708" height="605" key="#xdebugger.XInspectDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1578164100793" />
+    <state width="624" height="546" key="DebuggerActiveHint" timestamp="1578164410969">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="624" height="546" key="DebuggerActiveHint/70.27.1850.1053@70.27.1850.1053" timestamp="1578164410969" />
+    <state x="728" y="256" width="524" height="601" key="FileChooserDialogImpl" timestamp="1578166815979">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="728" y="256" width="524" height="601" key="FileChooserDialogImpl/70.27.1850.1053@70.27.1850.1053" timestamp="1578166815979" />
+    <state width="1864" height="414" key="GridCell.Tab.0.bottom" timestamp="1578409260300">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1864" height="414" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1578409260300" />
+    <state width="1794" height="401" key="GridCell.Tab.0.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1578166818407" />
+    <state width="1864" height="414" key="GridCell.Tab.0.center" timestamp="1578409260300">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1864" height="414" key="GridCell.Tab.0.center/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1578409260300" />
+    <state width="1794" height="401" key="GridCell.Tab.0.center/70.27.1850.1053@70.27.1850.1053" timestamp="1578166818406" />
+    <state width="1864" height="414" key="GridCell.Tab.0.left" timestamp="1578409260299">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1864" height="414" key="GridCell.Tab.0.left/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1578409260299" />
+    <state width="1794" height="401" key="GridCell.Tab.0.left/70.27.1850.1053@70.27.1850.1053" timestamp="1578166818406" />
+    <state width="1864" height="414" key="GridCell.Tab.0.right" timestamp="1578409260300">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1864" height="414" key="GridCell.Tab.0.right/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1578409260300" />
+    <state width="1794" height="401" key="GridCell.Tab.0.right/70.27.1850.1053@70.27.1850.1053" timestamp="1578166818407" />
+    <state width="1864" height="414" key="GridCell.Tab.1.bottom" timestamp="1578409265588">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1864" height="414" key="GridCell.Tab.1.bottom/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1578409265588" />
+    <state width="1794" height="401" key="GridCell.Tab.1.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1578166818407" />
+    <state width="1864" height="414" key="GridCell.Tab.1.center" timestamp="1578409265588">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1864" height="414" key="GridCell.Tab.1.center/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1578409265588" />
+    <state width="1794" height="401" key="GridCell.Tab.1.center/70.27.1850.1053@70.27.1850.1053" timestamp="1578166818407" />
+    <state width="1864" height="414" key="GridCell.Tab.1.left" timestamp="1578409265588">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1864" height="414" key="GridCell.Tab.1.left/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1578409265588" />
+    <state width="1794" height="401" key="GridCell.Tab.1.left/70.27.1850.1053@70.27.1850.1053" timestamp="1578166818407" />
+    <state width="1864" height="414" key="GridCell.Tab.1.right" timestamp="1578409265588">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1864" height="414" key="GridCell.Tab.1.right/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1578409265588" />
+    <state width="1794" height="401" key="GridCell.Tab.1.right/70.27.1850.1053@70.27.1850.1053" timestamp="1578166818407" />
+    <state width="1794" height="401" key="GridCell.Tab.2.bottom" timestamp="1578166818408">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="1794" height="401" key="GridCell.Tab.2.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1578166818408" />
+    <state width="1794" height="401" key="GridCell.Tab.2.center" timestamp="1578166818407">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="1794" height="401" key="GridCell.Tab.2.center/70.27.1850.1053@70.27.1850.1053" timestamp="1578166818407" />
+    <state width="1794" height="401" key="GridCell.Tab.2.left" timestamp="1578166818407">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="1794" height="401" key="GridCell.Tab.2.left/70.27.1850.1053@70.27.1850.1053" timestamp="1578166818407" />
+    <state width="1794" height="401" key="GridCell.Tab.2.right" timestamp="1578166818408">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="1794" height="401" key="GridCell.Tab.2.right/70.27.1850.1053@70.27.1850.1053" timestamp="1578166818408" />
+    <state width="1794" height="401" key="GridCell.Tab.3.bottom" timestamp="1578166818408">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="1794" height="401" key="GridCell.Tab.3.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1578166818408" />
+    <state width="1794" height="401" key="GridCell.Tab.3.center" timestamp="1578166818408">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="1794" height="401" key="GridCell.Tab.3.center/70.27.1850.1053@70.27.1850.1053" timestamp="1578166818408" />
+    <state width="1794" height="401" key="GridCell.Tab.3.left" timestamp="1578166818408">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="1794" height="401" key="GridCell.Tab.3.left/70.27.1850.1053@70.27.1850.1053" timestamp="1578166818408" />
+    <state width="1794" height="401" key="GridCell.Tab.3.right" timestamp="1578166818408">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="1794" height="401" key="GridCell.Tab.3.right/70.27.1850.1053@70.27.1850.1053" timestamp="1578166818408" />
+    <state width="1794" height="401" key="GridCell.Tab.4.bottom" timestamp="1578166818409">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="1794" height="401" key="GridCell.Tab.4.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1578166818409" />
+    <state width="1794" height="401" key="GridCell.Tab.4.center" timestamp="1578166818409">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="1794" height="401" key="GridCell.Tab.4.center/70.27.1850.1053@70.27.1850.1053" timestamp="1578166818409" />
+    <state width="1794" height="401" key="GridCell.Tab.4.left" timestamp="1578166818409">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="1794" height="401" key="GridCell.Tab.4.left/70.27.1850.1053@70.27.1850.1053" timestamp="1578166818409" />
+    <state width="1794" height="401" key="GridCell.Tab.4.right" timestamp="1578166818409">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="1794" height="401" key="GridCell.Tab.4.right/70.27.1850.1053@70.27.1850.1053" timestamp="1578166818409" />
+    <state x="360" y="101" width="1269" height="912" key="SettingsEditor" timestamp="1578161977556">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="360" y="101" width="1269" height="912" key="SettingsEditor/70.27.1850.1053@70.27.1850.1053" timestamp="1578161977556" />
+    <state width="925" height="526" key="XDebugger.FullValuePopup" timestamp="1578163996185">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="925" height="526" key="XDebugger.FullValuePopup/70.27.1850.1053@70.27.1850.1053" timestamp="1578163996185" />
+    <state x="686" y="442" width="548" height="202" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1578408225843">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="686" y="442" width="548" height="202" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1578408225843" />
+    <state x="565" y="48" width="863" height="1011" key="find.popup" timestamp="1578165438321">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="565" y="48" width="863" height="1011" key="find.popup/70.27.1850.1053@70.27.1850.1053" timestamp="1578165438321" />
+    <state x="575" y="18" width="838" height="1032" key="search.everywhere.popup" timestamp="1578163273517">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="575" y="18" width="838" height="1032" key="search.everywhere.popup/70.27.1850.1053@70.27.1850.1053" timestamp="1578163273517" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Api/Categories/CategoriesController.cs</url>
-          <line>47</line>
-          <properties documentPath="$PROJECT_DIR$/Presentation/Categories/CategoriesController.cs" initialLine="42" />
-          <option name="timeStamp" value="53" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Api/Utils/BaseController.cs</url>
-          <line>29</line>
-          <properties documentPath="$PROJECT_DIR$/Presentation/Utils/BaseController.cs" initialLine="29" />
-          <option name="timeStamp" value="58" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Persistance/CategoryRepository.cs</url>
-          <line>64</line>
-          <properties documentPath="$PROJECT_DIR$/Persistance/CategoryRepository.cs" initialLine="64">
+          <url>file://$PROJECT_DIR$/Api/Startup.cs</url>
+          <line>42</line>
+          <properties documentPath="$PROJECT_DIR$/Api/Startup.cs" initialLine="42">
             <startOffsets>
-              <option value="1914" />
+              <option value="1382" />
             </startOffsets>
             <endOffsets>
-              <option value="1966" />
+              <option value="1430" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="66" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Persistance/CategoryRepository.cs</url>
-          <line>58</line>
-          <properties documentPath="$PROJECT_DIR$/Persistance/CategoryRepository.cs" initialLine="58">
-            <startOffsets>
-              <option value="1602" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1603" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="67" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Api/Categories/CategoriesController.cs</url>
-          <line>17</line>
-          <properties documentPath="$PROJECT_DIR$/Api/Categories/CategoriesController.cs" initialLine="17">
-            <startOffsets>
-              <option value="539" />
-            </startOffsets>
-            <endOffsets>
-              <option value="540" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="68" />
+          <option name="timeStamp" value="77" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-  </component>
-  <component name="debuggerHistoryManager">
-    <expressions id="evaluateCodeFragment">
-      <expression>
-        <expression-string>res.Cat</expression-string>
-        <language-id>C#</language-id>
-        <custom-info>RiderImportsList:</custom-info>
-        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
-      </expression>
-    </expressions>
-    <expressions id="evaluateExpression">
-      <expression>
-        <expression-string>categories.Items[0]</expression-string>
-        <language-id>C#</language-id>
-        <custom-info>RiderImportsList:</custom-info>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>categories.Items[0].CategoryFields</expression-string>
-        <language-id>C#</language-id>
-        <custom-info>RiderImportsList:</custom-info>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-    </expressions>
+    <watches-manager>
+      <configuration name="DotNetProject">
+        <watch expression="Configuration" />
+        <watch expression="Configuration.Providers.Items[1].Source.Path" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

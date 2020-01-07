@@ -1,31 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\jjcv2\.nuget\packages\microsoft.net.test.sdk\16.4.0\build\netcoreapp2.1" t="Include">
+    <e p="$USER_HOME$/.Rider2019.3/system/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/.Rider2019.3/system/resharper-host/local/Transient/ReSharperHost/v193/SolutionCaches/_CheatCodes.1745068662.00" t="ExcludeRecursive" />
+    <e p="$USER_HOME$/.nuget/packages/microsoft.net.test.sdk/16.4.0/build/netcoreapp2.1" t="Include">
       <e p="Microsoft.NET.Test.Sdk.Program.cs" t="Include" />
     </e>
-    <e p="C:\Users\jjcv2\.nuget\packages\microsoft.testplatform.testhost\16.4.0\build\netcoreapp2.1\x64\testhost.dll" t="Include" />
-    <e p="C:\Users\jjcv2\.nuget\packages\microsoft.testplatform.testhost\16.4.0\build\netcoreapp2.1\x64\testhost.exe" t="Include" />
-    <e p="C:\Users\jjcv2\.nuget\packages\nunit3testadapter\3.15.1\build\netcoreapp2.0\nunit.engine.api.dll" t="Include" />
-    <e p="C:\Users\jjcv2\.nuget\packages\nunit3testadapter\3.15.1\build\netcoreapp2.0\nunit.engine.dll" t="Include" />
-    <e p="C:\Users\jjcv2\.nuget\packages\nunit3testadapter\3.15.1\build\netcoreapp2.0\NUnit3.TestAdapter.dll" t="Include" />
-    <e p="C:\Users\jjcv2\.nuget\packages\nunit3testadapter\3.15.1\build\netcoreapp2.0\NUnit3.TestAdapter.pdb" t="Include" />
-    <e p="C:\Users\jjcv2\.Rider2019.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\jjcv2\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_CheatCodes.467908422.00" t="ExcludeRecursive" />
-    <e p="D:\GIT\CheatCodes" t="IncludeFlat">
+    <e p="$USER_HOME$/.nuget/packages/nunit3testadapter/3.15.1/build/netcoreapp2.0/NUnit3.TestAdapter.dll" t="Include" />
+    <e p="$USER_HOME$/.nuget/packages/nunit3testadapter/3.15.1/build/netcoreapp2.0/NUnit3.TestAdapter.pdb" t="Include" />
+    <e p="$USER_HOME$/.nuget/packages/nunit3testadapter/3.15.1/build/netcoreapp2.0/nunit.engine.api.dll" t="Include" />
+    <e p="$USER_HOME$/.nuget/packages/nunit3testadapter/3.15.1/build/netcoreapp2.0/nunit.engine.dll" t="Include" />
+    <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="Api" t="IncludeRecursive">
         <e p="Api.csproj" t="IncludeRecursive" />
-        <e p="appsettings.Development.json" t="Include" />
-        <e p="appsettings.json" t="Include" />
-        <e p="Bin" t="ExcludeRecursive" />
-        <e p="categories" t="Include">
+        <e p="Categories" t="Include">
+          <e p="ApiTestController.cs" t="Include" />
           <e p="CategoriesController.cs" t="Include" />
         </e>
-        <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
-            <e p="netcoreapp2.1" t="Include">
-              <e p="Api.AssemblyInfo.cs" t="Include" />
-            </e>
+        <e p="Logs" t="Include">
+          <e p="Attributes" t="Include">
+            <e p="TrackPerformanceAttribute.cs" t="Include" />
+          </e>
+          <e p="Filters" t="Include">
+            <e p="LogMessages.cs" t="Include" />
+            <e p="TrackActionPerformanceFilter.cs" t="Include" />
+          </e>
+          <e p="Middleware" t="Include">
+            <e p="ApiError.cs" t="Include" />
+            <e p="ApiExceptionMiddleware.cs" t="Include" />
+            <e p="ApiExceptionMiddlewareExtensions.cs" t="Include" />
+            <e p="ApiExceptionOptions.cs" t="Include" />
           </e>
         </e>
         <e p="Program.cs" t="Include" />
@@ -36,36 +40,70 @@
         <e p="Utils" t="Include">
           <e p="BaseController.cs" t="Include" />
           <e p="Envelope.cs" t="Include" />
+          <e p="HandlerRegistration.cs" t="Include" />
+        </e>
+        <e p="appsettings.Development.json" t="Include" />
+        <e p="appsettings.json" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.1" t="Include">
+              <e p="Api.AssemblyInfo.cs" t="Include" />
+              <e p="Api.RazorAssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="wwwroot" t="Include">
+          <e p="swagger" t="Include">
+            <e p="ui" t="Include">
+              <e p="custom.css" t="Include" />
+              <e p="favicon-16x16.png" t="Include" />
+              <e p="favicon-32x32.png" t="Include" />
+              <e p="index.html" t="Include" />
+              <e p="oauth2-redirect.html" t="Include" />
+              <e p="swagger-ui-bundle.js" t="Include" />
+              <e p="swagger-ui-bundle.js.map" t="Include" />
+              <e p="swagger-ui-standalone-preset.js" t="Include" />
+              <e p="swagger-ui-standalone-preset.js.map" t="Include" />
+              <e p="swagger-ui.css" t="Include" />
+              <e p="swagger-ui.css.map" t="Include" />
+              <e p="swagger-ui.js" t="Include" />
+              <e p="swagger-ui.js.map" t="Include" />
+            </e>
+          </e>
         </e>
       </e>
       <e p="Application" t="IncludeRecursive">
         <e p="Application.csproj" t="IncludeRecursive" />
-        <e p="Bin" t="ExcludeRecursive" />
-        <e p="categories" t="Include">
-          <e p="Commands" t="Include">
-            <e p="CategoryCommand.cs" t="Include" />
-            <e p="ICategoryCommand.cs" t="Include" />
+        <e p="CategoryCreateCommand.cs" t="Include" />
+        <e p="CategoryDeleteCommand.cs" t="Include" />
+        <e p="CategoryUpdateCommand.cs" t="Include" />
+        <e p="Decorators" t="Include">
+          <e p="AuditLogAttribute.cs" t="Include" />
+          <e p="AuditLoggingDecorator.cs" t="Include" />
+        </e>
+        <e p="GetCategoryAllChildsQuery.cs" t="Include" />
+        <e p="GetCategoryAllParentsQuery.cs" t="Include" />
+        <e p="GetCategoryByExactNameQuery.cs" t="Include" />
+        <e p="GetCategoryByIdQuery.cs" t="Include" />
+        <e p="GetCategoryByPartialNameQuery.cs" t="Include" />
+        <e p="GetCategorySiblingsQuery.cs" t="Include" />
+        <e p="Utils" t="Include">
+          <e p="ConnectionString.cs" t="Include" />
+          <e p="Interfaces" t="Include">
+            <e p="ICategoryCommandRepository.cs" t="Include" />
+            <e p="ICategoryQueryRepository.cs" t="Include" />
+            <e p="ICommand.cs" t="Include" />
+            <e p="ICommandHandler.cs" t="Include" />
+            <e p="IDatabaseService.cs" t="Include" />
+            <e p="IQuery.cs" t="Include" />
+            <e p="IQueryHandler.cs" t="Include" />
+            <e p="IUnitOfWork.cs" t="Include" />
           </e>
           <e p="MapService.cs" t="Include" />
-          <e p="Queries" t="Include">
-            <e p="CategoryQuery.cs" t="Include" />
-            <e p="ICategoryQuery.cs" t="Include" />
-          </e>
-          <e p="Tests" t="Include">
-            <e p="CategoryBuilderTest.cs" t="Include" />
-            <e p="CategoryQueryTest.cs" t="Include" />
-          </e>
+          <e p="Messages.cs" t="Include" />
         </e>
-        <e p="Interfaces" t="Include">
-          <e p="ICategoryRepository.cs" t="Include" />
-          <e p="IDatabaseService.cs" t="Include" />
-          <e p="IRepository.cs" t="Include" />
-          <e p="IUnitOfWork.cs" t="Include" />
-          <e p="Tests" t="Include">
-            <e p="InMemoryCategoryRepository.cs" t="Include" />
-            <e p="RepositoryMock.cs" t="Include" />
-          </e>
-        </e>
+        <e p="bin" t="ExcludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp2.1" t="Include">
@@ -74,96 +112,131 @@
           </e>
         </e>
       </e>
-      <e p="CheatCodes.sln" t="IncludeFlat" />
-      <e p="CheatCodes.UI\node_modules\@angular\animations" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\@angular\cli" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\@angular\common" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\@angular\compiler" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\@angular\compiler-cli" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\@angular\core" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\@angular\forms" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\@angular\http" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\@angular\platform-browser" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\@angular\platform-browser-dynamic" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\@angular\router" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\@angular-devkit\architect" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\@angular-devkit\build-angular" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\@angular-devkit\build-optimizer" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\@angular-devkit\core" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\@ngtools\webpack" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\@types" t="IncludeRecursive">
-        <e p="jasmine" t="IncludeRecursive" />
-        <e p="jasminewd2" t="IncludeRecursive" />
-        <e p="node" t="IncludeRecursive" />
+      <e p="CheatCodes.UI" t="IncludeRecursive">
+        <e p=".editorconfig" t="Include" />
+        <e p=".gitignore" t="Include" />
+        <e p="README.md" t="Include" />
+        <e p="angular.json" t="Include" />
+        <e p="e2e" t="Include">
+          <e p="app.e2e-spec.ts" t="Include" />
+          <e p="app.po.ts" t="Include" />
+          <e p="tsconfig.e2e.json" t="Include" />
+        </e>
+        <e p="karma.conf.js" t="Include" />
+        <e p="package-lock.json" t="Include" />
+        <e p="package.json" t="Include" />
+        <e p="protractor.conf.js" t="Include" />
+        <e p="proxy.conf.json" t="Include" />
+        <e p="src" t="Include">
+          <e p="app" t="Include">
+            <e p="app-routing.module.ts" t="Include" />
+            <e p="app.component.css" t="Include" />
+            <e p="app.component.css.map" t="Include" />
+            <e p="app.component.html" t="Include" />
+            <e p="app.component.scss" t="Include" />
+            <e p="app.component.spec.ts" t="Include" />
+            <e p="app.component.ts" t="Include" />
+            <e p="app.module.ts" t="Include" />
+            <e p="categories" t="Include">
+              <e p="categories.service.spec.ts" t="Include" />
+              <e p="categories.service.ts" t="Include" />
+            </e>
+            <e p="categories-list" t="Include">
+              <e p="categories-list.component.css" t="Include" />
+              <e p="categories-list.component.css.map" t="Include" />
+              <e p="categories-list.component.html" t="Include" />
+              <e p="categories-list.component.scss" t="Include" />
+              <e p="categories-list.component.spec.ts" t="Include" />
+              <e p="categories-list.component.ts" t="Include" />
+            </e>
+            <e p="category-card" t="Include">
+              <e p=".sass-cache" t="Include">
+                <e p="87992336fede03285e07338d7ffcd74a0cde2f31" t="Include">
+                  <e p="category-card.component.scssc" t="Include" />
+                </e>
+              </e>
+              <e p="category-card.component.css" t="Include" />
+              <e p="category-card.component.css.map" t="Include" />
+              <e p="category-card.component.html" t="Include" />
+              <e p="category-card.component.scss" t="Include" />
+              <e p="category-card.component.spec.ts" t="Include" />
+              <e p="category-card.component.ts" t="Include" />
+            </e>
+            <e p="category-edit" t="Include">
+              <e p="category-edit.component.css" t="Include" />
+              <e p="category-edit.component.css.map" t="Include" />
+              <e p="category-edit.component.html" t="Include" />
+              <e p="category-edit.component.scss" t="Include" />
+              <e p="category-edit.component.spec.ts" t="Include" />
+              <e p="category-edit.component.ts" t="Include" />
+            </e>
+            <e p="main-menu" t="Include">
+              <e p="main-menu.component.css" t="Include" />
+              <e p="main-menu.component.css.map" t="Include" />
+              <e p="main-menu.component.html" t="Include" />
+              <e p="main-menu.component.scss" t="Include" />
+              <e p="main-menu.component.spec.ts" t="Include" />
+              <e p="main-menu.component.ts" t="Include" />
+            </e>
+            <e p="models" t="Include">
+              <e p="CategoryFilter.ts" t="Include" />
+              <e p="category.ts" t="Include" />
+              <e p="categoryFieldValue.ts" t="Include" />
+              <e p="envelope.ts" t="Include" />
+            </e>
+          </e>
+          <e p="assets" t="Include">
+            <e p=".gitkeep" t="Include" />
+            <e p="all.css" t="Include" />
+            <e p="forms.css" t="Include" />
+            <e p="forms.scss" t="Include" />
+            <e p="webfonts" t="Include">
+              <e p="fa-brands-400.eot" t="Include" />
+              <e p="fa-brands-400.svg" t="Include" />
+              <e p="fa-brands-400.ttf" t="Include" />
+              <e p="fa-brands-400.woff" t="Include" />
+              <e p="fa-brands-400.woff2" t="Include" />
+              <e p="fa-regular-400.eot" t="Include" />
+              <e p="fa-regular-400.svg" t="Include" />
+              <e p="fa-regular-400.ttf" t="Include" />
+              <e p="fa-regular-400.woff" t="Include" />
+              <e p="fa-regular-400.woff2" t="Include" />
+              <e p="fa-solid-900.eot" t="Include" />
+              <e p="fa-solid-900.svg" t="Include" />
+              <e p="fa-solid-900.ttf" t="Include" />
+              <e p="fa-solid-900.woff" t="Include" />
+              <e p="fa-solid-900.woff2" t="Include" />
+            </e>
+          </e>
+          <e p="environments" t="Include">
+            <e p="environment.prod.ts" t="Include" />
+            <e p="environment.ts" t="Include" />
+          </e>
+          <e p="favicon.ico" t="Include" />
+          <e p="index.html" t="Include" />
+          <e p="main.ts" t="Include" />
+          <e p="polyfills.ts" t="Include" />
+          <e p="styles.css" t="Include" />
+          <e p="styles.scss" t="Include" />
+          <e p="test.ts" t="Include" />
+          <e p="tsconfig.app.json" t="Include" />
+          <e p="tsconfig.spec.json" t="Include" />
+          <e p="typings.d.ts" t="Include" />
+        </e>
+        <e p="tsconfig.json" t="Include" />
+        <e p="tslint.json" t="Include" />
       </e>
-      <e p="CheatCodes.UI\node_modules\ajv" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\blocking-proxy" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\chalk" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\codelyzer" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\commander" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\core-js" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\fast-deep-equal" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\jasmine-core" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\jasmine-spec-reporter" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\karma" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\karma-chrome-launcher" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\karma-coverage-istanbul-reporter" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\karma-jasmine" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\karma-jasmine-html-reporter" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\license-webpack-plugin" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\ngx-flip" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\portfinder" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\postcss" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\protractor" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\reflect-metadata" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\rxjs" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\source-map" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\symbol-observable" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\tree-kill" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\ts-node" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\tsconfig" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\tsickle" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\tslib" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\tslint" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\typescript\lib\lib.d.ts" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\typescript\lib\lib.dom.d.ts" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\typescript\lib\lib.dom.iterable.d.ts" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\typescript\lib\lib.es2015.collection.d.ts" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\typescript\lib\lib.es2015.core.d.ts" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\typescript\lib\lib.es2015.d.ts" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\typescript\lib\lib.es2015.generator.d.ts" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\typescript\lib\lib.es2015.iterable.d.ts" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\typescript\lib\lib.es2015.promise.d.ts" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\typescript\lib\lib.es2015.proxy.d.ts" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\typescript\lib\lib.es2015.reflect.d.ts" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\typescript\lib\lib.es2015.symbol.d.ts" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\typescript\lib\lib.es2015.symbol.wellknown.d.ts" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\typescript\lib\lib.es2016.array.include.d.ts" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\typescript\lib\lib.es2016.d.ts" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\typescript\lib\lib.es2016.full.d.ts" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\typescript\lib\lib.es2017.d.ts" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\typescript\lib\lib.es2017.full.d.ts" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\typescript\lib\lib.es2017.intl.d.ts" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\typescript\lib\lib.es2017.object.d.ts" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\typescript\lib\lib.es2017.sharedmemory.d.ts" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\typescript\lib\lib.es2017.string.d.ts" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\typescript\lib\lib.es5.d.ts" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\typescript\lib\lib.es6.d.ts" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\typescript\lib\lib.esnext.asynciterable.d.ts" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\typescript\lib\lib.esnext.d.ts" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\typescript\lib\lib.esnext.full.d.ts" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\typescript\lib\lib.scripthost.d.ts" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\typescript\lib\lib.webworker.d.ts" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\uri-js" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\webdriver-js-extender" t="IncludeRecursive" />
-      <e p="CheatCodes.UI\node_modules\zone.js" t="IncludeRecursive" />
-      <e p="common" t="IncludeRecursive">
-        <e p="Bin" t="ExcludeRecursive" />
+      <e p="CheatCodes.sln" t="IncludeFlat" />
+      <e p="Common" t="IncludeRecursive">
         <e p="Common.csproj" t="IncludeRecursive" />
         <e p="Dates" t="Include" />
         <e p="Mocks" t="Include">
           <e p="MockEntity.cs" t="Include" />
         </e>
+        <e p="Utils" t="Include">
+          <e p="Entity.cs" t="Include" />
+        </e>
+        <e p="bin" t="ExcludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp2.1" t="Include">
@@ -171,18 +244,15 @@
             </e>
           </e>
         </e>
-        <e p="Utils" t="Include">
-          <e p="Entity.cs" t="Include" />
-        </e>
       </e>
       <e p="Domain" t="IncludeRecursive">
-        <e p="Bin" t="ExcludeRecursive" />
         <e p="Category.cs" t="Include" />
         <e p="CategoryField.cs" t="Include" />
         <e p="CategoryTests.cs" t="Include" />
         <e p="Domain.csproj" t="IncludeRecursive" />
         <e p="Field.cs" t="Include" />
         <e p="Item.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp2.1" t="Include">
@@ -192,11 +262,11 @@
         </e>
       </e>
       <e p="Dtos" t="IncludeRecursive">
-        <e p="Bin" t="ExcludeRecursive" />
         <e p="CategoryDto.cs" t="Include" />
         <e p="CategoryFieldValueDto.cs" t="Include" />
         <e p="Dtos.csproj" t="IncludeRecursive" />
         <e p="FieldDto.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp2.1" t="Include">
@@ -205,10 +275,20 @@
           </e>
         </e>
       </e>
-      <e p="packages" t="ExcludeRecursive" />
+      <e p="MainApp" t="Include" />
       <e p="Persistance" t="IncludeRecursive">
-        <e p="Bin" t="ExcludeRecursive" />
-        <e p="CategoryRepository.cs" t="Include" />
+        <e p="CategoryCommandRepository.cs" t="Include" />
+        <e p="CategoryQueryRepository.cs" t="Include" />
+        <e p="Persistance.csproj" t="IncludeRecursive" />
+        <e p="RepositoryBase.cs" t="Include" />
+        <e p="Utils" t="Include">
+          <e p="CheatCodesDatabase - Copy.db" t="Include" />
+          <e p="CheatCodesDatabase.db" t="Include" />
+          <e p="CheatCodesDatabase.db-journal" t="Include" />
+          <e p="DatabaseSetting.cs" t="Include" />
+          <e p="UnitOfWork.cs" t="Include" />
+        </e>
+        <e p="bin" t="ExcludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp2.1" t="Include">
@@ -216,15 +296,35 @@
             </e>
           </e>
         </e>
-        <e p="Persistance.csproj" t="IncludeRecursive" />
-        <e p="RepositoryBase.cs" t="Include" />
-        <e p="Utils" t="Include">
-          <e p="CheatCodesDatabase - Copy.db" t="Include" />
-          <e p="CheatCodesDatabase.db" t="Include" />
-          <e p="DatabaseSetting.cs" t="Include" />
-          <e p="UnitOfWork.cs" t="Include" />
-        </e>
       </e>
+      <e p="Postman/CheatCodes API.postman_collection.json" t="Include" />
+      <e p="Postman/CheatCodes Dev.postman_environment.json" t="Include" />
+      <e p="Reports" t="Include" />
+      <e p="Reports.All" t="IncludeRecursive">
+        <e p="Controllers" t="Include">
+          <e p="CategoriesController.fs" t="Include" />
+          <e p="ValuesController.fs" t="Include" />
+        </e>
+        <e p="DatabaseAccess" t="Include">
+          <e p="CheatCodesReportsDatabase.db" t="Include" />
+          <e p="Database.fs" t="Include" />
+        </e>
+        <e p="Models" t="Include">
+          <e p="Category.fs" t="Include" />
+        </e>
+        <e p="Program.fs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="launchSettings.json" t="Include" />
+        </e>
+        <e p="Reports.All.fsproj" t="IncludeRecursive" />
+        <e p="Startup.fs" t="Include" />
+        <e p="appsettings.Development.json" t="Include" />
+        <e p="appsettings.json" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+      </e>
+      <e p="Solution Items" t="Include" />
+      <e p="packages" t="ExcludeRecursive" />
     </e>
   </component>
 </project>
