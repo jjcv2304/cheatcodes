@@ -26,6 +26,7 @@ namespace Api.Test.Categories
                 var value = await client.GetStringAsync("api/categories");
                 Assert.Equal("Hello mockworld", value);
             }
+
         }
 
         private static IList<Category> GetTestCategories()
