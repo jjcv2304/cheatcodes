@@ -12,7 +12,7 @@ namespace Api
     {
         public static IConfiguration Configuration { get; } = new ConfigurationBuilder()
             .SetBasePath(Directory.GetCurrentDirectory())
-            .AddJsonFile("appSettings.json", optional: false, reloadOnChange: true)
+            .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
             .AddEnvironmentVariables()
             .Build();
 
@@ -20,7 +20,8 @@ namespace Api
         {
             Log.Logger = new LoggerConfiguration()
                 .ReadFrom.Configuration(Configuration)
-                .WriteTo.File(new JsonFormatter(), @"c:\temp\logs\cheatcodes_api_log.json", shared: true)
+                //.WriteTo.File(new JsonFormatter(), @"c:\temp\logs\cheatcodes_api_log.json", shared: true)
+                .WriteTo.File(new JsonFormatter(), @"///home/juan/temp/logs/cheatcodes_api_log.json", shared:true)
                 .CreateLogger();
 
             try
