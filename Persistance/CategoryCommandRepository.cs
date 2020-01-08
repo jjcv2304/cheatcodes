@@ -40,7 +40,7 @@ namespace Persistance
         public void Create(Category entity)
         {
             entity.Id = Connection.ExecuteScalar<int>(
-                "INSERT INTO Category(Name) VALUES(@Name); SELECT SCOPE_IDENTITY()",
+                "INSERT INTO Category(Name) VALUES(@Name); SELECT last_insert_rowid()",
                 param: new { Name = entity.Name },
                 transaction: Transaction
             );
