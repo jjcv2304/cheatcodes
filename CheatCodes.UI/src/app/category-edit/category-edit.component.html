@@ -18,7 +18,11 @@
              [(ngModel)]="model.description" name="description">
     </div>
 
+    <div class="form-group" style="display: none;">
+      <input type="text" id="parentId"
+             [(ngModel)]="model.parentId" name="parentId">
+    </div>
+
     <button type="submit" [disabled]="!categoryEditForm.form.valid">Submit</button>
-    <button type="button" (click)="newCategory(); categoryEditForm.reset()">Reset</button>
   </form>
 </div>

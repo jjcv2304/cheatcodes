@@ -9,11 +9,13 @@ namespace Application
     {
         public string Name { get; set; }
         public string Description { get; set; }
+        public int ParentId { get; }
 
-        public CategoryCreateCommand(string name, string description)
+        public CategoryCreateCommand(string name, string description, int parentId)
         {
             Name = name;
             Description = description;
+            ParentId = parentId;
         }
 
         [AuditLog]
