@@ -51,7 +51,8 @@ namespace Application.Utils
             return new Category()
             {
                 Description = categoryCreateCommand.Description,
-                Name = categoryCreateCommand.Name
+                Name = categoryCreateCommand.Name,
+                ParentCategory = new Category() { Id = categoryCreateCommand.ParentId}
             };
         }
 
@@ -61,8 +62,8 @@ namespace Application.Utils
             return new Category()
             {
                 Id = categoryUpdateCommand.Id,
-                Description = categoryUpdateCommand.Description,
-                Name = categoryUpdateCommand.Name
+                Name = categoryUpdateCommand.Name,
+                Description = categoryUpdateCommand.Description
             };
         }
 
@@ -79,8 +80,9 @@ namespace Application.Utils
         {
             if (categoryCreateDto == null) return null;
             return new CategoryCreateCommand(
+                categoryCreateDto.Name,
                 categoryCreateDto.Description,
-                categoryCreateDto.Name
+                categoryCreateDto.ParentId
             );
         }
 
@@ -89,8 +91,8 @@ namespace Application.Utils
             if (categoryUpdateDto == null) return null;
             return new CategoryUpdateCommand(
                 categoryUpdateDto.Id,
-                categoryUpdateDto.Description,
-                categoryUpdateDto.Name
+                categoryUpdateDto.Name,
+                categoryUpdateDto.Description
             );
         }
         

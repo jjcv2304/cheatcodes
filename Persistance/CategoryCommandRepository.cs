@@ -39,9 +39,13 @@ namespace Persistance
 
         public void Create(Category entity)
         {
+            int? parentId;
+            if (entity.ParentCategory.Id == 0) parentId = null;
+            else parentId = entity.ParentCategory.Id;
+
             entity.Id = Connection.ExecuteScalar<int>(
-                "INSERT INTO Category(Name) VALUES(@Name); SELECT SCOPE_IDENTITY()",
-                param: new { Name = entity.Name },
+                "INSERT INTO Category(Name, Description, ParentId) VALUES(@Name, @Description, @ParentId); SELECT last_insert_rowid()",
+                param: new { Name = entity.Name, Description = entity.Description, ParentId = parentId },
                 transaction: Transaction
             );
         }

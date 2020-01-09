@@ -1,0 +1,8 @@
+﻿
+Program.cs
+W: .WriteTo.File(new JsonFormatter(), @"c:\temp\logs\cheatcodes_api_log.json", shared: true)
+L: .WriteTo.File(new JsonFormatter(), @"///home/juan/temp/logs/cheatcodes_api_log.json", shared:true)
+
+appsettings.json
+W: "CheatCodesDatabase": "Data Source=D:\\GIT\\CheatCodes\\Persistance\\Utils\\CheatCodesDatabase.db"
+L: "CheatCodesDatabase": "Data Source=///home/juan/GIT/CheatCodes/Persistance/Utils/CheatCodesDatabase.db"

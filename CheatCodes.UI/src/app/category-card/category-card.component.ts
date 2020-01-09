@@ -29,12 +29,7 @@ export class CategoryCardComponent implements OnInit {
     this.cardWidth = this.minCardWidth;
   }
 
-  private sideNavigationLeft() {
-    this.flipDiv = !this.flipDiv;
-  }
-
   private sideNavigationRight() {
-    console.log('expand click');
     this.flipDiv = !this.flipDiv;
   }
 
@@ -58,6 +53,10 @@ export class CategoryCardComponent implements OnInit {
 
   private saveCard() {
     this.categoriesService.updateCategory(this.card);
+  }
+
+  addChildCard() {
+    this.router.navigateByUrl('/categoryEdit/' + this.card.id);
   }
 
   private deleteCard(category: Category) {
