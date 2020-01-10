@@ -13,5 +13,7 @@ namespace Application.Utils.Interfaces
         void Update(Category category);
 
         void Delete(Category category);
+
+        void UpdateCategoryField(CategoryField entity);
     }
 }

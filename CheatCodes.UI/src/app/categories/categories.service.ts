@@ -5,6 +5,7 @@ import {Envelope} from "../models/envelope";
 import {CategoryFilter} from "../models/CategoryFilter";
 import {Observable} from 'rxjs';
 import {catchError} from 'rxjs/operators';
+import {ICategoryFieldValue} from "../models/categoryFieldValue";
 
 @Injectable()
 export class CategoriesService {
@@ -62,6 +63,10 @@ export class CategoriesService {
 
   public updateCategory(category: Category): void {
     this.http.put(this.categoryUrl, category, this.httpOptions).subscribe();
+  };
+
+  public updateCategoryField(field: ICategoryFieldValue): void {
+    this.http.put(this.categoryUrl + '/UpdateField', field, this.httpOptions).subscribe();
   };
 
   public deleteCategory(category: Category) {

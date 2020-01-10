@@ -4,6 +4,7 @@ import {CategoriesService} from "../categories/categories.service";
 import {Envelope} from "../models/envelope";
 import {Router} from "@angular/router";
 import {CategoryFilter} from "../models/CategoryFilter";
+import {ICategoryFieldValue} from "../models/categoryFieldValue";
 
 
 @Component({
@@ -53,6 +54,10 @@ export class CategoryCardComponent implements OnInit {
 
   private saveCard() {
     this.categoriesService.updateCategory(this.card);
+  }
+
+  private updateFieldValue(field: ICategoryFieldValue) {
+    this.categoriesService.updateCategoryField(field)
   }
 
   addChildCard() {

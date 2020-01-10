@@ -33,7 +33,7 @@
           <label>
             {{field.fieldName}}
           </label>
-          <textarea (keyup)="autoGrowTextZone($event)" type="text" name="{{field.fieldName}}"
+          <textarea (keyup)="autoGrowTextZone($event)" (focusout)="updateFieldValue(field)" type="text" name="{{field.fieldName}}"
                     [(ngModel)]="field.value" class="input-field"></textarea>
         </div>
       </div>
@@ -41,13 +41,11 @@
         <div class="card-deep-navigation">
         </div>
         <div class="card-menu">
-          <div class="fas fa-save" (click)="saveCard()"></div>
           <div class="fas fa-bars"></div>
           <div class="fas fa-trash-alt" (click)="deleteCard(card)"></div>
         </div>
         <div class="card-side-navigation">
           <div class="fas fa-asterisk" (click)="resizeCard()"></div>
-          <div class="fas fa-angle-double-left" (click)="sideNavigationLeft()"></div>
           <div class="fas fa-angle-double-right" (click)="sideNavigationRight()"></div>
         </div>
       </div>

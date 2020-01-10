@@ -1,4 +1,4 @@
-import {ICategoryFieldValue} from "./CategoryFieldValue";
+import {ICategoryFieldValue} from "./categoryFieldValue";
 
 export interface ICategory {
   id: number;

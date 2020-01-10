@@ -12,8 +12,7 @@ namespace Api.Categories
 {
     //[TypeFilter(typeof(TrackPerformance))]
     [Route("api/[controller]")]
-    public class CategoriesController : BaseController
-    {
+    public class CategoriesController : BaseController    {
         private readonly Messages _messages;
        
         public CategoriesController(Messages messages) : base()
@@ -98,6 +97,13 @@ namespace Api.Categories
             return FromResult(result);
         }
 
-
+        [HttpPut]
+        [Route("[action]")]
+        public IActionResult UpdateField([FromBody] CategoryFieldValuedUpdateDto categoryFieldUpdateDto)
+        {
+            CategoryFieldValueUpdateCommand categoryFieldUpdateCommand = MapService.Map(categoryFieldUpdateDto);
+            Result result = _messages.Dispatch(categoryFieldUpdateCommand);
+            return FromResult(result);
+        }
     }
 }

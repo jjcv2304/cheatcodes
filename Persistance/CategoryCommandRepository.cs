@@ -63,7 +63,7 @@ namespace Persistance
             }
         }
 
-        private void UpdateCategoryField(CategoryField entity)
+        public void UpdateCategoryField(CategoryField entity)
         {
             Connection.Execute(
                 "UPDATE CategoryField SET Value = @Value  WHERE CategoryId = @CategoryId AND FieldId = @FieldId",

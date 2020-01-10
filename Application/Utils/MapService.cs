@@ -138,7 +138,7 @@ namespace Application.Utils
         {
             return fields.Select(Map).ToList();
         }
-
+   
         #endregion
 
         #region CategoryField
@@ -173,7 +173,19 @@ namespace Application.Utils
         {
             return categoryFieldsDto.Select(Map).ToList();
         }
-
+        public static CategoryFieldValueUpdateCommand Map(CategoryFieldValuedUpdateDto dto)
+        {
+            return new CategoryFieldValueUpdateCommand(dto.FieldId, dto.CategoryId, dto.Value);
+        }
+        public static CategoryField Map(CategoryFieldValueUpdateCommand command)
+        {
+            return new CategoryField()
+            {
+                Field = new Field(){Id = command.FieldId},
+                Category = new Category(){Id = command.CategoryId},
+                Value = command.Value
+            };
+        }
         #endregion
     }
 }

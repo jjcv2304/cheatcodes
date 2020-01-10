@@ -8,6 +8,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace Api.Utils
 {
+    //todo study the code
     public static class HandlerRegistration
     {
         public static void AddHandlers(this IServiceCollection services)
@@ -23,13 +24,15 @@ namespace Api.Utils
             }
         }
 
+        #region private
+
         private static void AddHandler(IServiceCollection services, Type type)
         {
             object[] attributes = type.GetCustomAttributes(false);
 
             List<Type> pipeline = attributes
                 .Select(x => ToDecorator(x))
-                .Concat(new[] { type })
+                .Concat(new[] {type})
                 .Reverse()
                 .ToList();
 
@@ -68,7 +71,8 @@ namespace Api.Utils
             return func;
         }
 
-        private static object[] GetParameters(List<ParameterInfo> parameterInfos, object current, IServiceProvider provider)
+        private static object[] GetParameters(List<ParameterInfo> parameterInfos, object current,
+            IServiceProvider provider)
         {
             var result = new object[parameterInfos.Count];
 
@@ -115,5 +119,7 @@ namespace Api.Utils
 
             return typeDefinition == typeof(ICommandHandler<>) || typeDefinition == typeof(IQueryHandler<,>);
         }
+
+        #endregion
     }
 }
