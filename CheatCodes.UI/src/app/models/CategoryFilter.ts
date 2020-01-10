@@ -1,31 +1,31 @@
 
 export class CategoryFilter {
 
-  public constructor() {
-  }
-
-  public static FilterByParent(parentId : number) : CategoryFilter {
-    let newFilter = new CategoryFilter();
-    newFilter.byParent = true;
-    newFilter.parentId = parentId;
-    return newFilter;
-  }
-  public static FilterByChild(childId : number) : CategoryFilter {
-    let newFilter = new CategoryFilter();
-    newFilter.byChild = true;
-    newFilter.childId = childId;
-    return newFilter;
-  }
-
-  byParent: boolean = false;
-  byChild: boolean = false;
-  byName: boolean = false;
-  byDescription: boolean = false;
+  byParent = false;
+  byChild = false;
+  byName = false;
+  byDescription = false;
 
   parentId: number = null;
   name: string = null;
   description: string = null;
   childId: number = null;
+
+  public constructor() {
+  }
+
+  public static FilterByParent(parentId: number): CategoryFilter {
+    const newFilter = new CategoryFilter();
+    newFilter.byParent = true;
+    newFilter.parentId = parentId;
+    return newFilter;
+  }
+  public static FilterByChild(childId: number): CategoryFilter {
+    const newFilter = new CategoryFilter();
+    newFilter.byChild = true;
+    newFilter.childId = childId;
+    return newFilter;
+  }
 }
 
 // export interface ICategory {

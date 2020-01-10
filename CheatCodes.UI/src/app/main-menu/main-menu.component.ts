@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Router} from "@angular/router";
-import {CategoriesService} from "../categories/categories.service";
+import {Router} from '@angular/router';
+import {CategoriesService} from '../categories/categories.service';
 
 @Component({
   selector: 'app-main-menu',
@@ -10,7 +10,7 @@ import {CategoriesService} from "../categories/categories.service";
 export class MainMenuComponent implements OnInit {
 
 
-  constructor(public router: Router, private categoriesService:CategoriesService) {
+  constructor(public router: Router, private categoriesService: CategoriesService) {
 
   }
 

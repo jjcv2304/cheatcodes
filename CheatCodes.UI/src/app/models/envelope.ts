@@ -4,6 +4,6 @@ export class Envelope<T> {
   }
 
   result: T = null;
-  errorMessage: string = '';
-  timeGenerated: string='';
+  errorMessage = '';
+  timeGenerated = '';
 }

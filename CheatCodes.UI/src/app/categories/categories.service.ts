@@ -1,11 +1,13 @@
+/* tslint:disable:member-ordering */
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpErrorResponse, HttpHeaders} from '@angular/common/http';
-import {Category, ICategory} from "../models/category";
-import {Envelope} from "../models/envelope";
-import {CategoryFilter} from "../models/CategoryFilter";
+import {Category, ICategory} from '../models/category';
+import {Envelope} from '../models/envelope';
+import {CategoryFilter} from '../models/CategoryFilter';
 import {Observable} from 'rxjs';
 import {catchError} from 'rxjs/operators';
-import {ICategoryFieldValue} from "../models/categoryFieldValue";
+import {ICategoryFieldValue} from '../models/categoryFieldValue';
+import {NewField} from '../models/NewField';
 
 @Injectable()
 export class CategoriesService {
@@ -18,7 +20,7 @@ export class CategoriesService {
 
   constructor(private http: HttpClient) {
     this.currentCategoryFilter = new CategoryFilter();
-  };
+  }
 
   /////////////////// Filter Region ///////////////////
   private currentCategoryFilter: CategoryFilter;
@@ -44,6 +46,7 @@ export class CategoriesService {
 
   /////////////////// Http Region ///////////////////
 
+
   private readonly categoryUrl: string = '/api/categories';
   private readonly httpOptions = {
     headers: new HttpHeaders({
@@ -59,20 +62,24 @@ export class CategoriesService {
 
   public addCategory(category: Category): Observable<Category> {
     return this.http.post<Category>(this.categoryUrl, category, this.httpOptions);
-  };
+  }
+
+  public addField(field: NewField): Observable<NewField> {
+    return this.http.put<NewField>(this.categoryUrl + '/AddField', field, this.httpOptions);
+  }
 
   public updateCategory(category: Category): void {
     this.http.put(this.categoryUrl, category, this.httpOptions).subscribe();
-  };
+  }
 
   public updateCategoryField(field: ICategoryFieldValue): void {
     this.http.put(this.categoryUrl + '/UpdateField', field, this.httpOptions).subscribe();
-  };
+  }
 
   public deleteCategory(category: Category) {
     this.httpOptionsWithBody.body = category;
     return this.http.delete<Envelope<ICategory>>(this.categoryUrl, this.httpOptionsWithBody);
-  };
+  }
 
   private getAllCategories() {
     return this.http.get<Envelope<Array<ICategory>>>(this.categoryUrl).subscribe(
@@ -83,20 +90,20 @@ export class CategoriesService {
         console.log('Error loading categories. getAllCategories');
       }
     );
-  };
+  }
 
   private getAllCategories_InMemory(): any {
     // return this.http.get<ICategory>(this.categoryUrl);
 
-    let card1 = {name: 'card1', description: 'card 1 desc', order: 1, color: 'rgba(0, 255, 255, 0.2)'};
-    let card2 = {name: 'card2', description: 'card 2 desc', order: 2, color: 'rgba(0, 255, 0, 0.2)'};
-    let card3 = {name: 'card5', description: 'card 5 desc', order: 5, color: 'rgba(0, 0, 255, 0.2'};
-    let card4 = {name: 'card4', description: 'card 4 desc', order: 4, color: 'rgba(255, 255, 0, 0.2)'};
-    let card5 = {name: 'card3', description: 'card 3 desc', order: 3, color: 'rgba(255, 0, 255, 0.2)'};
+    const card1 = {name: 'card1', description: 'card 1 desc', order: 1, color: 'rgba(0, 255, 255, 0.2)'};
+    const card2 = {name: 'card2', description: 'card 2 desc', order: 2, color: 'rgba(0, 255, 0, 0.2)'};
+    const card3 = {name: 'card5', description: 'card 5 desc', order: 5, color: 'rgba(0, 0, 255, 0.2'};
+    const card4 = {name: 'card4', description: 'card 4 desc', order: 4, color: 'rgba(255, 255, 0, 0.2)'};
+    const card5 = {name: 'card3', description: 'card 3 desc', order: 3, color: 'rgba(255, 0, 255, 0.2)'};
 
-    let card6 = {name: 'card6', description: 'card 6 desc', order: 6, color: 'rgba(125, 125, 0, 0.2'};
-    let card7 = {name: 'card7', description: 'card 7 desc', order: 7, color: 'rgba(0, 65, 65, 0.2)'};
-    let card8 = {name: 'card8', description: 'card 8 desc', order: 8, color: 'rgba(0, 0, 125, 0.2)'};
+    const card6 = {name: 'card6', description: 'card 6 desc', order: 6, color: 'rgba(125, 125, 0, 0.2'};
+    const card7 = {name: 'card7', description: 'card 7 desc', order: 7, color: 'rgba(0, 65, 65, 0.2)'};
+    const card8 = {name: 'card8', description: 'card 8 desc', order: 8, color: 'rgba(0, 0, 125, 0.2)'};
 
     let cards: any;
     cards = [];
@@ -120,11 +127,11 @@ export class CategoriesService {
       return 0;
     });
     return cards;
-  };
+  }
 
   private getById(categoryId: number) {
     return this.http.get<Envelope<ICategory>>(this.categoryUrl + '/' + categoryId);
-  };
+  }
 
   private getChildsByParent(categoryId: number) {
     this.http.get<Envelope<Array<ICategory>>>(this.categoryUrl + '/GetChildsOf/' + categoryId).subscribe(

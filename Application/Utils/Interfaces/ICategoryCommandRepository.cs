@@ -14,6 +14,10 @@ namespace Application.Utils.Interfaces
 
         void Delete(Category category);
 
+        int CreateField(Field field);
+
+        void LinkRecursive(int fieldId, int categoryRootId);
+
         void UpdateCategoryField(CategoryField entity);
     }
 }

@@ -72,5 +72,33 @@ namespace Persistance
             );
         }
 
+        public int CreateField(Field field)
+        {
+            var newFieldId = Connection.ExecuteScalar<int>(
+                "INSERT INTO Field(Name, Description) VALUES(@Name, @Description); SELECT last_insert_rowid()",
+                param: new { Name = field.Name, Description = field.Description },
+                transaction: Transaction
+            );
+            return newFieldId;
+        }
+
+        public void LinkRecursive(int fieldId, int categoryRootId)
+        {
+            Connection.Execute(
+                "WITH RECURSIVE cat_tree as (" +
+                "SELECT id, name, ParentId     " +
+                "FROM category    " +
+                "WHERE id=@categoryRootId    " +
+                "UNION ALL   " +
+                "SELECT child.id, child.name, child.ParentId     " +
+                "FROM category as child     " +
+                "JOIN cat_tree as parent on parent.id = child.ParentId)" +
+    "                                                                   " +
+                "INSERT INTO CategoryField(CategoryId, FieldId, Value)" +
+                "SELECT id, @newFieldId, '' FROM cat_tree;",
+                param: new { categoryRootId = categoryRootId, newFieldId = fieldId },
+                transaction: Transaction
+            );
+        }
     }
 }

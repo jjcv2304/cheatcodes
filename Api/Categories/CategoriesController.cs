@@ -105,5 +105,14 @@ namespace Api.Categories
             Result result = _messages.Dispatch(categoryFieldUpdateCommand);
             return FromResult(result);
         }
+
+        [HttpPut]
+        [Route("[action]")]
+        public IActionResult AddField([FromBody] FieldCreateCommand fieldCreateCommand)
+        {
+            //CategoryFieldValueUpdateCommand categoryFieldUpdateCommand = MapService.Map(categoryFieldUpdateDto);
+            Result result = _messages.Dispatch(fieldCreateCommand);
+            return FromResult(result);
+        }
     }
 }

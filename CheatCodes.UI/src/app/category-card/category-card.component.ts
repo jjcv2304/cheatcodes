@@ -1,10 +1,10 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Category, ICategory} from "../models/category";
-import {CategoriesService} from "../categories/categories.service";
-import {Envelope} from "../models/envelope";
-import {Router} from "@angular/router";
-import {CategoryFilter} from "../models/CategoryFilter";
-import {ICategoryFieldValue} from "../models/categoryFieldValue";
+import {Category, ICategory} from '../models/category';
+import {CategoriesService} from '../categories/categories.service';
+import {Envelope} from '../models/envelope';
+import {Router} from '@angular/router';
+import {CategoryFilter} from '../models/CategoryFilter';
+import {ICategoryFieldValue} from '../models/categoryFieldValue';
 
 
 @Component({
@@ -22,7 +22,7 @@ export class CategoryCardComponent implements OnInit {
   maxCardHeight = '500px';
   @Input() card: Category;
 
-  constructor(public router: Router, private categoriesService:CategoriesService) {
+  constructor(public router: Router, private categoriesService: CategoriesService) {
     this.flipDiv = false;
   }
 
@@ -34,21 +34,21 @@ export class CategoryCardComponent implements OnInit {
     this.flipDiv = !this.flipDiv;
   }
 
-  private canNavigateUp(){
+  private canNavigateUp() {
     return this.card.hasParent;
   }
 
   private navigateUp() {
-    let newFilter = CategoryFilter.FilterByChild(this.card.parentId);
+    const newFilter = CategoryFilter.FilterByChild(this.card.parentId);
     this.categoriesService.SetCategoryFilter(newFilter);
   }
 
-  private canNavigateDown(){
+  private canNavigateDown() {
     return this.card.hasChild;
   }
 
   private navigateDown() {
-    let newFilter = CategoryFilter.FilterByParent(this.card.id);
+    const newFilter = CategoryFilter.FilterByParent(this.card.id);
     this.categoriesService.SetCategoryFilter(newFilter);
   }
 
@@ -57,7 +57,7 @@ export class CategoryCardComponent implements OnInit {
   }
 
   private updateFieldValue(field: ICategoryFieldValue) {
-    this.categoriesService.updateCategoryField(field)
+    this.categoriesService.updateCategoryField(field);
   }
 
   addChildCard() {
@@ -67,7 +67,7 @@ export class CategoryCardComponent implements OnInit {
   private deleteCard(category: Category) {
     this.categoriesService.deleteCategory(category)
       .subscribe((data: Envelope<ICategory>) => {
-        if(data.errorMessage != null){
+        if (data.errorMessage != null) {
           console.dir(data.result);
         }
         location.reload();
@@ -76,12 +76,12 @@ export class CategoryCardComponent implements OnInit {
 
   private autoGrowTextZone(e) {
     e.target.style.overflow = 'hidden';
-    e.target.style.height = "0px";
-    e.target.style.height = (e.target.scrollHeight + 15)+"px";
+    e.target.style.height = '0px';
+    e.target.style.height = (e.target.scrollHeight + 15) + 'px';
   }
 
   private resizeCard() {
-    if(this.cardWidth == this.minCardWidth) {
+    if (this.cardWidth === this.minCardWidth) {
       this.cardWidth = this.maxCardWidth;
       this.cardHeight = this.maxCardHeight;
     } else {
@@ -89,5 +89,9 @@ export class CategoryCardComponent implements OnInit {
       this.cardHeight = this.minCardHeight;
     }
 
+  }
+
+  addField() {
+    this.router.navigateByUrl('/fieldEdit/' + this.card.id);
   }
 }

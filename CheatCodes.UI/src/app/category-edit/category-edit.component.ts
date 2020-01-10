@@ -26,11 +26,5 @@ export class CategoryEditComponent implements OnInit {
       .subscribe((data: ICategory) => {
         this.router.navigate(['/categoryList']);
       });
-
-
-
   }
-
-
-
 }

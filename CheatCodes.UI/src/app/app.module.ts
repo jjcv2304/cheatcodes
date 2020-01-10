@@ -5,12 +5,13 @@ import {FlipModule} from 'ngx-flip';
 
 import {AppComponent} from './app.component';
 import {CategoriesListComponent} from './categories-list/categories-list.component';
-import {CategoriesService} from "./categories/categories.service";
+import {CategoriesService} from './categories/categories.service';
 import {MainMenuComponent} from './main-menu/main-menu.component';
 import {CategoryCardComponent} from './category-card/category-card.component';
 import {CategoryEditComponent} from './category-edit/category-edit.component';
 import {AppRoutingModule} from './app-routing.module';
-import {FormsModule} from "@angular/forms";
+import {FormsModule} from '@angular/forms';
+import { FieldEditComponent } from './field-edit/field-edit.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import {FormsModule} from "@angular/forms";
     CategoriesListComponent,
     MainMenuComponent,
     CategoryCardComponent,
-    CategoryEditComponent
+    CategoryEditComponent,
+    FieldEditComponent
   ],
   imports: [
     BrowserModule,

@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {CategoriesService} from "../categories/categories.service";
-import {Category, ICategory} from "../models/category";
-import {Envelope} from "../models/envelope";
-import {CategoryFilter} from "../models/CategoryFilter";
+import {CategoriesService} from '../categories/categories.service';
+import {Category, ICategory} from '../models/category';
+import {Envelope} from '../models/envelope';
+import {CategoryFilter} from '../models/CategoryFilter';
 
 @Component({
   selector: 'app-categories-list',

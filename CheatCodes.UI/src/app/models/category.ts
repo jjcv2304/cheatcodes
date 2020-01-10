@@ -1,4 +1,4 @@
-import {ICategoryFieldValue} from "./categoryFieldValue";
+import {ICategoryFieldValue} from './categoryFieldValue';
 
 export interface ICategory {
   id: number;
@@ -17,9 +17,9 @@ export class Category implements ICategory {
 
   id: number = null;
   name: string = null;
-  description: string = '';
-  hasParent: boolean = false;
-  hasChild: boolean = false;
+  description = '';
+  hasParent = false;
+  hasChild = false;
   parentId: number;
   categoryFieldValues: ICategoryFieldValue[];
 }

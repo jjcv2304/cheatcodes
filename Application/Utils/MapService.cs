@@ -138,6 +138,15 @@ namespace Application.Utils
         {
             return fields.Select(Map).ToList();
         }
+
+        public static Field Map(FieldCreateCommand command)
+        {
+            return new Field()
+            {
+                Name = command.Name,
+                Description = command.Description
+            };
+        }
    
         #endregion
 
