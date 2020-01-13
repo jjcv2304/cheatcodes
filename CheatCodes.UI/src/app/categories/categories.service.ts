@@ -30,6 +30,10 @@ export class CategoriesService {
     this.getFilteredCategories();
   }
 
+  public RefreshCategoryLastFilter() {
+    this.getFilteredCategories();
+  }
+
   public GetCategoryFilter(): CategoryFilter {
     return this.currentCategoryFilter;
   }

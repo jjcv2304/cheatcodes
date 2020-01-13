@@ -8,6 +8,7 @@ import {FieldEditComponent} from './field-edit/field-edit.component';
 
 const routes: Routes = [
   { path: 'categoryList', component: CategoriesListComponent },
+  { path: 'categoryList/:reload', component: CategoriesListComponent },
   { path: 'categoryEdit', component: CategoryEditComponent },
   { path: 'categoryEdit/:parentId', component: CategoryEditComponent },
   { path: 'fieldEdit/:categoryId', component: FieldEditComponent },

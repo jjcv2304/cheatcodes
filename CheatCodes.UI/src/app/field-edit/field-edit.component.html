@@ -4,7 +4,7 @@
     <div class="form-group">
       <label for="name">Name</label>
       <input type="text"  id="name"
-             required
+             required #fieldName
              [(ngModel)]="model.name" name="name"
              #name="ngModel">
       <div [hidden]="name.valid || name.pristine">
@@ -20,7 +20,7 @@
 
     <div class="form-group" style="display: none;">
       <input type="text" id="parentId"
-             [(ngModel)]="model.rootCategoryId" name="parentId">
+             [(ngModel)]="model.categoryId" name="parentId">
     </div>
 
     <button type="submit" [disabled]="!fieldEditForm.form.valid">Submit</button>
