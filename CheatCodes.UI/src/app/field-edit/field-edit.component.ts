@@ -12,7 +12,7 @@ import {INewField, NewField} from '../models/NewField';
 export class FieldEditComponent implements OnInit {
 
 
-  model = new NewField({ name: '', description: '', rootCategoryId: 0});
+  model = new NewField({ name: '', description: '', categoryId: 0});
 
   submitted = false;
 
@@ -20,7 +20,7 @@ export class FieldEditComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.model.rootCategoryId = Number(this.route.snapshot.paramMap.get('categoryId'));
+    this.model.categoryId = Number(this.route.snapshot.paramMap.get('categoryId'));
   }
 
   onSubmit() {

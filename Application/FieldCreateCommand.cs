@@ -10,13 +10,13 @@ namespace Application
     {
         public string Name { get; set; }
         public string Description { get; set; }
-        public int RootCategoryId { get; }
+        public int CategoryId { get; }
 
-        public FieldCreateCommand(string name, string description, int rootCategoryId)
+        public FieldCreateCommand(string name, string description, int categoryId)
         {
             Name = name;
             Description = description;
-            RootCategoryId = rootCategoryId;
+            CategoryId = categoryId;
         }
 
         [AuditLog]
@@ -32,8 +32,8 @@ namespace Application
             {
                 var categoryRepository = _unitOfWork.CategoryCommandRepository;
                 var field = MapService.Map(fieldCreateCommand);
-                var fieldId = categoryRepository.CreateField(field);
-                categoryRepository.LinkRecursive(fieldId, fieldCreateCommand.RootCategoryId);
+                var newFieldId = categoryRepository.CreateField(field);
+               categoryRepository.LinkToCategoriesSameLevel(newFieldId, fieldCreateCommand.CategoryId);
 
                 _unitOfWork.Commit();
                 return Result.Ok();

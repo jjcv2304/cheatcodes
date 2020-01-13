@@ -2,7 +2,7 @@ export interface INewField {
 
   name: string;
   description: string;
-  rootCategoryId: number;
+  categoryId: number;
 }
 
 export class NewField implements INewField {
@@ -11,5 +11,5 @@ export class NewField implements INewField {
   }
   name: string;
   description = '';
-  rootCategoryId: number;
+  categoryId: number;
 }

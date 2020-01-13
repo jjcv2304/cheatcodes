@@ -32,8 +32,8 @@ namespace Application
             {
                 var categoryRepository = _unitOfWork.CategoryCommandRepository;
                 var category = MapService.Map(categoryCreateCommand);
-                categoryRepository.Create(category);
-
+                var newCategoryId = categoryRepository.Create(category);
+                categoryRepository.LinkToFieldsFromSameLevel(newCategoryId, categoryCreateCommand.ParentId);
                 _unitOfWork.Commit();
                 return Result.Ok();
             }

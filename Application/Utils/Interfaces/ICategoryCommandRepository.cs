@@ -8,7 +8,7 @@ namespace Application.Utils.Interfaces
 
         Category GetById(int id);
 
-        void Create(Category category);
+        int Create(Category category);
 
         void Update(Category category);
 
@@ -19,5 +19,7 @@ namespace Application.Utils.Interfaces
         void LinkRecursive(int fieldId, int categoryRootId);
 
         void UpdateCategoryField(CategoryField entity);
+        void LinkToFieldsFromSameLevel(int currentCategory, int parentCategoryId);
+        void LinkToCategoriesSameLevel(int newFieldId, int rootCategoryId);
     }
 }

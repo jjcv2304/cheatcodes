@@ -37,7 +37,7 @@ namespace Persistance
             Remove(entity.Id);
         }
 
-        public void Create(Category entity)
+        public int Create(Category entity)
         {
             int? parentId;
             if (entity.ParentCategory.Id == 0) parentId = null;
@@ -48,6 +48,7 @@ namespace Persistance
                 param: new { Name = entity.Name, Description = entity.Description, ParentId = parentId },
                 transaction: Transaction
             );
+            return entity.Id;
         }
 
         public void Update(Category entity)
@@ -97,6 +98,31 @@ namespace Persistance
                 "INSERT INTO CategoryField(CategoryId, FieldId, Value)" +
                 "SELECT id, @newFieldId, '' FROM cat_tree;",
                 param: new { categoryRootId = categoryRootId, newFieldId = fieldId },
+                transaction: Transaction
+            );
+        }
+        public void LinkToFieldsFromSameLevel(int currentCategory, int parentCategoryId)
+        {
+            Connection.Execute(
+                "INSERT INTO CategoryField(CategoryId, FieldId, Value)" +
+                "SELECT DISTINCT @currentCategory, FieldId, '' " +
+                "FROM CategoryField cf " +
+                "INNER JOIN Category C ON cf.CategoryId = C.Id " +
+                "WHERE c.ParentId=@parentCategoryId",
+                param: new { currentCategory = currentCategory, parentCategoryId = parentCategoryId },
+                transaction: Transaction
+            );
+        }
+
+        public void LinkToCategoriesSameLevel(int newFieldId, int categoryId)
+        {
+            Connection.Execute(
+                "INSERT INTO CategoryField(CategoryId, FieldId, Value)" +
+                "SELECT cSiblings.id, @newFieldId, '' " +
+                "  FROM Category c" +
+                " INNER JOIN Category cSiblings on cSiblings.ParentId = c.ParentId" +
+                " WHERE c.Id = @categoryId",
+                param: new { newFieldId = newFieldId, categoryId = categoryId },
                 transaction: Transaction
             );
         }
