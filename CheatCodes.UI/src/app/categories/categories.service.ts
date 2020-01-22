@@ -72,8 +72,8 @@ export class CategoriesService {
     return this.http.put<NewField>(this.categoryUrl + '/AddField', field, this.httpOptions);
   }
 
-  public updateCategory(category: Category): void {
-    this.http.put(this.categoryUrl, category, this.httpOptions).subscribe();
+  public updateCategory(category: Category): Observable<void> {
+    return this.http.put<void>(this.categoryUrl, category, this.httpOptions);
   }
 
   public updateCategoryField(field: ICategoryFieldValue): void {
