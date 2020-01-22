@@ -13,17 +13,21 @@
 }
 
 .card-header {
-  font-size: larger;
+  //font-size: larger;
   text-align: center;
   flex-shrink: 0;
   margin: 5px;
   border:0;
+  width:93%;
+  resize: none;
+  overflow: hidden;
 }
 
 .card-description {
   flex-grow: 1;
   margin: 5px;
   overflow: auto;
+  resize: none;
   border: 0;
 }
 .card-description-field {

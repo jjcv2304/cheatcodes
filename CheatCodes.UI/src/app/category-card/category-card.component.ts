@@ -14,6 +14,7 @@ import {ICategoryFieldValue} from '../models/categoryFieldValue';
 })
 export class CategoryCardComponent implements OnInit {
   flipDiv: boolean;
+  saveIsRecommended: boolean;
   cardWidth: string;
   cardHeight: string;
   minCardWidth = '200px';
@@ -52,8 +53,15 @@ export class CategoryCardComponent implements OnInit {
     this.categoriesService.SetCategoryFilter(newFilter);
   }
 
+  private setSaveIsRecommended() {
+    this.saveIsRecommended = true;
+  }
+
   private saveCard() {
-    this.categoriesService.updateCategory(this.card);
+    this.categoriesService.updateCategory(this.card)
+      .subscribe(() => {
+        this.saveIsRecommended = false;
+      });
   }
 
   private updateFieldValue(field: ICategoryFieldValue) {
