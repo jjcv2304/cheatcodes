@@ -12,9 +12,10 @@ namespace Api.Categories
 {
     //[TypeFilter(typeof(TrackPerformance))]
     [Route("api/[controller]")]
-    public class CategoriesController : BaseController    {
+    public class CategoriesController : BaseController
+    {
         private readonly Messages _messages;
-       
+
         public CategoriesController(Messages messages) : base()
         {
             _messages = messages;
@@ -66,15 +67,15 @@ namespace Api.Categories
         [HttpGet("{name}")]
         public IActionResult Get(string name, bool exactMatch = true)
         {
-            var result = exactMatch ? 
-                _messages.Dispatch(new GetCategoryByExactNameQuery(name)) : 
-                _messages.Dispatch(new GetCategoryByPartialNameQuery(name));
+            var result = exactMatch
+                ? _messages.Dispatch(new GetCategoryByExactNameQuery(name))
+                : _messages.Dispatch(new GetCategoryByPartialNameQuery(name));
 
             return Ok(result);
         }
 
         [HttpPost]
-        public IActionResult Create([FromBody]CategoryCreateDto categoryCreateDto)
+        public IActionResult Create([FromBody] CategoryCreateDto categoryCreateDto)
         {
             CategoryCreateCommand categoryCreateCommand = MapService.Map(categoryCreateDto);
             Result result = _messages.Dispatch(categoryCreateCommand);
@@ -82,7 +83,7 @@ namespace Api.Categories
         }
 
         [HttpPut]
-        public IActionResult Update([FromBody]CategoryUpdateDto categoryUpdateDto)
+        public IActionResult Update([FromBody] CategoryUpdateDto categoryUpdateDto)
         {
             CategoryUpdateCommand categoryUpdateCommand = MapService.Map(categoryUpdateDto);
             Result result = _messages.Dispatch(categoryUpdateCommand);
@@ -91,15 +92,24 @@ namespace Api.Categories
 
         [HttpPut]
         [Route("[action]")]
-        public IActionResult MoveUp([FromBody]CategoryMoveUpDto categoryMoveUpDto)
+        public IActionResult MoveUp([FromBody] CategoryMoveUpDto categoryMoveUpDto)
         {
             CategoryMoveUpCommand categoryMoveUpCommand = MapService.Map(categoryMoveUpDto);
             Result result = _messages.Dispatch(categoryMoveUpCommand);
             return FromResult(result);
         }
 
+        [HttpPut]
+        [Route("[action]")]
+        public IActionResult MoveToSibling([FromBody] CategoryMoveToSiblingDto categoryMoveToSiblingDto)
+        {
+            CategoryMoveToSiblingCommand categoryMoveToSiblingCommand = MapService.Map(categoryMoveToSiblingDto);
+            Result result = _messages.Dispatch(categoryMoveToSiblingCommand);
+            return FromResult(result);
+        }
+
         [HttpDelete]
-        public IActionResult Delete([FromBody]CategoryDeleteDto categoryDeleteDto)
+        public IActionResult Delete([FromBody] CategoryDeleteDto categoryDeleteDto)
         {
             CategoryDeleteCommand categoryDeleteCommand = MapService.Map(categoryDeleteDto);
             Result result = _messages.Dispatch(categoryDeleteCommand);

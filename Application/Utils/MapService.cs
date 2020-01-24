@@ -101,6 +101,12 @@ namespace Application.Utils
             return new CategoryMoveUpCommand(
                 categoryMoveUpDto.Id, categoryMoveUpDto.ParentId);
         }
+        public static CategoryMoveToSiblingCommand Map(CategoryMoveToSiblingDto categoryMoveToSiblingDto)
+        {
+            if (categoryMoveToSiblingDto == null) return null;
+            return new CategoryMoveToSiblingCommand(
+                categoryMoveToSiblingDto.CategoryId, categoryMoveToSiblingDto.SiblingId);
+        }
         
         public static CategoryDeleteCommand Map(CategoryDeleteDto categoryDeleteDto)
         {

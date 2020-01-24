@@ -39,5 +39,10 @@ namespace Dtos
         public int ParentId { get; set; }
         public int Id { get; set; }
     }
+    public class CategoryMoveToSiblingDto
+    {
+        public int SiblingId { get; set; }
+        public int CategoryId { get; set; }
+    }
     
 }

@@ -52,6 +52,14 @@ export class CategoryCardComponent implements OnInit {
       });
   }
 
+  moveCardToSibling(siblingId: number) {
+    this.categoriesService.moveCategoryToSibling(this.card.id, siblingId)
+      .subscribe(() => {
+        const newFilter = CategoryFilter.FilterByParent(siblingId);
+        this.categoriesService.SetCategoryFilter(newFilter);
+      });
+  }
+
   private canNavigateDown() {
     return this.card.hasChild;
   }

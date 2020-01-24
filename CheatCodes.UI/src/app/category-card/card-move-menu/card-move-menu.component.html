@@ -2,15 +2,13 @@
   <ul>
     <li>
       <div class="fas fa-arrow-up" [ngClass]="{'fa-disabled' : !canMoveUp}"
-           (click)="canMoveUp ? moveUpEvent() : $event.stopPropagation()"> Navigate up
+           (click)="canMoveUp ? moveUpEvent() : $event.stopPropagation()"> Move up
       </div>
     </li>
     <li (mouseenter)="showSubmenu()" (mouseleave)="hideSubmenu()">
-      <div class="fas fa-exchange-alt"> Navigate sibling</div>
+      <div class="fas fa-exchange-alt"> Move to sibling</div>
       <ul *ngIf="submenuVisible">
-        <li>angular menu text long header</li>
-        <li>b</li>
-        <li>c</li>
+        <li *ngFor="let category of siblingCategories" (click)="moveToSiblingEvent(category.id)">{{category.name}}</li>
       </ul>
     </li>
   </ul>

@@ -1,4 +1,7 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {CategoriesService} from '../../categories/categories.service';
+import {Category} from '../../models/category';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-card-move-menu',
@@ -8,11 +11,17 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 export class CardMoveMenuComponent implements OnInit {
   submenuVisible = false;
   @Input() canMoveUp: boolean;
+  @Input() currentCategoryId: number;
   @Output() moveUp: EventEmitter<void> = new EventEmitter();
+  @Output() moveToSibling: EventEmitter<number> = new EventEmitter();
+  private siblingCategories: Category[];
 
-  constructor() { }
+  constructor(private categoriesService: CategoriesService) {
+  }
 
   ngOnInit() {
+    this.siblingCategories = this.categoriesService.currentCategories;
+    this.siblingCategories = this.siblingCategories.filter(item => item.id !== this.currentCategoryId);
   }
 
   showSubmenu() {
@@ -22,8 +31,12 @@ export class CardMoveMenuComponent implements OnInit {
   hideSubmenu() {
     this.submenuVisible = false;
   }
+
   moveUpEvent() {
     this.moveUp.emit();
   }
 
+  moveToSiblingEvent(id: number) {
+    this.moveToSibling.emit(id);
+  }
 }

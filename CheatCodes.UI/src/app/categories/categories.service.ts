@@ -80,6 +80,10 @@ export class CategoriesService {
     return this.http.put<void>(this.categoryUrl + '/MoveUp', category, this.httpOptions);
   }
 
+  moveCategoryToSibling(cardId: number, siblingId: number) {
+    return this.http.put<void>(this.categoryUrl + '/MoveToSibling', {categoryId: cardId, siblingId: siblingId}, this.httpOptions);
+  }
+
   public updateCategoryField(field: ICategoryFieldValue): void {
     this.http.put(this.categoryUrl + '/UpdateField', field, this.httpOptions).subscribe();
   }
@@ -162,6 +166,7 @@ export class CategoriesService {
       }
     );
   }
+
 
 }
 

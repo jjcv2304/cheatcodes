@@ -18,7 +18,7 @@
           <div class="fas fa-save" [style.color]="saveIsRecommended ? 'red' : 'black'" (click)="saveCard()"></div>
           <div class="fas fa-plus" (click)="addChildCard()"></div>
           <div class="fas fa-bars card-menu-container" (mouseenter)="toogleMenu()" (mouseleave)="toogleMenu()">
-            <app-card-move-menu *ngIf="showMenu" (moveUp)="moveCardUp()" [canMoveUp]="canNavigateUp()"></app-card-move-menu>
+            <app-card-move-menu *ngIf="showMenu" (moveUp)="moveCardUp()" (moveToSibling)="moveCardToSibling($event)" [canMoveUp]="canNavigateUp()" [currentCategoryId]="card.id"></app-card-move-menu>
           </div>
           <div class="fas fa-trash-alt" (click)="deleteCard(card)"></div>
         </div>
