@@ -16,7 +16,6 @@ namespace Dtos
         public List<CategoryFieldValueDto> CategoryFieldValues { get; set; }        
         
     }
-
     public class CategoryCreateDto
     {
         public string Name { get; set; }
@@ -31,9 +30,13 @@ namespace Dtos
         
         public List<CategoryFieldValueDto> CategoryFieldValues { get; set; }  
     }
-
     public class CategoryDeleteDto
     {
+        public int Id { get; set; }
+    }
+    public class CategoryMoveUpDto
+    {
+        public int ParentId { get; set; }
         public int Id { get; set; }
     }
     

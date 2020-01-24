@@ -5,7 +5,6 @@ namespace Application.Utils.Interfaces
 {
     public interface ICategoryCommandRepository
     {
-
         Category GetById(int id);
 
         int Create(Category category);
@@ -19,7 +18,11 @@ namespace Application.Utils.Interfaces
         void LinkRecursive(int fieldId, int categoryRootId);
 
         void UpdateCategoryField(CategoryField entity);
+        
         void LinkToFieldsFromSameLevel(int currentCategory, int parentCategoryId);
+        
         void LinkToCategoriesSameLevel(int newFieldId, int rootCategoryId);
+
+        void ChangeParent(int categoryId, int? newParentId);
     }
 }

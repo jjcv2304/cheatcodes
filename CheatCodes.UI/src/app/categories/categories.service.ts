@@ -76,6 +76,10 @@ export class CategoriesService {
     return this.http.put<void>(this.categoryUrl, category, this.httpOptions);
   }
 
+  public moveCategoryUp(category: Category): Observable<void> {
+    return this.http.put<void>(this.categoryUrl + '/MoveUp', category, this.httpOptions);
+  }
+
   public updateCategoryField(field: ICategoryFieldValue): void {
     this.http.put(this.categoryUrl + '/UpdateField', field, this.httpOptions).subscribe();
   }

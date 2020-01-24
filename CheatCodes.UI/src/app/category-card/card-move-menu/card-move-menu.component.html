@@ -1,0 +1,17 @@
+<div class="card-move-menu-container">
+  <ul>
+    <li>
+      <div class="fas fa-arrow-up" [ngClass]="{'fa-disabled' : !canMoveUp}"
+           (click)="canMoveUp ? moveUpEvent() : $event.stopPropagation()"> Navigate up
+      </div>
+    </li>
+    <li (mouseenter)="showSubmenu()" (mouseleave)="hideSubmenu()">
+      <div class="fas fa-exchange-alt"> Navigate sibling</div>
+      <ul *ngIf="submenuVisible">
+        <li>angular menu text long header</li>
+        <li>b</li>
+        <li>c</li>
+      </ul>
+    </li>
+  </ul>
+</div>

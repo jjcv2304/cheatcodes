@@ -89,6 +89,15 @@ namespace Api.Categories
             return FromResult(result);
         }
 
+        [HttpPut]
+        [Route("[action]")]
+        public IActionResult MoveUp([FromBody]CategoryMoveUpDto categoryMoveUpDto)
+        {
+            CategoryMoveUpCommand categoryMoveUpCommand = MapService.Map(categoryMoveUpDto);
+            Result result = _messages.Dispatch(categoryMoveUpCommand);
+            return FromResult(result);
+        }
+
         [HttpDelete]
         public IActionResult Delete([FromBody]CategoryDeleteDto categoryDeleteDto)
         {

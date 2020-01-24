@@ -15,6 +15,7 @@ import {ICategoryFieldValue} from '../models/categoryFieldValue';
 export class CategoryCardComponent implements OnInit {
   flipDiv: boolean;
   saveIsRecommended: boolean;
+  showMenu = false;
   cardWidth: string;
   cardHeight: string;
   minCardWidth = '200px';
@@ -42,6 +43,13 @@ export class CategoryCardComponent implements OnInit {
   private navigateUp() {
     const newFilter = CategoryFilter.FilterByChild(this.card.parentId);
     this.categoriesService.SetCategoryFilter(newFilter);
+  }
+
+  moveCardUp() {
+    this.categoriesService.moveCategoryUp(this.card)
+      .subscribe(() => {
+        this.navigateUp();
+      });
   }
 
   private canNavigateDown() {
@@ -101,5 +109,13 @@ export class CategoryCardComponent implements OnInit {
 
   addField() {
     this.router.navigateByUrl('/fieldEdit/' + this.card.id);
+  }
+
+  moveCardDown() {
+    console.log('move down 2');
+  }
+
+  toogleMenu() {
+    this.showMenu = !this.showMenu;
   }
 }

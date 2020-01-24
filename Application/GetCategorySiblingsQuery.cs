@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using Application.Utils;
 using Application.Utils.Interfaces;
+using Domain;
 using Dtos;
 
 namespace Application
@@ -25,7 +26,13 @@ namespace Application
 
             public List<CategoryDto> Handle(GetCategorySiblingsQuery query)
             {
-                var categories = _categoryQueryRepository.GetSiblingsOf(query.Id);
+                // var categories = _categoryQueryRepository.GetSiblingsOf(query.Id);
+                var category = _categoryQueryRepository.GetById(query.Id);
+                IList<Category> categories;
+                categories = category.ParentCategory.Id == 0
+                    ? _categoryQueryRepository.GetAllParents()
+                    : _categoryQueryRepository.GetAllChilds(category.ParentCategory.Id);
+
                 var categoryDtos = MapService.Map(categories);
 
                 return categoryDtos;

@@ -1,0 +1,25 @@
+.card-move-menu-container {
+  position: absolute;
+  left: -50px;
+  border: black solid;
+  width: max-content;
+  z-index: 2;
+  background: white;
+  ul{
+    margin: 0;
+    padding-inline-start: 2px;
+    list-style: none;
+    ul{
+      padding-inline-start: 20px;
+      list-style: disc;
+    }
+  }
+  li{
+    margin: 5px;
+  }
+}
+
+.fa-disabled {
+  opacity: 0.4;
+  cursor: default;
+}

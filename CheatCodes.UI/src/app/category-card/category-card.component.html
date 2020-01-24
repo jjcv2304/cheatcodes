@@ -1,9 +1,10 @@
 <div class="card-container" [ngStyle]="{'background-color': card.color, 'width': cardWidth, 'height': cardHeight}">
   <div class="front" [hidden]="flipDiv">
     <div class="front-container" [ngStyle]="{'width': cardWidth, 'height': cardHeight}">
-      <textarea type="text" class="card-header text-shadow" (input)="setSaveIsRecommended()" [(ngModel)]="card.name" >
+      <textarea type="text" class="card-header text-shadow" (input)="setSaveIsRecommended()" [(ngModel)]="card.name">
         </textarea>
-      <textarea type="text" class="card-description" (input)="setSaveIsRecommended()" [(ngModel)]="card.description" ></textarea>
+      <textarea type="text" class="card-description" (input)="setSaveIsRecommended()"
+                [(ngModel)]="card.description"></textarea>
       <div class="card-footer">
         <div class="card-deep-navigation">
           <div (click)="canNavigateUp() ? navigateUp() : $event.stopPropagation(); canNavigateUp() ? null:false"
@@ -16,7 +17,9 @@
         <div class="card-menu">
           <div class="fas fa-save" [style.color]="saveIsRecommended ? 'red' : 'black'" (click)="saveCard()"></div>
           <div class="fas fa-plus" (click)="addChildCard()"></div>
-          <div class="fas fa-bars"></div>
+          <div class="fas fa-bars card-menu-container" (mouseenter)="toogleMenu()" (mouseleave)="toogleMenu()">
+            <app-card-move-menu *ngIf="showMenu" (moveUp)="moveCardUp()" [canMoveUp]="canNavigateUp()"></app-card-move-menu>
+          </div>
           <div class="fas fa-trash-alt" (click)="deleteCard(card)"></div>
         </div>
         <div class="card-side-navigation">
@@ -34,7 +37,8 @@
           <label>
             {{field.fieldName}}
           </label>
-          <textarea (keyup)="autoGrowTextZone($event)" (focusout)="updateFieldValue(field)" type="text" name="{{field.fieldName}}"
+          <textarea (keyup)="autoGrowTextZone($event)" (focusout)="updateFieldValue(field)" type="text"
+                    name="{{field.fieldName}}"
                     [(ngModel)]="field.value" class="input-field"></textarea>
         </div>
       </div>

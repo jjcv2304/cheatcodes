@@ -22,15 +22,40 @@ namespace Persistance
             _connectionString = connectionString;
         }
 
+        // public Category GetById(int id)
+        // {
+        //     using (SQLiteConnection connection = new SQLiteConnection(_connectionString.Value))
+        //     {
+        //         return connection.Query<Category>(
+        //             "SELECT * FROM Category WHERE Id = @CategoryId",
+        //             param: new { CategoryId = id }
+        //
+        //         ).FirstOrDefault();
+        //     }
+        // }
         public Category GetById(int id)
         {
+            const string sql =
+                @"SELECT cp.Id, cp.Name, cp.Description, cp.ParentId as endOfType, 
+                         ch.Id , ch.Name, ch.Description, ch.ParentId 
+                FROM Category ch
+                left join Category cp on ch.ParentId=cp.Id
+                where ch.Id=@CategoryId";
+
             using (SQLiteConnection connection = new SQLiteConnection(_connectionString.Value))
             {
-                return connection.Query<Category>(
-                    "SELECT * FROM Category WHERE Id = @CategoryId",
-                    param: new { CategoryId = id }
+                var res = connection.Query<Category, Category, Category>(
+                        sql,
+                        (cp, ch) =>
+                        {
+                            ch.ParentCategory = cp;
+                            return ch;
+                        },
+                        param: new { CategoryId = id },
+                        splitOn: "endOfType"
+                    ).Single();
 
-                ).FirstOrDefault();
+                return res;
             }
         }
 
@@ -68,6 +93,7 @@ namespace Persistance
                             {
                                 cp.ChildCategories.Add(ch);
                             }
+
                             cp.CategoryFields = cp.CategoryFields ?? new List<CategoryField>();
                             cf.Field = f;
                             cf.Category = cp;
@@ -85,15 +111,15 @@ namespace Persistance
                             categoryParent.ChildCategories =
                                 group.Select(cp => cp.ChildCategories.Single()).Distinct().ToList();
                         }
-                        categoryParent.CategoryFields = group.Select(cp => cp.CategoryFields.Single()).Distinct().ToList();
+
+                        categoryParent.CategoryFields =
+                            group.Select(cp => cp.CategoryFields.Single()).Distinct().ToList();
                         return categoryParent;
                     }).ToList();
 
                 return res;
             }
-
         }
-
 
 
         public IList<Category> GetAllChilds(int categoryParentId)
@@ -130,7 +156,7 @@ namespace Persistance
 
                             return c;
                         },
-                        param: new { categoryParentId = categoryParentId },
+                        param: new {categoryParentId = categoryParentId},
                         splitOn: "endOfType, endOfType2, endOfType3, endOfType4")
                     .GroupBy(c => c.Id)
                     .Select(group =>
@@ -142,8 +168,6 @@ namespace Persistance
                         return category;
                     }).ToList();
             }
-
-            
         }
 
         public IList<Category> GetSiblingsOf(int categoryId)
@@ -195,7 +219,7 @@ namespace Persistance
 
                             return c;
                         },
-                        param: new { categoryId = categoryId },
+                        param: new {categoryId = categoryId},
                         splitOn: "endOfType, endOfType2, endOfType3, endOfType4")
                     .GroupBy(c => c.Id)
                     .Select(group =>
@@ -207,8 +231,6 @@ namespace Persistance
                         return category;
                     }).ToList();
             }
-
-            
         }
     }
 }

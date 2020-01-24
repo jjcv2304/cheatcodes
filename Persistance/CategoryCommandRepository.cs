@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SQLite;
 using System.Linq;
 using Application.Utils.Interfaces;
 using Dapper;
@@ -14,13 +15,37 @@ namespace Persistance
         {
         }
 
+        // public Category GetById(int id)
+        // {
+        //     return Connection.Query<Category>(
+        //         "SELECT * FROM Category WHERE Id = @CategoryId",
+        //         param: new {CategoryId = id},
+        //         transaction: Transaction
+        //     ).FirstOrDefault();
+        // }
         public Category GetById(int id)
         {
-            return Connection.Query<Category>(
-                "SELECT * FROM Category WHERE CategoryId = @CategoryId",
+            const string sql =
+                @"SELECT cp.Id, cp.Name, cp.Description, cp.ParentId as endOfType, 
+                         ch.Id , ch.Name, ch.Description, ch.ParentId 
+                FROM Category ch
+                left join Category cp on ch.ParentId=cp.Id
+                where ch.Id=@CategoryId";
+
+
+            var res = Connection.Query<Category, Category, Category>(
+                sql,
+                (cp, ch) =>
+                {
+                    ch.ParentCategory = cp;
+                    return ch;
+                },
                 param: new {CategoryId = id},
-                transaction: Transaction
-            ).FirstOrDefault();
+                transaction: Transaction,
+                splitOn: "endOfType"
+            ).Single();
+
+            return res;
         }
 
         public void Remove(long id)
@@ -45,7 +70,7 @@ namespace Persistance
 
             entity.Id = Connection.ExecuteScalar<int>(
                 "INSERT INTO Category(Name, Description, ParentId) VALUES(@Name, @Description, @ParentId); SELECT last_insert_rowid()",
-                param: new { Name = entity.Name, Description = entity.Description, ParentId = parentId },
+                param: new {Name = entity.Name, Description = entity.Description, ParentId = parentId},
                 transaction: Transaction
             );
             return entity.Id;
@@ -77,7 +102,7 @@ namespace Persistance
         {
             var newFieldId = Connection.ExecuteScalar<int>(
                 "INSERT INTO Field(Name, Description) VALUES(@Name, @Description); SELECT last_insert_rowid()",
-                param: new { Name = field.Name, Description = field.Description },
+                param: new {Name = field.Name, Description = field.Description},
                 transaction: Transaction
             );
             return newFieldId;
@@ -94,13 +119,14 @@ namespace Persistance
                 "SELECT child.id, child.name, child.ParentId     " +
                 "FROM category as child     " +
                 "JOIN cat_tree as parent on parent.id = child.ParentId)" +
-    "                                                                   " +
+                "                                                                   " +
                 "INSERT INTO CategoryField(CategoryId, FieldId, Value)" +
                 "SELECT id, @newFieldId, '' FROM cat_tree;",
-                param: new { categoryRootId = categoryRootId, newFieldId = fieldId },
+                param: new {categoryRootId = categoryRootId, newFieldId = fieldId},
                 transaction: Transaction
             );
         }
+
         public void LinkToFieldsFromSameLevel(int currentCategory, int parentCategoryId)
         {
             Connection.Execute(
@@ -109,7 +135,7 @@ namespace Persistance
                 "FROM CategoryField cf " +
                 "INNER JOIN Category C ON cf.CategoryId = C.Id " +
                 "WHERE c.ParentId=@parentCategoryId",
-                param: new { currentCategory = currentCategory, parentCategoryId = parentCategoryId },
+                param: new {currentCategory = currentCategory, parentCategoryId = parentCategoryId},
                 transaction: Transaction
             );
         }
@@ -122,7 +148,16 @@ namespace Persistance
                 "  FROM Category c" +
                 " INNER JOIN Category cSiblings on cSiblings.ParentId = c.ParentId" +
                 " WHERE c.Id = @categoryId",
-                param: new { newFieldId = newFieldId, categoryId = categoryId },
+                param: new {newFieldId = newFieldId, categoryId = categoryId},
+                transaction: Transaction
+            );
+        }
+
+        public void ChangeParent(int categoryId, int? newParentId)
+        {
+            Connection.Execute(
+                "UPDATE Category SET ParentId=@ParentId WHERE Id = @CategoryId",
+                param: new {ParentId = newParentId, CategoryId = categoryId},
                 transaction: Transaction
             );
         }

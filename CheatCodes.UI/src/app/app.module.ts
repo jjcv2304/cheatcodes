@@ -12,6 +12,9 @@ import {CategoryEditComponent} from './category-edit/category-edit.component';
 import {AppRoutingModule} from './app-routing.module';
 import {FormsModule} from '@angular/forms';
 import { FieldEditComponent } from './field-edit/field-edit.component';
+import {NgbDropdownModule} from '@ng-bootstrap/ng-bootstrap';
+import { CardMoveMenuComponent } from './category-card/card-move-menu/card-move-menu.component';
+// import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -21,7 +24,8 @@ import { FieldEditComponent } from './field-edit/field-edit.component';
     MainMenuComponent,
     CategoryCardComponent,
     CategoryEditComponent,
-    FieldEditComponent
+    FieldEditComponent,
+    CardMoveMenuComponent
   ],
   imports: [
     BrowserModule,
@@ -29,6 +33,8 @@ import { FieldEditComponent } from './field-edit/field-edit.component';
     FlipModule,
     AppRoutingModule,
     FormsModule,
+    NgbDropdownModule.forRoot()
+    // NgbModule.forRoot()
   ],
   providers: [CategoriesService],
   bootstrap: [AppComponent]
