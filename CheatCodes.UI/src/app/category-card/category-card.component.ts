@@ -91,11 +91,23 @@ export class CategoryCardComponent implements OnInit {
   private deleteCard(category: Category) {
     this.categoriesService.deleteCategory(category)
       .subscribe((data: Envelope<ICategory>) => {
-        if (data.errorMessage != null) {
-          console.dir(data.result);
+        if (category.parentId === null) {
+          location.reload();
+        } else {
+           if (this.hasSiblings(category.id)) {
+             const newFilter = CategoryFilter.FilterByParent(category.parentId);
+             this.categoriesService.SetCategoryFilter(newFilter);
+           } else {
+             this.navigateUp();
+           }
+
         }
-        location.reload();
       });
+  }
+
+  private hasSiblings(categoryId: number) {
+    const siblingCategories = this.categoriesService.currentCategories.filter(item => item.id !== categoryId);
+    return siblingCategories.length > 0;
   }
 
   private autoGrowTextZone(e) {

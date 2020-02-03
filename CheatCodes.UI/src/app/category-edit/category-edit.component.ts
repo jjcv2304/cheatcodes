@@ -2,6 +2,7 @@ import {AfterViewInit, Component, ElementRef, OnInit, ViewChild} from '@angular/
 import {Category, ICategory} from '../models/category';
 import {ActivatedRoute, Router} from '@angular/router';
 import {CategoriesService} from '../categories/categories.service';
+import {CategoryFilter} from '../models/CategoryFilter';
 
 @Component({
   selector: 'app-category-edit',
@@ -26,8 +27,14 @@ export class CategoryEditComponent implements OnInit, AfterViewInit {
   onSubmit() {
     this.submitted = true;
     this.categoriesService.addCategory(this.model)
-      .subscribe((data: ICategory) => {
-        this.router.navigate(['/categoryList/true']);
+      .subscribe(() => {
+        if(this.model.parentId === 0) {
+          this.router.navigate(['/categoryList']);
+        } else {
+          const newFilter = CategoryFilter.FilterByParent(this.model.parentId);
+          this.categoriesService.SetCategoryFilter(newFilter);
+          this.router.navigate(['/categoryList/true']);
+        }
       });
   }
 }
