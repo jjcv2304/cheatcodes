@@ -24,9 +24,9 @@ create unique index Field_Id2_uindex
 create table CategoryField2
 (
 	CategoryId integer not null
-		references Category2,
+		references Category2 ON DELETE cascade,
 	FieldId integer not null
-		references Field2,
+		references Field2 ON DELETE cascade,
 	Value text not null,
 	constraint CategoryField_pk2
 		primary key (CategoryId, FieldId)
@@ -40,7 +40,7 @@ from CategoryField cf
 left join Category C on cf.CategoryId = C.Id
 left join Field F on cf.FieldId = F.Id
 where c.Name is null or f.Name is null
-    )
+    );
 
 insert into Field2
 select * from Field;
@@ -62,8 +62,7 @@ create table Category
 	Name TEXT not null,
 	Description TEXT,
 	ParentId BIGINT
-		references Category
-ON DELETE cascade
+		references Category ON DELETE cascade
 );
 
 create table Field
@@ -81,9 +80,9 @@ create unique index Field_Id_uindex
 create table CategoryField
 (
 	CategoryId integer not null
-		references Category,
+		references Category ON DELETE cascade,
 	FieldId integer not null
-		references Field,
+		references Field ON DELETE cascade,
 	Value text not null,
 	constraint CategoryField_pk
 		primary key (CategoryId, FieldId)
