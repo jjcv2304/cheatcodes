@@ -11,7 +11,7 @@ import {INewField, NewField} from '../models/NewField';
 })
 export class FieldEditComponent implements OnInit, AfterViewInit {
 
-  @ViewChild('fieldName') fieldName: ElementRef;
+  @ViewChild('fieldName', {static : false}) fieldName: ElementRef;
   model = new NewField({ name: '', description: '', categoryId: 0});
 
   submitted = false;

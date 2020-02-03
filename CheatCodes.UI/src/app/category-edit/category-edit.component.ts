@@ -9,7 +9,7 @@ import {CategoriesService} from '../categories/categories.service';
   styleUrls: ['./category-edit.component.scss']
 })
 export class CategoryEditComponent implements OnInit, AfterViewInit {
-  @ViewChild('fieldName') fieldName: ElementRef;
+  @ViewChild('fieldName', {static: false}) fieldName: ElementRef;
   model = new Category({id: 0, name: '', description: '', parentId: 0});
 
   submitted = false;
