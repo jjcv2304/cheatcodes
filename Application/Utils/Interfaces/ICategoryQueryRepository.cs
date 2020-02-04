@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Domain;
+using Dtos;
 
 namespace Application.Utils.Interfaces
 {
@@ -16,6 +17,8 @@ namespace Application.Utils.Interfaces
         IList<Category> GetSiblingsOf(int categoryChildId);
 
         Category GetById(int id);
+
+        IList<CategoryTreeDto> ExportToJson();
 
     }
 }

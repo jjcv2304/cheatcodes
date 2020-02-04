@@ -24,6 +24,9 @@
 
     <ItemGroup>
       <None Remove="Categories\Category.hbm.xml" />
+      <None Remove="Utils\CheatCodesDatabase - Copy %282%29.db" />
+      <None Remove="Utils\CheatCodesDatabase - Copy %283%29.db" />
+      <None Remove="Utils\CheatCodesDatabase - Copy.db" />
     </ItemGroup>
 
 </Project>
