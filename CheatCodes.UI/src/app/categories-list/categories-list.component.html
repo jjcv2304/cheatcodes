@@ -1,3 +1,5 @@
 <div class="cards-container">
   <app-category-card [card]="card" *ngFor="let card of cards"></app-category-card>
+
+  <div class="addCard fa fa-plus-circle fa-2x" *ngIf="cards.length > 0" (click)="addSiblingCard()"></div>
 </div>

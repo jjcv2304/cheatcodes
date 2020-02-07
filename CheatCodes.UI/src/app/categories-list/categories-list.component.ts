@@ -3,7 +3,7 @@ import {CategoriesService} from '../categories/categories.service';
 import {Category, ICategory} from '../models/category';
 import {Envelope} from '../models/envelope';
 import {CategoryFilter} from '../models/CategoryFilter';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-categories-list',
@@ -16,7 +16,7 @@ export class CategoriesListComponent implements OnInit {
     return this.categoriesService.currentCategories;
   }
 
-  constructor(private categoriesService: CategoriesService, private route: ActivatedRoute) {
+  constructor(private categoriesService: CategoriesService, private route: ActivatedRoute, public router: Router, ) {
   }
 
   ngOnInit() {
@@ -26,6 +26,11 @@ export class CategoriesListComponent implements OnInit {
     } else {
       this.categoriesService.SetCategoryFilter(new CategoryFilter());
     }
+  }
+
+  addSiblingCard() {
+    const parentId =  this.categoriesService.currentCategories[0].parentId || 0;
+    this.router.navigateByUrl('/categoryEdit/parentId/' + parentId);
   }
 }
 

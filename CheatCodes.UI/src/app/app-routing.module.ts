@@ -10,6 +10,7 @@ const routes: Routes = [
   { path: 'categoryList', component: CategoriesListComponent },
   { path: 'categoryList/:reload', component: CategoriesListComponent },
   { path: 'categoryEdit', component: CategoryEditComponent },
+  { path: 'categoryEdit/parentId/:parentId', component: CategoryEditComponent },
   { path: 'categoryEdit/:parentId', component: CategoryEditComponent },
   { path: 'fieldEdit/:categoryId', component: FieldEditComponent },
   { path: '', redirectTo: '/categoryList', pathMatch: 'full' },
