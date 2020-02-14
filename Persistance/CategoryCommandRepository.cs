@@ -133,8 +133,8 @@ namespace Persistance
                 "INSERT INTO CategoryField(CategoryId, FieldId, Value)" +
                 "SELECT DISTINCT @currentCategory, FieldId, '' " +
                 "FROM CategoryField cf " +
-                "INNER JOIN Category C ON cf.CategoryId = C.Id " +
-                "WHERE c.ParentId=@parentCategoryId",
+                "INNER JOIN Category C ON COALESCE(cf.CategoryId,0) = COALESCE(C.Id,0) " +
+                "WHERE COALESCE(c.ParentId,0)=COALESCE(@parentCategoryId,0)",
                 param: new {currentCategory = currentCategory, parentCategoryId = parentCategoryId},
                 transaction: Transaction
             );
@@ -146,7 +146,7 @@ namespace Persistance
                 "INSERT INTO CategoryField(CategoryId, FieldId, Value)" +
                 "SELECT cSiblings.id, @newFieldId, '' " +
                 "  FROM Category c" +
-                " INNER JOIN Category cSiblings on cSiblings.ParentId = c.ParentId" +
+                " INNER JOIN Category cSiblings on COALESCE(cSiblings.ParentId, 0) = COALESCE(c.ParentId, 0)" +
                 " WHERE c.Id = @categoryId",
                 param: new {newFieldId = newFieldId, categoryId = categoryId},
                 transaction: Transaction

@@ -17,9 +17,11 @@ export class CategoryEditComponent implements OnInit, AfterViewInit {
 
   constructor(public router: Router, private categoriesService: CategoriesService, private route: ActivatedRoute) {
   }
+
   ngOnInit(): void {
     this.model.parentId = Number(this.route.snapshot.paramMap.get('parentId'));
   }
+
   ngAfterViewInit(): void {
     this.fieldName.nativeElement.focus();
   }

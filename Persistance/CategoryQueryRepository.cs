@@ -96,9 +96,12 @@ namespace Persistance
                   }
 
                   cp.CategoryFields = cp.CategoryFields ?? new List<CategoryField>();
-                  cf.Field = f;
-                  cf.Category = cp;
-                  cp.CategoryFields.Add(cf);
+                  if (cf.Value != null)
+                  {
+                    cf.Field = f;
+                    cf.Category = cp;
+                    cp.CategoryFields.Add(cf);
+                  }
 
                   return cp;
                 },
@@ -113,7 +116,8 @@ namespace Persistance
                             group.Select(cp => cp.ChildCategories.Single()).Distinct().ToList();
               }
 
-              categoryParent.CategoryFields =
+              if (categoryParent.CategoryFields.Any())
+                categoryParent.CategoryFields =
                           group.Select(cp => cp.CategoryFields.Single()).Distinct().ToList();
               return categoryParent;
             }).ToList();
@@ -121,7 +125,6 @@ namespace Persistance
         return res;
       }
     }
-
 
     public IList<Category> GetAllChilds(int categoryParentId)
     {
@@ -151,9 +154,12 @@ namespace Persistance
                   }
 
                   c.CategoryFields = c.CategoryFields ?? new List<CategoryField>();
-                  cf.Field = f;
-                  cf.Category = c;
-                  c.CategoryFields.Add(cf);
+                  if (cf.Value != null)
+                  {
+                    cf.Field = f;
+                    cf.Category = c;
+                    c.CategoryFields.Add(cf);
+                  }
 
                   return c;
                 },
@@ -165,7 +171,8 @@ namespace Persistance
               var category = group.First();
               if (category.ChildCategories.Any())
                 category.ChildCategories = group.Select(c => c.ChildCategories.Single()).ToList();
-              category.CategoryFields = group.Select(c => c.CategoryFields.Single()).Distinct().ToList();
+              if (category.CategoryFields.Any())
+                category.CategoryFields = group.Select(c => c.CategoryFields.Single()).Distinct().ToList();
               return category;
             }).ToList();
       }
