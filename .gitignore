@@ -34,3 +34,4 @@ CheatCodes.WebApi/obj/
 /Api/bin/Debug/netcoreapp2.1
 /Reports.All/obj/
 /Reports.All.Tests/obj/
+/Api.Test/Scratch.cs
