@@ -7,6 +7,7 @@ export interface ICategory {
   hasParent: boolean;
   hasChild: boolean;
   parentId: number;
+  color: string;
   categoryFieldValues: ICategoryFieldValue [];
 }
 
@@ -21,5 +22,6 @@ export class Category implements ICategory {
   hasParent = false;
   hasChild = false;
   parentId: number;
+  color = 'lightskyblue';
   categoryFieldValues: ICategoryFieldValue[];
 }

@@ -126,6 +126,10 @@ export class CategoryCardComponent implements OnInit {
     }
 
   }
+  private expandCard() {
+    this.cardWidth = this.maxCardWidth;
+    this.cardHeight = this.maxCardHeight;
+  }
 
   addField() {
     this.router.navigateByUrl('/fieldEdit/' + this.card.id);

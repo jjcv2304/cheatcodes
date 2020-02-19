@@ -3,7 +3,7 @@
     <div class="front-container" [ngStyle]="{'width': cardWidth, 'height': cardHeight}">
       <textarea type="text" class="card-header text-shadow" (input)="setSaveIsRecommended()" [(ngModel)]="card.name">
         </textarea>
-      <textarea type="text" class="card-description" (input)="setSaveIsRecommended()"
+      <textarea type="text" class="card-description" (input)="setSaveIsRecommended()" (focusin)="expandCard()"
                 [(ngModel)]="card.description"></textarea>
       <div class="card-footer">
         <div class="card-deep-navigation">
