@@ -13,6 +13,8 @@ import {AppRoutingModule} from './app-routing.module';
 import {FormsModule} from '@angular/forms';
 import { FieldEditComponent } from './field-edit/field-edit.component';
 import { CardMoveMenuComponent } from './category-card/card-move-menu/card-move-menu.component';
+import {CategoriesSearchModule} from './categories-search/categories-search.module';
+
 
 
 @NgModule({
@@ -30,7 +32,8 @@ import { CardMoveMenuComponent } from './category-card/card-move-menu/card-move-
     HttpClientModule,
     FlipModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    CategoriesSearchModule
   ],
   providers: [CategoriesService],
   bootstrap: [AppComponent]
