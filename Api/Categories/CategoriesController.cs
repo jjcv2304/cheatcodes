@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using Api.RabbitMQ;
 using Api.Utils;
 using Application;
 using Application.Utils;
@@ -24,6 +25,7 @@ namespace Api.Categories
     public CategoriesController(Messages messages) : base()
     {
       _messages = messages;
+      RabbitMQClient client = new RabbitMQClient();//todo to improve, create once only?
     }
 
     // GET api/values
