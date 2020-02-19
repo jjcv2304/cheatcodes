@@ -1,7 +1,6 @@
-<div class="menu-container">
-  <a href="#" class="button" routerLink="/categoryList">Home</a>
+<div class="menu-container" *ngIf="showMenu">
+  <a href="#" class="button" routerLink="/categoryList">Cards</a>
   <a href="#" class="button" routerLink="/categoryEdit">New</a>
   <a href="#" class="button" routerLink="/categorySearch">Search</a>
-  <a href="#" class="button">Order</a>
   <a href="#" class="button">Options</a>
 </div>

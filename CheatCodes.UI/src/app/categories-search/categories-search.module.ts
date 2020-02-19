@@ -4,8 +4,15 @@ import {CategoriesSearchContainerComponent} from './categories-search-container/
 import {CategoriesSearchFiltersComponent} from './categories-search-filters/categories-search-filters.component';
 import {CategoriesSearchResultsComponent} from './categories-search-results/categories-search-results.component';
 import {CategoriesSearchCardComponent} from './categories-search-card/categories-search-card.component';
-import {CategoriesService} from '../categories-generation/categories/categories.service';
 import {CategoriesSearchHttpService} from './categories-search-http.service';
+import {MatSliderModule} from '@angular/material/slider';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import {RouterModule} from '@angular/router';
 
 
 @NgModule({
@@ -15,7 +22,15 @@ import {CategoriesSearchHttpService} from './categories-search-http.service';
     CategoriesSearchResultsComponent,
     CategoriesSearchCardComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    MatSliderModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
+    RouterModule
   ],
   providers: [CategoriesSearchHttpService],
 })

@@ -1,24 +1,29 @@
-import { Component, OnInit } from '@angular/core';
-import {Router} from '@angular/router';
-import {CategoriesService} from '../categories-generation/categories/categories.service';
+import {Component, OnDestroy, OnInit} from '@angular/core';
+import {CheatCodesGlobalValuesService} from '../../cheatcodes-global-values.service';
+import {Subscription} from 'rxjs';
 
 @Component({
   selector: 'app-main-menu',
   templateUrl: './main-menu.component.html',
   styleUrls: ['./main-menu.component.scss']
 })
-export class MainMenuComponent implements OnInit {
+export class MainMenuComponent implements OnInit, OnDestroy {
+  showMenu: boolean;
+  subscription: Subscription;
 
-
-  constructor(public router: Router, private categoriesService: CategoriesService) {
+  constructor(private globalValues: CheatCodesGlobalValuesService) {
 
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
+    this.subscription = this.globalValues.getShowBasicMenu().subscribe(show =>
+      this.showMenu = show
+    );
   }
 
-  newCard() {
-
+  ngOnDestroy() {
+    // unsubscribe to ensure no memory leaks
+    this.subscription.unsubscribe();
   }
 
 }

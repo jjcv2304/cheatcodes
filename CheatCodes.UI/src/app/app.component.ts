@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 
 @Component({
@@ -9,3 +9,6 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Categories';
 }
+
+// todo deborah youtube video, min 5 and 10, child routes and spinners
+// todo add guards for login

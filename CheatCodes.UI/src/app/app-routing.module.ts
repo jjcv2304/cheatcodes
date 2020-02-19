@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: 'categoryEdit/parentId/:parentId', component: CategoryEditComponent },
   { path: 'categoryEdit/:parentId', component: CategoryEditComponent },
   { path: 'fieldEdit/:categoryId', component: FieldEditComponent },
-  { path: 'categorySearch', component: CategoriesSearchContainerComponent },
+  { path: 'categorySearch', component: CategoriesSearchContainerComponent, data: {hideBasicMenuBar: true} },
   { path: '', redirectTo: '/categoryList', pathMatch: 'full' },
 ];
 

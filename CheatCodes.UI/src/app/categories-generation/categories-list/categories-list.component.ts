@@ -4,6 +4,7 @@ import {Category, ICategory} from '../models/category';
 import {Envelope} from '../models/envelope';
 import {CategoryFilter} from '../models/CategoryFilter';
 import {ActivatedRoute, Router} from '@angular/router';
+import {CheatCodesGlobalValuesService} from '../../../cheatcodes-global-values.service';
 
 @Component({
   selector: 'app-categories-list',
@@ -16,7 +17,9 @@ export class CategoriesListComponent implements OnInit {
     return this.categoriesService.currentCategories;
   }
 
-  constructor(private categoriesService: CategoriesService, private route: ActivatedRoute, public router: Router, ) {
+  constructor(private categoriesService: CategoriesService, private route: ActivatedRoute, public router: Router,
+              private globalValues: CheatCodesGlobalValuesService) {
+    this.globalValues.setShowBasicMenu(true);
   }
 
   ngOnInit() {
@@ -29,7 +32,7 @@ export class CategoriesListComponent implements OnInit {
   }
 
   addSiblingCard() {
-    const parentId =  this.categoriesService.currentCategories[0].parentId || 0;
+    const parentId = this.categoriesService.currentCategories[0].parentId || 0;
     this.router.navigateByUrl('/categoryEdit/parentId/' + parentId);
   }
 }

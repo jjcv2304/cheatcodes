@@ -14,6 +14,8 @@ import {FormsModule} from '@angular/forms';
 import { FieldEditComponent } from './categories-generation/field-edit/field-edit.component';
 import { CardMoveMenuComponent } from './categories-generation/category-card/card-move-menu/card-move-menu.component';
 import {CategoriesSearchModule} from './categories-search/categories-search.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSliderModule } from '@angular/material/slider';
 
 
 
@@ -33,7 +35,9 @@ import {CategoriesSearchModule} from './categories-search/categories-search.modu
     FlipModule,
     AppRoutingModule,
     FormsModule,
-    CategoriesSearchModule
+    CategoriesSearchModule,
+    BrowserAnimationsModule,
+    MatSliderModule
   ],
   providers: [CategoriesService],
   bootstrap: [AppComponent]
