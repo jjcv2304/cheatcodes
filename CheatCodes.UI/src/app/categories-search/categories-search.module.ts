@@ -4,7 +4,7 @@ import {CategoriesSearchContainerComponent} from './categories-search-container/
 import {CategoriesSearchFiltersComponent} from './categories-search-filters/categories-search-filters.component';
 import {CategoriesSearchResultsComponent} from './categories-search-results/categories-search-results.component';
 import {CategoriesSearchCardComponent} from './categories-search-card/categories-search-card.component';
-import {CategoriesService} from '../categories/categories.service';
+import {CategoriesService} from '../categories-generation/categories/categories.service';
 import {CategoriesSearchHttpService} from './categories-search-http.service';
 
 

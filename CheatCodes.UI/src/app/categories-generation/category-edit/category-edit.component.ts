@@ -30,7 +30,7 @@ export class CategoryEditComponent implements OnInit, AfterViewInit {
     this.submitted = true;
     this.categoriesService.addCategory(this.model)
       .subscribe(() => {
-        if(this.model.parentId === 0) {
+        if (this.model.parentId === 0) {
           this.router.navigate(['/categoryList']);
         } else {
           const newFilter = CategoryFilter.FilterByParent(this.model.parentId);

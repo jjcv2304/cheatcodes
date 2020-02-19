@@ -4,15 +4,15 @@ import {HttpClientModule} from '@angular/common/http';
 import {FlipModule} from 'ngx-flip';
 
 import {AppComponent} from './app.component';
-import {CategoriesListComponent} from './categories-list/categories-list.component';
-import {CategoriesService} from './categories/categories.service';
+import {CategoriesListComponent} from './categories-generation/categories-list/categories-list.component';
+import {CategoriesService} from './categories-generation/categories/categories.service';
 import {MainMenuComponent} from './main-menu/main-menu.component';
-import {CategoryCardComponent} from './category-card/category-card.component';
-import {CategoryEditComponent} from './category-edit/category-edit.component';
+import {CategoryCardComponent} from './categories-generation/category-card/category-card.component';
+import {CategoryEditComponent} from './categories-generation/category-edit/category-edit.component';
 import {AppRoutingModule} from './app-routing.module';
 import {FormsModule} from '@angular/forms';
-import { FieldEditComponent } from './field-edit/field-edit.component';
-import { CardMoveMenuComponent } from './category-card/card-move-menu/card-move-menu.component';
+import { FieldEditComponent } from './categories-generation/field-edit/field-edit.component';
+import { CardMoveMenuComponent } from './categories-generation/category-card/card-move-menu/card-move-menu.component';
 import {CategoriesSearchModule} from './categories-search/categories-search.module';
 
 

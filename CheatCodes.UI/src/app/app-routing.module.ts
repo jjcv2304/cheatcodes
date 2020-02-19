@@ -1,9 +1,9 @@
 // tslint:disable-next-line:import-spacing
 import { NgModule }             from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {CategoriesListComponent} from './categories-list/categories-list.component';
-import {CategoryEditComponent} from './category-edit/category-edit.component';
-import {FieldEditComponent} from './field-edit/field-edit.component';
+import {CategoriesListComponent} from './categories-generation/categories-list/categories-list.component';
+import {CategoryEditComponent} from './categories-generation/category-edit/category-edit.component';
+import {FieldEditComponent} from './categories-generation/field-edit/field-edit.component';
 import {CategoriesSearchContainerComponent} from './categories-search/categories-search-container/categories-search-container.component';
 
 
