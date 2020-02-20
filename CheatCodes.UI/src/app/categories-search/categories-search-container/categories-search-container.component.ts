@@ -2,7 +2,6 @@ import {Component} from '@angular/core';
 import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
 import {Observable} from 'rxjs';
 import {map, shareReplay} from 'rxjs/operators';
-import {CheatCodesGlobalValuesService} from '../../../cheatcodes-global-values.service';
 
 @Component({
   selector: 'app-categories-search-container',
@@ -17,8 +16,7 @@ export class CategoriesSearchContainerComponent {
       shareReplay()
     );
 
-  constructor(private breakpointObserver: BreakpointObserver, private globalValues: CheatCodesGlobalValuesService) {
-    this.globalValues.setShowBasicMenu(false);
+  constructor(private breakpointObserver: BreakpointObserver) {
   }
 
 }

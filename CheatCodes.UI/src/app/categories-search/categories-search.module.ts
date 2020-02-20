@@ -30,7 +30,7 @@ import {RouterModule} from '@angular/router';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    RouterModule
+    RouterModule.forChild([])
   ],
   providers: [CategoriesSearchHttpService],
 })
