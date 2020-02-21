@@ -48,7 +48,11 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "CheatCodes.UI", "CheatCodes
 		SlnRelativePath = "CheatCodes.UI\"
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.Test", "Api.Test\Api.Test.csproj", "{2631318D-2499-4B04-AD88-248CBDCC1BFD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api.Test", "Api.Test\Api.Test.csproj", "{2631318D-2499-4B04-AD88-248CBDCC1BFD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Search", "Search", "{90E333B3-4814-4471-B3A2-E165BF7D8A6B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheatCodes.Search", "CheatCodes.Search\CheatCodes.Search.csproj", "{213CBC6F-F7F4-4ECF-AE2C-28E8080FC8AD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -91,6 +95,10 @@ Global
 		{2631318D-2499-4B04-AD88-248CBDCC1BFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2631318D-2499-4B04-AD88-248CBDCC1BFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2631318D-2499-4B04-AD88-248CBDCC1BFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{213CBC6F-F7F4-4ECF-AE2C-28E8080FC8AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{213CBC6F-F7F4-4ECF-AE2C-28E8080FC8AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{213CBC6F-F7F4-4ECF-AE2C-28E8080FC8AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{213CBC6F-F7F4-4ECF-AE2C-28E8080FC8AD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -104,6 +112,7 @@ Global
 		{825EA062-0587-4EBF-A64B-3C98C7C8BA33} = {35280129-14A9-4D7B-BBBD-2046E87B29FD}
 		{8C28FC74-BE64-49D0-9276-82062CC34869} = {F6C04AA7-DCDE-4B35-A943-9FFF6B733E02}
 		{2631318D-2499-4B04-AD88-248CBDCC1BFD} = {35280129-14A9-4D7B-BBBD-2046E87B29FD}
+		{213CBC6F-F7F4-4ECF-AE2C-28E8080FC8AD} = {90E333B3-4814-4471-B3A2-E165BF7D8A6B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9E304F39-739C-48FA-A247-4309BFC306EE}
