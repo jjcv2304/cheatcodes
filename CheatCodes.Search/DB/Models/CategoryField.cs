@@ -2,11 +2,11 @@ namespace CheatCodes.Search.DB.Models
 {
     public class CategoryField
     {
-        //public virtual Category Category { get; set; }
-        //public virtual Field Field { get; set; }
+    public virtual Category Category { get; set; }
+    public virtual Field Field { get; set; }
 
-        public  int CategoryId { get; set; }
-        public  int FieldId { get; set; }
+    public int CategoryId { get; set; }
+    public int FieldId { get; set; }
 
     public virtual string Value { get; set; }
 
