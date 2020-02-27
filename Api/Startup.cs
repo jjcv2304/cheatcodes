@@ -87,14 +87,7 @@ namespace Api
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             app.UseStaticFiles();
-            //if (env.IsDevelopment())
-            //{
-            //    app.UseDeveloperExceptionPage();
-            //}
-            //else
-            //{
-            //    app.UseHsts();
-            //}
+
             app.UseApiExceptionHandler(options => options.AddResponseDetails = UpdateApiErrorResponse);
 
             app.UseHsts();

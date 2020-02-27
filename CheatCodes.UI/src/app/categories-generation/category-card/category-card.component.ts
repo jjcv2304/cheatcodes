@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Category, ICategory} from '../models/category';
 import {CategoriesService} from '../categories/categories.service';
-import {Envelope} from '../models/envelope';
+import {Envelope} from '../../utils/envelope';
 import {Router} from '@angular/router';
 import {CategoryFilter} from '../models/CategoryFilter';
 import {ICategoryFieldValue} from '../models/categoryFieldValue';

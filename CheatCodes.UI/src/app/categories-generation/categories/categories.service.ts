@@ -2,7 +2,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpErrorResponse, HttpHeaders} from '@angular/common/http';
 import {Category, ICategory} from '../models/category';
-import {Envelope} from '../models/envelope';
+import {Envelope} from '../../utils/envelope';
 import {CategoryFilter} from '../models/CategoryFilter';
 import {Observable} from 'rxjs';
 import {catchError} from 'rxjs/operators';

@@ -5,7 +5,8 @@ namespace CheatCodes.Search.Repositories
 {
   public static class TreeUtils
   {
-    public static IEnumerable<T> Expand<T>(this IEnumerable<T> source, Func<T, IEnumerable<T>> elementSelector)
+    public static IEnumerable<T> Expand<T>(
+      this IEnumerable<T> source, Func<T, IEnumerable<T>> elementSelector)
     {
       var stack = new Stack<IEnumerator<T>>();
       var e = source.GetEnumerator();

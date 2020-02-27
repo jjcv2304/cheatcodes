@@ -12,7 +12,7 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "api/categoriessearch",
+      "launchUrl": "api/GetCategoriesByPartialNameAsync",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
@@ -20,7 +20,7 @@
     "CheatCodes.Search": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "api/categoriessearch",
+      "launchUrl": "api/GetCategoriesByPartialNameAsync",
       "applicationUrl": "http://localhost:5000",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"

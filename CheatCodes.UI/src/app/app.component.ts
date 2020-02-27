@@ -32,4 +32,4 @@ export class AppComponent {
 }
 
 
-// todo deborah youtube video https://www.youtube.com/watch?v=LaIAHOSKHCQ&t=1s min 10, child routes and spinners & add guards for login
+// todo deborah youtube video https://www.youtube.com/watch?v=LaIAHOSKHCQ&t=1s  guards for login

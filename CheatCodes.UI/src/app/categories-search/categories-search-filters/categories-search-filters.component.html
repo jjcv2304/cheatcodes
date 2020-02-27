@@ -1,1 +1,10 @@
-<p>categories-search-filters works!</p>
+<form [formGroup]="searchCategoriesForm" class="categories-search-filters" (ngSubmit)="Search()">
+  <mat-form-field class="full-width">
+    <input matInput placeholder="Partial Category Name" formControlName="categoryNameFilter">
+    <mat-hint>Minimum 3 characters</mat-hint>
+  </mat-form-field>
+
+  <button type="submit" class="searchCategoriesForm--submitButton " mat-raised-button color="primary"
+          [disabled]="!searchCategoriesForm.valid">Search
+  </button>
+</form>
