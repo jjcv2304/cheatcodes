@@ -45,46 +45,7 @@ namespace CheatCodes.Search.Repositories
       return categories;
     }
 
-    //public async Task<CategoryNameTreeVM> GetCategoriesSubTreeByRootId(int rootId)
-    //{
-    //  var categories = await _context.Categories
-    //    .FromSqlInterpolated($@"    
-    //  WITH RECURSIVE ParentCategories (ID, Name, Description, ParentId)
-    //   AS(
-    //     SELECT ID, Name, Description, ParentId
-    //     FROM Category
-    //   Where Id = {rootId} 
-    //   UNION ALL
-    //   SELECT e.ID, e.Name, e.Description, e.ParentId
-    //     FROM Category e
-    //   INNER JOIN ParentCategories ON ParentCategories.ID = e.ParentId
-    //     )
-    //   SELECT * FROM ParentCategories")
-    //    .Select(c => new CategoryNameTreeVM()
-    //    {
-    //      Id = c.Id,
-    //      Name = c.Name,
-    //      Description = c.Description,
-    //      ParentId = c.ParentId,
-    //      Childs = new List<CategoryNameTreeVM>()
-    //    })
-    //    .ToListAsync();
-
-    //  var categoryParent = categories.SingleOrDefault(c => c.Id == rootId);
-    //  if (categoryParent == null) return null;
-
-    //  var childs = FindAllChildren(categories, categoryParent).ToList();
-    //  categoryParent.Childs = childs;
-    //  return categoryParent;
-    //}
-
-    //private static IEnumerable<CategoryNameTreeVM> FindAllChildren(List<CategoryNameTreeVM> children, CategoryNameTreeVM category)
-    //{
-    //  var childrenByParentId = children.ToLookup(r => r.ParentId);
-    //  return childrenByParentId[category != null ? category.Id:(int?)null].Expand(r => childrenByParentId[r.Id]);
-    //}
-
-    public async Task<Category> GetCategoriesSubTreeByRootId(int rootId)
+    public async Task<CategoryNameTreeVM> GetCategoriesSubTreeByRootId(int rootId)
     {
       var categories = await _context.Categories
         .FromSqlInterpolated($@"    
@@ -99,18 +60,22 @@ namespace CheatCodes.Search.Repositories
        INNER JOIN ParentCategories ON ParentCategories.ID = e.ParentId
          )
        SELECT * FROM ParentCategories")
+        .Select(c => new CategoryNameTreeVM()
+        {
+          Id = c.Id,
+          Name = c.Name,
+          Description = c.Description,
+          ParentId = c.ParentId,
+          Childs = new List<CategoryNameTreeVM>()
+        })
         .ToListAsync();
 
-      var categoryParent = categories.SingleOrDefault(c => c.Id == rootId);
-
-      //var childs = FindAllChildren(categories, categoryParent).ToList();
-      //categoryParent.ChildCategories = childs;
-      return categoryParent;
+      return BuildSubTree(rootId, categories);
     }
-    private static IEnumerable<Category> FindAllChildren(List<Category> children, Category category)
+    private static CategoryNameTreeVM BuildSubTree(int rootId, List<CategoryNameTreeVM> items)
     {
-      var childrenByParentId = children.ToLookup(r => r.ParentId);
-      return childrenByParentId[category != null ? category.Id : (int?)null].Expand(r => childrenByParentId[r.Id]);
+      items.ForEach(i => i.Childs = items.Where(ch => ch.ParentId == i.Id).ToList());
+      return items.Single(i => i.Id == rootId);
     }
 
   }

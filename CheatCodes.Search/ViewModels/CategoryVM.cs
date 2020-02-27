@@ -19,9 +19,5 @@ namespace CheatCodes.Search.ViewModels
     public int? ParentId { get; set; }
     public IList<CategoryNameTreeVM> Childs { get; set; }
 
-    //public int? ParentId { get; set; }
-    //public virtual Category ParentCategory { get; set; }
-
-    //public IList<Category> ChildCategories { get; set; }
   }
 }

@@ -26,5 +26,17 @@ export interface ICategoryTree {
   description: string;
   parentId: number;
   color: string;
-  child
+  childs: ICategoryTree[];
+}
+export class CategoryTree implements ICategoryTree {
+  public constructor(init?: Partial<CategoryTree>) {
+    Object.assign(this, init);
+  }
+
+  id: number = null;
+  name: string = null;
+  description = '';
+  parentId: number;
+  color = 'lightskyblue';
+  childs: CategoryTree[];
 }

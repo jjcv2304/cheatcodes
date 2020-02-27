@@ -9,6 +9,6 @@ namespace CheatCodes.Search.Repositories
   {
     Task<List<Category>> Test();
     Task<List<CategoryBasicVM>> GetCategoriesByPartialNameAsync(string partialName);
-    Task<Category> GetCategoriesSubTreeByRootId(int rootId);
+    Task<CategoryNameTreeVM> GetCategoriesSubTreeByRootId(int rootId);
   }
 }
