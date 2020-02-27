@@ -12,7 +12,6 @@ export class CategoriesSearchListResultComponent {
 
   constructor() { }
 
-
   showCardViewDetails($event: CategoryBasic) {
 
   }

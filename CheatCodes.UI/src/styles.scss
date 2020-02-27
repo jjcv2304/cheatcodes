@@ -56,5 +56,22 @@ $dark-theme: mat-dark-theme($cheat-codes-ui-primary, $cheat-codes-ui-accent, $ch
   outline: 0 solid transparent;
 }
 
+
+//$primary: map-get($cheat-codes-ui-theme, primary);
+//$accent: map-get($cheat-codes-ui-theme, accent);
+
+:root {
+  font-size: 62.5%;
+  --color-primary: #{mat-color($cheat-codes-ui-primary)};
+  --color-accent: #{mat-color($cheat-codes-ui-accent)};
+  --color-warn: #{mat-color($cheat-codes-ui-warn)};
+  body {
+    margin: 0;
+    // Body font size 16px
+    font-size: 1.6rem;
+  }
+}
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+

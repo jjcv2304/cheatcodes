@@ -9,8 +9,8 @@ export class CategoriesSearchHttpService {
 
   public newCardSearchResult = new BehaviorSubject(false);
   public newCardDetailsResult = new BehaviorSubject(false);
-  private cardDetailResult: CategoryTree[];
-  get currentCategoryDetail(): CategoryTree[] {
+  private cardDetailResult: CategoryTree;
+  get currentCategoryDetail(): CategoryTree {
     return this.cardDetailResult;
   }
   private cardsSearchResult: CategoryBasic[];
@@ -38,12 +38,11 @@ export class CategoriesSearchHttpService {
       );
   }
   public GetCategoryDetails(categoryRootId: number) {
-    return this.http.get<Envelope<Array<ICategoryBasic>>>(
+    return this.http.get<Envelope<ICategoryBasic>>(
       this.categorySearchUrl + '/GetCategoriesSubTreeByRootId/' + categoryRootId)
       .subscribe(
-        (data: Envelope<Array<ICategoryTree>>) => {
+        (data: Envelope<ICategoryTree>) => {
           this.cardDetailResult = data.result;
-          console.dir(this.cardDetailResult);
           this.newCardDetailsResult.next(true);
         },
         () => {

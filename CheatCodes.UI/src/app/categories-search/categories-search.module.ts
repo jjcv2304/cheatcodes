@@ -19,6 +19,7 @@ import { CategoriesSearchTreeDetailResultComponent } from './categories-search-t
 import { CardResultBasicComponent } from './card-result-basic/card-result-basic.component';
 import { CardResultDetailComponent } from './card-result-detail/card-result-detail.component';
 import {MatCardModule} from '@angular/material/card';
+import {MatTreeModule} from '@angular/material/tree';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import {MatCardModule} from '@angular/material/card';
     MatFormFieldModule,
     MatInputModule,
     ReactiveFormsModule,
-    MatCardModule
+    MatCardModule,
+    MatTreeModule
 
   ],
   providers: [CategoriesSearchHttpService],

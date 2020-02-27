@@ -1,8 +1,8 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
-import {Observable} from 'rxjs';
+import {Observable, Subscription} from 'rxjs';
 import {map, shareReplay} from 'rxjs/operators';
-import {CategoryBasic} from '../model/category';
+import {CategoryBasic, CategoryTree} from '../model/category';
 import {CategoriesSearchHttpService} from '../categories-search-http.service';
 
 @Component({
@@ -12,6 +12,8 @@ import {CategoriesSearchHttpService} from '../categories-search-http.service';
 })
 export class CategoriesSearchContainerComponent implements OnInit, OnDestroy {
   showDetailView = false;
+  newCardSearchResultSubscription: Subscription;
+  newCardDetailsResultSubscription: Subscription;
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
@@ -19,24 +21,46 @@ export class CategoriesSearchContainerComponent implements OnInit, OnDestroy {
       shareReplay()
     );
   cardsSearchResult: CategoryBasic[];
+  cardDetails: CategoryTree;
 
   constructor(private breakpointObserver: BreakpointObserver, private categoriesSearchService: CategoriesSearchHttpService) {
   }
 
   ngOnInit(): void {
-    this.categoriesSearchService.newCardSearchResult.subscribe({
+
+    this.newCardSearchResultSubscription = this.categoriesSearchService.newCardSearchResult.subscribe({
       next: (v) => {
         if (v === true) {
+          this.showDetailView = false;
           this.cardsSearchResult = this.categoriesSearchService.currentCategories;
         } else {
           this.cardsSearchResult = null;
+          this.showDetailView = true;
         }
       }
     });
+
+    this.newCardDetailsResultSubscription = this.categoriesSearchService.newCardDetailsResult.subscribe({
+      next: (v) => {
+        if (v === true) {
+          this.cardDetails = this.categoriesSearchService.currentCategoryDetail;
+          this.showDetailView = true;
+        } else {
+          this.showDetailView = false;
+          this.cardDetails = null;
+        }
+      }
+    });
+
   }
 
   ngOnDestroy(): void {
-    this.categoriesSearchService.newCardSearchResult.unsubscribe();
+    if (this.newCardSearchResultSubscription) {
+      this.newCardSearchResultSubscription.unsubscribe();
+    }
+    if (this.newCardDetailsResultSubscription) {
+      this.newCardDetailsResultSubscription.unsubscribe();
+    }
   }
 
 }
