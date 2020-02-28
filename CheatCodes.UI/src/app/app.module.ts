@@ -10,7 +10,7 @@ import {MainMenuComponent} from './main-menu/main-menu.component';
 import {CategoryCardComponent} from './categories-generation/category-card/category-card.component';
 import {CategoryEditComponent} from './categories-generation/category-edit/category-edit.component';
 import {AppRoutingModule} from './app-routing.module';
-import {FormsModule} from '@angular/forms';
+import {FormsModule } from '@angular/forms';
 import {FieldEditComponent} from './categories-generation/field-edit/field-edit.component';
 import {CardMoveMenuComponent} from './categories-generation/category-card/card-move-menu/card-move-menu.component';
 import {CategoriesSearchModule} from './categories-search/categories-search.module';
@@ -41,6 +41,7 @@ import {MatProgressSpinnerModule} from '@angular/material';
     BrowserAnimationsModule,
     MatSliderModule,
     MatProgressSpinnerModule
+
   ],
   providers: [CategoriesService],
   bootstrap: [AppComponent]

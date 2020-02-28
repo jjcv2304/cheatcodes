@@ -1,8 +1,9 @@
 import {Injectable} from '@angular/core';
 import {Envelope} from '../utils/envelope';
-import {HttpClient, HttpParams} from '@angular/common/http';
+import {HttpClient, HttpParams, HttpHeaders} from '@angular/common/http';
 import {CategoryBasic, CategoryTree, ICategoryBasic, ICategoryTree} from './model/category';
 import {BehaviorSubject} from 'rxjs';
+import {CategorySearchFilters} from './model/categorySearchFilters';
 
 @Injectable()
 export class CategoriesSearchHttpService {
@@ -34,6 +35,27 @@ export class CategoriesSearchHttpService {
         },
         () => {
           console.log('Error GetCategoriesByPartialNameAsync');
+        }
+      );
+  }
+
+  toHttpParams(params) {
+    return Object.getOwnPropertyNames(params)
+      .reduce((p, key) => p.set(key, params[key]), new HttpParams());
+  }
+
+  public GetCategoriesByFiltersAsync(filters: CategorySearchFilters) {
+    const params: HttpParams = this.toHttpParams(filters);
+
+    return this.http.get<Envelope<Array<ICategoryBasic>>>(
+      this.categorySearchUrl + '/GetCategoriesByFilters', {params: params})
+      .subscribe(
+        (data: Envelope<Array<ICategoryBasic>>) => {
+          this.cardsSearchResult = data.result;
+          this.newCardSearchResult.next(true);
+        },
+        () => {
+          console.log('Error GetCategoriesByFiltersAsync');
         }
       );
   }

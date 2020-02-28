@@ -13,13 +13,14 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatListModule} from '@angular/material/list';
 import {RouterModule} from '@angular/router';
 import {MatFormFieldModule, MatInputModule} from '@angular/material';
-import {ReactiveFormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { CategoriesSearchListResultComponent } from './categories-search-list-result/categories-search-list-result.component';
 import { CategoriesSearchTreeDetailResultComponent } from './categories-search-tree-detail-result/categories-search-tree-detail-result.component';
 import { CardResultBasicComponent } from './card-result-basic/card-result-basic.component';
 import { CardResultDetailComponent } from './card-result-detail/card-result-detail.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatTreeModule} from '@angular/material/tree';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,9 @@ import {MatTreeModule} from '@angular/material/tree';
     MatInputModule,
     ReactiveFormsModule,
     MatCardModule,
-    MatTreeModule
+    MatTreeModule,
+    MatCheckboxModule,
+    FormsModule
 
   ],
   providers: [CategoriesSearchHttpService],

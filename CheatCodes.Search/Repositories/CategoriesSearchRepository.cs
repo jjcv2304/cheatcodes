@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 using CheatCodes.Search.DB;
 using CheatCodes.Search.DB.Models;
 using CheatCodes.Search.ViewModels;
-using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
+
 
 namespace CheatCodes.Search.Repositories
 {
@@ -45,6 +45,37 @@ namespace CheatCodes.Search.Repositories
       return categories;
     }
 
+    public async Task<List<CategoryBasicVM>> GetCategoriesByFiltersAsync(CategorySearchFiltersVM filtersVM)
+    {
+      Func<Category, bool> predicate;
+      predicate = p => (p.Name.ToLower().Contains(filtersVM.CategoryNameFilter.ToLower()));
+
+      if (filtersVM.CategoryNameFilterAnd)
+      {
+        var oldPredicate = predicate;
+        predicate = p => oldPredicate(p) && (p.Name.ToLower().Contains(filtersVM.CategoryName2Filter.ToLower()));
+      }
+
+      if (filtersVM.CategoryNameFilterOr)
+      {
+        var oldPredicate = predicate;
+        predicate = p => oldPredicate(p) || (p.Name.ToLower().Contains(filtersVM.CategoryName2Filter.ToLower()));
+      }
+
+      var result = _context
+        .Categories
+        .Where(predicate)
+        .Select(c => new CategoryBasicVM()
+        {
+          Id = c.Id,
+          Name = c.Name
+        })
+        .OrderBy(c => c.Id);
+
+      return await Task.FromResult(result.ToList());
+
+    }
+
     public async Task<CategoryNameTreeVM> GetCategoriesSubTreeByRootId(int rootId)
     {
       var categories = await _context.Categories
@@ -72,6 +103,7 @@ namespace CheatCodes.Search.Repositories
 
       return BuildSubTree(rootId, categories);
     }
+
     private static CategoryNameTreeVM BuildSubTree(int rootId, List<CategoryNameTreeVM> items)
     {
       items.ForEach(i => i.Childs = items.Where(ch => ch.ParentId == i.Id).ToList());

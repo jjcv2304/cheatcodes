@@ -20,4 +20,13 @@ namespace CheatCodes.Search.ViewModels
     public IList<CategoryNameTreeVM> Childs { get; set; }
 
   }
+
+  public class CategorySearchFiltersVM
+  {
+    public string CategoryNameFilter { get; set; }
+    public bool CategoryNameFilterOr { get; set; }
+    public bool CategoryNameFilterAnd { get; set; }
+    public string CategoryName2Filter { get; set; }
+
+  }
 }

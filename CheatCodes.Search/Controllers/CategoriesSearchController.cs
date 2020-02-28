@@ -6,6 +6,7 @@ using CheatCodes.Search.DB;
 using CheatCodes.Search.DB.Models;
 using CheatCodes.Search.Repositories;
 using CheatCodes.Search.Utils;
+using CheatCodes.Search.ViewModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -31,6 +32,14 @@ namespace CheatCodes.Search.Controllers
         return ValidationProblem("The text search must be 3 or more characters long");
 
       var result = await _categoriesSearchRepository.GetCategoriesByPartialNameAsync(textSearch);
+      return Ok(result);
+    }
+
+    [HttpGet]
+    [Route("[action]")]
+    public async Task<IActionResult> GetCategoriesByFiltersAsync([FromQuery]CategorySearchFiltersVM filtersVM)
+    {
+      var result = await _categoriesSearchRepository.GetCategoriesByFiltersAsync(filtersVM);
       return Ok(result);
     }
 
