@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using CheatCodes.Search.RabbitMQ;
+using CheatCodes.Search.RabbitMQ.Handlers;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Serilog;
@@ -20,7 +23,7 @@ namespace CheatCodes.Search
       .AddEnvironmentVariables()
       .Build();
 
-    public static void Main(string[] args)
+    public static async Task Main(string[] args)
     {
       Log.Logger = new LoggerConfiguration()
         .ReadFrom.Configuration(Configuration)
@@ -29,10 +32,13 @@ namespace CheatCodes.Search
         .WriteTo.File(new JsonFormatter(), @"c:\temp\logs\cheatcodes_search_api_log.json", shared: true)
         .CreateLogger();
 
+      var host = CreateHostBuilder(args).Build();
+
       try
       {
         Log.Information("Starting web host");
-        CreateHostBuilder(args).Build().Run();
+
+        InitializeRabbitMq(host);
       }
       catch (Exception ex)
       {
@@ -42,6 +48,17 @@ namespace CheatCodes.Search
       {
         Log.CloseAndFlush();
       }
+      await host.RunAsync();
+    }
+
+    private static void InitializeRabbitMq(IHost host)
+    {
+      var serviceScope = host.Services.CreateScope();
+      var services = serviceScope.ServiceProvider;
+      var newCategoryEventHandler = services.GetRequiredService<INewCategoryEventHandler>();
+      var client = new RabbitMQConsumer(newCategoryEventHandler);
+      client.CreateConnection();
+      client.ProcessMessages();
     }
 
     public static IHostBuilder CreateHostBuilder(string[] args) =>
@@ -53,4 +70,6 @@ namespace CheatCodes.Search
             }).UseSerilog();
 
   }
+
+
 }

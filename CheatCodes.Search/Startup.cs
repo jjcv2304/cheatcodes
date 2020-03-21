@@ -5,6 +5,8 @@ using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 using CheatCodes.Search.DB;
+using CheatCodes.Search.RabbitMQ;
+using CheatCodes.Search.RabbitMQ.Handlers;
 using CheatCodes.Search.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -16,6 +18,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Console;
 using Microsoft.OpenApi.Models;
+using ICategoriesChangesRepository = CheatCodes.Search.Repositories.ICategoriesChangesRepository;
 
 namespace CheatCodes.Search
 {
@@ -34,11 +37,17 @@ namespace CheatCodes.Search
     public void ConfigureServices(IServiceCollection services)
     {
       services.AddTransient<ICategoriesSearchRepository, CategoriesSearchRepository>();
+      services.AddTransient<ICategoriesChangesRepository, CategoriesChangesRepository>();
+      services.AddTransient<INewCategoryEventHandler, NewCategoryEventHandler>();
 
       var connectionString = Configuration.GetConnectionString("CheatCodesDatabase");
       services.AddDbContext<CheatCodesDbContext>(options =>
         options.UseLoggerFactory(MyLoggerFactory)
         .UseSqlite(connectionString));
+
+      //services.AddDbContext<CheatCodesDbContext2>(options =>
+      //  options.UseLoggerFactory(MyLoggerFactory)
+      //    .UseSqlite(connectionString));
 
       services.AddControllers().AddNewtonsoftJson(options =>
         options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);

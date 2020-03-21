@@ -49,6 +49,7 @@ namespace Api
             services.AddTransient<ICategoryQueryRepository, CategoryQueryRepository>();
             services.AddTransient<ICategoryCommandRepository, CategoryCommandRepository>();
 
+
             services.AddSingleton<Messages>();
 
             
