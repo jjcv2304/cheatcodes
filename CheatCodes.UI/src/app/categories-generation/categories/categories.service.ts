@@ -1,13 +1,12 @@
 /* tslint:disable:member-ordering */
-import {Injectable} from '@angular/core';
-import {HttpClient, HttpErrorResponse, HttpHeaders} from '@angular/common/http';
-import {Category, ICategory} from '../models/category';
-import {Envelope} from '../../utils/envelope';
-import {CategoryFilter} from '../models/CategoryFilter';
-import {Observable} from 'rxjs';
-import {catchError} from 'rxjs/operators';
-import {ICategoryFieldValue} from '../models/categoryFieldValue';
-import {NewField} from '../models/NewField';
+import { Injectable } from "@angular/core";
+import { HttpClient, HttpHeaders } from "@angular/common/http";
+import { Category, ICategory } from "../models/category";
+import { Envelope } from "../../utils/envelope";
+import { CategoryFilter } from "../models/CategoryFilter";
+import { Observable } from "rxjs";
+import { ICategoryFieldValue } from "../models/categoryFieldValue";
+import { NewField } from "../models/NewField";
 
 @Injectable()
 export class CategoriesService {
@@ -25,16 +24,16 @@ export class CategoriesService {
   /////////////////// Filter Region ///////////////////
   private currentCategoryFilter: CategoryFilter;
 
-  public SetCategoryFilter(newCategoryFilter: CategoryFilter) {
+  SetCategoryFilter(newCategoryFilter: CategoryFilter) {
     this.currentCategoryFilter = newCategoryFilter;
     this.getFilteredCategories();
   }
 
-  public RefreshCategoryLastFilter() {
+  RefreshCategoryLastFilter() {
     this.getFilteredCategories();
   }
 
-  public GetCategoryFilter(): CategoryFilter {
+  GetCategoryFilter(): CategoryFilter {
     return this.currentCategoryFilter;
   }
 
@@ -51,44 +50,46 @@ export class CategoriesService {
   /////////////////// Http Region ///////////////////
 
 
-  private readonly categoryUrl: string = '/api/categories';
+  private readonly categoryUrl = "/api/categories";
   private readonly httpOptions = {
     headers: new HttpHeaders({
-      'Content-Type': 'application/json'
+      'Content-Type': "application/json"
     })
   };
   private httpOptionsWithBody = {
     headers: new HttpHeaders({
-      'Content-Type': 'application/json'
+      'Content-Type': "application/json"
     }),
     body: {}
   };
 
-  public addCategory(category: Category): Observable<Category> {
+  addCategory(category: Category): Observable<Category> {
     return this.http.post<Category>(this.categoryUrl, category, this.httpOptions);
   }
 
-  public addField(field: NewField): Observable<NewField> {
-    return this.http.put<NewField>(this.categoryUrl + '/AddField', field, this.httpOptions);
+  addField(field: NewField): Observable<NewField> {
+    return this.http.put<NewField>(this.categoryUrl + "/AddField", field, this.httpOptions);
   }
 
-  public updateCategory(category: Category): Observable<void> {
+  updateCategory(category: Category): Observable<void> {
     return this.http.put<void>(this.categoryUrl, category, this.httpOptions);
   }
 
-  public moveCategoryUp(category: Category): Observable<void> {
-    return this.http.put<void>(this.categoryUrl + '/MoveUp', category, this.httpOptions);
+  moveCategoryUp(category: Category): Observable<void> {
+    return this.http.put<void>(this.categoryUrl + "/MoveUp", category, this.httpOptions);
   }
 
   moveCategoryToSibling(cardId: number, siblingId: number) {
-    return this.http.put<void>(this.categoryUrl + '/MoveToSibling', {categoryId: cardId, siblingId: siblingId}, this.httpOptions);
+    return this.http.put<void>(this.categoryUrl + "/MoveToSibling",
+      { categoryId: cardId, siblingId: siblingId },
+      this.httpOptions);
   }
 
-  public updateCategoryField(field: ICategoryFieldValue): void {
-    this.http.put(this.categoryUrl + '/UpdateField', field, this.httpOptions).subscribe();
+  updateCategoryField(field: ICategoryFieldValue): void {
+    this.http.put(this.categoryUrl + "/UpdateField", field, this.httpOptions).subscribe();
   }
 
-  public deleteCategory(category: Category) {
+  deleteCategory(category: Category) {
     this.httpOptionsWithBody.body = category;
     return this.http.delete<Envelope<ICategory>>(this.categoryUrl, this.httpOptionsWithBody);
   }
@@ -99,7 +100,7 @@ export class CategoriesService {
         this.currentCategoriesView = data.result;
       },
       () => {
-        console.log('Error loading categories. getAllCategories');
+        console.log("Error loading categories. getAllCategories");
       }
     );
   }
@@ -107,15 +108,15 @@ export class CategoriesService {
   private getAllCategories_InMemory(): any {
     // return this.http.get<ICategory>(this.categoryUrl);
 
-    const card1 = {name: 'card1', description: 'card 1 desc', order: 1, color: 'rgba(0, 255, 255, 0.2)'};
-    const card2 = {name: 'card2', description: 'card 2 desc', order: 2, color: 'rgba(0, 255, 0, 0.2)'};
-    const card3 = {name: 'card5', description: 'card 5 desc', order: 5, color: 'rgba(0, 0, 255, 0.2'};
-    const card4 = {name: 'card4', description: 'card 4 desc', order: 4, color: 'rgba(255, 255, 0, 0.2)'};
-    const card5 = {name: 'card3', description: 'card 3 desc', order: 3, color: 'rgba(255, 0, 255, 0.2)'};
+    const card1 = { name: "card1", description: "card 1 desc", order: 1, color: "rgba(0, 255, 255, 0.2)" };
+    const card2 = { name: "card2", description: "card 2 desc", order: 2, color: "rgba(0, 255, 0, 0.2)" };
+    const card3 = { name: "card5", description: "card 5 desc", order: 5, color: "rgba(0, 0, 255, 0.2" };
+    const card4 = { name: "card4", description: "card 4 desc", order: 4, color: "rgba(255, 255, 0, 0.2)" };
+    const card5 = { name: "card3", description: "card 3 desc", order: 3, color: "rgba(255, 0, 255, 0.2)" };
 
-    const card6 = {name: 'card6', description: 'card 6 desc', order: 6, color: 'rgba(125, 125, 0, 0.2'};
-    const card7 = {name: 'card7', description: 'card 7 desc', order: 7, color: 'rgba(0, 65, 65, 0.2)'};
-    const card8 = {name: 'card8', description: 'card 8 desc', order: 8, color: 'rgba(0, 0, 125, 0.2)'};
+    const card6 = { name: "card6", description: "card 6 desc", order: 6, color: "rgba(125, 125, 0, 0.2" };
+    const card7 = { name: "card7", description: "card 7 desc", order: 7, color: "rgba(0, 65, 65, 0.2)" };
+    const card8 = { name: "card8", description: "card 8 desc", order: 8, color: "rgba(0, 0, 125, 0.2)" };
 
     let cards: any;
     cards = [];
@@ -128,7 +129,7 @@ export class CategoriesService {
     cards.push(card6);
     cards.push(card7);
     cards.push(card8);
-    cards.sort(function (a, b) {
+    cards.sort(function(a, b) {
       if (a.order > b.order) {
         return 1;
       }
@@ -142,31 +143,30 @@ export class CategoriesService {
   }
 
   private getById(categoryId: number) {
-    return this.http.get<Envelope<ICategory>>(this.categoryUrl + '/' + categoryId);
+    return this.http.get<Envelope<ICategory>>(this.categoryUrl + "/" + categoryId);
   }
 
   private getChildsByParent(categoryId: number) {
-    this.http.get<Envelope<Array<ICategory>>>(this.categoryUrl + '/GetChildsOf/' + categoryId).subscribe(
+    this.http.get<Envelope<Array<ICategory>>>(this.categoryUrl + "/GetChildsOf/" + categoryId).subscribe(
       (data: Envelope<Array<ICategory>>) => {
         this.currentCategoriesView = data.result;
       },
       () => {
-        console.log('Error loading categories. getAllCategories');
+        console.log("Error loading categories. getAllCategories");
       }
     );
   }
 
   private getSiblingsOf(categoryId: number) {
-    this.http.get<Envelope<Array<ICategory>>>(this.categoryUrl + '/GetSiblingsOf/' + categoryId).subscribe(
+    this.http.get<Envelope<Array<ICategory>>>(this.categoryUrl + "/GetSiblingsOf/" + categoryId).subscribe(
       (data: Envelope<Array<ICategory>>) => {
         this.currentCategoriesView = data.result;
       },
       () => {
-        console.log('Error loading categories. getParentsByChild');
+        console.log("Error loading categories. getParentsByChild");
       }
     );
   }
 
 
 }
-

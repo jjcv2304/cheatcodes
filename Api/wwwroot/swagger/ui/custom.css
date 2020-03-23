@@ -1,8 +1,6 @@
-﻿body {
-    background: black;
-}
+﻿body { background: black; }
 
 .swagger-ui .topbar {
-    background-color: #000;
-    border-bottom: 3px solid #547f00;
+  background-color: #000;
+  border-bottom: 3px solid #547f00;
 }

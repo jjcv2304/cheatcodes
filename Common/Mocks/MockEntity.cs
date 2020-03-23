@@ -2,11 +2,12 @@ using Common.Utils;
 
 namespace Common.Mocks
 {
-    public class MockEntity: Entity
+  public class MockEntity : Entity
+  {
+    public int TestableId
     {
-        public int TestableId { 
-            get => Id;
-            set => Id = value;
-        }
+      get => Id;
+      set => Id = value;
     }
+  }
 }

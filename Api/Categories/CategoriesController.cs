@@ -1,15 +1,9 @@
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 using Api.Utils;
 using Application;
 using Application.Utils;
 using CSharpFunctionalExtensions;
-using Domain;
 using Dtos;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using NHibernate.Mapping;
 
 // ReSharper disable SuggestVarOrType_SimpleTypes
 
@@ -21,7 +15,7 @@ namespace Api.Categories
   {
     private readonly Messages _messages;
 
-    public CategoriesController(Messages messages) : base()
+    public CategoriesController(Messages messages)
     {
       _messages = messages;
     }
@@ -48,7 +42,7 @@ namespace Api.Categories
     }
 
     /// <summary>
-    /// Get categories that are located at the same tree level
+    ///   Get categories that are located at the same tree level
     /// </summary>
     /// <param name="categoryId"></param>
     /// <returns></returns>
@@ -73,8 +67,8 @@ namespace Api.Categories
     public IActionResult Get(string name, bool exactMatch = true)
     {
       var result = exactMatch
-          ? _messages.Dispatch(new GetCategoryByExactNameQuery(name))
-          : _messages.Dispatch(new GetCategoryByPartialNameQuery(name));
+        ? _messages.Dispatch(new GetCategoryByExactNameQuery(name))
+        : _messages.Dispatch(new GetCategoryByPartialNameQuery(name));
 
       return Ok(result);
     }
@@ -139,7 +133,7 @@ namespace Api.Categories
       return FromResult(result);
     }
 
-    [HttpGet()]
+    [HttpGet]
     [Route("[action]")]
     public IActionResult ExportToJson()
     {

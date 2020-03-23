@@ -1,7 +1,6 @@
 ﻿namespace Application.Utils.Interfaces
 {
-    public interface IQuery<TResult>
-    {
-    }
-
+  public interface IQuery<TResult>
+  {
+  }
 }

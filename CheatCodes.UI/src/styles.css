@@ -1,12 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 .fa-rotate-45 {
-  -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   -o-transform: rotate(45deg);
-  transform: rotate(45deg); }
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
 
-[contenteditable]:focus {
-  outline: 0 solid transparent; }
+[contenteditable]:focus { outline: 0 solid transparent; }
 
 /*# sourceMappingURL=styles.css.map */

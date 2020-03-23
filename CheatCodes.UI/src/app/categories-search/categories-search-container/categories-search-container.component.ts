@@ -1,14 +1,14 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
-import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
-import {Observable, Subscription} from 'rxjs';
-import {map, shareReplay} from 'rxjs/operators';
-import {CategoryBasic, CategoryTree} from '../model/category';
-import {CategoriesSearchHttpService} from '../categories-search-http.service';
+import { Component, OnDestroy, OnInit } from "@angular/core";
+import { BreakpointObserver, Breakpoints } from "@angular/cdk/layout";
+import { Observable, Subscription } from "rxjs";
+import { map, shareReplay } from "rxjs/operators";
+import { CategoryBasic, CategoryTree } from "../model/category";
+import { CategoriesSearchHttpService } from "../categories-search-http.service";
 
 @Component({
-  selector: 'app-categories-search-container',
-  templateUrl: './categories-search-container.component.html',
-  styleUrls: ['./categories-search-container.component.scss']
+  selector: "app-categories-search-container",
+  templateUrl: "./categories-search-container.component.html",
+  styleUrls: ["./categories-search-container.component.scss"]
 })
 export class CategoriesSearchContainerComponent implements OnInit, OnDestroy {
   showDetailView = false;
@@ -23,7 +23,8 @@ export class CategoriesSearchContainerComponent implements OnInit, OnDestroy {
   cardsSearchResult: CategoryBasic[];
   cardDetails: CategoryTree;
 
-  constructor(private breakpointObserver: BreakpointObserver, private categoriesSearchService: CategoriesSearchHttpService) {
+  constructor(private breakpointObserver: BreakpointObserver,
+    private categoriesSearchService: CategoriesSearchHttpService) {
   }
 
   ngOnInit(): void {

@@ -9,7 +9,8 @@ export class NewField implements INewField {
   public constructor(init?: Partial<NewField>) {
     Object.assign(this, init);
   }
+
   name: string;
-  description = '';
+  description = "";
   categoryId: number;
 }

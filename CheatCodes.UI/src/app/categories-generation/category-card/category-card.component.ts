@@ -1,16 +1,16 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {Category, ICategory} from '../models/category';
-import {CategoriesService} from '../categories/categories.service';
-import {Envelope} from '../../utils/envelope';
-import {Router} from '@angular/router';
-import {CategoryFilter} from '../models/CategoryFilter';
-import {ICategoryFieldValue} from '../models/categoryFieldValue';
+import { Component, Input, OnInit } from "@angular/core";
+import { Category, ICategory } from "../models/category";
+import { CategoriesService } from "../categories/categories.service";
+import { Envelope } from "../../utils/envelope";
+import { Router } from "@angular/router";
+import { CategoryFilter } from "../models/CategoryFilter";
+import { ICategoryFieldValue } from "../models/categoryFieldValue";
 
 
 @Component({
-  selector: 'app-category-card',
-  templateUrl: './category-card.component.html',
-  styleUrls: ['./category-card.component.scss']
+  selector: "app-category-card",
+  templateUrl: "./category-card.component.html",
+  styleUrls: ["./category-card.component.scss"]
 })
 export class CategoryCardComponent implements OnInit {
   flipDiv: boolean;
@@ -18,11 +18,12 @@ export class CategoryCardComponent implements OnInit {
   showMenu = false;
   cardWidth: string;
   cardHeight: string;
-  minCardWidth = '200px';
-  maxCardWidth = '1000px';
-  minCardHeight = '200px';
-  maxCardHeight = '500px';
-  @Input() card: Category;
+  minCardWidth = "200px";
+  maxCardWidth = "1000px";
+  minCardHeight = "200px";
+  maxCardHeight = "500px";
+  @Input()
+  card: Category;
 
   constructor(public router: Router, private categoriesService: CategoriesService) {
     this.flipDiv = false;
@@ -85,7 +86,7 @@ export class CategoryCardComponent implements OnInit {
   }
 
   addChildCard() {
-    this.router.navigateByUrl('/categoryEdit/' + this.card.id);
+    this.router.navigateByUrl(`/categoryEdit/${this.card.id}`);
   }
 
   private deleteCard(category: Category) {
@@ -94,12 +95,12 @@ export class CategoryCardComponent implements OnInit {
         if (category.parentId === null) {
           location.reload();
         } else {
-           if (this.hasSiblings(category.id)) {
-             const newFilter = CategoryFilter.FilterByParent(category.parentId);
-             this.categoriesService.SetCategoryFilter(newFilter);
-           } else {
-             this.navigateUp();
-           }
+          if (this.hasSiblings(category.id)) {
+            const newFilter = CategoryFilter.FilterByParent(category.parentId);
+            this.categoriesService.SetCategoryFilter(newFilter);
+          } else {
+            this.navigateUp();
+          }
 
         }
       });
@@ -111,9 +112,9 @@ export class CategoryCardComponent implements OnInit {
   }
 
   private autoGrowTextZone(e) {
-    e.target.style.overflow = 'hidden';
-    e.target.style.height = '0px';
-    e.target.style.height = (e.target.scrollHeight + 15) + 'px';
+    e.target.style.overflow = "hidden";
+    e.target.style.height = "0px";
+    e.target.style.height = (e.target.scrollHeight + 15) + "px";
   }
 
   private resizeCard() {
@@ -126,17 +127,18 @@ export class CategoryCardComponent implements OnInit {
     }
 
   }
+
   private expandCard() {
     this.cardWidth = this.maxCardWidth;
     this.cardHeight = this.maxCardHeight;
   }
 
   addField() {
-    this.router.navigateByUrl('/fieldEdit/' + this.card.id);
+    this.router.navigateByUrl(`/fieldEdit/${this.card.id}`);
   }
 
   moveCardDown() {
-    console.log('move down 2');
+    console.log("move down 2");
   }
 
   toogleMenu() {

@@ -1,14 +1,13 @@
-import {Component, OnInit} from '@angular/core';
-import {CategoriesService} from '../categories/categories.service';
-import {Category, ICategory} from '../models/category';
-import {Envelope} from '../../utils/envelope';
-import {CategoryFilter} from '../models/CategoryFilter';
-import {ActivatedRoute, Router} from '@angular/router';
+import { Component, OnInit } from "@angular/core";
+import { CategoriesService } from "../categories/categories.service";
+import { Category } from "../models/category";
+import { CategoryFilter } from "../models/CategoryFilter";
+import { ActivatedRoute, Router } from "@angular/router";
 
 @Component({
-  selector: 'app-categories-list',
-  templateUrl: './categories-list.component.html',
-  styleUrls: ['./categories-list.component.scss']
+  selector: "app-categories-list",
+  templateUrl: "./categories-list.component.html",
+  styleUrls: ["./categories-list.component.scss"]
 })
 export class CategoriesListComponent implements OnInit {
 
@@ -20,7 +19,7 @@ export class CategoriesListComponent implements OnInit {
   }
 
   ngOnInit() {
-    const reload = Boolean(this.route.snapshot.paramMap.get('reload'));
+    const reload = Boolean(this.route.snapshot.paramMap.get("reload"));
     if (reload === true) {
       this.categoriesService.RefreshCategoryLastFilter();
     } else {
@@ -30,8 +29,6 @@ export class CategoriesListComponent implements OnInit {
 
   addSiblingCard() {
     const parentId = this.categoriesService.currentCategories[0].parentId || 0;
-    this.router.navigateByUrl('/categoryEdit/parentId/' + parentId);
+    this.router.navigateByUrl(`/categoryEdit/parentId/${parentId}`);
   }
 }
-
-

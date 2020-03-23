@@ -1,5 +1,3 @@
-import {ICategoryFieldValue} from './categoryFieldValue';
-
 export interface ICategoryBasic {
   id: number;
   name: string;
@@ -15,9 +13,9 @@ export class CategoryBasic implements ICategoryBasic {
 
   id: number = null;
   name: string = null;
-  description = '';
+  description = "";
   parentId: number;
-  color = 'lightskyblue';
+  color = "lightskyblue";
 }
 
 export interface ICategoryTree {
@@ -28,6 +26,7 @@ export interface ICategoryTree {
   color: string;
   childs: ICategoryTree[];
 }
+
 export class CategoryTree implements ICategoryTree {
   public constructor(init?: Partial<CategoryTree>) {
     Object.assign(this, init);
@@ -35,8 +34,8 @@ export class CategoryTree implements ICategoryTree {
 
   id: number = null;
   name: string = null;
-  description = '';
+  description = "";
   parentId: number;
-  color = 'lightskyblue';
+  color = "lightskyblue";
   childs: CategoryTree[];
 }

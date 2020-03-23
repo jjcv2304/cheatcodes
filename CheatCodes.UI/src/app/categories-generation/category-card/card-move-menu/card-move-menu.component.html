@@ -2,7 +2,8 @@
   <ul>
     <li>
       <div class="fas fa-arrow-up" [ngClass]="{'fa-disabled' : !canMoveUp}"
-           (click)="canMoveUp ? moveUpEvent() : $event.stopPropagation()"> Move up
+           (click)="canMoveUp ? moveUpEvent() : $event.stopPropagation()">
+        Move up
       </div>
     </li>
     <li (mouseenter)="showSubmenu()" (mouseleave)="hideSubmenu()">

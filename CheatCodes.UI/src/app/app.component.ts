@@ -1,16 +1,16 @@
-import {Component} from '@angular/core';
-import {NavigationCancel, NavigationEnd, NavigationError, NavigationStart, Router, Event} from '@angular/router';
-import {ThemePalette} from '@angular/material';
+import { Component } from "@angular/core";
+import { NavigationCancel, NavigationEnd, NavigationError, NavigationStart, Router, Event } from "@angular/router";
+import { ThemePalette } from "@angular/material";
 
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.scss"]
 })
 export class AppComponent {
   loading = true;
-  color: ThemePalette = 'accent';
+  color: ThemePalette = "accent";
 
   constructor(private router: Router) {
     router.events.subscribe((routerEvent: Event) => {

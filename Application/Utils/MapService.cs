@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using System.Linq;
-using Application.RabbitMQ.Models;
 using Domain;
 using Dtos;
 
@@ -12,7 +11,7 @@ namespace Application.Utils
 
     public static CategoryDto Map(Category category)
     {
-      return new CategoryDto()
+      return new CategoryDto
       {
         Id = category.Id,
         Description = category.Description,
@@ -31,7 +30,7 @@ namespace Application.Utils
 
     public static CategoryTreeDto MapToTreeDto(Category category)
     {
-      return new CategoryTreeDto()
+      return new CategoryTreeDto
       {
         Id = category.Id,
         Description = category.Description,
@@ -50,7 +49,7 @@ namespace Application.Utils
     public static Category Map(CategoryDto categoryDto)
     {
       if (categoryDto == null) return null;
-      return new Category()
+      return new Category
       {
         Id = categoryDto.Id,
         Description = categoryDto.Description,
@@ -67,18 +66,18 @@ namespace Application.Utils
     public static Category Map(CategoryCreateCommand categoryCreateCommand)
     {
       if (categoryCreateCommand == null) return null;
-      return new Category()
+      return new Category
       {
         Description = categoryCreateCommand.Description,
         Name = categoryCreateCommand.Name,
-        ParentCategory = new Category() { Id = categoryCreateCommand.ParentId }
+        ParentCategory = new Category {Id = categoryCreateCommand.ParentId}
       };
     }
 
     public static Category Map(CategoryUpdateCommand categoryUpdateCommand)
     {
       if (categoryUpdateCommand == null) return null;
-      return new Category()
+      return new Category
       {
         Id = categoryUpdateCommand.Id,
         Name = categoryUpdateCommand.Name,
@@ -89,7 +88,7 @@ namespace Application.Utils
     public static Category Map(CategoryDeleteCommand categoryDeleteCommand)
     {
       if (categoryDeleteCommand == null) return null;
-      return new Category()
+      return new Category
       {
         Id = categoryDeleteCommand.Id
       };
@@ -99,9 +98,9 @@ namespace Application.Utils
     {
       if (categoryCreateDto == null) return null;
       return new CategoryCreateCommand(
-          categoryCreateDto.Name,
-          categoryCreateDto.Description,
-          categoryCreateDto.ParentId
+        categoryCreateDto.Name,
+        categoryCreateDto.Description,
+        categoryCreateDto.ParentId
       );
     }
 
@@ -109,32 +108,33 @@ namespace Application.Utils
     {
       if (categoryUpdateDto == null) return null;
       return new CategoryUpdateCommand(
-          categoryUpdateDto.Id,
-          categoryUpdateDto.Name,
-          categoryUpdateDto.Description
+        categoryUpdateDto.Id,
+        categoryUpdateDto.Name,
+        categoryUpdateDto.Description
       );
     }
+
     public static CategoryMoveUpCommand Map(CategoryMoveUpDto categoryMoveUpDto)
     {
       if (categoryMoveUpDto == null) return null;
       return new CategoryMoveUpCommand(
-          categoryMoveUpDto.Id, categoryMoveUpDto.ParentId);
+        categoryMoveUpDto.Id, categoryMoveUpDto.ParentId);
     }
+
     public static CategoryMoveToSiblingCommand Map(CategoryMoveToSiblingDto categoryMoveToSiblingDto)
     {
       if (categoryMoveToSiblingDto == null) return null;
       return new CategoryMoveToSiblingCommand(
-          categoryMoveToSiblingDto.CategoryId, categoryMoveToSiblingDto.SiblingId);
+        categoryMoveToSiblingDto.CategoryId, categoryMoveToSiblingDto.SiblingId);
     }
 
     public static CategoryDeleteCommand Map(CategoryDeleteDto categoryDeleteDto)
     {
       if (categoryDeleteDto == null) return null;
       return new CategoryDeleteCommand(
-          categoryDeleteDto.Id
+        categoryDeleteDto.Id
       );
     }
-
 
     #endregion
 
@@ -142,7 +142,7 @@ namespace Application.Utils
 
     public static FieldDto Map(Field field)
     {
-      return new FieldDto()
+      return new FieldDto
       {
         Id = field.Id,
         Name = field.Name,
@@ -152,7 +152,7 @@ namespace Application.Utils
 
     public static Field Map(FieldDto fieldDto)
     {
-      return new Field()
+      return new Field
       {
         Id = fieldDto.Id,
         Name = fieldDto.Name,
@@ -172,7 +172,7 @@ namespace Application.Utils
 
     public static Field Map(FieldCreateCommand command)
     {
-      return new Field()
+      return new Field
       {
         Name = command.Name,
         Description = command.Description
@@ -185,7 +185,7 @@ namespace Application.Utils
 
     public static CategoryFieldValueDto Map(CategoryField categoryField)
     {
-      return new CategoryFieldValueDto()
+      return new CategoryFieldValueDto
       {
         CategoryId = categoryField.Category.Id,
         FieldId = categoryField.Field.Id,
@@ -196,10 +196,10 @@ namespace Application.Utils
 
     public static CategoryField Map(CategoryFieldValueDto categoryFieldValueDto)
     {
-      return new CategoryField()
+      return new CategoryField
       {
-        Category = new Category() { Id = categoryFieldValueDto.CategoryId },
-        Field = new Field() { Id = categoryFieldValueDto.FieldId },
+        Category = new Category {Id = categoryFieldValueDto.CategoryId},
+        Field = new Field {Id = categoryFieldValueDto.FieldId},
         Value = categoryFieldValueDto.Value
       };
     }
@@ -213,19 +213,22 @@ namespace Application.Utils
     {
       return categoryFieldsDto.Select(Map).ToList();
     }
+
     public static CategoryFieldValueUpdateCommand Map(CategoryFieldValuedUpdateDto dto)
     {
       return new CategoryFieldValueUpdateCommand(dto.FieldId, dto.CategoryId, dto.Value);
     }
+
     public static CategoryField Map(CategoryFieldValueUpdateCommand command)
     {
-      return new CategoryField()
+      return new CategoryField
       {
-        Field = new Field() { Id = command.FieldId },
-        Category = new Category() { Id = command.CategoryId },
+        Field = new Field {Id = command.FieldId},
+        Category = new Category {Id = command.CategoryId},
         Value = command.Value
       };
     }
+
     #endregion
   }
 }

@@ -3,16 +3,15 @@ using RabbitMQ.Client;
 
 namespace Application.RabbitMQ
 {
-public class RabbitMQClient
+  public class RabbitMQClient
   {
-    private static ConnectionFactory _factory;
-    private static IConnection _connection;
-    private static IModel _model;
-
     private const string ExchangeName = "Direct_Exchange";
     private const string CategoryCreateQueueKeyName = "CategoryCreate_Queue";
     private const string CategoryDeleteQueueKeyName = "CategoryDelete_Queue";
     private const string CategoryUpdateQueueKeyName = "CategoryUpdate_Queue";
+    private static ConnectionFactory _factory;
+    private static IConnection _connection;
+    private static IModel _model;
 
 
     public RabbitMQClient()
@@ -34,7 +33,7 @@ public class RabbitMQClient
 
       _connection = _factory.CreateConnection();
       _model = _connection.CreateModel();
-      _model.ExchangeDeclare(ExchangeName, type:"direct");
+      _model.ExchangeDeclare(ExchangeName, "direct");
 
       _model.QueueDeclare(CategoryCreateQueueKeyName, true, false, false, null);
       _model.QueueDeclare(CategoryDeleteQueueKeyName, true, false, false, null);
@@ -43,7 +42,6 @@ public class RabbitMQClient
       _model.QueueBind(CategoryCreateQueueKeyName, ExchangeName, CategoryCreateQueueKeyName);
       _model.QueueBind(CategoryDeleteQueueKeyName, ExchangeName, CategoryDeleteQueueKeyName);
       _model.QueueBind(CategoryUpdateQueueKeyName, ExchangeName, CategoryUpdateQueueKeyName);
-
     }
 
     public void Close()
@@ -60,7 +58,7 @@ public class RabbitMQClient
     {
       SendMessage(deletedCategory.Serialize(), CategoryDeleteQueueKeyName);
     }
-    
+
     public void UpdateCategory(CategoryUpdateCommand updatedCategory)
     {
       SendMessage(updatedCategory.Serialize(), CategoryUpdateQueueKeyName);

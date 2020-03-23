@@ -2,19 +2,18 @@ using System.Data;
 
 namespace Persistance
 {
-    public abstract class RepositoryBase
+  public abstract class RepositoryBase
+  {
+    public RepositoryBase(IDbTransaction transaction)
     {
-        protected IDbTransaction Transaction { get; private set; }
-        protected IDbConnection Connection { get { return Transaction.Connection; } }
-
-        public RepositoryBase(IDbTransaction transaction)
-        {
-            Transaction = transaction;
-        }
-
-        public RepositoryBase()
-        {
-            
-        }
+      Transaction = transaction;
     }
+
+    public RepositoryBase()
+    {
+    }
+
+    protected IDbTransaction Transaction { get; }
+    protected IDbConnection Connection => Transaction.Connection;
+  }
 }

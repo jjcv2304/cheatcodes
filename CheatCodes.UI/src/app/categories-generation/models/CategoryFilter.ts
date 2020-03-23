@@ -14,13 +14,14 @@ export class CategoryFilter {
   public constructor() {
   }
 
-  public static FilterByParent(parentId: number): CategoryFilter {
+  static FilterByParent(parentId: number): CategoryFilter {
     const newFilter = new CategoryFilter();
     newFilter.byParent = true;
     newFilter.parentId = parentId;
     return newFilter;
   }
-  public static FilterByChild(childId: number): CategoryFilter {
+
+  static FilterByChild(childId: number): CategoryFilter {
     const newFilter = new CategoryFilter();
     newFilter.byChild = true;
     newFilter.childId = childId;

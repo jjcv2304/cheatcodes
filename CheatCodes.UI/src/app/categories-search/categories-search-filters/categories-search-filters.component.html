@@ -5,10 +5,12 @@
   </mat-form-field>
 
   <mat-checkbox [(ngModel)]="categoryNameFilterAnd" (click)="categoryNameFilterAndClicked()"
-                [ngModelOptions]="{standalone: true}">And
+                [ngModelOptions]="{standalone: true}">
+    And
   </mat-checkbox>
   <mat-checkbox [(ngModel)]="categoryNameFilterOr" (click)="categoryNameFilterOrClicked()"
-                [ngModelOptions]="{standalone: true}">Or
+                [ngModelOptions]="{standalone: true}">
+    Or
   </mat-checkbox>
 
 
@@ -20,6 +22,7 @@
   </mat-form-field>
 
   <button type="submit" class="searchCategoriesForm--submitButton " mat-raised-button color="primary"
-          [disabled]="!searchCategoriesForm.valid">Search
+          [disabled]="!searchCategoriesForm.valid">
+    Search
   </button>
 </form>

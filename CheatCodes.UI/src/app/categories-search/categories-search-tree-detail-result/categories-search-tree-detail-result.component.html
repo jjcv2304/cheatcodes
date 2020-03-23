@@ -1,6 +1,6 @@
 <div class="content-container">
   <div class="card-details-tree">
-    <mat-tree [dataSource]="dataSource" [treeControl]="treeControl" >
+    <mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
       <!-- This is the tree node template for leaf nodes -->
       <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding (click)="showDetail(node)"
                      [ngClass]="{ 'background-highlight': activeNode === node }">
@@ -61,13 +61,3 @@
 
   </div>
 </div>
-
-
-
-
-
-
-
-
-
-

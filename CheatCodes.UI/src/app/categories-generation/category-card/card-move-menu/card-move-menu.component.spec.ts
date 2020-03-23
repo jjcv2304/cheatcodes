@@ -1,25 +1,27 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { CardMoveMenuComponent } from './card-move-menu.component';
+import { CardMoveMenuComponent } from "./card-move-menu.component";
 
-describe('CardMoveMenuComponent', () => {
-  let component: CardMoveMenuComponent;
-  let fixture: ComponentFixture<CardMoveMenuComponent>;
+describe("CardMoveMenuComponent",
+  () => {
+    let component: CardMoveMenuComponent;
+    let fixture: ComponentFixture<CardMoveMenuComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ CardMoveMenuComponent ]
-    })
-    .compileComponents();
-  }));
+    beforeEach(async(() => {
+      TestBed.configureTestingModule({
+          declarations: [CardMoveMenuComponent]
+        })
+        .compileComponents();
+    }));
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(CardMoveMenuComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+    beforeEach(() => {
+      fixture = TestBed.createComponent(CardMoveMenuComponent);
+      component = fixture.componentInstance;
+      fixture.detectChanges();
+    });
+
+    it("should create",
+      () => {
+        expect(component).toBeTruthy();
+      });
   });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});

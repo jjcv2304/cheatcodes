@@ -1,25 +1,27 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { FieldEditComponent } from './field-edit.component';
+import { FieldEditComponent } from "./field-edit.component";
 
-describe('FieldEditComponent', () => {
-  let component: FieldEditComponent;
-  let fixture: ComponentFixture<FieldEditComponent>;
+describe("FieldEditComponent",
+  () => {
+    let component: FieldEditComponent;
+    let fixture: ComponentFixture<FieldEditComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ FieldEditComponent ]
-    })
-    .compileComponents();
-  }));
+    beforeEach(async(() => {
+      TestBed.configureTestingModule({
+          declarations: [FieldEditComponent]
+        })
+        .compileComponents();
+    }));
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(FieldEditComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+    beforeEach(() => {
+      fixture = TestBed.createComponent(FieldEditComponent);
+      component = fixture.componentInstance;
+      fixture.detectChanges();
+    });
+
+    it("should create",
+      () => {
+        expect(component).toBeTruthy();
+      });
   });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});

@@ -1,17 +1,18 @@
-import {AfterViewInit, Component, ElementRef, OnInit, ViewChild} from '@angular/core';
-import {Category, ICategory} from '../models/category';
-import {ActivatedRoute, Router} from '@angular/router';
-import {CategoriesService} from '../categories/categories.service';
-import {CategoryFilter} from '../models/CategoryFilter';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from "@angular/core";
+import { Category } from "../models/category";
+import { ActivatedRoute, Router } from "@angular/router";
+import { CategoriesService } from "../categories/categories.service";
+import { CategoryFilter } from "../models/CategoryFilter";
 
 @Component({
-  selector: 'app-category-edit',
-  templateUrl: './category-edit.component.html',
-  styleUrls: ['./category-edit.component.scss']
+  selector: "app-category-edit",
+  templateUrl: "./category-edit.component.html",
+  styleUrls: ["./category-edit.component.scss"]
 })
 export class CategoryEditComponent implements OnInit, AfterViewInit {
-  @ViewChild('fieldName', {static: false}) fieldName: ElementRef;
-  model = new Category({id: 0, name: '', description: '', parentId: 0});
+  @ViewChild("fieldName", { static: false })
+  fieldName: ElementRef;
+  model = new Category({ id: 0, name: "", description: "", parentId: 0 });
 
   submitted = false;
 
@@ -19,7 +20,7 @@ export class CategoryEditComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit(): void {
-    this.model.parentId = Number(this.route.snapshot.paramMap.get('parentId'));
+    this.model.parentId = Number(this.route.snapshot.paramMap.get("parentId"));
   }
 
   ngAfterViewInit(): void {
@@ -31,11 +32,11 @@ export class CategoryEditComponent implements OnInit, AfterViewInit {
     this.categoriesService.addCategory(this.model)
       .subscribe(() => {
         if (this.model.parentId === 0) {
-          this.router.navigate(['/categoryList']);
+          this.router.navigate(["/categoryList"]);
         } else {
           const newFilter = CategoryFilter.FilterByParent(this.model.parentId);
           this.categoriesService.SetCategoryFilter(newFilter);
-          this.router.navigate(['/categoryList/true']);
+          this.router.navigate(["/categoryList/true"]);
         }
       });
   }

@@ -1,18 +1,19 @@
-import {AfterViewInit, Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from "@angular/core";
 
-import {ActivatedRoute, Router} from '@angular/router';
-import {CategoriesService} from '../categories/categories.service';
-import {INewField, NewField} from '../models/NewField';
+import { ActivatedRoute, Router } from "@angular/router";
+import { CategoriesService } from "../categories/categories.service";
+import { INewField, NewField } from "../models/NewField";
 
 @Component({
-  selector: 'app-field-edit',
-  templateUrl: './field-edit.component.html',
-  styleUrls: ['./field-edit.component.scss']
+  selector: "app-field-edit",
+  templateUrl: "./field-edit.component.html",
+  styleUrls: ["./field-edit.component.scss"]
 })
 export class FieldEditComponent implements OnInit, AfterViewInit {
 
-  @ViewChild('fieldName', {static : false}) fieldName: ElementRef;
-  model = new NewField({ name: '', description: '', categoryId: 0});
+  @ViewChild("fieldName", { static: false })
+  fieldName: ElementRef;
+  model = new NewField({ name: "", description: "", categoryId: 0 });
 
   submitted = false;
 
@@ -21,8 +22,9 @@ export class FieldEditComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit(): void {
-    this.model.categoryId = Number(this.route.snapshot.paramMap.get('categoryId'));
+    this.model.categoryId = Number(this.route.snapshot.paramMap.get("categoryId"));
   }
+
   ngAfterViewInit(): void {
     this.fieldName.nativeElement.focus();
   }
@@ -31,11 +33,10 @@ export class FieldEditComponent implements OnInit, AfterViewInit {
     this.submitted = true;
     this.categoriesService.addField(this.model)
       .subscribe((data: INewField) => {
-        this.router.navigate(['/categoryList/true']);
+        this.router.navigate(["/categoryList/true"]);
       });
 
   }
-
 
 
 }

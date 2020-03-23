@@ -4,22 +4,22 @@ using System.Reflection;
 
 namespace Api.Logs.Extensions
 {
-    public interface IScopeInformation
-    {
-        Dictionary<string, string> HostScopeInfo { get; }
-    }
-    public class ScopeInformation : IScopeInformation
-    {
-        public ScopeInformation()
-        {
-            HostScopeInfo = new Dictionary<string, string>
-            {
-                {"MachineName", Environment.MachineName },
-                {"EntryPoint", Assembly.GetEntryAssembly().GetName().Name }
-            };
-        }
+  public interface IScopeInformation
+  {
+    Dictionary<string, string> HostScopeInfo { get; }
+  }
 
-        public Dictionary<string, string> HostScopeInfo { get; }
+  public class ScopeInformation : IScopeInformation
+  {
+    public ScopeInformation()
+    {
+      HostScopeInfo = new Dictionary<string, string>
+      {
+        {"MachineName", Environment.MachineName},
+        {"EntryPoint", Assembly.GetEntryAssembly().GetName().Name}
+      };
     }
+
+    public Dictionary<string, string> HostScopeInfo { get; }
+  }
 }
-
