@@ -1,11 +1,12 @@
 namespace CheatCodes.Search.DB
 {
-    public class DatabaseSetting
+  public class DatabaseSetting
+  {
+    public DatabaseSetting(string connectionString)
     {
-        public string ConnectionString { get; set; }
-        public DatabaseSetting(string connectionString)
-        {
-            ConnectionString = connectionString;
-        }
+      ConnectionString = connectionString;
     }
+
+    public string ConnectionString { get; set; }
+  }
 }

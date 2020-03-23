@@ -4,10 +4,16 @@ namespace CheatCodes.Search.DB.Models
 {
   public class Category
   {
+    public Category()
+    {
+      ChildCategories = new List<Category>();
+      CategoryFields = new List<CategoryField>();
+    }
+
     public int Id { get; set; }
     public string Name { get; set; }
     public string Description { get; set; }
-    
+
 
     public ICollection<CategoryField> CategoryFields { get; set; }
 
@@ -15,11 +21,5 @@ namespace CheatCodes.Search.DB.Models
     public virtual Category ParentCategory { get; set; }
 
     public IList<Category> ChildCategories { get; set; }
-
-    public Category()
-    {
-      ChildCategories = new List<Category>();
-      CategoryFields = new List<CategoryField>();
-    }
   }
 }

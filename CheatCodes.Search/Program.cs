@@ -1,7 +1,5 @@
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Threading.Tasks;
 using CheatCodes.Search.RabbitMQ;
 using CheatCodes.Search.RabbitMQ.Handlers;
@@ -9,7 +7,6 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Serilog;
 using Serilog.Formatting.Json;
 
@@ -19,7 +16,7 @@ namespace CheatCodes.Search
   {
     public static IConfiguration Configuration { get; } = new ConfigurationBuilder()
       .SetBasePath(Directory.GetCurrentDirectory())
-      .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+      .AddJsonFile("appsettings.json", false, true)
       .AddEnvironmentVariables()
       .Build();
 
@@ -48,6 +45,7 @@ namespace CheatCodes.Search
       {
         Log.CloseAndFlush();
       }
+
       await host.RunAsync();
     }
 
@@ -61,15 +59,10 @@ namespace CheatCodes.Search
       client.ProcessMessages();
     }
 
-    public static IHostBuilder CreateHostBuilder(string[] args) =>
-        Host.CreateDefaultBuilder(args)
-            .ConfigureWebHostDefaults(webBuilder =>
-            {
-              webBuilder.UseStartup<Startup>();
-
-            }).UseSerilog();
-
+    public static IHostBuilder CreateHostBuilder(string[] args)
+    {
+      return Host.CreateDefaultBuilder(args)
+        .ConfigureWebHostDefaults(webBuilder => { webBuilder.UseStartup<Startup>(); }).UseSerilog();
+    }
   }
-
-
 }

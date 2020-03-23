@@ -1,15 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using CheatCodes.Search.DB;
-using CheatCodes.Search.DB.Models;
+﻿using System.Threading.Tasks;
 using CheatCodes.Search.Repositories;
 using CheatCodes.Search.Utils;
 using CheatCodes.Search.ViewModels;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 namespace CheatCodes.Search.Controllers
 {
@@ -23,7 +16,7 @@ namespace CheatCodes.Search.Controllers
     {
       _categoriesSearchRepository = categoriesSearchRepository;
     }
-    
+
     [HttpGet]
     [Route("[action]")]
     public async Task<IActionResult> GetCategoriesByPartialNameAsync(string textSearch)
@@ -37,7 +30,7 @@ namespace CheatCodes.Search.Controllers
 
     [HttpGet]
     [Route("[action]")]
-    public async Task<IActionResult> GetCategoriesByFiltersAsync([FromQuery]CategorySearchFiltersVM filtersVM)
+    public async Task<IActionResult> GetCategoriesByFiltersAsync([FromQuery] CategorySearchFiltersVM filtersVM)
     {
       var result = await _categoriesSearchRepository.GetCategoriesByFiltersAsync(filtersVM);
       return Ok(result);

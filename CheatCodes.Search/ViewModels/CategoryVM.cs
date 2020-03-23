@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace CheatCodes.Search.ViewModels
 {
@@ -18,7 +15,6 @@ namespace CheatCodes.Search.ViewModels
     public string Description { get; set; }
     public int? ParentId { get; set; }
     public IList<CategoryNameTreeVM> Childs { get; set; }
-
   }
 
   public class CategorySearchFiltersVM
@@ -27,6 +23,5 @@ namespace CheatCodes.Search.ViewModels
     public bool CategoryNameFilterOr { get; set; }
     public bool CategoryNameFilterAnd { get; set; }
     public string CategoryName2Filter { get; set; }
-
   }
 }

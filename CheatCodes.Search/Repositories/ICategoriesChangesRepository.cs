@@ -6,7 +6,7 @@ namespace CheatCodes.Search.Repositories
   public interface ICategoriesChangesRepository
   {
     Task NewCategory(NewCategoryEvent newCategoryEvent);
-    Task UpdateCategory(NewCategoryEvent newCategory);
-    Task DeleteCategory(NewCategoryEvent newCategory);
+    Task UpdateCategory(UpdateCategoryEvent newCategory);
+    Task DeleteCategory(DeleteCategoryEvent newCategory);
   }
 }

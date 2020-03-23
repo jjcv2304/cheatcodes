@@ -23,6 +23,7 @@ namespace CheatCodes.Search.Repositories
             stack.Push(e);
             e = elements.GetEnumerator();
           }
+
           if (stack.Count == 0) break;
           e.Dispose();
           e = stack.Pop();

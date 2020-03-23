@@ -7,10 +7,9 @@ using CheatCodes.Search.DB.Models;
 using CheatCodes.Search.ViewModels;
 using Microsoft.EntityFrameworkCore;
 
-
 namespace CheatCodes.Search.Repositories
 {
-  public partial class CategoriesSearchRepository : ICategoriesSearchRepository
+  public class CategoriesSearchRepository : ICategoriesSearchRepository
   {
     private readonly CheatCodesDbContext _context;
 
@@ -34,7 +33,7 @@ namespace CheatCodes.Search.Repositories
       var categories = await _context
         .Categories
         .Where(c => c.Name.ToLower().Contains(partialName.ToLower()))
-        .Select(c => new CategoryBasicVM()
+        .Select(c => new CategoryBasicVM
         {
           Id = c.Id,
           Name = c.Name
@@ -48,24 +47,24 @@ namespace CheatCodes.Search.Repositories
     public async Task<List<CategoryBasicVM>> GetCategoriesByFiltersAsync(CategorySearchFiltersVM filtersVM)
     {
       Func<Category, bool> predicate;
-      predicate = p => (p.Name.ToLower().Contains(filtersVM.CategoryNameFilter.ToLower()));
+      predicate = p => p.Name.ToLower().Contains(filtersVM.CategoryNameFilter.ToLower());
 
       if (filtersVM.CategoryNameFilterAnd)
       {
         var oldPredicate = predicate;
-        predicate = p => oldPredicate(p) && (p.Name.ToLower().Contains(filtersVM.CategoryName2Filter.ToLower()));
+        predicate = p => oldPredicate(p) && p.Name.ToLower().Contains(filtersVM.CategoryName2Filter.ToLower());
       }
 
       if (filtersVM.CategoryNameFilterOr)
       {
         var oldPredicate = predicate;
-        predicate = p => oldPredicate(p) || (p.Name.ToLower().Contains(filtersVM.CategoryName2Filter.ToLower()));
+        predicate = p => oldPredicate(p) || p.Name.ToLower().Contains(filtersVM.CategoryName2Filter.ToLower());
       }
 
       var result = _context
         .Categories
         .Where(predicate)
-        .Select(c => new CategoryBasicVM()
+        .Select(c => new CategoryBasicVM
         {
           Id = c.Id,
           Name = c.Name
@@ -73,7 +72,6 @@ namespace CheatCodes.Search.Repositories
         .OrderBy(c => c.Id);
 
       return await Task.FromResult(result.ToList());
-
     }
 
     public async Task<CategoryNameTreeVM> GetCategoriesSubTreeByRootId(int rootId)
@@ -91,7 +89,7 @@ namespace CheatCodes.Search.Repositories
        INNER JOIN ParentCategories ON ParentCategories.ID = e.ParentId
          )
        SELECT * FROM ParentCategories")
-        .Select(c => new CategoryNameTreeVM()
+        .Select(c => new CategoryNameTreeVM
         {
           Id = c.Id,
           Name = c.Name,
@@ -109,6 +107,5 @@ namespace CheatCodes.Search.Repositories
       items.ForEach(i => i.Childs = items.Where(ch => ch.ParentId == i.Id).ToList());
       return items.Single(i => i.Id == rootId);
     }
-
   }
 }

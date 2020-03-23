@@ -1,7 +1,7 @@
 namespace CheatCodes.Search.DB.Models
 {
-    public class CategoryField
-    {
+  public class CategoryField
+  {
     public virtual Category Category { get; set; }
     public virtual Field Field { get; set; }
 
@@ -10,27 +10,27 @@ namespace CheatCodes.Search.DB.Models
 
     public virtual string Value { get; set; }
 
-        public override bool Equals(object obj)
-        {
-            var other = obj as CategoryField;
+    public override bool Equals(object obj)
+    {
+      var other = obj as CategoryField;
 
-            if (ReferenceEquals(null, other)) return false;
-            if (ReferenceEquals(this, other)) return true;
+      if (ReferenceEquals(null, other)) return false;
+      if (ReferenceEquals(this, other)) return true;
 
-            return this.CategoryId == other.CategoryId &&
-                   this.FieldId == other.FieldId;
-        }
-
-        public override int GetHashCode()
-        {
-            unchecked
-            {
-                int hash = GetType().GetHashCode();
-                    hash = (hash * 31) ^ CategoryId.GetHashCode();
-                    hash = (hash * 31) ^ FieldId.GetHashCode();
-
-                return hash;
-            }
-        }
+      return CategoryId == other.CategoryId &&
+             FieldId == other.FieldId;
     }
+
+    public override int GetHashCode()
+    {
+      unchecked
+      {
+        var hash = GetType().GetHashCode();
+        hash = (hash * 31) ^ CategoryId.GetHashCode();
+        hash = (hash * 31) ^ FieldId.GetHashCode();
+
+        return hash;
+      }
+    }
+  }
 }

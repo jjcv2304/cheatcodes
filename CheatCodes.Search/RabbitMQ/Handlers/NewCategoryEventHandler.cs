@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using CheatCodes.Search.RabbitMQ.Models;
+﻿using CheatCodes.Search.RabbitMQ.Models;
 using CheatCodes.Search.Repositories;
 
 namespace CheatCodes.Search.RabbitMQ.Handlers
@@ -14,12 +10,13 @@ namespace CheatCodes.Search.RabbitMQ.Handlers
 
   public class NewCategoryEventHandler : INewCategoryEventHandler
   {
-    private  readonly ICategoriesChangesRepository _categoriesChangesRepository;
-    public  NewCategoryEventHandler(ICategoriesChangesRepository categoriesChangesRepository)
+    private readonly ICategoriesChangesRepository _categoriesChangesRepository;
+
+    public NewCategoryEventHandler(ICategoriesChangesRepository categoriesChangesRepository)
     {
       _categoriesChangesRepository = categoriesChangesRepository;
     }
-  
+
     public void Handle(NewCategoryEvent newCategory)
     {
       _categoriesChangesRepository.NewCategory(newCategory);

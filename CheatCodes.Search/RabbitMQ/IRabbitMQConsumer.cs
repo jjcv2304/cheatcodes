@@ -1,6 +1,4 @@
-﻿using System.Threading.Tasks;
-
-namespace CheatCodes.Search.RabbitMQ
+﻿namespace CheatCodes.Search.RabbitMQ
 {
   public interface IRabbitMQConsumer
   {
