@@ -47,7 +47,6 @@ namespace CheatCodes.Search.Repositories
 
     public async Task<List<CategoryBasicVM>> GetCategoriesByFiltersAsync(CategorySearchFiltersVM filtersVM)
     {
-      throw new Exception("laskjl");
       Func<Category, bool> predicate;
       predicate = p => p.Name.ToLower().Contains(filtersVM.CategoryNameFilter.ToLower());
 

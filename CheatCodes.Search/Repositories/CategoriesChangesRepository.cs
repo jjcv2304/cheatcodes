@@ -16,7 +16,6 @@ namespace CheatCodes.Search.Repositories
 
     public async Task NewCategory(NewCategoryEvent newCategoryEvent, CheatCodesDbContext context)
     {
-      throw new Exception("error on new cat method");
       Category newParent = null;
       if (newCategoryEvent.ParentId != 0) newParent = new Category { Id = newCategoryEvent.ParentId };
       var newCategory = new Category
