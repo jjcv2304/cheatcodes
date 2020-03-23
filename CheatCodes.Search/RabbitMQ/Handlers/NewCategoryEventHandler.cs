@@ -1,11 +1,13 @@
-﻿using CheatCodes.Search.RabbitMQ.Models;
+﻿using System.Threading.Tasks;
+using CheatCodes.Search.DB;
+using CheatCodes.Search.RabbitMQ.Models;
 using CheatCodes.Search.Repositories;
 
 namespace CheatCodes.Search.RabbitMQ.Handlers
 {
   public interface INewCategoryEventHandler
   {
-    void Handle(NewCategoryEvent newCategory);
+    Task Handle(NewCategoryEvent newCategory, CheatCodesDbContext context);
   }
 
   public class NewCategoryEventHandler : INewCategoryEventHandler
@@ -17,9 +19,9 @@ namespace CheatCodes.Search.RabbitMQ.Handlers
       _categoriesChangesRepository = categoriesChangesRepository;
     }
 
-    public void Handle(NewCategoryEvent newCategory)
+    public async Task Handle(NewCategoryEvent newCategory, CheatCodesDbContext context)
     {
-      _categoriesChangesRepository.NewCategory(newCategory);
+      await _categoriesChangesRepository.NewCategory(newCategory, context);
     }
   }
 }

@@ -1,13 +1,16 @@
 using System;
+using System.Configuration;
 using System.IO;
 using System.Threading.Tasks;
 using CheatCodes.Search.RabbitMQ;
 using CheatCodes.Search.RabbitMQ.Handlers;
+using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Serilog;
+using Serilog.Exceptions;
 using Serilog.Formatting.Json;
 
 namespace CheatCodes.Search
@@ -20,22 +23,20 @@ namespace CheatCodes.Search
       .AddEnvironmentVariables()
       .Build();
 
-    public static async Task Main(string[] args)
+    public static void Main(string[] args)
     {
       Log.Logger = new LoggerConfiguration()
         .ReadFrom.Configuration(Configuration)
-        .WriteTo.Console()
-        .WriteTo.Debug()
         .WriteTo.File(new JsonFormatter(), @"c:\temp\logs\cheatcodes_search_api_log.json", shared: true)
         .CreateLogger();
 
-      var host = CreateHostBuilder(args).Build();
 
       try
       {
-        Log.Information("Starting web host");
-
+        Log.Information("Starting web host search");
+        var host = CreateHostBuilder(args).Build();
         InitializeRabbitMq(host);
+        host.Run();
       }
       catch (Exception ex)
       {
@@ -45,16 +46,14 @@ namespace CheatCodes.Search
       {
         Log.CloseAndFlush();
       }
-
-      await host.RunAsync();
     }
+
 
     private static void InitializeRabbitMq(IHost host)
     {
       var serviceScope = host.Services.CreateScope();
       var services = serviceScope.ServiceProvider;
-      var newCategoryEventHandler = services.GetRequiredService<INewCategoryEventHandler>();
-      var client = new RabbitMQConsumer(newCategoryEventHandler);
+      var client = new RabbitMQConsumer(services);
       client.CreateConnection();
       client.ProcessMessages();
     }
@@ -62,7 +61,10 @@ namespace CheatCodes.Search
     public static IHostBuilder CreateHostBuilder(string[] args)
     {
       return Host.CreateDefaultBuilder(args)
-        .ConfigureWebHostDefaults(webBuilder => { webBuilder.UseStartup<Startup>(); }).UseSerilog();
+        .ConfigureWebHostDefaults(webBuilder => { webBuilder.UseStartup<Startup>(); })
+        .UseSerilog();
+
     }
+
   }
 }

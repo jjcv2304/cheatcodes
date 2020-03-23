@@ -1,11 +1,12 @@
-﻿using CheatCodes.Search.RabbitMQ.Models;
+﻿using CheatCodes.Search.DB;
+using CheatCodes.Search.RabbitMQ.Models;
 using CheatCodes.Search.Repositories;
 
 namespace CheatCodes.Search.RabbitMQ.Handlers
 {
   public interface IDeleteCategoryEventHandler
   {
-    void Handle(DeleteCategoryEvent deleteCategoryEvent);
+    void Handle(DeleteCategoryEvent deleteCategoryEvent, CheatCodesDbContext context);
   }
 
   public class DeleteCategoryEventHandler : IDeleteCategoryEventHandler
@@ -17,9 +18,9 @@ namespace CheatCodes.Search.RabbitMQ.Handlers
       _categoriesChangesRepository = categoriesChangesRepository;
     }
 
-    public void Handle(DeleteCategoryEvent deleteCategoryEvent)
+    public void Handle(DeleteCategoryEvent deleteCategoryEvent, CheatCodesDbContext context)
     {
-      _categoriesChangesRepository.DeleteCategory(deleteCategoryEvent);
+      _categoriesChangesRepository.DeleteCategory(deleteCategoryEvent, context); 
     }
   }
 }

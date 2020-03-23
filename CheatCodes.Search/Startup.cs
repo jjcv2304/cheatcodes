@@ -1,11 +1,18 @@
 using System;
+using System.Data.SqlClient;
 using System.IO;
+using System.Net;
 using System.Reflection;
 using CheatCodes.Search.DB;
+using CheatCodes.Search.Logs.Extensions;
+using CheatCodes.Search.Logs.Middleware;
 using CheatCodes.Search.RabbitMQ.Handlers;
 using CheatCodes.Search.Repositories;
+using CheatCodes.Search.Utils;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -13,13 +20,14 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using Newtonsoft.Json;
+using Serilog;
 
 namespace CheatCodes.Search
 {
   public class Startup
   {
-    public static readonly ILoggerFactory MyLoggerFactory
-      = LoggerFactory.Create(builder => { builder.AddEventLog(); });
+    //public static readonly ILoggerFactory MyLoggerFactory
+    //  = LoggerFactory.Create(builder => { builder.AddEventLog(); });
 
     public Startup(IConfiguration configuration)
     {
@@ -31,18 +39,22 @@ namespace CheatCodes.Search
     // This method gets called by the runtime. Use this method to add services to the container.
     public void ConfigureServices(IServiceCollection services)
     {
+      services.AddSingleton<IScopeInformation, ScopeInformation>();
+
       services.AddTransient<ICategoriesSearchRepository, CategoriesSearchRepository>();
       services.AddTransient<ICategoriesChangesRepository, CategoriesChangesRepository>();
       services.AddTransient<INewCategoryEventHandler, NewCategoryEventHandler>();
+      services.AddTransient<IUpdateCategoryEventHandler, UpdateCategoryEventHandler>();
+      services.AddTransient<IDeleteCategoryEventHandler, DeleteCategoryEventHandler>();
 
       var connectionString = Configuration.GetConnectionString("CheatCodesDatabase");
-      services.AddDbContext<CheatCodesDbContext>(options =>
-        options.UseLoggerFactory(MyLoggerFactory)
+      services.AddDbContext<CheatCodesDbContext>(options =>options
+       // options.UseLoggerFactory(MyLoggerFactory)
           .UseSqlite(connectionString));
 
-      //services.AddDbContext<CheatCodesDbContext2>(options =>
-      //  options.UseLoggerFactory(MyLoggerFactory)
-      //    .UseSqlite(connectionString));
+      services.AddDbContext<CheatCodesDbContext2>(options =>options
+       // options.UseLoggerFactory(MyLoggerFactory)
+          .UseSqlite(connectionString));
 
       services.AddControllers().AddNewtonsoftJson(options =>
         options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore);
@@ -78,8 +90,9 @@ namespace CheatCodes.Search
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
     {
-      if (env.IsDevelopment()) app.UseDeveloperExceptionPage();
-
+      app.UseStaticFiles();
+      app.UseApiExceptionHandler(options => options.AddResponseDetails = UpdateApiErrorResponse);
+      
       app.UseRouting();
 
       app.UseAuthorization();
@@ -88,6 +101,12 @@ namespace CheatCodes.Search
       app.UseSwaggerUI(c => { c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1"); });
 
       app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
+    }
+    private void UpdateApiErrorResponse(HttpContext context, Exception ex, ApiError error)
+    {
+      if (ex.GetType().Name == typeof(SqlException).Name) error.Detail = "Exception was a database exception!";
+
+      //error.Links = "https://gethelpformyerror.com/";
     }
   }
 }

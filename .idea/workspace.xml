@@ -96,7 +96,16 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="root:CheatCodesDatabase" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@433ac657" type="9fbbdea:ServiceModel$ServiceNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@6c8c8d4" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:CheatCodesDatabase [2]" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:CheatCodesDatabase [2]" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@51bcfedf" type="9fbbdea:ServiceModel$ServiceNode" />
               </path>
             </expand>
             <select />
@@ -132,26 +141,30 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="801" height="224" key="GridCell.Tab.0.bottom" timestamp="1584980900761">
+    <state x="264" y="20" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584985289696">
+      <screen x="62" y="0" width="1218" height="720" />
+    </state>
+    <state x="264" y="20" key="#com.intellij.execution.impl.EditConfigurationsDialog/62.0.1218.720/-1920.0.1536.864@62.0.1218.720" timestamp="1584985289696" />
+    <state width="801" height="389" key="GridCell.Tab.0.bottom" timestamp="1584985298160">
       <screen x="62" y="0" width="1218" height="720" />
     </state>
     <state width="975" height="224" key="GridCell.Tab.0.bottom/0.0.1280.720/-1920.0.1466.864@-1920.0.1466.864" timestamp="1584740590191" />
-    <state width="801" height="224" key="GridCell.Tab.0.bottom/62.0.1218.720/-1920.0.1536.864@62.0.1218.720" timestamp="1584980900761" />
-    <state width="801" height="224" key="GridCell.Tab.0.center" timestamp="1584980900761">
+    <state width="801" height="389" key="GridCell.Tab.0.bottom/62.0.1218.720/-1920.0.1536.864@62.0.1218.720" timestamp="1584985298160" />
+    <state width="801" height="389" key="GridCell.Tab.0.center" timestamp="1584985298160">
       <screen x="62" y="0" width="1218" height="720" />
     </state>
     <state width="975" height="224" key="GridCell.Tab.0.center/0.0.1280.720/-1920.0.1466.864@-1920.0.1466.864" timestamp="1584740590191" />
-    <state width="801" height="224" key="GridCell.Tab.0.center/62.0.1218.720/-1920.0.1536.864@62.0.1218.720" timestamp="1584980900761" />
-    <state width="801" height="224" key="GridCell.Tab.0.left" timestamp="1584980900760">
+    <state width="801" height="389" key="GridCell.Tab.0.center/62.0.1218.720/-1920.0.1536.864@62.0.1218.720" timestamp="1584985298160" />
+    <state width="801" height="389" key="GridCell.Tab.0.left" timestamp="1584985298160">
       <screen x="62" y="0" width="1218" height="720" />
     </state>
     <state width="975" height="224" key="GridCell.Tab.0.left/0.0.1280.720/-1920.0.1466.864@-1920.0.1466.864" timestamp="1584740590191" />
-    <state width="801" height="224" key="GridCell.Tab.0.left/62.0.1218.720/-1920.0.1536.864@62.0.1218.720" timestamp="1584980900760" />
-    <state width="801" height="224" key="GridCell.Tab.0.right" timestamp="1584980900761">
+    <state width="801" height="389" key="GridCell.Tab.0.left/62.0.1218.720/-1920.0.1536.864@62.0.1218.720" timestamp="1584985298160" />
+    <state width="801" height="389" key="GridCell.Tab.0.right" timestamp="1584985298160">
       <screen x="62" y="0" width="1218" height="720" />
     </state>
     <state width="975" height="224" key="GridCell.Tab.0.right/0.0.1280.720/-1920.0.1466.864@-1920.0.1466.864" timestamp="1584740590191" />
-    <state width="801" height="224" key="GridCell.Tab.0.right/62.0.1218.720/-1920.0.1536.864@62.0.1218.720" timestamp="1584980900761" />
+    <state width="801" height="389" key="GridCell.Tab.0.right/62.0.1218.720/-1920.0.1536.864@62.0.1218.720" timestamp="1584985298160" />
     <state x="-1470" y="75" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1584754745865">
       <screen x="-1920" y="0" width="1466" height="864" />
     </state>
