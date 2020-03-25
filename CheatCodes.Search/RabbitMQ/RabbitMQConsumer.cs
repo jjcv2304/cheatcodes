@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Text;
-using System.Threading.Tasks;
 using CheatCodes.Search.DB;
 using CheatCodes.Search.RabbitMQ.Handlers;
 using CheatCodes.Search.RabbitMQ.Models;

@@ -1,13 +1,8 @@
-﻿using System;
-using System.IO;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using CheatCodes.Search.DB;
 using CheatCodes.Search.DB.Models;
 using CheatCodes.Search.RabbitMQ.Models;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using Serilog;
-using Serilog.Formatting.Json;
 
 namespace CheatCodes.Search.Repositories
 {

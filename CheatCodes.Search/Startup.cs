@@ -1,26 +1,20 @@
 using System;
 using System.Data.SqlClient;
 using System.IO;
-using System.Net;
 using System.Reflection;
 using CheatCodes.Search.DB;
 using CheatCodes.Search.Logs.Extensions;
 using CheatCodes.Search.Logs.Middleware;
 using CheatCodes.Search.RabbitMQ.Handlers;
 using CheatCodes.Search.Repositories;
-using CheatCodes.Search.Utils;
 using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using Newtonsoft.Json;
-using Serilog;
 
 namespace CheatCodes.Search
 {

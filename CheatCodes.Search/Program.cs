@@ -1,16 +1,11 @@
 using System;
-using System.Configuration;
 using System.IO;
-using System.Threading.Tasks;
 using CheatCodes.Search.RabbitMQ;
-using CheatCodes.Search.RabbitMQ.Handlers;
-using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Serilog;
-using Serilog.Exceptions;
 using Serilog.Formatting.Json;
 
 namespace CheatCodes.Search
