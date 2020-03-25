@@ -42,6 +42,7 @@ namespace Api
     {
       return WebHost.CreateDefaultBuilder(args)
         .UseStartup<Startup>()
+        .UseKestrel(o => o.AddServerHeader=false)
         .UseSerilog();
     }
   }

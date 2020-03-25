@@ -5,6 +5,7 @@ using System.Reflection;
 using Api.Logs.Extensions;
 using Api.Logs.Filters;
 using Api.Logs.Middleware;
+using Api.Security;
 using Api.Utils;
 using Application.Utils;
 using Application.Utils.Interfaces;
@@ -86,6 +87,8 @@ namespace Api
     public void Configure(IApplicationBuilder app, IHostingEnvironment env)
     {
       app.UseStaticFiles();
+
+      app.UseSecurityHeaders();
 
       app.UseApiExceptionHandler(options => options.AddResponseDetails = UpdateApiErrorResponse);
 

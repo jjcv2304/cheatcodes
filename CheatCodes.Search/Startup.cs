@@ -7,6 +7,7 @@ using CheatCodes.Search.Logs.Extensions;
 using CheatCodes.Search.Logs.Middleware;
 using CheatCodes.Search.RabbitMQ.Handlers;
 using CheatCodes.Search.Repositories;
+using CheatCodes.Search.Security;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -85,6 +86,7 @@ namespace CheatCodes.Search
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
     {
       app.UseStaticFiles();
+      app.UseSecurityHeaders();
       app.UseApiExceptionHandler(options => options.AddResponseDetails = UpdateApiErrorResponse);
       
       app.UseRouting();
