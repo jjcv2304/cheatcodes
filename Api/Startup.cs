@@ -80,6 +80,7 @@ namespace Api
         var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
         c.IncludeXmlComments(xmlPath);
       });
+      services.Configure<MyConfig>(Configuration.GetSection("MyConfig"));
       ConfigureAdditionalServices(services);
     }
 

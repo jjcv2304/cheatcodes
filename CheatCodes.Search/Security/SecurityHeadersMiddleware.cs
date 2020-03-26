@@ -1,6 +1,8 @@
 ﻿using System.Threading.Tasks;
+using Api.Security;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Options;
 
 namespace CheatCodes.Search.Security
 {
@@ -16,16 +18,25 @@ namespace CheatCodes.Search.Security
   public class SecurityHeadersMiddleware
   {
     private readonly RequestDelegate next;
+    private readonly IOptions<MyConfig> _config;
 
-    public SecurityHeadersMiddleware(RequestDelegate next)
+    public SecurityHeadersMiddleware(RequestDelegate next, IOptions<MyConfig> config)
     {
       this.next = next;
+      _config = config;
     }
 
     public async Task Invoke(HttpContext context)
     {
-      context.Response.Headers.Add(
-        "Content-Security-Policy","default-src 'self'; script-src 'self'; script-src-elem 'self'; style-src 'self'; style-src-elem 'self'; style-src-attr 'self'; img-src 'self'; connect-src 'self'; media-src 'self'; frame-src 'none'; frame-ancestors 'none'; base-uri 'self'");
+      if (_config.Value.Environment == Environments.Development.ToString())
+      {
+
+      }
+      else
+      {
+        context.Response.Headers.Add(
+          "Content-Security-Policy", "default-src 'self'; script-src 'self'; script-src-elem 'self'; style-src 'self'; style-src-elem 'self'; style-src-attr 'self'; img-src 'self'; connect-src 'self'; media-src 'self'; frame-src 'none'; frame-ancestors 'none'; base-uri 'self'");
+      }
       //require-sri-for script style
       context.Response.Headers.Add(
         "Feature-Policy", "camera 'none'");

@@ -2,6 +2,7 @@ using System;
 using System.Data.SqlClient;
 using System.IO;
 using System.Reflection;
+using Api.Security;
 using CheatCodes.Search.DB;
 using CheatCodes.Search.Logs.Extensions;
 using CheatCodes.Search.Logs.Middleware;
@@ -80,6 +81,7 @@ namespace CheatCodes.Search
         var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
         c.IncludeXmlComments(xmlPath);
       });
+      services.Configure<MyConfig>(Configuration.GetSection("MyConfig"));
     }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
