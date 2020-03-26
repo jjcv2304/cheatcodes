@@ -41,12 +41,10 @@ namespace Api.Security
       }
 
       //require-sri-for script style
-      context.Response.Headers.Add(
-        "Feature-Policy", "camera 'none'");
-      context.Response.Headers.Add(
-        "X-Content-Type-Options", "nosniff");
-      context.Response.Headers.Add(
-        "Referrer-Policy", "no-referrer");
+      context.Response.Headers.Add("Feature-Policy", "camera 'none'");
+      context.Response.Headers.Add("X-Content-Type-Options", "nosniff");
+      context.Response.Headers.Add("Referrer-Policy", "no-referrer");
+      context.Response.Headers.Add("X-Frame-Options", "DENY");
       await next(context);
     }
 

@@ -87,10 +87,8 @@ namespace Api
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
     public void Configure(IApplicationBuilder app, IHostingEnvironment env)
     {
-      app.UseStaticFiles();
-
       app.UseSecurityHeaders();
-
+      app.UseStaticFiles();
       app.UseApiExceptionHandler(options => options.AddResponseDetails = UpdateApiErrorResponse);
 
       app.UseHsts();

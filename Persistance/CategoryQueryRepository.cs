@@ -50,7 +50,7 @@ namespace Persistance
           },
           new {CategoryId = id},
           splitOn: "endOfType"
-        ).Single();
+        ).SingleOrDefault();
 
         return res;
       }

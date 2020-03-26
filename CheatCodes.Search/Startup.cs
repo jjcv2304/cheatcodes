@@ -87,8 +87,9 @@ namespace CheatCodes.Search
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
     {
-      app.UseStaticFiles();
       app.UseSecurityHeaders();
+      app.UseStaticFiles();
+      
       app.UseApiExceptionHandler(options => options.AddResponseDetails = UpdateApiErrorResponse);
       
       app.UseRouting();
