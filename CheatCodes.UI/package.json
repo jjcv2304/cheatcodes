@@ -18,13 +18,19 @@
     "@angular/compiler": "^9.1.0",
     "@angular/core": "^9.1.0",
     "@angular/forms": "^9.1.0",
-    "@angular/http": "^7.2.16",
     "@angular/material": "^9.2.0",
     "@angular/platform-browser": "^9.1.0",
     "@angular/platform-browser-dynamic": "^9.1.0",
     "@angular/router": "^9.1.0",
+    "adm-zip": "^0.4.14",
+    "ajv": "^6.12.0",
     "core-js": "^2.6.11",
+    "fibers": "^4.0.2",
+    "html-webpack-plugin": "^4.0.3",
+    "https-proxy-agent": "^5.0.0",
+    "minimist": "^1.2.5",
     "ngx-flip": "^7.1.0",
+    "node-sass": "^4.13.1",
     "oidc-client": "^1.10.1",
     "rxjs": "6.5.4",
     "rxjs-compat": "^6.0.0-rc.0",
@@ -47,9 +53,12 @@
     "karma-coverage-istanbul-reporter": "^1.2.1",
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
-    "protractor": "~5.1.2",
-    "ts-node": "~4.1.0",
+    "protractor": "^5.4.3",
+    "ts-node": "^8.8.1",
     "tslint": "~5.9.1",
     "typescript": "^3.8.3"
+  },
+  "resolutions": {
+    "minimist": "^1.2.5"
   }
 }
