@@ -33,15 +33,15 @@ export class CategoryCardComponent implements OnInit {
     this.cardWidth = this.minCardWidth;
   }
 
-  private sideNavigationRight() {
+  sideNavigationRight() {
     this.flipDiv = !this.flipDiv;
   }
 
-  private canNavigateUp() {
+  canNavigateUp() {
     return this.card.hasParent;
   }
 
-  private navigateUp() {
+  navigateUp() {
     const newFilter = CategoryFilter.FilterByChild(this.card.parentId);
     this.categoriesService.SetCategoryFilter(newFilter);
   }
@@ -61,27 +61,27 @@ export class CategoryCardComponent implements OnInit {
       });
   }
 
-  private canNavigateDown() {
+  canNavigateDown() {
     return this.card.hasChild;
   }
 
-  private navigateDown() {
+  navigateDown() {
     const newFilter = CategoryFilter.FilterByParent(this.card.id);
     this.categoriesService.SetCategoryFilter(newFilter);
   }
 
-  private setSaveIsRecommended() {
+  setSaveIsRecommended() {
     this.saveIsRecommended = true;
   }
 
-  private saveCard() {
+  saveCard() {
     this.categoriesService.updateCategory(this.card)
       .subscribe(() => {
         this.saveIsRecommended = false;
       });
   }
 
-  private updateFieldValue(field: ICategoryFieldValue) {
+  updateFieldValue(field: ICategoryFieldValue) {
     this.categoriesService.updateCategoryField(field);
   }
 
@@ -89,7 +89,7 @@ export class CategoryCardComponent implements OnInit {
     this.router.navigateByUrl(`/categoryEdit/${this.card.id}`);
   }
 
-  private deleteCard(category: Category) {
+  deleteCard(category: Category) {
     this.categoriesService.deleteCategory(category)
       .subscribe((data: Envelope<ICategory>) => {
         if (category.parentId === null) {
@@ -106,18 +106,18 @@ export class CategoryCardComponent implements OnInit {
       });
   }
 
-  private hasSiblings(categoryId: number) {
+  hasSiblings(categoryId: number) {
     const siblingCategories = this.categoriesService.currentCategories.filter(item => item.id !== categoryId);
     return siblingCategories.length > 0;
   }
 
-  private autoGrowTextZone(e) {
+  autoGrowTextZone(e) {
     e.target.style.overflow = "hidden";
     e.target.style.height = "0px";
     e.target.style.height = (e.target.scrollHeight + 15) + "px";
   }
 
-  private resizeCard() {
+  resizeCard() {
     if (this.cardWidth === this.minCardWidth) {
       this.cardWidth = this.maxCardWidth;
       this.cardHeight = this.maxCardHeight;
@@ -128,7 +128,7 @@ export class CategoryCardComponent implements OnInit {
 
   }
 
-  private expandCard() {
+  expandCard() {
     this.cardWidth = this.maxCardWidth;
     this.cardHeight = this.maxCardHeight;
   }

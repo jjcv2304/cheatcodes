@@ -10,7 +10,7 @@ import { CategoryFilter } from "../models/CategoryFilter";
   styleUrls: ["./category-edit.component.scss"]
 })
 export class CategoryEditComponent implements OnInit, AfterViewInit {
-  @ViewChild("fieldName", { static: false })
+  @ViewChild("fieldName")
   fieldName: ElementRef;
   model = new Category({ id: 0, name: "", description: "", parentId: 0 });
 
