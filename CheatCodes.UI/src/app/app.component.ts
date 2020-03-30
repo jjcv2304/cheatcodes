@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
 import { NavigationCancel, NavigationEnd, NavigationError, NavigationStart, Router, Event } from "@angular/router";
-import { ThemePalette } from "@angular/material";
+import { ThemePalette } from "@angular/material/core";
 
 
 @Component({

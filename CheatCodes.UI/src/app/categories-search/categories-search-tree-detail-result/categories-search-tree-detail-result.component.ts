@@ -2,7 +2,7 @@
 import { Component, Input, OnInit } from "@angular/core";
 import { CategoryTree } from "../model/category";
 import { FlatTreeControl } from "@angular/cdk/tree";
-import { MatTreeFlatDataSource, MatTreeFlattener } from "@angular/material";
+import { MatTreeFlatDataSource, MatTreeFlattener } from "@angular/material/tree";
 
 interface FlatNode {
   expandable: boolean;

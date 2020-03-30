@@ -13,7 +13,8 @@ import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatIconModule } from "@angular/material/icon";
 import { MatListModule } from "@angular/material/list";
 import { RouterModule } from "@angular/router";
-import { MatFormFieldModule, MatInputModule } from "@angular/material";
+import { MatFormFieldModule } from "@angular/material/form-field";
+import { MatInputModule } from "@angular/material/input";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { CategoriesSearchListResultComponent } from
   "./categories-search-list-result/categories-search-list-result.component";
