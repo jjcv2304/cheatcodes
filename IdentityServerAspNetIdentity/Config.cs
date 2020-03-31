@@ -38,13 +38,17 @@ namespace IdentityServerAspNetIdentity
                     RequirePkce = true,
                     RequireClientSecret = false,
 
-                    RedirectUris = {"http://localhost:4200/signin-callback"},
+                    RedirectUris = {"http://localhost:4200/signin-callback", 
+                      "http://localhost:4200/assets/silent-callback.html"},
 
                     PostLogoutRedirectUris = {"http://localhost:4200/signout-callback" },
                     AllowedCorsOrigins = { "http://localhost:4200" },
 
-                    AllowedScopes = { "openid", "profile", "mainApp-api" }
+                    AllowedScopes = { "openid", "profile", "mainApp-api" },
+                    AccessTokenLifetime = 600
+
                 }
+                
         };
   }
 }
