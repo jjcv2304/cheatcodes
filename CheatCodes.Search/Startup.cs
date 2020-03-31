@@ -9,9 +9,11 @@ using CheatCodes.Search.Logs.Middleware;
 using CheatCodes.Search.RabbitMQ.Handlers;
 using CheatCodes.Search.Repositories;
 using CheatCodes.Search.Security;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -52,9 +54,26 @@ namespace CheatCodes.Search
        // options.UseLoggerFactory(MyLoggerFactory)
           .UseSqlite(connectionString));
 
+      services.AddAuthentication("Bearer")
+        .AddJwtBearer("Bearer", options =>
+        {
+          options.Authority = "http://localhost:5000";
+          options.Audience = "mainApp-api";
+          options.RequireHttpsMetadata = false;
+        });
+      
+      //services.AddAuthorization(options =>
+      //  options.AddPolicy("RequireAuth", policy => policy.RequireAuthenticatedUser()));
+      services.AddAuthorization(options =>
+      {
+        options.FallbackPolicy = new AuthorizationPolicyBuilder()
+          .RequireAuthenticatedUser()
+          .Build();
+      });
+
       services.AddControllers().AddNewtonsoftJson(options =>
         options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore);
-
+      
       services.AddControllers();
 
       services.AddSwaggerGen(c =>
@@ -92,13 +111,14 @@ namespace CheatCodes.Search
       
       app.UseApiExceptionHandler(options => options.AddResponseDetails = UpdateApiErrorResponse);
       
+      app.UseAuthentication();
+      
       app.UseRouting();
-
-      app.UseAuthorization();
 
       app.UseSwagger();
       app.UseSwaggerUI(c => { c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1"); });
-
+      
+      app.UseAuthorization();
       app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
     }
     private void UpdateApiErrorResponse(HttpContext context, Exception ex, ApiError error)

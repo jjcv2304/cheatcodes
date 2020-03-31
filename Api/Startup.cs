@@ -55,13 +55,6 @@ namespace Api
             options.Audience = "mainApp-api";
             options.RequireHttpsMetadata = false;
           });
-      //services.AddAuthentication(IdentityServerAuthenticationDefaults.AuthenticationScheme)
-      //  .AddIdentityServerAuthentication(options =>
-      //  {
-      //    options.Authority = "http://localhost:4242";
-      //    options.ApiName = "projects-api";
-      //    options.RequireHttpsMetadata = false;
-      //  });
 
       services.AddMvc(options =>
       {

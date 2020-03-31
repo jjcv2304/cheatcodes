@@ -2,6 +2,7 @@
 using CheatCodes.Search.Repositories;
 using CheatCodes.Search.Utils;
 using CheatCodes.Search.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CheatCodes.Search.Controllers

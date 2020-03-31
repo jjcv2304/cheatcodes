@@ -16,7 +16,7 @@ export class AuthInterceptorService implements HttpInterceptor {
 
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     //  if (req.url.startsWith(Constants.apiRoot)) { http://localhost
-    if (req.url.startsWith('http://localhost') || req.url.startsWith('/api/categories')) {
+    if (req.url.startsWith('http://localhost') || req.url.startsWith('/api/categories') || req.url.startsWith('/api/CategoriesSearch')) {
       return from(this._authService.getAccessToken().then(token => {
         const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
         const authReq = req.clone({headers});
