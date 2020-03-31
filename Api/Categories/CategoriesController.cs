@@ -3,6 +3,7 @@ using Application;
 using Application.Utils;
 using CSharpFunctionalExtensions;
 using Dtos;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 // ReSharper disable SuggestVarOrType_SimpleTypes

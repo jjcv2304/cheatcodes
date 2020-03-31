@@ -1,6 +1,6 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
-import {HttpClientModule} from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {FlipModule} from 'ngx-flip';
 
 import {AppComponent} from './app.component';
@@ -19,6 +19,10 @@ import {MatSliderModule} from '@angular/material/slider';
 import {CategoriesContainerComponent} from
     './categories-generation/categories-container/categories-container.component';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {AuthService} from './security/auth-service.component';
+import {SignoutRedirectCallbackComponent} from './security/signout-redirect-callback.component';
+import {SigninRedirectCallbackComponent} from './security/signin-redirect-callback.component';
+import {AuthInterceptorService} from './security/auth-interceptor.service';
 
 
 @NgModule({
@@ -30,7 +34,9 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     CategoryEditComponent,
     FieldEditComponent,
     CardMoveMenuComponent,
-    CategoriesContainerComponent
+    CategoriesContainerComponent,
+    SignoutRedirectCallbackComponent,
+    SigninRedirectCallbackComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +49,11 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     MatSliderModule,
     MatProgressSpinnerModule
   ],
-  providers: [CategoriesService],
+  providers: [
+    CategoriesService,
+    AuthService,
+    {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptorService, multi: true}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

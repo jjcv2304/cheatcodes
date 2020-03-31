@@ -67,7 +67,6 @@
       <NameSurrogate>1</NameSurrogate>
       <ColNames>CategoryId
 FieldId</ColNames>
-      <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
     <key id="22" parent="7" name="CategoryField_pk">
@@ -110,7 +109,6 @@ FieldId</ColNames>
     </column>
     <index id="29" parent="9" name="Field_Id_uindex">
       <ColNames>Id</ColNames>
-      <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
     <key id="30" parent="9" name="Field_pk">
