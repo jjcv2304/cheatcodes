@@ -9,10 +9,12 @@ using Api.Security;
 using Api.Utils;
 using Application.Utils;
 using Application.Utils.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
@@ -35,8 +37,40 @@ namespace Api
     {
       services.AddSingleton<IScopeInformation, ScopeInformation>();
 
+      //services.AddCors(o =>
+      //{
+      //  o.AddPolicy("AllRequests", builder =>
+      //  {
+      //    builder.AllowAnyHeader()
+      //      .AllowAnyMethod()
+      //      .SetIsOriginAllowed(origin => origin == "http://localhost:4200")
+      //      .AllowCredentials();
+      //  });
+      //});
+
+      services.AddAuthentication("Bearer")
+          .AddJwtBearer("Bearer", options =>
+          {
+            options.Authority = "http://localhost:5000";
+            options.Audience = "mainApp-api";
+            options.RequireHttpsMetadata = false;
+          });
+      //services.AddAuthentication(IdentityServerAuthenticationDefaults.AuthenticationScheme)
+      //  .AddIdentityServerAuthentication(options =>
+      //  {
+      //    options.Authority = "http://localhost:4242";
+      //    options.ApiName = "projects-api";
+      //    options.RequireHttpsMetadata = false;
+      //  });
+
       services.AddMvc(options =>
-        options.Filters.Add(typeof(TrackActionPerformanceFilter))
+      {
+        var policy = new AuthorizationPolicyBuilder()
+        .RequireAuthenticatedUser()
+        .Build();
+        options.Filters.Add(new AuthorizeFilter(policy));
+        options.Filters.Add(typeof(TrackActionPerformanceFilter));
+      }
       ).SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
 
@@ -75,8 +109,8 @@ namespace Api
             Url = new Uri("https://example.com/license")
           }
         });
-        // Set the comments path for the Swagger JSON and UI.
-        var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+          // Set the comments path for the Swagger JSON and UI.
+          var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
         var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
         c.IncludeXmlComments(xmlPath);
       });
@@ -98,6 +132,7 @@ namespace Api
 
 
       app.UseHttpsRedirection();
+      app.UseAuthentication();
       app.UseMvc();
     }
 

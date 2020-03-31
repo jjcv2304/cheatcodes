@@ -1,6 +1,11 @@
 <div class="menu-container">
   <a href="#" class="button" routerLink="/categoryList">Cards</a>
-  <a href="#" class="button" routerLink="/categoryEdit">New</a>
-  <a href="#" class="button" routerLink="/categorySearch">Search</a>
+  <a href="#" *ngIf="isLoggedIn" class="button" routerLink="/categoryEdit">New</a>
+  <a href="#"  class="button" routerLink="/categorySearch">Search</a>
   <a href="#" class="button">Options</a>
+
+  <span>
+    <button *ngIf="!isLoggedIn" mat-button (click)="login()">Login</button>
+    <button *ngIf="isLoggedIn" mat-button (click)="logout()">Logout</button>
+  </span>
 </div>
