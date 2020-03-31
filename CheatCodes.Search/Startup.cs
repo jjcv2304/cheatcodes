@@ -9,6 +9,7 @@ using CheatCodes.Search.Logs.Middleware;
 using CheatCodes.Search.RabbitMQ.Handlers;
 using CheatCodes.Search.Repositories;
 using CheatCodes.Search.Security;
+using IdentityServer4.AccessTokenValidation;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -54,11 +55,18 @@ namespace CheatCodes.Search
        // options.UseLoggerFactory(MyLoggerFactory)
           .UseSqlite(connectionString));
 
-      services.AddAuthentication("Bearer")
-        .AddJwtBearer("Bearer", options =>
+      //services.AddAuthentication("Bearer")
+      //  .AddJwtBearer("Bearer", options =>
+      //  {
+      //    options.Authority = "http://localhost:5000";
+      //    options.Audience = "mainApp-api";
+      //    options.RequireHttpsMetadata = false;
+      //  });
+      services.AddAuthentication(IdentityServerAuthenticationDefaults.AuthenticationScheme)
+        .AddIdentityServerAuthentication(options =>
         {
           options.Authority = "http://localhost:5000";
-          options.Audience = "mainApp-api";
+          options.ApiName = "mainApp-api";
           options.RequireHttpsMetadata = false;
         });
       

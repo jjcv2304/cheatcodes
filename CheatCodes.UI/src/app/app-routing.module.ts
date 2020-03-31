@@ -8,6 +8,7 @@ import {CategoriesSearchContainerComponent} from './categories-search/categories
 import {CategoriesContainerComponent} from './categories-generation/categories-container/categories-container.component';
 import {SignoutRedirectCallbackComponent} from './security/signout-redirect-callback.component';
 import {SigninRedirectCallbackComponent} from './security/signin-redirect-callback.component';
+import {UnauthorizedComponent} from './security/unauthorized/unauthorized.component';
 
 const appRoutes: Routes = [
   {
@@ -25,7 +26,8 @@ const appRoutes: Routes = [
   },
   {path: 'categorySearch', component: CategoriesSearchContainerComponent},
   {path: 'signin-callback', component: SigninRedirectCallbackComponent},
-  {path: 'signout-callback', component: SignoutRedirectCallbackComponent}
+  {path: 'signout-callback', component: SignoutRedirectCallbackComponent},
+  { path: 'unauthorized', component: UnauthorizedComponent }
 ];
 
 @NgModule({
