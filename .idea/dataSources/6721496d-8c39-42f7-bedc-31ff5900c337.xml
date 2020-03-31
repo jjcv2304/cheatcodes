@@ -45,7 +45,6 @@
     </column>
     <index id="20" parent="6" name="IX_AspNetRoleClaims_RoleId">
       <ColNames>RoleId</ColNames>
-      <ColumnCollations></ColumnCollations>
     </index>
     <key id="21" parent="6" name="PK_AspNetRoleClaims">
       <ColNames>Id</ColNames>
@@ -78,12 +77,10 @@
     <index id="27" parent="7" name="sqlite_autoindex_AspNetRoles_1">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>Id</ColNames>
-      <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
     <index id="28" parent="7" name="RoleNameIndex">
       <ColNames>NormalizedName</ColNames>
-      <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
     <key id="29" parent="7" name="PK_AspNetRoles">
@@ -112,7 +109,6 @@
     </column>
     <index id="34" parent="8" name="IX_AspNetUserClaims_UserId">
       <ColNames>UserId</ColNames>
-      <ColumnCollations></ColumnCollations>
     </index>
     <key id="35" parent="8" name="PK_AspNetUserClaims">
       <ColNames>Id</ColNames>
@@ -148,12 +144,10 @@
       <NameSurrogate>1</NameSurrogate>
       <ColNames>LoginProvider
 ProviderKey</ColNames>
-      <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
     <index id="42" parent="9" name="IX_AspNetUserLogins_UserId">
       <ColNames>UserId</ColNames>
-      <ColumnCollations></ColumnCollations>
     </index>
     <key id="43" parent="9" name="PK_AspNetUserLogins">
       <ColNames>LoginProvider
@@ -182,12 +176,10 @@ ProviderKey</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ColNames>UserId
 RoleId</ColNames>
-      <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
     <index id="48" parent="10" name="IX_AspNetUserRoles_RoleId">
       <ColNames>RoleId</ColNames>
-      <ColumnCollations></ColumnCollations>
     </index>
     <key id="49" parent="10" name="PK_AspNetUserRoles">
       <ColNames>UserId
@@ -233,7 +225,6 @@ RoleId</ColNames>
       <ColNames>UserId
 LoginProvider
 Name</ColNames>
-      <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
     <key id="57" parent="11" name="PK_AspNetUserTokens">
@@ -319,17 +310,14 @@ Name</ColNames>
     <index id="74" parent="12" name="sqlite_autoindex_AspNetUsers_1">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>Id</ColNames>
-      <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
     <index id="75" parent="12" name="UserNameIndex">
       <ColNames>NormalizedUserName</ColNames>
-      <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
     <index id="76" parent="12" name="EmailIndex">
       <ColNames>NormalizedEmail</ColNames>
-      <ColumnCollations></ColumnCollations>
     </index>
     <key id="77" parent="12" name="PK_AspNetUsers">
       <ColNames>Id</ColNames>
@@ -349,7 +337,6 @@ Name</ColNames>
     <index id="80" parent="13" name="sqlite_autoindex___EFMigrationsHistory_1">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>MigrationId</ColNames>
-      <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
     <key id="81" parent="13" name="PK___EFMigrationsHistory">

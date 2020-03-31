@@ -23,6 +23,7 @@ import {AuthService} from './security/auth-service.component';
 import {SignoutRedirectCallbackComponent} from './security/signout-redirect-callback.component';
 import {SigninRedirectCallbackComponent} from './security/signin-redirect-callback.component';
 import {AuthInterceptorService} from './security/auth-interceptor.service';
+import { UnauthorizedComponent } from './security/unauthorized/unauthorized.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import {AuthInterceptorService} from './security/auth-interceptor.service';
     CardMoveMenuComponent,
     CategoriesContainerComponent,
     SignoutRedirectCallbackComponent,
-    SigninRedirectCallbackComponent
+    SigninRedirectCallbackComponent,
+    UnauthorizedComponent
   ],
   imports: [
     BrowserModule,

@@ -9,6 +9,7 @@ using Api.Security;
 using Api.Utils;
 using Application.Utils;
 using Application.Utils.Interfaces;
+using IdentityServer4.AccessTokenValidation;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -48,13 +49,21 @@ namespace Api
       //  });
       //});
 
-      services.AddAuthentication("Bearer")
-          .AddJwtBearer("Bearer", options =>
-          {
-            options.Authority = "http://localhost:5000";
-            options.Audience = "mainApp-api";
-            options.RequireHttpsMetadata = false;
-          });
+      //services.AddAuthentication("Bearer")
+      //    .AddJwtBearer("Bearer", options =>
+      //    {
+      //      options.Authority = "http://localhost:5000";
+      //      options.Audience = "mainApp-api";
+      //      options.RequireHttpsMetadata = false;
+      //    });
+
+      services.AddAuthentication(IdentityServerAuthenticationDefaults.AuthenticationScheme)
+        .AddIdentityServerAuthentication(options =>
+        {
+          options.Authority = "http://localhost:5000";
+          options.ApiName = "mainApp-api";
+          options.RequireHttpsMetadata = false;
+        });
 
       services.AddMvc(options =>
       {
