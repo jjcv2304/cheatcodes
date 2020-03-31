@@ -4,7 +4,6 @@ import {Subject} from 'rxjs';
 import {Constants} from './Constants';
 import {HttpClient} from '@angular/common/http';
 
-// @Injectable({ providedIn: CoreModule })
 @Injectable()
 export class AuthService {
   private _userManager: UserManager;
