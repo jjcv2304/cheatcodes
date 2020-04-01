@@ -30,7 +30,23 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand />
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="AspIdUsers" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="AspIdUsers" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="AspIdUsers" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
+      </path>
+    </expand>
     <select />
   </component>
   <component name="FindInProjectRecents">
@@ -73,17 +89,17 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="root:AspIdUsers" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@66683cfb" type="9fbbdea:ServiceModel$ServiceNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@49b875fd" type="9fbbdea:ServiceModel$ServiceNode" />
               </path>
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="root:AspIdUsers" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@2691e504" type="9fbbdea:ServiceModel$ServiceNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@53f95775" type="9fbbdea:ServiceModel$ServiceNode" />
               </path>
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="root:AspIdUsers" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@fbb3b24" type="9fbbdea:ServiceModel$ServiceNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@7538d7e5" type="9fbbdea:ServiceModel$ServiceNode" />
               </path>
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
@@ -92,7 +108,7 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="root:CheatCodesDatabase" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@71ebe127" type="9fbbdea:ServiceModel$ServiceNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@440718a1" type="9fbbdea:ServiceModel$ServiceNode" />
               </path>
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
@@ -101,7 +117,7 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="root:CheatCodesDatabase [2]" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@eee2ef9" type="9fbbdea:ServiceModel$ServiceNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@43c95673" type="9fbbdea:ServiceModel$ServiceNode" />
               </path>
             </expand>
             <select />
@@ -165,11 +181,11 @@
       <screen x="-1920" y="0" width="1466" height="864" />
     </state>
     <state x="-1470" y="75" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1280.720/-1920.0.1466.864@-1920.0.1466.864" timestamp="1584754745865" />
-    <state x="420" y="215" key="com.intellij.ide.util.TipDialog" timestamp="1585668368305">
-      <screen x="62" y="0" width="1218" height="720" />
+    <state x="-1469" y="258" key="com.intellij.ide.util.TipDialog" timestamp="1585781208463">
+      <screen x="-1920" y="0" width="1536" height="864" />
     </state>
     <state x="-1490" y="258" key="com.intellij.ide.util.TipDialog/0.0.1280.720/-1920.0.1466.864@-1920.0.1466.864" timestamp="1584751911788" />
-    <state x="-1469" y="258" key="com.intellij.ide.util.TipDialog/62.0.1218.720/-1920.0.1536.864@-1920.0.1536.864" timestamp="1584980854702" />
+    <state x="-1469" y="258" key="com.intellij.ide.util.TipDialog/62.0.1218.720/-1920.0.1536.864@-1920.0.1536.864" timestamp="1585781208463" />
     <state x="420" y="215" key="com.intellij.ide.util.TipDialog/62.0.1218.720/-1920.0.1536.864@62.0.1218.720" timestamp="1585668368305" />
   </component>
   <component name="masterDetails">
