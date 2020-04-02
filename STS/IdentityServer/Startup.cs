@@ -29,7 +29,7 @@ namespace IdentityServer
 
     public void ConfigureServices(IServiceCollection services)
     {
-     
+
       string connectionString = Configuration.GetConnectionString("DefaultConnection");
 
       var migrationsAssembly = typeof(Startup).GetTypeInfo().Assembly.GetName().Name;
@@ -39,7 +39,10 @@ namespace IdentityServer
       services.AddDbContext<IdentityDbContext>(options =>
         options.UseSqlServer(connectionString, sql => sql.MigrationsAssembly(migrationsAssembly))
       );
- 
+      services.AddDbContext<Data.ConfigurationDbContext>(options =>
+        options.UseSqlServer(connectionString, sql => sql.MigrationsAssembly(migrationsAssembly))
+        );
+
       services.AddIdentity<ApplicationUser, IdentityRole>(options =>
         {
           options.SignIn.RequireConfirmedEmail = true;
