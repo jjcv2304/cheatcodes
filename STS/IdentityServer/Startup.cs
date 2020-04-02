@@ -11,6 +11,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using IdentityServer4.Configuration;
 using Microsoft.Extensions.Configuration;
+using IdentityServer.Models;
+using Microsoft.AspNetCore.Identity;
 
 namespace IdentityServer
 {
@@ -27,12 +29,23 @@ namespace IdentityServer
 
     public void ConfigureServices(IServiceCollection services)
     {
-      // uncomment, if you want to add an MVC-based UI
-      services.AddControllersWithViews();
-
+     
       string connectionString = Configuration.GetConnectionString("DefaultConnection");
 
       var migrationsAssembly = typeof(Startup).GetTypeInfo().Assembly.GetName().Name;
+
+      services.AddControllersWithViews();
+
+      services.AddDbContext<IdentityDbContext>(options =>
+        options.UseSqlServer(connectionString, sql => sql.MigrationsAssembly(migrationsAssembly))
+      );
+ 
+      services.AddIdentity<ApplicationUser, IdentityRole>(options =>
+        {
+          options.SignIn.RequireConfirmedEmail = true;
+        })
+        .AddEntityFrameworkStores<IdentityDbContext>()
+        .AddDefaultTokenProviders();
 
       var builder = services.AddIdentityServer(options =>
         {
@@ -56,7 +69,8 @@ namespace IdentityServer
         {
           options.ConfigureDbContext = b => b.UseSqlServer(connectionString, sql => sql.MigrationsAssembly(migrationsAssembly));
           options.EnableTokenCleanup = true;
-        });
+        })
+        .AddAspNetIdentity<ApplicationUser>();
 
       // not recommended for production - you need to store your key material somewhere secure
       builder.AddDeveloperSigningCredential();
