@@ -1,0 +1,30 @@
+2020-04-01 16:57:46.977 -07:00 [INF] Starting host...
+2020-04-01 16:57:50.839 -07:00 [INF] Starting IdentityServer4 version 3.1.0.0
+2020-04-01 16:57:50.872 -07:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2020-04-01 16:57:50.880 -07:00 [INF] Using the default authentication scheme idsrv for IdentityServer
+2020-04-01 16:57:50.881 -07:00 [DBG] Using idsrv as default ASP.NET Core scheme for authentication
+2020-04-01 16:57:50.881 -07:00 [DBG] Using idsrv as default ASP.NET Core scheme for sign-in
+2020-04-01 16:57:50.883 -07:00 [DBG] Using idsrv as default ASP.NET Core scheme for sign-out
+2020-04-01 16:57:50.883 -07:00 [DBG] Using idsrv as default ASP.NET Core scheme for challenge
+2020-04-01 16:57:50.883 -07:00 [DBG] Using idsrv as default ASP.NET Core scheme for forbid
+2020-04-01 16:57:51.273 -07:00 [DBG] Login Url: /Account/Login
+2020-04-01 16:57:51.276 -07:00 [DBG] Login Return Url Parameter: ReturnUrl
+2020-04-01 16:57:51.276 -07:00 [DBG] Logout Url: /Account/Logout
+2020-04-01 16:57:51.276 -07:00 [DBG] ConsentUrl Url: /consent
+2020-04-01 16:57:51.276 -07:00 [DBG] Consent Return Url Parameter: returnUrl
+2020-04-01 16:57:51.276 -07:00 [DBG] Error Url: /home/error
+2020-04-01 16:57:51.276 -07:00 [DBG] Error Id Parameter: errorId
+2020-04-01 16:57:53.607 -07:00 [INF] AuthenticationScheme: idsrv was challenged.
+2020-04-01 16:57:58.142 -07:00 [DBG] CORS request made for path: /Account/Login from origin: null but was ignored because path was not for an allowed IdentityServer CORS endpoint
+2020-04-01 16:57:58.232 -07:00 [DBG] Augmenting SignInContext
+2020-04-01 16:57:58.234 -07:00 [DBG] Adding idp claim with value: local
+2020-04-01 16:57:58.234 -07:00 [DBG] Adding amr claim with value: pwd
+2020-04-01 16:57:58.235 -07:00 [DBG] Adding auth_time claim with value: 1585785478
+2020-04-01 16:57:58.252 -07:00 [INF] AuthenticationScheme: idsrv signed in.
+2020-04-01 16:59:25.249 -07:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2020-04-01 16:59:25.255 -07:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2020-04-01 16:59:25.255 -07:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2020-04-01 16:59:25.258 -07:00 [DBG] Start discovery request
+2020-04-01 16:59:48.192 -07:00 [DBG] CORS request made for path: /Account/Logout from origin: null but was ignored because path was not for an allowed IdentityServer CORS endpoint
+2020-04-01 16:59:48.242 -07:00 [INF] AuthenticationScheme: idsrv signed out.
+2020-04-01 16:59:52.884 -07:00 [INF] AuthenticationScheme: idsrv was challenged.
