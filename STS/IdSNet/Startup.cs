@@ -40,6 +40,7 @@ namespace IdSNet
             });
 
             services.AddTransient<IEmailSender, EmailSender>();
+            services.Configure<AuthMessageSenderOptions>(Configuration);
 
             // configures IIS in-proc settings
             services.Configure<IISServerOptions>(iis =>
@@ -51,10 +52,14 @@ namespace IdSNet
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
 
-            services.AddIdentity<ApplicationUser, IdentityRole>()
+            services.AddIdentity<ApplicationUser, IdentityRole>(config =>
+              {
+                config.SignIn.RequireConfirmedEmail = true;
+                config.SignIn.RequireConfirmedAccount = true;
+              })
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
-            
+
             var builder = services.AddIdentityServer(options =>
                 {
                     options.Events.RaiseErrorEvents = true;
