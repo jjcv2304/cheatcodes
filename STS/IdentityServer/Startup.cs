@@ -13,6 +13,7 @@ using IdentityServer4.Configuration;
 using Microsoft.Extensions.Configuration;
 using IdentityServer.Models;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI.Services;
 
 namespace IdentityServer
 {
@@ -34,7 +35,11 @@ namespace IdentityServer
 
       var migrationsAssembly = typeof(Startup).GetTypeInfo().Assembly.GetName().Name;
 
+      services.AddTransient<IEmailSender, EmailSender>();
+      services.Configure<AuthMessageSenderOptions>(Configuration);
+
       services.AddControllersWithViews();
+      services.AddRazorPages();
 
       services.AddDbContext<IdentityDbContext>(options =>
         options.UseSqlServer(connectionString, sql => sql.MigrationsAssembly(migrationsAssembly))
@@ -46,6 +51,7 @@ namespace IdentityServer
       services.AddIdentity<ApplicationUser, IdentityRole>(options =>
         {
           options.SignIn.RequireConfirmedEmail = true;
+          options.SignIn.RequireConfirmedAccount = true;
         })
         .AddEntityFrameworkStores<IdentityDbContext>()
         .AddDefaultTokenProviders();
@@ -56,8 +62,10 @@ namespace IdentityServer
           options.Events.RaiseInformationEvents = true;
           options.Events.RaiseFailureEvents = true;
           options.Events.RaiseSuccessEvents = true;
-          options.UserInteraction.LoginUrl = "/Account/Login";
-          options.UserInteraction.LogoutUrl = "/Account/Logout";
+          //options.UserInteraction.LoginUrl = "/Account/Login";
+          //options.UserInteraction.LogoutUrl = "/Account/Logout";
+          options.UserInteraction.LoginUrl = "/Identity/Account/Login";
+          options.UserInteraction.LogoutUrl = "/Identity/Account/Logout";
           options.Authentication = new AuthenticationOptions()
           {
             CookieLifetime = TimeSpan.FromHours(10), // ID server cookie timeout set to 10 hours
@@ -97,6 +105,7 @@ namespace IdentityServer
       app.UseEndpoints(endpoints =>
       {
         endpoints.MapDefaultControllerRoute();
+        endpoints.MapRazorPages();
       });
     }
   }

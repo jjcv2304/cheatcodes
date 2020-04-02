@@ -69,3 +69,152 @@
 2020-04-02 07:29:05.899 -07:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
 2020-04-02 07:29:05.902 -07:00 [DBG] Start discovery request
 2020-04-02 07:29:07.042 -07:00 [DBG] Found ["openid","profile","web_api"] as all scopes in database
+2020-04-02 10:24:42.558 -07:00 [INF] Starting host...
+2020-04-02 10:24:48.719 -07:00 [INF] Starting IdentityServer4 version 3.1.2.0
+2020-04-02 10:24:49.015 -07:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2020-04-02 10:24:49.016 -07:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2020-04-02 10:24:49.016 -07:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2020-04-02 10:24:49.016 -07:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2020-04-02 10:24:49.016 -07:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2020-04-02 10:24:49.017 -07:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2020-04-02 10:24:49.790 -07:00 [DBG] Login Url: /Account/Login
+2020-04-02 10:24:49.793 -07:00 [DBG] Login Return Url Parameter: ReturnUrl
+2020-04-02 10:24:49.793 -07:00 [DBG] Logout Url: /Account/Logout
+2020-04-02 10:24:49.793 -07:00 [DBG] ConsentUrl Url: /consent
+2020-04-02 10:24:49.793 -07:00 [DBG] Consent Return Url Parameter: returnUrl
+2020-04-02 10:24:49.793 -07:00 [DBG] Error Url: /home/error
+2020-04-02 10:24:49.793 -07:00 [DBG] Error Id Parameter: errorId
+2020-04-02 10:27:13.187 -07:00 [INF] Starting host...
+2020-04-02 10:27:16.252 -07:00 [INF] Starting IdentityServer4 version 3.1.2.0
+2020-04-02 10:27:16.516 -07:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2020-04-02 10:27:16.516 -07:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2020-04-02 10:27:16.517 -07:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2020-04-02 10:27:16.517 -07:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2020-04-02 10:27:16.517 -07:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2020-04-02 10:27:16.517 -07:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2020-04-02 10:27:16.949 -07:00 [DBG] Login Url: /Account/Login
+2020-04-02 10:27:16.952 -07:00 [DBG] Login Return Url Parameter: ReturnUrl
+2020-04-02 10:27:16.952 -07:00 [DBG] Logout Url: /Account/Logout
+2020-04-02 10:27:16.952 -07:00 [DBG] ConsentUrl Url: /consent
+2020-04-02 10:27:16.952 -07:00 [DBG] Consent Return Url Parameter: returnUrl
+2020-04-02 10:27:16.952 -07:00 [DBG] Error Url: /home/error
+2020-04-02 10:27:16.953 -07:00 [DBG] Error Id Parameter: errorId
+2020-04-02 10:27:50.870 -07:00 [WRN] User d02f8fa3-99df-40df-9d17-8e90045226eb validation failed: DuplicateUserName.
+2020-04-02 10:28:14.820 -07:00 [INF] User created a new account with password.
+2020-04-02 10:28:16.004 -07:00 [DBG] Augmenting SignInContext
+2020-04-02 10:28:16.006 -07:00 [DBG] Adding idp claim with value: local
+2020-04-02 10:28:16.007 -07:00 [DBG] Adding amr claim with value: pwd
+2020-04-02 10:28:16.007 -07:00 [DBG] Adding auth_time claim with value: 1585848496
+2020-04-02 10:28:16.053 -07:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2020-04-02 10:29:26.242 -07:00 [DBG] CORS request made for path: /Account/Logout from origin: null but was ignored because path was not for an allowed IdentityServer CORS endpoint
+2020-04-02 10:29:26.280 -07:00 [INF] AuthenticationScheme: Identity.Application signed out.
+2020-04-02 10:29:26.282 -07:00 [INF] AuthenticationScheme: Identity.External signed out.
+2020-04-02 10:29:26.283 -07:00 [INF] AuthenticationScheme: Identity.TwoFactorUserId signed out.
+2020-04-02 10:29:26.304 -07:00 [INF] {"SubjectId":"5e9970e4-b569-4dc7-a4f8-d98bd1680ee2","DisplayName":"j2@j.com","Category":"Authentication","Name":"User Logout Success","EventType":"Success","Id":1002,"Message":null,"ActivityId":"80000004-0000-ff00-b63f-84710c7967bb","TimeStamp":"2020-04-02T17:29:26.0000000Z","ProcessId":25004,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"UserLogoutSuccessEvent"}
+2020-04-02 10:29:30.522 -07:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2020-04-02 10:29:39.504 -07:00 [DBG] CORS request made for path: /Account/Login from origin: null but was ignored because path was not for an allowed IdentityServer CORS endpoint
+2020-04-02 10:29:39.569 -07:00 [WRN] User 5e9970e4-b569-4dc7-a4f8-d98bd1680ee2 cannot sign in without a confirmed email.
+2020-04-02 10:29:39.573 -07:00 [INF] {"Username":"j2@j.com","Endpoint":"UI","ClientId":null,"Category":"Authentication","Name":"User Login Failure","EventType":"Failure","Id":1001,"Message":"invalid credentials","ActivityId":"80000008-0000-ff00-b63f-84710c7967bb","TimeStamp":"2020-04-02T17:29:39.0000000Z","ProcessId":25004,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"UserLoginFailureEvent"}
+2020-04-02 10:30:02.438 -07:00 [DBG] CORS request made for path: /Account/Login from origin: null but was ignored because path was not for an allowed IdentityServer CORS endpoint
+2020-04-02 10:30:02.458 -07:00 [WRN] User 5e9970e4-b569-4dc7-a4f8-d98bd1680ee2 cannot sign in without a confirmed email.
+2020-04-02 10:30:02.458 -07:00 [INF] {"Username":"j2@j.com","Endpoint":"UI","ClientId":null,"Category":"Authentication","Name":"User Login Failure","EventType":"Failure","Id":1001,"Message":"invalid credentials","ActivityId":"80000009-0000-ff00-b63f-84710c7967bb","TimeStamp":"2020-04-02T17:30:02.0000000Z","ProcessId":25004,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"UserLoginFailureEvent"}
+2020-04-02 10:30:13.426 -07:00 [INF] AuthenticationScheme: Identity.External signed out.
+2020-04-02 10:30:20.835 -07:00 [WRN] User 5e9970e4-b569-4dc7-a4f8-d98bd1680ee2 cannot sign in without a confirmed email.
+2020-04-02 10:30:38.647 -07:00 [DBG] Augmenting SignInContext
+2020-04-02 10:30:38.648 -07:00 [DBG] Adding idp claim with value: local
+2020-04-02 10:30:38.648 -07:00 [DBG] Adding auth_time claim with value: 1585848638
+2020-04-02 10:30:38.650 -07:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2020-04-02 10:30:38.654 -07:00 [INF] User logged in.
+2020-04-02 10:30:49.336 -07:00 [DBG] CORS request made for path: /Account/Logout from origin: null but was ignored because path was not for an allowed IdentityServer CORS endpoint
+2020-04-02 10:30:49.345 -07:00 [INF] AuthenticationScheme: Identity.Application signed out.
+2020-04-02 10:30:49.347 -07:00 [INF] AuthenticationScheme: Identity.External signed out.
+2020-04-02 10:30:49.348 -07:00 [INF] AuthenticationScheme: Identity.TwoFactorUserId signed out.
+2020-04-02 10:30:49.349 -07:00 [INF] {"SubjectId":"5e9970e4-b569-4dc7-a4f8-d98bd1680ee2","DisplayName":"j2@j.com","Category":"Authentication","Name":"User Logout Success","EventType":"Success","Id":1002,"Message":null,"ActivityId":"8000000c-0000-ff00-b63f-84710c7967bb","TimeStamp":"2020-04-02T17:30:49.0000000Z","ProcessId":25004,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"UserLogoutSuccessEvent"}
+2020-04-02 10:30:54.433 -07:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2020-04-02 10:31:00.723 -07:00 [DBG] CORS request made for path: /Account/Login from origin: null but was ignored because path was not for an allowed IdentityServer CORS endpoint
+2020-04-02 10:31:00.779 -07:00 [DBG] Augmenting SignInContext
+2020-04-02 10:31:00.780 -07:00 [DBG] Adding idp claim with value: local
+2020-04-02 10:31:00.781 -07:00 [DBG] Adding auth_time claim with value: 1585848660
+2020-04-02 10:31:00.783 -07:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2020-04-02 10:31:00.802 -07:00 [INF] {"Username":"j2@j.com","Provider":null,"ProviderUserId":null,"SubjectId":"5e9970e4-b569-4dc7-a4f8-d98bd1680ee2","DisplayName":"j2@j.com","Endpoint":"UI","ClientId":null,"Category":"Authentication","Name":"User Login Success","EventType":"Success","Id":1000,"Message":null,"ActivityId":"8000000d-0001-fe00-b63f-84710c7967bb","TimeStamp":"2020-04-02T17:31:00.0000000Z","ProcessId":25004,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"UserLoginSuccessEvent"}
+2020-04-02 10:31:00.889 -07:00 [DBG] 0 persisted grants found for 5e9970e4-b569-4dc7-a4f8-d98bd1680ee2
+2020-04-02 10:31:33.793 -07:00 [DBG] CORS request made for path: /Account/Logout from origin: null but was ignored because path was not for an allowed IdentityServer CORS endpoint
+2020-04-02 10:31:33.798 -07:00 [INF] AuthenticationScheme: Identity.Application signed out.
+2020-04-02 10:31:33.799 -07:00 [INF] AuthenticationScheme: Identity.External signed out.
+2020-04-02 10:31:33.800 -07:00 [INF] AuthenticationScheme: Identity.TwoFactorUserId signed out.
+2020-04-02 10:31:33.801 -07:00 [INF] {"SubjectId":"5e9970e4-b569-4dc7-a4f8-d98bd1680ee2","DisplayName":"j2@j.com","Category":"Authentication","Name":"User Logout Success","EventType":"Success","Id":1002,"Message":null,"ActivityId":"80000014-0006-ff00-b63f-84710c7967bb","TimeStamp":"2020-04-02T17:31:33.0000000Z","ProcessId":25004,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"UserLogoutSuccessEvent"}
+2020-04-02 10:31:55.162 -07:00 [INF] User created a new account with password.
+2020-04-02 10:31:55.690 -07:00 [DBG] Augmenting SignInContext
+2020-04-02 10:31:55.690 -07:00 [DBG] Adding idp claim with value: local
+2020-04-02 10:31:55.690 -07:00 [DBG] Adding amr claim with value: pwd
+2020-04-02 10:31:55.690 -07:00 [DBG] Adding auth_time claim with value: 1585848715
+2020-04-02 10:31:55.692 -07:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2020-04-02 10:32:12.296 -07:00 [DBG] CORS request made for path: /Account/Logout from origin: null but was ignored because path was not for an allowed IdentityServer CORS endpoint
+2020-04-02 10:32:12.300 -07:00 [INF] AuthenticationScheme: Identity.Application signed out.
+2020-04-02 10:32:12.301 -07:00 [INF] AuthenticationScheme: Identity.External signed out.
+2020-04-02 10:32:12.302 -07:00 [INF] AuthenticationScheme: Identity.TwoFactorUserId signed out.
+2020-04-02 10:32:12.303 -07:00 [INF] {"SubjectId":"057a12ef-3b5f-4003-92fa-bdb3357d0589","DisplayName":"t@t.com","Category":"Authentication","Name":"User Logout Success","EventType":"Success","Id":1002,"Message":null,"ActivityId":"8000001e-0006-ff00-b63f-84710c7967bb","TimeStamp":"2020-04-02T17:32:12.0000000Z","ProcessId":25004,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"UserLogoutSuccessEvent"}
+2020-04-02 10:32:16.973 -07:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2020-04-02 10:32:22.871 -07:00 [DBG] CORS request made for path: /Account/Login from origin: null but was ignored because path was not for an allowed IdentityServer CORS endpoint
+2020-04-02 10:32:22.894 -07:00 [WRN] User 057a12ef-3b5f-4003-92fa-bdb3357d0589 cannot sign in without a confirmed email.
+2020-04-02 10:32:22.895 -07:00 [INF] {"Username":"t@t.com","Endpoint":"UI","ClientId":null,"Category":"Authentication","Name":"User Login Failure","EventType":"Failure","Id":1001,"Message":"invalid credentials","ActivityId":"80000022-0006-ff00-b63f-84710c7967bb","TimeStamp":"2020-04-02T17:32:22.0000000Z","ProcessId":25004,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"UserLoginFailureEvent"}
+2020-04-02 10:32:45.115 -07:00 [DBG] CORS request made for path: /Account/Login from origin: null but was ignored because path was not for an allowed IdentityServer CORS endpoint
+2020-04-02 10:32:45.182 -07:00 [DBG] Augmenting SignInContext
+2020-04-02 10:32:45.183 -07:00 [DBG] Adding idp claim with value: local
+2020-04-02 10:32:45.183 -07:00 [DBG] Adding auth_time claim with value: 1585848765
+2020-04-02 10:32:45.185 -07:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2020-04-02 10:32:45.191 -07:00 [INF] {"Username":"t@t.com","Provider":null,"ProviderUserId":null,"SubjectId":"057a12ef-3b5f-4003-92fa-bdb3357d0589","DisplayName":"t@t.com","Endpoint":"UI","ClientId":null,"Category":"Authentication","Name":"User Login Success","EventType":"Success","Id":1000,"Message":null,"ActivityId":"80000023-0006-ff00-b63f-84710c7967bb","TimeStamp":"2020-04-02T17:32:45.0000000Z","ProcessId":25004,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"UserLoginSuccessEvent"}
+2020-04-02 10:32:45.209 -07:00 [DBG] 0 persisted grants found for 057a12ef-3b5f-4003-92fa-bdb3357d0589
+2020-04-02 10:38:20.205 -07:00 [INF] Starting host...
+2020-04-02 10:38:24.057 -07:00 [INF] Starting IdentityServer4 version 3.1.2.0
+2020-04-02 10:38:24.333 -07:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2020-04-02 10:38:24.333 -07:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2020-04-02 10:38:24.334 -07:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2020-04-02 10:38:24.334 -07:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2020-04-02 10:38:24.334 -07:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2020-04-02 10:38:24.334 -07:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2020-04-02 10:38:24.852 -07:00 [DBG] Login Url: /Identity/Account/Login
+2020-04-02 10:38:24.855 -07:00 [DBG] Login Return Url Parameter: ReturnUrl
+2020-04-02 10:38:24.855 -07:00 [DBG] Logout Url: /Identity/Account/Logout
+2020-04-02 10:38:24.855 -07:00 [DBG] ConsentUrl Url: /consent
+2020-04-02 10:38:24.855 -07:00 [DBG] Consent Return Url Parameter: returnUrl
+2020-04-02 10:38:24.855 -07:00 [DBG] Error Url: /home/error
+2020-04-02 10:38:24.856 -07:00 [DBG] Error Id Parameter: errorId
+2020-04-02 10:38:40.920 -07:00 [DBG] 0 persisted grants found for 057a12ef-3b5f-4003-92fa-bdb3357d0589
+2020-04-02 10:38:40.920 -07:00 [DBG] 0 persisted grants found for 057a12ef-3b5f-4003-92fa-bdb3357d0589
+2020-04-02 10:39:04.478 -07:00 [INF] User created a new account with password.
+2020-04-02 10:39:25.644 -07:00 [DBG] Augmenting SignInContext
+2020-04-02 10:39:25.647 -07:00 [DBG] Adding idp claim with value: local
+2020-04-02 10:39:25.647 -07:00 [DBG] Adding amr claim with value: pwd
+2020-04-02 10:39:25.647 -07:00 [DBG] Adding auth_time claim with value: 1585849165
+2020-04-02 10:39:25.671 -07:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2020-04-02 10:41:54.104 -07:00 [INF] Starting host...
+2020-04-02 10:41:57.915 -07:00 [INF] Starting IdentityServer4 version 3.1.2.0
+2020-04-02 10:41:58.167 -07:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2020-04-02 10:41:58.167 -07:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2020-04-02 10:41:58.167 -07:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2020-04-02 10:41:58.167 -07:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2020-04-02 10:41:58.167 -07:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2020-04-02 10:41:58.167 -07:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2020-04-02 10:41:58.602 -07:00 [DBG] Login Url: /Identity/Account/Login
+2020-04-02 10:41:58.607 -07:00 [DBG] Login Return Url Parameter: ReturnUrl
+2020-04-02 10:41:58.607 -07:00 [DBG] Logout Url: /Identity/Account/Logout
+2020-04-02 10:41:58.607 -07:00 [DBG] ConsentUrl Url: /consent
+2020-04-02 10:41:58.607 -07:00 [DBG] Consent Return Url Parameter: returnUrl
+2020-04-02 10:41:58.607 -07:00 [DBG] Error Url: /home/error
+2020-04-02 10:41:58.607 -07:00 [DBG] Error Id Parameter: errorId
+2020-04-02 10:42:05.643 -07:00 [DBG] CORS request made for path: /Account/Logout from origin: null but was ignored because path was not for an allowed IdentityServer CORS endpoint
+2020-04-02 10:42:05.746 -07:00 [INF] AuthenticationScheme: Identity.Application signed out.
+2020-04-02 10:42:05.748 -07:00 [INF] AuthenticationScheme: Identity.External signed out.
+2020-04-02 10:42:05.749 -07:00 [INF] AuthenticationScheme: Identity.TwoFactorUserId signed out.
+2020-04-02 10:42:05.784 -07:00 [INF] {"SubjectId":"3b2a2b53-2a9c-4f40-8378-faf3e94c0fe2","DisplayName":"f@f.com","Category":"Authentication","Name":"User Logout Success","EventType":"Success","Id":1002,"Message":null,"ActivityId":"8000001c-0002-ff00-b63f-84710c7967bb","TimeStamp":"2020-04-02T17:42:05.0000000Z","ProcessId":6140,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"UserLogoutSuccessEvent"}
+2020-04-02 10:43:01.859 -07:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2020-04-02 10:46:49.066 -07:00 [INF] User created a new account with password.
+2020-04-02 10:47:13.421 -07:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2020-04-02 10:47:21.021 -07:00 [DBG] CORS request made for path: /Account/Login from origin: null but was ignored because path was not for an allowed IdentityServer CORS endpoint
+2020-04-02 10:47:21.266 -07:00 [DBG] Augmenting SignInContext
+2020-04-02 10:47:21.268 -07:00 [DBG] Adding idp claim with value: local
+2020-04-02 10:47:21.269 -07:00 [DBG] Adding auth_time claim with value: 1585849641
+2020-04-02 10:47:21.278 -07:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2020-04-02 10:47:21.286 -07:00 [INF] {"Username":"d@d.com","Provider":null,"ProviderUserId":null,"SubjectId":"596ba02d-2c3a-48af-9043-222cdb6421b5","DisplayName":"d@d.com","Endpoint":"UI","ClientId":null,"Category":"Authentication","Name":"User Login Success","EventType":"Success","Id":1000,"Message":null,"ActivityId":"8000002e-0006-ff00-b63f-84710c7967bb","TimeStamp":"2020-04-02T17:47:21.0000000Z","ProcessId":6140,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"UserLoginSuccessEvent"}
+2020-04-02 10:47:21.359 -07:00 [DBG] 0 persisted grants found for 596ba02d-2c3a-48af-9043-222cdb6421b5
