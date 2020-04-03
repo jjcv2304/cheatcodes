@@ -32,6 +32,8 @@ namespace IdSNet
             services.AddControllersWithViews();
             services.AddMvc();
 
+            services.AddHttpsRedirection(httpsOpts => { httpsOpts.HttpsPort = 5002; });
+
             // configures IIS out-of-proc settings (see https://github.com/aspnet/AspNetCore/issues/14882)
             services.Configure<IISOptions>(iis =>
             {
@@ -98,6 +100,7 @@ namespace IdSNet
             app.UseStaticFiles();
 
             app.UseRouting();
+          //  app.UseHttpsRedirection();
             app.UseIdentityServer();
             app.UseAuthorization();
             app.UseEndpoints(endpoints =>

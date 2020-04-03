@@ -1,6 +1,6 @@
 {
   "/api/categories": {
-    "target": "http://localhost:57243",
+    "target": "https://localhost:44326",
     "secure": false,
     "pathRewrite": {
       "^/api/categories": "/api/categories"
@@ -8,7 +8,7 @@
     "logLevel": "debug"
   },
   "/api/CategoriesSearch": {
-    "target": "http://localhost:58138",
+    "target": "https://localhost:44327",
     "secure": false,
     "pathRewrite": {
       "^/api/CategoriesSearch": "api/CategoriesSearch"

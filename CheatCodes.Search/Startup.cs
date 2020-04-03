@@ -118,7 +118,9 @@ namespace CheatCodes.Search
       app.UseStaticFiles();
       
       app.UseApiExceptionHandler(options => options.AddResponseDetails = UpdateApiErrorResponse);
-      
+
+      app.UseHsts();
+      app.UseHttpsRedirection();
       app.UseAuthentication();
       
       app.UseRouting();
