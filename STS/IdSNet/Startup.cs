@@ -100,7 +100,8 @@ namespace IdSNet
             app.UseStaticFiles();
 
             app.UseRouting();
-          //  app.UseHttpsRedirection();
+            app.UseHsts();
+            app.UseHttpsRedirection();
             app.UseIdentityServer();
             app.UseAuthorization();
             app.UseEndpoints(endpoints =>
