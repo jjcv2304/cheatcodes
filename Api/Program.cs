@@ -21,6 +21,7 @@ namespace Api
       Log.Logger = new LoggerConfiguration()
         .ReadFrom.Configuration(Configuration)
         .WriteTo.File(new JsonFormatter(), @"c:\temp\logs\cheatcodes_api_log.json", shared: true)
+        .WriteTo.Console()
         .CreateLogger();
 
       try

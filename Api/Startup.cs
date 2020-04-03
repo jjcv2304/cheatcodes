@@ -38,16 +38,16 @@ namespace Api
     {
       services.AddSingleton<IScopeInformation, ScopeInformation>();
 
-      //services.AddCors(o =>
-      //{
-      //  o.AddPolicy("AllRequests", builder =>
-      //  {
-      //    builder.AllowAnyHeader()
-      //      .AllowAnyMethod()
-      //      .SetIsOriginAllowed(origin => origin == "http://localhost:4200")
-      //      .AllowCredentials();
-      //  });
-      //});
+      services.AddCors(o =>
+      {
+        o.AddPolicy("ApiCorsPolicy", builder =>
+        {
+          builder.AllowAnyHeader()
+            .AllowAnyMethod()
+            .SetIsOriginAllowed(origin => origin == "http://localhost:4200")
+            .AllowCredentials();
+        });
+      });
 
       //services.AddAuthentication("Bearer")
       //    .AddJwtBearer("Bearer", options =>
@@ -124,6 +124,8 @@ namespace Api
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
     public void Configure(IApplicationBuilder app, IHostingEnvironment env)
     {
+      app.UseCors("ApiCorsPolicy");
+
       app.UseSecurityHeaders();
       app.UseStaticFiles();
       app.UseApiExceptionHandler(options => options.AddResponseDetails = UpdateApiErrorResponse);

@@ -40,6 +40,17 @@ namespace CheatCodes.Search
     {
       services.AddSingleton<IScopeInformation, ScopeInformation>();
 
+      services.AddCors(o =>
+      {
+        o.AddPolicy("ApiCorsPolicy", builder =>
+        {
+          builder.AllowAnyHeader()
+            .AllowAnyMethod()
+            .SetIsOriginAllowed(origin => origin == "http://localhost:4200")
+            .AllowCredentials();
+        });
+      });
+
       services.AddTransient<ICategoriesSearchRepository, CategoriesSearchRepository>();
       services.AddTransient<ICategoriesChangesRepository, CategoriesChangesRepository>();
       services.AddTransient<INewCategoryEventHandler, NewCategoryEventHandler>();
@@ -65,7 +76,7 @@ namespace CheatCodes.Search
       services.AddAuthentication(IdentityServerAuthenticationDefaults.AuthenticationScheme)
         .AddIdentityServerAuthentication(options =>
         {
-          options.Authority = "http://localhost:5000";
+          options.Authority = "https://localhost:5002";
           options.ApiName = "mainApp-api";
           options.RequireHttpsMetadata = false;
         });
@@ -114,6 +125,8 @@ namespace CheatCodes.Search
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
     {
+      app.UseCors("ApiCorsPolicy");
+
       app.UseSecurityHeaders();
       app.UseStaticFiles();
       
