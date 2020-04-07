@@ -25,6 +25,7 @@ import { CardResultDetailComponent } from "./card-result-detail/card-result-deta
 import { MatCardModule } from "@angular/material/card";
 import { MatTreeModule } from "@angular/material/tree";
 import { MatCheckboxModule } from "@angular/material/checkbox";
+import {LoggedInGuard} from '../guards/logged-in.guard';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,9 @@ import { MatCheckboxModule } from "@angular/material/checkbox";
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    RouterModule.forChild([]),
+    RouterModule.forChild([
+      {path: '', component: CategoriesSearchContainerComponent},
+    ]),
     MatFormFieldModule,
     MatInputModule,
     ReactiveFormsModule,

@@ -32,3 +32,10 @@ a.button:hover {
   box-shadow: rgba(200, 220, 54, 0.7) 0 0px 0px 40px inset;
 }
 
+a.button.active {
+  font-weight: bolder;
+}
+a.button.active:after {
+  font-weight: lighter;
+}
+

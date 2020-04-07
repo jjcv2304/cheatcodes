@@ -30,7 +30,7 @@ export class AuthService {
     this._userManager.events.addUserLoaded(user => {
       if (this._user !== user) {
         this._user = user;
-     //   this.loadSecurityContext();
+        //   this.loadSecurityContext();
         this._loginChangedSubject.next(!!user && !user.expired);
       }
     });
@@ -38,7 +38,7 @@ export class AuthService {
   }
 
   login() {
-    return this._userManager.signinRedirect();
+    return this._userManager.signinRedirect({state: window.location.href});
   }
 
   isLoggedIn(): Promise<boolean> {

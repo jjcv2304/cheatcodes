@@ -1,11 +1,11 @@
-import { Component, Input } from "@angular/core";
-import { CategoryBasic } from "../model/category";
-import { CategoriesSearchHttpService } from "../categories-search-http.service";
+import {Component, Input} from '@angular/core';
+import {CategoryBasic} from '../model/category';
+import {CategoriesSearchHttpService} from '../categories-search-http.service';
 
 @Component({
-  selector: "app-card-result-basic",
-  templateUrl: "./card-result-basic.component.html",
-  styleUrls: ["./card-result-basic.component.scss"]
+  selector: 'app-card-result-basic',
+  templateUrl: './card-result-basic.component.html',
+  styleUrls: ['./card-result-basic.component.scss']
 })
 export class CardResultBasicComponent {
   @Input()

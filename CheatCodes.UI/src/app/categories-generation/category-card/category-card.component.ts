@@ -15,6 +15,7 @@ import { ICategoryFieldValue } from "../models/categoryFieldValue";
 export class CategoryCardComponent implements OnInit {
   flipDiv: boolean;
   saveIsRecommended: boolean;
+
   showMenu = false;
   cardWidth: string;
   cardHeight: string;
