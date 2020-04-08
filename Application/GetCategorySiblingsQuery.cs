@@ -28,8 +28,7 @@ namespace Application
       {
         // var categories = _categoryQueryRepository.GetSiblingsOf(query.Id);
         var category = _categoryQueryRepository.GetById(query.Id);
-        IList<Category> categories;
-        categories = category.ParentCategory.Id == 0
+        var categories = category.ParentCategory.Id == 0
           ? _categoryQueryRepository.GetAllParents()
           : _categoryQueryRepository.GetAllChilds(category.ParentCategory.Id);
 

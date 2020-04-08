@@ -18,6 +18,11 @@ namespace Domain
 
     public Category ParentCategory { get; set; }
 
+    //TOdo to be considered
+    //[ForeignKey(nameof(ParentCategory))]
+    //public int? ParentCategoryId { get; set; }
+
     public IList<Category> ChildCategories { get; set; }
+
   }
 }

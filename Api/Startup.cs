@@ -49,14 +49,6 @@ namespace Api
         });
       });
 
-      //services.AddAuthentication("Bearer")
-      //    .AddJwtBearer("Bearer", options =>
-      //    {
-      //      options.Authority = "http://localhost:5000";
-      //      options.Audience = "mainApp-api";
-      //      options.RequireHttpsMetadata = false;
-      //    });
-
       services.AddAuthentication(IdentityServerAuthenticationDefaults.AuthenticationScheme)
         .AddIdentityServerAuthentication(options =>
         {
@@ -68,10 +60,10 @@ namespace Api
 
       services.AddMvc(options =>
       {
-        var policy = new AuthorizationPolicyBuilder()
-        .RequireAuthenticatedUser()
-        .Build();
-        options.Filters.Add(new AuthorizeFilter(policy));
+        //var policy = new AuthorizationPolicyBuilder()
+        //.RequireAuthenticatedUser()
+        //.Build();
+      //  options.Filters.Add(new AuthorizeFilter(policy));
         options.Filters.Add(typeof(TrackActionPerformanceFilter));
       }
       ).SetCompatibilityVersion(CompatibilityVersion.Version_2_1);

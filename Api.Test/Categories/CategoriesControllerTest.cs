@@ -6,6 +6,9 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
+using Api.Test.Framework;
+using Api.Test.Framework.Builders;
+using Api.Test.Framework.Mothers;
 using Application.Utils.Interfaces;
 using Domain;
 using Dtos;
@@ -46,15 +49,19 @@ namespace Api.Test.Categories
       return new CategoryUpdateDto();
     }
 
-    private static IList<Category> GetTestCategories()
+    private static IList<Category> GetTypicalCategories()
     {
       return new List<Category>
       {
-        new Category
-        {
-          Name = "Cat test name 1",
-          Description = "Cat test description 1"
-        }
+          CategoryBuilder.Typical().Build(),
+          CategoryBuilder.Typical().Build()
+      };
+    }
+    private static IList<Category> GetSimpleWithIdsCategories()
+    {
+      return new List<Category>
+      {
+        CategoryBuilder.Typical().WithParentCategory(()=>CategoryBuilder.Simple().Build()).Build()
       };
     }
 
@@ -107,7 +114,7 @@ namespace Api.Test.Categories
     public async Task Get_ReturnOk_IfNoIssues()
     {
       var mockRepo = new Mock<ICategoryQueryRepository>();
-      mockRepo.Setup(repo => repo.GetAllParents()).Returns(GetTestCategories());
+      mockRepo.Setup(repo => repo.GetAllParents()).Returns(GetTypicalCategories());
       var serviceDescriptor = new ServiceDescriptor(typeof(ICategoryQueryRepository), mockRepo.Object);
 
       using (var testServer = new ConfigurableServer(sc => sc.Replace(serviceDescriptor)))
@@ -123,7 +130,7 @@ namespace Api.Test.Categories
     public async Task GetCategory_ReturnOk_IfNoIssues()
     {
       var mockRepo = new Mock<ICategoryQueryRepository>();
-      mockRepo.Setup(repo => repo.GetById(It.IsAny<int>())).Returns(GetTestCategories().Single());
+      mockRepo.Setup(repo => repo.GetById(It.IsAny<int>())).Returns(GetTypicalCategories().First());
       var serviceDescriptor = new ServiceDescriptor(typeof(ICategoryQueryRepository), mockRepo.Object);
 
       using (var testServer = new ConfigurableServer(sc => sc.Replace(serviceDescriptor)))
@@ -139,7 +146,8 @@ namespace Api.Test.Categories
     public async Task GetChildsOf_ReturnOk_IfNoIssues()
     {
       var mockRepo = new Mock<ICategoryQueryRepository>();
-      mockRepo.Setup(repo => repo.GetAllChilds(It.IsAny<int>())).Returns(GetTestCategories());
+      var simpleCategories = GetTypicalCategories();
+      mockRepo.Setup(repo => repo.GetAllChilds(It.IsAny<int>())).Returns(simpleCategories);
       var serviceDescriptor = new ServiceDescriptor(typeof(ICategoryQueryRepository), mockRepo.Object);
 
       using (var testServer = new ConfigurableServer(sc => sc.Replace(serviceDescriptor)))
@@ -154,14 +162,18 @@ namespace Api.Test.Categories
     [Fact]
     public async Task GetSiblingsOf_ReturnOk_IfNoIssues()
     {
+      var testCategories = GetSimpleWithIdsCategories();
       var mockRepo = new Mock<ICategoryQueryRepository>();
-      mockRepo.Setup(repo => repo.GetSiblingsOf(It.IsAny<int>())).Returns(GetTestCategories());
+      mockRepo.Setup(repo => repo.GetById(It.IsAny<int>())).Returns(testCategories.First);
+      mockRepo.Setup(repo => repo.GetAllParents()).Returns(testCategories);
+      mockRepo.Setup(repo => repo.GetAllChilds(It.IsAny<int>())).Returns(GetTypicalCategories());
+
       var serviceDescriptor = new ServiceDescriptor(typeof(ICategoryQueryRepository), mockRepo.Object);
 
       using (var testServer = new ConfigurableServer(sc => sc.Replace(serviceDescriptor)))
       {
         var client = testServer.CreateClient();
-        var value = await client.GetAsync("api/Categories/GetSiblingsOf/1");
+        var value = await client.GetAsync("api/Categories/GetSiblingsOf/" + GetRandom.Id());
 
         Assert.Equal(HttpStatusCode.OK, value.StatusCode);
       }

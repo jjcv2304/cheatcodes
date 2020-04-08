@@ -19,7 +19,7 @@ namespace Application.Utils
         HasParent = category.ParentCategory != null,
         ParentId = category.ParentCategory?.Id,
         HasChild = category.ChildCategories.Any(),
-        CategoryFieldValues = Map(category.CategoryFields.ToList())
+        CategoryFieldValues = Map(category.CategoryFields?.ToList())
       };
     }
 
@@ -206,7 +206,7 @@ namespace Application.Utils
 
     public static List<CategoryFieldValueDto> Map(List<CategoryField> categoryFields)
     {
-      return categoryFields.Select(Map).ToList();
+      return categoryFields?.Select(Map).ToList();
     }
 
     public static List<CategoryField> Map(List<CategoryFieldValueDto> categoryFieldsDto)
