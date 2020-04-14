@@ -4,41 +4,37 @@ import {BreakpointObserver} from '@angular/cdk/layout';
 import {CategoriesSearchHttpService} from '../categories-search-http.service';
 import {CategorySearchFilters} from '../model/categorySearchFilters';
 import {select, Store} from '@ngrx/store';
+import * as fromCategorySearch from '../state/categories-search.reducer';
 
 @Component({
   selector: 'app-categories-search-filters',
   templateUrl: './categories-search-filters.component.html',
   styleUrls: ['./categories-search-filters.component.scss']
 })
-export class CategoriesSearchFiltersComponent implements AfterViewInit, OnInit {
+export class CategoriesSearchFiltersComponent implements OnInit {
 
   searchCategoriesForm = new FormGroup({
     categoryNameFilter: new FormControl(''),
     categoryName2Filter: new FormControl('')
   });
+  private categoryNameFilterOr: boolean;
+  private categoryNameFilterAnd: boolean;
 
-  categoryNameFilterAnd = false;
-  categoryNameFilterOr = false;
-
-  constructor(private breakpointObserver: BreakpointObserver, private apiService: CategoriesSearchHttpService, private store: Store<any>) {
+  constructor(private breakpointObserver: BreakpointObserver,
+              private apiService: CategoriesSearchHttpService,
+              private store: Store<fromCategorySearch.State>) {
   }
 
   ngOnInit(): void {
     this.searchCategoriesForm.get('categoryName2Filter').disable();
 
     // TODO: unsubscribe
-    this.store.pipe(select('categorySearchReducer')).subscribe(
-      categorySearchReducer => {
-        if (categorySearchReducer) {
-          this.categoryNameFilterOr = categorySearchReducer.categoryNameFilterOr;
-          this.categoryNameFilterAnd = categorySearchReducer.categoryNameFilterAnd;
-        }
-      }
+    this.store.pipe(select(fromCategorySearch.getCategoryNameFilterAnd)).subscribe(
+      categoryNameFilterAnd => this.categoryNameFilterAnd = categoryNameFilterAnd
     );
-  }
-
-  ngAfterViewInit(): void {
-
+    this.store.pipe(select(fromCategorySearch.getCategoryNameFilterOr)).subscribe(
+      categoryNameFilterOr => this.categoryNameFilterOr = categoryNameFilterOr
+    );
   }
 
   Search() {
@@ -54,14 +50,14 @@ export class CategoriesSearchFiltersComponent implements AfterViewInit, OnInit {
 
   categoryNameFilterAndClicked($event) {
     this.store.dispatch({
-      type: 'CategorySearchFilters.categoryNameFilterAndClicked',
+      type: 'categoryNameFilterAndClicked',
       payload: $event.checked
     });
   }
 
   categoryNameFilterOrClicked($event) {
     this.store.dispatch({
-      type: 'CategorySearchFilters.categoryNameFilterOrClicked',
+      type: 'categoryNameFilterOrClicked',
       payload: $event.checked
     });
   }

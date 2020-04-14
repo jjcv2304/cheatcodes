@@ -55,7 +55,7 @@ import {reducer} from './state/categories-search.reducer';
     MatTreeModule,
     MatCheckboxModule,
     FormsModule,
-    StoreModule.forFeature('categorySearchReducer', reducer)
+    StoreModule.forFeature('categoriesSearchReducer', reducer)
   ],
   providers: [CategoriesSearchHttpService],
 })
