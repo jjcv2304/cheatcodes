@@ -4,12 +4,17 @@
     <mat-hint>Minimum 3 characters</mat-hint>
   </mat-form-field>
 
-  <mat-checkbox [(ngModel)]="categoryNameFilterAnd" (click)="categoryNameFilterAndClicked()"
-                [ngModelOptions]="{standalone: true}">
+<!--  <mat-checkbox [(ngModel)]="categoryNameFilterAnd" (click)="categoryNameFilterAndClicked()" [ngModelOptions]="{standalone: true}">-->
+<!--    And-->
+<!--  </mat-checkbox>-->
+<!--  <mat-checkbox [(ngModel)]="categoryNameFilterOr" (click)="categoryNameFilterOrClicked()" [ngModelOptions]="{standalone: true}">-->
+<!--    Or-->
+<!--  </mat-checkbox>-->
+
+  <mat-checkbox (change)="categoryNameFilterAndClicked($event)" [checked]="categoryNameFilterAnd">
     And
   </mat-checkbox>
-  <mat-checkbox [(ngModel)]="categoryNameFilterOr" (click)="categoryNameFilterOrClicked()"
-                [ngModelOptions]="{standalone: true}">
+  <mat-checkbox (change)="categoryNameFilterOrClicked($event)" [checked]="categoryNameFilterOr">
     Or
   </mat-checkbox>
 

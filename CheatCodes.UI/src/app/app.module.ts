@@ -15,14 +15,16 @@ import {FieldEditComponent} from './categories-generation/field-edit/field-edit.
 import {CardMoveMenuComponent} from './categories-generation/category-card/card-move-menu/card-move-menu.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatSliderModule} from '@angular/material/slider';
-import {CategoriesContainerComponent} from
-    './categories-generation/categories-container/categories-container.component';
+import {CategoriesContainerComponent} from './categories-generation/categories-container/categories-container.component';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {AuthService} from './security/auth-service.component';
 import {SignoutRedirectCallbackComponent} from './security/signout-redirect-callback.component';
 import {SigninRedirectCallbackComponent} from './security/signin-redirect-callback.component';
 import {AuthInterceptorService} from './security/auth-interceptor.service';
 import { UnauthorizedComponent } from './security/unauthorized/unauthorized.component';
+import {StoreModule} from '@ngrx/store';
+import {StoreDevtoolsModule} from '@ngrx/store-devtools';
+import {environment} from '../environments/environment';
 
 
 @NgModule({
@@ -47,7 +49,13 @@ import { UnauthorizedComponent } from './security/unauthorized/unauthorized.comp
     FormsModule,
     BrowserAnimationsModule,
     MatSliderModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    StoreModule.forRoot({}),
+    StoreDevtoolsModule.instrument({
+      name: 'Dev tools ngrx for CheatCodes',
+      maxAge: 25,
+      logOnly: environment.production
+    })
   ],
   providers: [
     CategoriesService,

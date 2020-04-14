@@ -22,6 +22,8 @@
     "@angular/platform-browser": "^9.1.0",
     "@angular/platform-browser-dynamic": "^9.1.0",
     "@angular/router": "^9.1.0",
+    "@ngrx/store": "^9.1.0",
+    "@ngrx/store-devtools": "^9.1.0",
     "adm-zip": "^0.4.14",
     "ajv": "^6.12.0",
     "core-js": "^2.6.11",
