@@ -5,6 +5,7 @@ import {CategoriesSearchHttpService} from '../categories-search-http.service';
 import {CategorySearchFilters} from '../model/categorySearchFilters';
 import {select, Store} from '@ngrx/store';
 import * as fromCategorySearch from '../state/categories-search.reducer';
+import * as searchActions from './../state/categories-search.actions';
 
 @Component({
   selector: 'app-categories-search-filters',
@@ -17,8 +18,8 @@ export class CategoriesSearchFiltersComponent implements OnInit {
     categoryNameFilter: new FormControl(''),
     categoryName2Filter: new FormControl('')
   });
-  private categoryNameFilterOr: boolean;
-  private categoryNameFilterAnd: boolean;
+  categoryNameFilterOr: boolean;
+  categoryNameFilterAnd: boolean;
 
   constructor(private breakpointObserver: BreakpointObserver,
               private apiService: CategoriesSearchHttpService,
@@ -49,17 +50,11 @@ export class CategoriesSearchFiltersComponent implements OnInit {
   }
 
   categoryNameFilterAndClicked($event) {
-    this.store.dispatch({
-      type: 'categoryNameFilterAndClicked',
-      payload: $event.checked
-    });
+    this.store.dispatch(new searchActions.CategoryNameFilterAndClicked($event.checked));
   }
 
   categoryNameFilterOrClicked($event) {
-    this.store.dispatch({
-      type: 'categoryNameFilterOrClicked',
-      payload: $event.checked
-    });
+    this.store.dispatch(new searchActions.CategoryNameFilterOrClicked($event.checked));
   }
 
 

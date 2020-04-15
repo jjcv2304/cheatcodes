@@ -1,5 +1,6 @@
 import * as fromRoot from '../../state/app.state';
 import {createFeatureSelector, createSelector} from '@ngrx/store';
+import {CategoriesSearchActions, CategoriesSearchActionTypes} from './categories-search.actions';
 
 export interface State extends fromRoot.State {
   categoriesSearch: CategoriesSearchState;
@@ -26,17 +27,17 @@ export const getCategoryNameFilterOr = createSelector(
   state => state.categoryNameFilterOr
 );
 
-export function reducer(state = initialState, action): CategoriesSearchState {
+export function reducer(state = initialState, action: CategoriesSearchActions): CategoriesSearchState {
   switch (action.type) {
 
-    case 'categoryNameFilterOrClicked':
+    case CategoriesSearchActionTypes.CategoryNameFilterOrClicked:
       return {
         ...state,
         categoryNameFilterOr: action.payload,
         categoryNameFilterAnd: false
       };
 
-    case 'categoryNameFilterAndClicked':
+    case CategoriesSearchActionTypes.CategoryNameFilterAndClicked:
       return {
         ...state,
         categoryNameFilterAnd: action.payload,
