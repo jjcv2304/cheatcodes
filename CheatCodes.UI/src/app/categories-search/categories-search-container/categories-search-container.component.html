@@ -26,8 +26,17 @@
       </mat-nav-list>
     </mat-toolbar>
 
-    <app-categories-search-list-result *ngIf="!showDetailView" [cards]="cardsSearchResult"></app-categories-search-list-result>
-    <app-categories-search-tree-detail-result *ngIf="!!showDetailView" [cardDetail]="cardDetails"></app-categories-search-tree-detail-result>
+<!--    <app-categories-search-list-result *ngIf="cardsSearchResult$ | async as cardsSearchResult$"-->
+<!--                                       [cards]="cardsSearchResult$">-->
+<!--    </app-categories-search-list-result>-->
+<!--    -->
+    <app-categories-search-list-result *ngIf="!showDetailView" [cards]="cardsSearchResult">
+    </app-categories-search-list-result>
+
+    <app-categories-search-tree-detail-result *ngIf="!!showDetailView"
+                                              [cardDetail]="cardDetails">
+
+    </app-categories-search-tree-detail-result>
 
   </mat-sidenav-content>
 </mat-sidenav-container>

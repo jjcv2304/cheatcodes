@@ -26,6 +26,8 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import {LoggedInGuard} from '../guards/logged-in.guard';
 import {StoreModule} from '@ngrx/store';
 import {reducer} from './state/categories-search.reducer';
+import {EffectsModule} from '@ngrx/effects';
+import {CategoriesSearchEffects} from './state/categories-search.effects';
 
 @NgModule({
   declarations: [
@@ -55,7 +57,8 @@ import {reducer} from './state/categories-search.reducer';
     MatTreeModule,
     MatCheckboxModule,
     FormsModule,
-    StoreModule.forFeature('categoriesSearchReducer', reducer)
+    StoreModule.forFeature('categoriesSearchReducer', reducer),
+    EffectsModule.forFeature([CategoriesSearchEffects])
   ],
   providers: [CategoriesSearchHttpService],
 })

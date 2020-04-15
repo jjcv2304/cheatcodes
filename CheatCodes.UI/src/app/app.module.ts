@@ -25,6 +25,7 @@ import { UnauthorizedComponent } from './security/unauthorized/unauthorized.comp
 import {StoreModule} from '@ngrx/store';
 import {StoreDevtoolsModule} from '@ngrx/store-devtools';
 import {environment} from '../environments/environment';
+import {EffectsModule} from '@ngrx/effects';
 
 
 @NgModule({
@@ -51,6 +52,7 @@ import {environment} from '../environments/environment';
     MatSliderModule,
     MatProgressSpinnerModule,
     StoreModule.forRoot({}),
+    EffectsModule.forRoot([]),
     StoreDevtoolsModule.instrument({
       name: 'Dev tools ngrx for CheatCodes',
       maxAge: 25,

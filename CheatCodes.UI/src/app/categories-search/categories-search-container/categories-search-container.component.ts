@@ -1,18 +1,22 @@
-import { Component, OnDestroy, OnInit } from "@angular/core";
-import { BreakpointObserver, Breakpoints } from "@angular/cdk/layout";
-import { Observable, Subscription } from "rxjs";
-import { map, shareReplay } from "rxjs/operators";
-import { CategoryBasic, CategoryTree } from "../model/category";
-import { CategoriesSearchHttpService } from "../categories-search-http.service";
+import {Component, OnDestroy, OnInit} from '@angular/core';
+import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
+import {Observable, Subscription} from 'rxjs';
+import {map, shareReplay, takeWhile} from 'rxjs/operators';
+import {CategoryBasic, CategoryTree} from '../model/category';
+import {CategoriesSearchHttpService} from '../categories-search-http.service';
+import {select, Store} from '@ngrx/store';
+import * as fromCategorySearch from '../state/categories-search.reducer';
+import * as searchActions from '../state/categories-search.actions';
+import {CategoriesFilter} from '../state/categories-search.actions';
 
 @Component({
-  selector: "app-categories-search-container",
-  templateUrl: "./categories-search-container.component.html",
-  styleUrls: ["./categories-search-container.component.scss"]
+  selector: 'app-categories-search-container',
+  templateUrl: './categories-search-container.component.html',
+  styleUrls: ['./categories-search-container.component.scss']
 })
 export class CategoriesSearchContainerComponent implements OnInit, OnDestroy {
   showDetailView = false;
-  newCardSearchResultSubscription: Subscription;
+  componentActive = true;
   newCardDetailsResultSubscription: Subscription;
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
@@ -24,22 +28,15 @@ export class CategoriesSearchContainerComponent implements OnInit, OnDestroy {
   cardDetails: CategoryTree;
 
   constructor(private breakpointObserver: BreakpointObserver,
-    private categoriesSearchService: CategoriesSearchHttpService) {
+              private categoriesSearchService: CategoriesSearchHttpService,
+              private store: Store<fromCategorySearch.State>) {
   }
 
   ngOnInit(): void {
 
-    this.newCardSearchResultSubscription = this.categoriesSearchService.newCardSearchResult.subscribe({
-      next: (v) => {
-        if (v === true) {
-          this.showDetailView = false;
-          this.cardsSearchResult = this.categoriesSearchService.currentCategories;
-        } else {
-          this.cardsSearchResult = null;
-          this.showDetailView = true;
-        }
-      }
-    });
+    this.store.pipe(select(fromCategorySearch.getFilteredCategories),
+      takeWhile(() => this.componentActive))
+      .subscribe((result: CategoryBasic[]) => this.cardsSearchResult = result);
 
     this.newCardDetailsResultSubscription = this.categoriesSearchService.newCardDetailsResult.subscribe({
       next: (v) => {
@@ -56,9 +53,7 @@ export class CategoriesSearchContainerComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    if (this.newCardSearchResultSubscription) {
-      this.newCardSearchResultSubscription.unsubscribe();
-    }
+    this.componentActive = false;
     if (this.newCardDetailsResultSubscription) {
       this.newCardDetailsResultSubscription.unsubscribe();
     }

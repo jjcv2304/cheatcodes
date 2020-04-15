@@ -1,15 +1,8 @@
 <form [formGroup]="searchCategoriesForm" class="categories-search-filters" (ngSubmit)="Search()">
   <mat-form-field class="full-width">
-    <input matInput placeholder="Partial Category Name" formControlName="categoryNameFilter">
+    <input matInput placeholder="Partial Category Name" formControlName="categoryNameFilter" (focusout)="categoryNameFilterChanged($event.target.value)">
     <mat-hint>Minimum 3 characters</mat-hint>
   </mat-form-field>
-
-<!--  <mat-checkbox [(ngModel)]="categoryNameFilterAnd" (click)="categoryNameFilterAndClicked()" [ngModelOptions]="{standalone: true}">-->
-<!--    And-->
-<!--  </mat-checkbox>-->
-<!--  <mat-checkbox [(ngModel)]="categoryNameFilterOr" (click)="categoryNameFilterOrClicked()" [ngModelOptions]="{standalone: true}">-->
-<!--    Or-->
-<!--  </mat-checkbox>-->
 
   <mat-checkbox (change)="categoryNameFilterAndClicked($event)" [checked]="categoryNameFilterAnd">
     And
@@ -21,7 +14,7 @@
 
   <mat-form-field class="full-width">
     <input matInput placeholder="Partial Category Name" formControlName="categoryName2Filter"
-           [attr.disabled]=" (!categoryNameFilterAnd && !categoryNameFilterOr)?'':null">
+           [attr.disabled]=" (!categoryNameFilterAnd && !categoryNameFilterOr)?'':null" (focusout)="categoryNames2FilterChanged($event.target.value)">
 
     <mat-hint>Minimum 3 characters</mat-hint>
   </mat-form-field>

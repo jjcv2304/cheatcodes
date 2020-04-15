@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup} from '@angular/forms';
 import {BreakpointObserver} from '@angular/cdk/layout';
 import {CategoriesSearchHttpService} from '../categories-search-http.service';
@@ -31,10 +31,30 @@ export class CategoriesSearchFiltersComponent implements OnInit {
 
     // TODO: unsubscribe
     this.store.pipe(select(fromCategorySearch.getCategoryNameFilterAnd)).subscribe(
-      categoryNameFilterAnd => this.categoryNameFilterAnd = categoryNameFilterAnd
+      categoryNameFilterAnd => {
+        this.categoryNameFilterAnd = categoryNameFilterAnd;
+        if (this.categoryNameFilterAnd) {
+          this.searchCategoriesForm.get('categoryName2Filter').enable();
+        }
+      }
     );
     this.store.pipe(select(fromCategorySearch.getCategoryNameFilterOr)).subscribe(
-      categoryNameFilterOr => this.categoryNameFilterOr = categoryNameFilterOr
+      categoryNameFilterOr => {
+        this.categoryNameFilterOr = categoryNameFilterOr;
+        if (this.categoryNameFilterOr) {
+          this.searchCategoriesForm.get('categoryName2Filter').enable();
+        }
+      }
+    );
+    this.store.pipe(select(fromCategorySearch.getCategoryNameFilter)).subscribe(
+      categoryNameFilter => {
+        this.searchCategoriesForm.get('categoryNameFilter').setValue(categoryNameFilter);
+      }
+    );
+    this.store.pipe(select(fromCategorySearch.getCategoryName2Filter)).subscribe(
+      categoryName2Filter => {
+        this.searchCategoriesForm.get('categoryName2Filter').setValue(categoryName2Filter);
+      }
     );
   }
 
@@ -46,7 +66,7 @@ export class CategoriesSearchFiltersComponent implements OnInit {
       filters.categoryNameFilterOr = this.categoryNameFilterOr;
       filters.categoryName2Filter = this.searchCategoriesForm.get('categoryName2Filter').value;
     }
-    this.apiService.GetCategoriesByFiltersAsync(filters);
+    this.store.dispatch(new searchActions.CategoriesFilter(filters));
   }
 
   categoryNameFilterAndClicked($event) {
@@ -57,5 +77,11 @@ export class CategoriesSearchFiltersComponent implements OnInit {
     this.store.dispatch(new searchActions.CategoryNameFilterOrClicked($event.checked));
   }
 
+  categoryNameFilterChanged(value: string) {
+    this.store.dispatch(new searchActions.CategoryNameFilterEnter(value));
+  }
 
+  categoryNames2FilterChanged(value: string) {
+    this.store.dispatch(new searchActions.CategoryName2FilterEnter(value));
+  }
 }
