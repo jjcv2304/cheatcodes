@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {FormControl, FormGroup} from '@angular/forms';
 import {BreakpointObserver} from '@angular/cdk/layout';
 import {CategoriesSearchHttpService} from '../categories-search-http.service';
@@ -6,13 +6,14 @@ import {CategorySearchFilters} from '../model/categorySearchFilters';
 import {select, Store} from '@ngrx/store';
 import * as fromCategorySearch from '../state/categories-search.reducer';
 import * as searchActions from './../state/categories-search.actions';
+import {takeWhile} from 'rxjs/operators';
 
 @Component({
   selector: 'app-categories-search-filters',
   templateUrl: './categories-search-filters.component.html',
   styleUrls: ['./categories-search-filters.component.scss']
 })
-export class CategoriesSearchFiltersComponent implements OnInit {
+export class CategoriesSearchFiltersComponent implements OnInit, OnDestroy {
 
   searchCategoriesForm = new FormGroup({
     categoryNameFilter: new FormControl(''),
@@ -20,6 +21,7 @@ export class CategoriesSearchFiltersComponent implements OnInit {
   });
   categoryNameFilterOr: boolean;
   categoryNameFilterAnd: boolean;
+  private componentActive = true;
 
   constructor(private breakpointObserver: BreakpointObserver,
               private apiService: CategoriesSearchHttpService,
@@ -29,8 +31,11 @@ export class CategoriesSearchFiltersComponent implements OnInit {
   ngOnInit(): void {
     this.searchCategoriesForm.get('categoryName2Filter').disable();
 
-    // TODO: unsubscribe
-    this.store.pipe(select(fromCategorySearch.getCategoryNameFilterAnd)).subscribe(
+    //    this.store.pipe(select(fromCategorySearch.getFilteredCategories),
+    //       takeWhile(() => this.componentActive))
+    //       .subscribe((result: CategoryBasic[]) => this.cardsSearchResult = result);
+
+    this.store.pipe(select(fromCategorySearch.getCategoryNameFilterAnd), takeWhile(() => this.componentActive)).subscribe(
       categoryNameFilterAnd => {
         this.categoryNameFilterAnd = categoryNameFilterAnd;
         if (this.categoryNameFilterAnd) {
@@ -38,7 +43,7 @@ export class CategoriesSearchFiltersComponent implements OnInit {
         }
       }
     );
-    this.store.pipe(select(fromCategorySearch.getCategoryNameFilterOr)).subscribe(
+    this.store.pipe(select(fromCategorySearch.getCategoryNameFilterOr), takeWhile(() => this.componentActive)).subscribe(
       categoryNameFilterOr => {
         this.categoryNameFilterOr = categoryNameFilterOr;
         if (this.categoryNameFilterOr) {
@@ -46,12 +51,12 @@ export class CategoriesSearchFiltersComponent implements OnInit {
         }
       }
     );
-    this.store.pipe(select(fromCategorySearch.getCategoryNameFilter)).subscribe(
+    this.store.pipe(select(fromCategorySearch.getCategoryNameFilter), takeWhile(() => this.componentActive)).subscribe(
       categoryNameFilter => {
         this.searchCategoriesForm.get('categoryNameFilter').setValue(categoryNameFilter);
       }
     );
-    this.store.pipe(select(fromCategorySearch.getCategoryName2Filter)).subscribe(
+    this.store.pipe(select(fromCategorySearch.getCategoryName2Filter), takeWhile(() => this.componentActive)).subscribe(
       categoryName2Filter => {
         this.searchCategoriesForm.get('categoryName2Filter').setValue(categoryName2Filter);
       }
@@ -83,5 +88,9 @@ export class CategoriesSearchFiltersComponent implements OnInit {
 
   categoryNames2FilterChanged(value: string) {
     this.store.dispatch(new searchActions.CategoryName2FilterEnter(value));
+  }
+
+  ngOnDestroy(): void {
+    this.componentActive = false;
   }
 }
