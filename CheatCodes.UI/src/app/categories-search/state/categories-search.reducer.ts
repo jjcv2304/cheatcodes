@@ -1,11 +1,5 @@
-import * as fromRoot from '../../state/app.state';
-import {createFeatureSelector, createSelector} from '@ngrx/store';
 import {CategoriesSearchActions, CategoriesSearchActionTypes} from './categories-search.actions';
 import {CategoryBasic} from '../model/category';
-
-export interface State extends fromRoot.State {
-  categoriesSearch: CategoriesSearchState;
-}
 
 export interface CategoriesSearchState {
   categoryNameFilterOr: boolean;
@@ -25,29 +19,6 @@ const initialState: CategoriesSearchState = {
   error: ''
 };
 
-const getCategoriesSearchFeatureState = createFeatureSelector<CategoriesSearchState>('categoriesSearchReducer');
-
-export const getCategoryNameFilterAnd = createSelector(
-  getCategoriesSearchFeatureState,
-  state => state.categoryNameFilterAnd
-);
-export const getCategoryNameFilterOr = createSelector(
-  getCategoriesSearchFeatureState,
-  state => state.categoryNameFilterOr
-);
-export const getFilteredCategories = createSelector(
-  getCategoriesSearchFeatureState,
-  state => state.filteredCategories
-);
-export const getCategoryNameFilter = createSelector(
-  getCategoriesSearchFeatureState,
-  state => state.categoryNameFilter
-);
-
-export const getCategoryName2Filter = createSelector(
-  getCategoriesSearchFeatureState,
-  state => state.categoryName2Filter
-);
 
 export function reducer(state = initialState, action: CategoriesSearchActions): CategoriesSearchState {
   switch (action.type) {

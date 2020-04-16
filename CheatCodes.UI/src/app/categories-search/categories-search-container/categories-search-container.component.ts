@@ -5,9 +5,7 @@ import {map, shareReplay, takeWhile} from 'rxjs/operators';
 import {CategoryBasic, CategoryTree} from '../model/category';
 import {CategoriesSearchHttpService} from '../categories-search-http.service';
 import {select, Store} from '@ngrx/store';
-import * as fromCategorySearch from '../state/categories-search.reducer';
-import * as searchActions from '../state/categories-search.actions';
-import {CategoriesFilter} from '../state/categories-search.actions';
+import * as fromCategorySearch from '../state';
 
 @Component({
   selector: 'app-categories-search-container',

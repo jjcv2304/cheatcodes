@@ -4,7 +4,7 @@ import {BreakpointObserver} from '@angular/cdk/layout';
 import {CategoriesSearchHttpService} from '../categories-search-http.service';
 import {CategorySearchFilters} from '../model/categorySearchFilters';
 import {select, Store} from '@ngrx/store';
-import * as fromCategorySearch from '../state/categories-search.reducer';
+import * as fromCategorySearch from '../state';
 import * as searchActions from './../state/categories-search.actions';
 import {takeWhile} from 'rxjs/operators';
 
@@ -30,10 +30,6 @@ export class CategoriesSearchFiltersComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.searchCategoriesForm.get('categoryName2Filter').disable();
-
-    //    this.store.pipe(select(fromCategorySearch.getFilteredCategories),
-    //       takeWhile(() => this.componentActive))
-    //       .subscribe((result: CategoryBasic[]) => this.cardsSearchResult = result);
 
     this.store.pipe(select(fromCategorySearch.getCategoryNameFilterAnd), takeWhile(() => this.componentActive)).subscribe(
       categoryNameFilterAnd => {
