@@ -4,7 +4,7 @@ namespace CheatCodes.Search.Utils
 {
   public class Envelope<T>
   {
-    protected internal Envelope(T result, string errorMessage)
+    protected internal Envelope(T result, string? errorMessage)
     {
       Result = result;
       ErrorMessage = errorMessage;
@@ -12,7 +12,7 @@ namespace CheatCodes.Search.Utils
     }
 
     public T Result { get; }
-    public string ErrorMessage { get; }
+    public string? ErrorMessage { get; }
     public DateTime TimeGenerated { get; }
   }
 
