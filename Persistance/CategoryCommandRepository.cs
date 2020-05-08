@@ -8,6 +8,10 @@ namespace Persistance
 {
   public class CategoryCommandRepository : RepositoryBase, ICategoryCommandRepository
   {
+    public CategoryCommandRepository() : base(null)
+    {
+    }
+
     public CategoryCommandRepository(IDbTransaction transaction) : base(transaction)
     {
     }

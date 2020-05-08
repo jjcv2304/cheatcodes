@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Data;
+using System.Data.Common;
 using System.Data.SqlClient;
 using System.IO;
 using System.Reflection;
@@ -12,12 +14,15 @@ using Application.Utils.Interfaces;
 using IdentityServer4.AccessTokenValidation;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Internal;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Microsoft.OpenApi.Models;
 using Persistance;
 using Persistance.Utils;
@@ -36,6 +41,19 @@ namespace Api
     // This method gets called by the runtime. Use this method to add services to the container.
     public void ConfigureServices(IServiceCollection services)
     {
+      services.AddMvc(options =>
+        {
+          var policy = new AuthorizationPolicyBuilder()
+            .RequireAuthenticatedUser()
+            .Build();
+          options.EnableEndpointRouting = false;
+          options.Filters.Add(new AuthorizeFilter(policy));
+          options.Filters.Add(typeof(TrackActionPerformanceFilter));
+        }
+      ).SetCompatibilityVersion(CompatibilityVersion.Latest);
+
+      //services.AddNewtonsoftJson();
+
       services.AddSingleton<IScopeInformation, ScopeInformation>();
 
       services.AddCors(o =>
@@ -58,26 +76,16 @@ namespace Api
           options.RequireHttpsMetadata = false;
         });
 
-      services.AddMvc(options =>
-      {
-        var policy = new AuthorizationPolicyBuilder()
-        .RequireAuthenticatedUser()
-        .Build();
-        options.Filters.Add(new AuthorizeFilter(policy));
-        options.Filters.Add(typeof(TrackActionPerformanceFilter));
-      }
-      ).SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-
-
       var connectionString = Configuration.GetConnectionString("CheatCodesDatabase");
       var con = new DatabaseSetting(connectionString);
       services.AddSingleton(con);
       var queriesConnectionString = new QueriesConnectionString(connectionString);
       services.AddSingleton(queriesConnectionString);
+     // services.AddTransient<IDbTransaction, DbTransaction>();
       services.AddTransient<IUnitOfWork, UnitOfWork>();
       services.AddTransient<ICategoryQueryRepository, CategoryQueryRepository>();
       services.AddTransient<ICategoryCommandRepository, CategoryCommandRepository>();
-
+       
 
       services.AddSingleton<Messages>();
 
@@ -114,7 +122,7 @@ namespace Api
     }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-    public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+    public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
     {
       app.UseCors("ApiCorsPolicy");
 
@@ -128,16 +136,50 @@ namespace Api
       app.UseHsts();
       app.UseHttpsRedirection();
       app.UseAuthentication();
-      app.UseMvc();
+      app.UseMvc(routes =>
+      {
+        routes.MapRoute(
+          name: "default",
+          template: "{controller=Home}/{action=Index}/{id?}");
+      });
+
+      app.UseRouting();
+
+      //app.UseEndpoints(endpoints =>
+      //{
+      //  endpoints.MapHealthChecks("/health/ready", new HealthCheckOptions()
+      //  {
+      //    ResultStatusCodes = {
+      //      [HealthStatus.Healthy] = StatusCodes.Status200OK,
+      //      [HealthStatus.Degraded] = StatusCodes.Status500InternalServerError,
+      //      [HealthStatus.Unhealthy] =StatusCodes.Status503ServiceUnavailable
+      //    },
+      //    // ResponseWriter = WriteHealthCheckReadyResponse,
+      //    Predicate = (check) => check.Tags.Contains("ready"),
+      //    AllowCachingResponses = false
+      //  });
+
+      //  endpoints.MapHealthChecks("/health/live", new HealthCheckOptions()
+      //  {
+      //    Predicate = (check) => !check.Tags.Contains("ready"),
+      //    // ResponseWriter = WriteHealthCheckLiveResponse,
+      //    AllowCachingResponses = false
+      //  });
+      //});
     }
 
     protected virtual void ConfigureAdditionalServices(IServiceCollection services)
     {
+      //services.AddHealthChecks()
+      //  .Add(connectionString, failureStatus: HealthStatus.Unhealthy, tags: new[] { "ready" })
+      //  .AddUrlGroup(new Uri($"{stockIndexServiceUrl}/api/StockIndexes"),
+      //    "Stock Index Api Health Check", HealthStatus.Degraded, tags: new[] { "ready" }, timeout: new TimeSpan(0, 0, 5))
+      //  .AddFilePathWrite(securityLogFilePath, HealthStatus.Unhealthy, tags: new[] { "ready" });
     }
 
     private void UpdateApiErrorResponse(HttpContext context, Exception ex, ApiError error)
     {
-      if (ex.GetType().Name == typeof(SqlException).Name) error.Detail = "Exception was a database exception!";
+      if (ex.GetType().Name == nameof(DbException)) error.Detail = "Exception was a database exception!";
 
       //error.Links = "https://gethelpformyerror.com/";
     }

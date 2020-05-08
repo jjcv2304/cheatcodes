@@ -21,7 +21,7 @@ namespace Persistance.Utils
     }
 
     public ICategoryCommandRepository CategoryCommandRepository =>
-      _categoryCommandRepository ?? (_categoryCommandRepository = new CategoryCommandRepository(_transaction));
+      _categoryCommandRepository ??= new CategoryCommandRepository(_transaction);
 
     public void Commit()
     {

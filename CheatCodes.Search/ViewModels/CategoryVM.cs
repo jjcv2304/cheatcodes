@@ -6,6 +6,7 @@ namespace CheatCodes.Search.ViewModels
   {
     public int Id { get; set; }
     public string Name { get; set; }
+    
   }
 
   public class CategoryNameTreeVM
@@ -15,6 +16,13 @@ namespace CheatCodes.Search.ViewModels
     public string Description { get; set; }
     public int? ParentId { get; set; }
     public IList<CategoryNameTreeVM> Childs { get; set; }
+
+    static bool IsAngularAndHasChilds(object o)
+    {
+      return o is CategoryNameTreeVM c &&
+             c is { Name: "Angular", Childs: {} };
+
+    }
   }
 
   public class CategorySearchFiltersVM
