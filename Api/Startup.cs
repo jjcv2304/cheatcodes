@@ -2,8 +2,11 @@
 using System.Data;
 using System.Data.Common;
 using System.Data.SqlClient;
+using System.Data.SQLite;
 using System.IO;
+using System.Linq;
 using System.Reflection;
+using System.Threading.Tasks;
 using Api.Logs.Extensions;
 using Api.Logs.Filters;
 using Api.Logs.Middleware;
@@ -24,6 +27,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Microsoft.OpenApi.Models;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using Persistance;
 using Persistance.Utils;
 
@@ -52,8 +57,6 @@ namespace Api
         }
       ).SetCompatibilityVersion(CompatibilityVersion.Latest);
 
-      //services.AddNewtonsoftJson();
-
       services.AddSingleton<IScopeInformation, ScopeInformation>();
 
       services.AddCors(o =>
@@ -81,11 +84,11 @@ namespace Api
       services.AddSingleton(con);
       var queriesConnectionString = new QueriesConnectionString(connectionString);
       services.AddSingleton(queriesConnectionString);
-     // services.AddTransient<IDbTransaction, DbTransaction>();
+      // services.AddTransient<IDbTransaction, DbTransaction>();
       services.AddTransient<IUnitOfWork, UnitOfWork>();
       services.AddTransient<ICategoryQueryRepository, CategoryQueryRepository>();
       services.AddTransient<ICategoryCommandRepository, CategoryCommandRepository>();
-       
+
 
       services.AddSingleton<Messages>();
 
@@ -112,8 +115,8 @@ namespace Api
             Url = new Uri("https://example.com/license")
           }
         });
-          // Set the comments path for the Swagger JSON and UI.
-          var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+        // Set the comments path for the Swagger JSON and UI.
+        var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
         var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
         c.IncludeXmlComments(xmlPath);
       });
@@ -145,31 +148,66 @@ namespace Api
 
       app.UseRouting();
 
-      //app.UseEndpoints(endpoints =>
-      //{
-      //  endpoints.MapHealthChecks("/health/ready", new HealthCheckOptions()
-      //  {
-      //    ResultStatusCodes = {
-      //      [HealthStatus.Healthy] = StatusCodes.Status200OK,
-      //      [HealthStatus.Degraded] = StatusCodes.Status500InternalServerError,
-      //      [HealthStatus.Unhealthy] =StatusCodes.Status503ServiceUnavailable
-      //    },
-      //    // ResponseWriter = WriteHealthCheckReadyResponse,
-      //    Predicate = (check) => check.Tags.Contains("ready"),
-      //    AllowCachingResponses = false
-      //  });
 
-      //  endpoints.MapHealthChecks("/health/live", new HealthCheckOptions()
-      //  {
-      //    Predicate = (check) => !check.Tags.Contains("ready"),
-      //    // ResponseWriter = WriteHealthCheckLiveResponse,
-      //    AllowCachingResponses = false
-      //  });
-      //});
+      app.UseEndpoints(endpoints =>
+      {
+        endpoints.MapHealthChecks("/health", new HealthCheckOptions()
+        {
+          ResultStatusCodes = {
+            [HealthStatus.Healthy] = StatusCodes.Status200OK,
+            [HealthStatus.Degraded] = StatusCodes.Status500InternalServerError,
+            [HealthStatus.Unhealthy] =StatusCodes.Status503ServiceUnavailable
+          },
+          ResponseWriter = WriteHealthCheckReadyResponse,
+          AllowCachingResponses = false
+        }) ;
+      });
+
+    }
+    private Task WriteHealthCheckReadyResponse(HttpContext httpContext, HealthReport result)
+    {
+      httpContext.Response.ContentType = "application/json";
+
+      var json = new JObject(
+        new JProperty("OverallStatus", result.Status.ToString()),
+        new JProperty("TotalChecksDuration", result.TotalDuration.TotalSeconds.ToString("0:0.00")),
+        new JProperty("DependencyHealthChecks", new JObject(result.Entries.Select(dicItem =>
+          new JProperty(dicItem.Key, new JObject(
+            new JProperty("Status", dicItem.Value.Status.ToString()),
+            new JProperty("Duration", dicItem.Value.Duration.TotalSeconds.ToString("0:0.00")),
+            new JProperty("Exception", dicItem.Value.Exception?.Message),
+            new JProperty("Data", new JObject(dicItem.Value.Data.Select(dicData =>
+              new JProperty(dicData.Key, dicData.Value))))
+          ))
+        )))
+      );
+
+      return httpContext.Response.WriteAsync(json.ToString(Formatting.Indented));
     }
 
     protected virtual void ConfigureAdditionalServices(IServiceCollection services)
     {
+      var connectionString = Configuration.GetConnectionString("CheatCodesDatabase");
+      var con = new DatabaseSetting(connectionString);
+
+      services.AddHealthChecks()
+        .AddCheck("Sql Check", () =>
+      {
+        try
+        {
+          using (var connection = new SQLiteConnection(connectionString))
+          {
+            connection.Open();
+            connection.Close();
+            return HealthCheckResult.Healthy();
+          }
+        }
+        catch (Exception e)
+        {
+          return HealthCheckResult.Unhealthy();
+        }
+      });
+
       //services.AddHealthChecks()
       //  .Add(connectionString, failureStatus: HealthStatus.Unhealthy, tags: new[] { "ready" })
       //  .AddUrlGroup(new Uri($"{stockIndexServiceUrl}/api/StockIndexes"),
