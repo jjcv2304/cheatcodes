@@ -14,6 +14,7 @@ using Api.Security;
 using Api.Utils;
 using Application.Utils;
 using Application.Utils.Interfaces;
+using HealthChecks.UI.Client;
 using IdentityServer4.AccessTokenValidation;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
@@ -78,6 +79,11 @@ namespace Api
           options.ApiName = "mainApp-api";
           options.RequireHttpsMetadata = false;
         });
+
+      //services.AddAuthorization(o =>
+      //{
+      //  o.AddPolicy("HealthCheckPolicy", policy => policy.RequireClaim("mainApp-api", "healthChecks"));
+      //});
 
       var connectionString = Configuration.GetConnectionString("CheatCodesDatabase");
       var con = new DatabaseSetting(connectionString);
@@ -160,7 +166,16 @@ namespace Api
           },
           ResponseWriter = WriteHealthCheckReadyResponse,
           AllowCachingResponses = false
-        }) ;
+        }).RequireAuthorization();
+        // }).RequireAuthorization("HealthCheckPolicy"); //TODO
+
+        endpoints.MapHealthChecks("/healthui", new HealthCheckOptions()
+        {
+          Predicate = _ => true,
+          ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
+        });
+
+        app.UseHealthChecksUI();
       });
 
     }
@@ -213,6 +228,7 @@ namespace Api
       //  .AddUrlGroup(new Uri($"{stockIndexServiceUrl}/api/StockIndexes"),
       //    "Stock Index Api Health Check", HealthStatus.Degraded, tags: new[] { "ready" }, timeout: new TimeSpan(0, 0, 5))
       //  .AddFilePathWrite(securityLogFilePath, HealthStatus.Unhealthy, tags: new[] { "ready" });
+      services.AddHealthChecksUI();
     }
 
     private void UpdateApiErrorResponse(HttpContext context, Exception ex, ApiError error)
