@@ -1,16 +1,21 @@
-import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { MainMenuComponent } from "./main-menu.component";
+import {MainMenuComponent} from './main-menu.component';
+import {AuthService} from '../security/auth-service.component';
+import {HttpClientTestingModule} from '@angular/common/http/testing';
+import {RouterTestingModule} from '@angular/router/testing';
 
-describe("MainMenuComponent",
+describe('MainMenuComponent',
   () => {
     let component: MainMenuComponent;
     let fixture: ComponentFixture<MainMenuComponent>;
 
     beforeEach(async(() => {
       TestBed.configureTestingModule({
-          declarations: [MainMenuComponent]
-        })
+        imports: [HttpClientTestingModule, RouterTestingModule.withRoutes([])],
+        declarations: [MainMenuComponent],
+        providers: [{provide: AuthService}]
+      })
         .compileComponents();
     }));
 
@@ -20,7 +25,7 @@ describe("MainMenuComponent",
       fixture.detectChanges();
     });
 
-    it("should create",
+    it('should create',
       () => {
         expect(component).toBeTruthy();
       });

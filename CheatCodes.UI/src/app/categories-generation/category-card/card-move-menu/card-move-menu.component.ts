@@ -1,11 +1,11 @@
-import { Component, EventEmitter, Input, OnInit, Output } from "@angular/core";
-import { CategoriesService } from "../../categories/categories.service";
-import { Category } from "../../models/category";
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {CategoriesService} from '../../categories/categories.service';
+import {Category} from '../../models/category';
 
 @Component({
-  selector: "app-card-move-menu",
-  templateUrl: "./card-move-menu.component.html",
-  styleUrls: ["./card-move-menu.component.scss"]
+  selector: 'app-card-move-menu',
+  templateUrl: './card-move-menu.component.html',
+  styleUrls: ['./card-move-menu.component.scss']
 })
 export class CardMoveMenuComponent implements OnInit {
   submenuVisible = false;
@@ -24,7 +24,9 @@ export class CardMoveMenuComponent implements OnInit {
 
   ngOnInit() {
     this.siblingCategories = this.categoriesService.currentCategories;
-    this.siblingCategories = this.siblingCategories.filter(item => item.id !== this.currentCategoryId);
+    if (this.siblingCategories != null) {
+      this.siblingCategories = this.siblingCategories.filter(item => item.id !== this.currentCategoryId);
+    }
   }
 
   showSubmenu() {
