@@ -13,7 +13,11 @@ export class CategoriesService {
 
   private currentCategoriesView: Category[];
 
-  get currentCategories(): Category[] {
+  // less testable
+  // get currentCategories(): Category[] {
+  //   return this.currentCategoriesView;
+  // }
+  GetCurrentCategories(): Category[] {
     return this.currentCategoriesView;
   }
 
@@ -24,6 +28,7 @@ export class CategoriesService {
   /////////////////// Filter Region ///////////////////
   private currentCategoryFilter: CategoryFilter;
 
+  // todo misleading name, should not call getFileteredCategories
   SetCategoryFilter(newCategoryFilter: CategoryFilter) {
     this.currentCategoryFilter = newCategoryFilter;
     this.getFilteredCategories();
@@ -50,7 +55,7 @@ export class CategoriesService {
   /////////////////// Http Region ///////////////////
 
 
-  private readonly categoryUrl = 'https://localhost:44326/api/categories';
+  public readonly categoryUrl = 'https://localhost:44326/api/categories';
   private readonly httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json'

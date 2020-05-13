@@ -1,16 +1,16 @@
-import { Component, Input, OnInit } from "@angular/core";
-import { Category, ICategory } from "../models/category";
-import { CategoriesService } from "../categories/categories.service";
-import { Envelope } from "../../utils/envelope";
-import { Router } from "@angular/router";
-import { CategoryFilter } from "../models/CategoryFilter";
-import { ICategoryFieldValue } from "../models/categoryFieldValue";
+import {Component, Input, OnInit} from '@angular/core';
+import {Category, ICategory} from '../models/category';
+import {CategoriesService} from '../categories/categories.service';
+import {Envelope} from '../../utils/envelope';
+import {Router} from '@angular/router';
+import {CategoryFilter} from '../models/CategoryFilter';
+import {ICategoryFieldValue} from '../models/categoryFieldValue';
 
 
 @Component({
-  selector: "app-category-card",
-  templateUrl: "./category-card.component.html",
-  styleUrls: ["./category-card.component.scss"]
+  selector: 'app-category-card',
+  templateUrl: './category-card.component.html',
+  styleUrls: ['./category-card.component.scss']
 })
 export class CategoryCardComponent implements OnInit {
   flipDiv: boolean;
@@ -19,10 +19,10 @@ export class CategoryCardComponent implements OnInit {
   showMenu = false;
   cardWidth: string;
   cardHeight: string;
-  minCardWidth = "200px";
-  maxCardWidth = "1000px";
-  minCardHeight = "200px";
-  maxCardHeight = "500px";
+  minCardWidth = '200px';
+  maxCardWidth = '1000px';
+  minCardHeight = '200px';
+  maxCardHeight = '500px';
   @Input()
   card: Category;
 
@@ -108,14 +108,14 @@ export class CategoryCardComponent implements OnInit {
   }
 
   hasSiblings(categoryId: number) {
-    const siblingCategories = this.categoriesService.currentCategories.filter(item => item.id !== categoryId);
+    const siblingCategories = this.categoriesService.GetCurrentCategories().filter(item => item.id !== categoryId);
     return siblingCategories.length > 0;
   }
 
   autoGrowTextZone(e) {
-    e.target.style.overflow = "hidden";
-    e.target.style.height = "0px";
-    e.target.style.height = (e.target.scrollHeight + 15) + "px";
+    e.target.style.overflow = 'hidden';
+    e.target.style.height = '0px';
+    e.target.style.height = (e.target.scrollHeight + 15) + 'px';
   }
 
   resizeCard() {
@@ -139,7 +139,7 @@ export class CategoryCardComponent implements OnInit {
   }
 
   moveCardDown() {
-    console.log("move down 2");
+    console.log('move down 2');
   }
 
   toogleMenu() {

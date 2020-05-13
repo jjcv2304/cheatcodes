@@ -23,7 +23,7 @@ export class CardMoveMenuComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.siblingCategories = this.categoriesService.currentCategories;
+    this.siblingCategories = this.categoriesService.GetCurrentCategories();
     if (this.siblingCategories != null) {
       this.siblingCategories = this.siblingCategories.filter(item => item.id !== this.currentCategoryId);
     }

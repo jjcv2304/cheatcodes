@@ -15,7 +15,7 @@ describe('CardResultBasicComponent',
     beforeEach(async(() => {
 
       TestBed.configureTestingModule({
-        imports: [HttpClientTestingModule, RouterTestingModule.withRoutes([])],
+        imports: [HttpClientTestingModule],
         declarations: [CardResultBasicComponent],
         providers: [{provide: CategoriesSearchHttpService}]
       })
@@ -24,14 +24,14 @@ describe('CardResultBasicComponent',
 
     beforeEach(() => {
       fixture = TestBed.createComponent(CardResultBasicComponent);
-      component = fixture.componentInstance;
-      const expectedCard = new CategoryBasic();
-      component.card = expectedCard;
-      fixture.detectChanges();
     });
 
     it('should create',
       () => {
+        fixture.componentInstance.card = new CategoryBasic();
+        component = fixture.componentInstance;
+        fixture.detectChanges();
+
         expect(component).toBeTruthy();
       });
   });
