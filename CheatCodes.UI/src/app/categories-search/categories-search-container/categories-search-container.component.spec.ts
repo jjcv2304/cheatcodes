@@ -14,40 +14,46 @@ import {RouterTestingModule} from '@angular/router/testing';
 import {MemoizedSelector} from '@ngrx/store';
 import * as fromCategorySearch from '../state';
 import {CategoryBasic} from '../model/category';
+import {FormsModule} from '@angular/forms';
 
 
 describe('CategoriesSearchContainerComponent',
   () => {
-    let component: CategoriesSearchContainerComponent;
     let fixture: ComponentFixture<CategoriesSearchContainerComponent>;
     let mockStore: MockStore;
     let mockFilteredCategoriesSelector: MemoizedSelector<fromCategorySearch.State, CategoryBasic[]>;
     const filteredCategories: CategoryBasic[] = [new CategoryBasic(), new CategoryBasic()];
 
     beforeEach(async(() => {
-      const initialState = {};
       TestBed.configureTestingModule({
-        declarations: [CategoriesSearchContainerComponent],
         imports: [
           HttpClientTestingModule, RouterTestingModule.withRoutes([]),
-          NoopAnimationsModule, LayoutModule, MatButtonModule, MatIconModule, MatListModule, MatSidenavModule, MatToolbarModule,
+          FormsModule
+          , NoopAnimationsModule, LayoutModule, MatButtonModule, MatIconModule, MatListModule, MatSidenavModule, MatToolbarModule
         ],
-        providers: [{provide: CategoriesSearchHttpService}, {provide: BreakpointObserver}, {provide: provideMockStore()}]
-      }).compileComponents();
+        declarations: [CategoriesSearchContainerComponent],
+        providers: [
+          {provide: CategoriesSearchHttpService},
+          {provide: BreakpointObserver},
+          {provide: provideMockStore()}
+          ]
+      });
     }));
 
     beforeEach(() => {
-      fixture = TestBed.createComponent(CategoriesSearchContainerComponent);
+
       mockStore = TestBed.inject(MockStore);
       mockFilteredCategoriesSelector = mockStore.overrideSelector(
         fromCategorySearch.getFilteredCategories, filteredCategories
       );
-      component = fixture.componentInstance;
-      fixture.detectChanges();
+
     });
 
-    it('should compile',
-      () => {
-        expect(component).toBeTruthy();
-      });
+    it('should compile', () => {
+      TestBed.compileComponents();
+      fixture = TestBed.createComponent(CategoriesSearchContainerComponent);
+      fixture.detectChanges();
+
+      expect(fixture.componentInstance).toBeTruthy();
+    });
   });

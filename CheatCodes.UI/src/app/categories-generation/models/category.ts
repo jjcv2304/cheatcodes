@@ -38,16 +38,26 @@ export class CategoryBuilder implements ICategory {
   color = 'lightskyblue';
   categoryFieldValues: ICategoryFieldValue[];
 
+  static basic() {
+    const categoryBuilder = new CategoryBuilder();
+    categoryBuilder.id = GetRandom.Number();
+    categoryBuilder.name = GetRandom.String();
+    return categoryBuilder;
+  }
+
   constructor() {
   }
+
   build() {
     return new Category(this);
   }
+
   simple() {
-    this.id =  GetRandom.Number();
+    this.id = GetRandom.Number();
     this.name = GetRandom.String();
     return this;
   }
+
 
   setId(id: number) {
     this.id = id;
@@ -71,6 +81,10 @@ export class CategoryBuilder implements ICategory {
 
   setDescription(description: string) {
     this.description = description;
+    return this;
+  }
+  setParentId(parentId: number) {
+    this.parentId = parentId;
     return this;
   }
 }

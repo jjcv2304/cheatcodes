@@ -9,7 +9,7 @@ import {map} from 'rxjs/operators';
 })
 export class LoggedInGuard implements CanActivate, CanLoad {
 
-  constructor(private authService: AuthService, private router: Router) {
+  constructor(private authService: AuthService) {
   }
 
   canActivate(
