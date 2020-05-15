@@ -50,6 +50,8 @@ export class CategoriesSearchContainerComponent implements OnInit, OnDestroy {
 
   }
 
+
+
   ngOnDestroy(): void {
     this.componentActive = false;
     if (this.newCardDetailsResultSubscription) {

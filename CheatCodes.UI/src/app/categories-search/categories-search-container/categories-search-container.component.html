@@ -5,7 +5,7 @@
                [opened]="(isHandset$ | async) === false">
     <mat-toolbar>Search Filters</mat-toolbar>
 
-    <app-categories-search-filters></app-categories-search-filters>
+    <app-categories-search-filters  (valueChange)='showDetailView=false;'></app-categories-search-filters>
 
   </mat-sidenav>
   <mat-sidenav-content>
@@ -33,9 +33,7 @@
     <app-categories-search-list-result *ngIf="!showDetailView" [cards]="cardsSearchResult">
     </app-categories-search-list-result>
 
-    <app-categories-search-tree-detail-result *ngIf="!!showDetailView"
-                                              [cardDetail]="cardDetails">
-
+    <app-categories-search-tree-detail-result *ngIf="!!showDetailView" [cardDetail]="cardDetails">
     </app-categories-search-tree-detail-result>
 
   </mat-sidenav-content>

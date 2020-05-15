@@ -7,26 +7,26 @@ using System.Collections.Generic;
 
 namespace IdSNet
 {
-    public static class Config
-    {
-      public static IEnumerable<IdentityResource> Ids =>
-        new IdentityResource[]
-        {
+  public static class Config
+  {
+    public static IEnumerable<IdentityResource> Ids =>
+      new IdentityResource[]
+      {
           new IdentityResources.OpenId(),
           new IdentityResources.Profile(),
-        };
+      };
 
 
-      public static IEnumerable<ApiResource> Apis =>
-        new ApiResource[]
-        {
+    public static IEnumerable<ApiResource> Apis =>
+      new ApiResource[]
+      {
           new ApiResource("mainApp-api", "My API #1")
-        };
+      };
 
 
-      public static IEnumerable<Client> Clients =>
-        new Client[]
-        {
+    public static IEnumerable<Client> Clients =>
+      new Client[]
+      {
           // SPA client using code flow + pkce
           new Client
           {
@@ -38,17 +38,19 @@ namespace IdSNet
             RequirePkce = true,
             RequireClientSecret = false,
 
-            RedirectUris = {"http://localhost:4200/signin-callback", 
-              "http://localhost:4200/assets/silent-callback.html"},
+            RedirectUris = {"http://localhost:4200/signin-callback",
+              "http://localhost:4200/assets/silent-callback.html",
+            "http://localhost:3214/signin-callback",
+              "http://localhost:3214/assets/silent-callback.html"},
 
-            PostLogoutRedirectUris = {"http://localhost:4200/signout-callback" },
-            AllowedCorsOrigins = { "http://localhost:4200" },
+            PostLogoutRedirectUris = {"http://localhost:4200/signout-callback", "http://localhost:3214/signout-callback" },
+            AllowedCorsOrigins = { "http://localhost:4200", "http://localhost:3214" },
 
             AllowedScopes = { "openid", "profile", "mainApp-api" },
             AccessTokenLifetime = 600
 
           }
-                
-        };
-    }
+
+      };
+  }
 }
