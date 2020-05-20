@@ -1,17 +1,20 @@
 /* tslint:disable:member-ordering */
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
-import {Category, ICategory} from '../models/category';
+import {Category, CategoryBreadCrumb, ICategory} from '../models/category';
 import {Envelope} from '../../utils/envelope';
 import {CategoryFilter} from '../models/CategoryFilter';
-import {Observable} from 'rxjs';
+import {BehaviorSubject, EMPTY, Observable, of, Subscription} from 'rxjs';
 import {ICategoryFieldValue} from '../models/categoryFieldValue';
 import {NewField} from '../models/NewField';
+import {catchError, map} from 'rxjs/operators';
 
 @Injectable()
 export class CategoriesService {
 
-  private currentCategoriesView: Category[];
+  public currentCategoriesParentId$: BehaviorSubject<number> = new BehaviorSubject<number>(0);
+
+   private currentCategoriesView: Category[];
 
   // less testable
   // get currentCategories(): Category[] {
@@ -80,6 +83,11 @@ export class CategoriesService {
     return this.http.put<void>(this.categoryUrl, category, this.httpOptions);
   }
 
+  private handleError(methodName: string) {
+    console.log('Error on ' + methodName);
+    return EMPTY;
+  }
+
   moveCategoryUp(category: Category): Observable<void> {
     return this.http.put<void>(this.categoryUrl + '/MoveUp', category, this.httpOptions);
   }
@@ -103,6 +111,7 @@ export class CategoriesService {
     return this.http.get<Envelope<Array<ICategory>>>(this.categoryUrl).subscribe(
       (data: Envelope<Array<ICategory>>) => {
         this.currentCategoriesView = data.result;
+        this.currentCategoriesParentId$.next(this.currentCategoriesView[0].parentId || 0);
       },
       () => {
         console.log('Error loading categories. getAllCategories');
@@ -155,6 +164,7 @@ export class CategoriesService {
     this.http.get<Envelope<Array<ICategory>>>(this.categoryUrl + '/GetChildsOf/' + categoryId).subscribe(
       (data: Envelope<Array<ICategory>>) => {
         this.currentCategoriesView = data.result;
+        this.currentCategoriesParentId$.next(this.currentCategoriesView[0].parentId || 0);
       },
       () => {
         console.log('Error loading categories. getAllCategories');
@@ -166,6 +176,7 @@ export class CategoriesService {
     this.http.get<Envelope<Array<ICategory>>>(this.categoryUrl + '/GetSiblingsOf/' + categoryId).subscribe(
       (data: Envelope<Array<ICategory>>) => {
         this.currentCategoriesView = data.result;
+        this.currentCategoriesParentId$.next(this.currentCategoriesView[0].parentId || 0);
       },
       () => {
         console.log('Error loading categories. getParentsByChild');

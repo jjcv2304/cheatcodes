@@ -26,6 +26,7 @@ import {StoreModule} from '@ngrx/store';
 import {StoreDevtoolsModule} from '@ngrx/store-devtools';
 import {environment} from '../environments/environment';
 import {EffectsModule} from '@ngrx/effects';
+import { CategoriesBreadCrumbsComponent } from './categories-bread-crumbs/categories-bread-crumbs.component';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import {EffectsModule} from '@ngrx/effects';
     CategoriesContainerComponent,
     SignoutRedirectCallbackComponent,
     SigninRedirectCallbackComponent,
-    UnauthorizedComponent
+    UnauthorizedComponent,
+    CategoriesBreadCrumbsComponent
   ],
   imports: [
     BrowserModule,
