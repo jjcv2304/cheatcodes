@@ -24,10 +24,12 @@ export class CategoriesSearchContainerComponent implements OnInit, OnDestroy {
     );
   cardsSearchResult: CategoryBasic[];
   cardDetails: CategoryTree;
+  currentParentId: number;
 
   constructor(private breakpointObserver: BreakpointObserver,
               private categoriesSearchService: CategoriesSearchHttpService,
               private store: Store<fromCategorySearch.State>) {
+    this.currentParentId = 0;
   }
 
   ngOnInit(): void {

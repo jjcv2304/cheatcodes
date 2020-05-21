@@ -11,8 +11,8 @@ import {catchError, map} from 'rxjs/operators';
   templateUrl: './categories-bread-crumbs.component.html',
   styleUrls: ['./categories-bread-crumbs.component.scss']
 })
-export class CategoriesBreadCrumbsComponent implements OnChanges  {
-  breadCrumbsText = '...';
+export class CategoriesBreadCrumbsComponent implements OnChanges {
+  breadCrumbsText = this.GetDefaultBreadCrumbsText();
   @Input() categoryId: number;
 
   categoryUrl = 'https://localhost:44326/api/categories';
@@ -21,26 +21,32 @@ export class CategoriesBreadCrumbsComponent implements OnChanges  {
   }
 
   ngOnChanges() {
+    // this will fire every time categoryId Observer pushes a new value
+    this.breadCrumbsText = this.GetDefaultBreadCrumbsText();
     this.getCategoryBreadCrumbs(this.categoryId).subscribe(bc => {
       this.breadCrumbsText = this.buildBreadCrumbsText(bc);
     });
   }
 
+  private GetDefaultBreadCrumbsText() {
+    return '...';
+  }
+
   private getCategoryBreadCrumbs(categoryId: number): Observable<CategoryBreadCrumb> {
 
-    return this.http.get<Envelope<CategoryBreadCrumb>>(this.categoryUrl + '/breadCrumbs/' + categoryId)
+    return this.http.get<Envelope<CategoryBreadCrumb>>(this.categoryUrl + '/GetBreadCrumbs/' + categoryId)
       .pipe(
         map(res => {
           if (res.errorMessage !== '') {
-            this.handleError('getCategoryBreadCrumbs');
+            this.handleError('getCategoryBreadCrumbs', res);
           }
           return res.result;
         }),
-        catchError(err => this.handleError('getCategoryBreadCrumbs'))
+        catchError(err => this.handleError('getCategoryBreadCrumbs', err))
       );
   }
 
-  private handleError(methodName: string) {
+  private handleError(methodName: string, err: any) {
     console.log('Error on ' + methodName);
     return EMPTY;
   }
@@ -49,7 +55,7 @@ export class CategoriesBreadCrumbsComponent implements OnChanges  {
     let breadCrumbText = breadCrumbRoot.name;
 
     if (breadCrumbRoot.child != null) {
-      breadCrumbText += ('>' + this.buildBreadCrumbsText(breadCrumbRoot.child));
+      breadCrumbText += (' > ' + this.buildBreadCrumbsText(breadCrumbRoot.child));
     }
     return breadCrumbText;
   }
