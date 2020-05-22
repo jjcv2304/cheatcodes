@@ -23,6 +23,9 @@ export class CategoriesBreadCrumbsComponent implements OnChanges {
   ngOnChanges() {
     // this will fire every time categoryId Observer pushes a new value
     this.breadCrumbsText = this.GetDefaultBreadCrumbsText();
+    if (this.categoryId < 1) {
+      return;
+    }
     this.getCategoryBreadCrumbs(this.categoryId).subscribe(bc => {
       this.breadCrumbsText = this.buildBreadCrumbsText(bc);
     });
@@ -37,7 +40,7 @@ export class CategoriesBreadCrumbsComponent implements OnChanges {
     return this.http.get<Envelope<CategoryBreadCrumb>>(this.categoryUrl + '/GetBreadCrumbs/' + categoryId)
       .pipe(
         map(res => {
-          if (res.errorMessage !== '') {
+          if (res.errorMessage !== null) {
             this.handleError('getCategoryBreadCrumbs', res);
           }
           return res.result;
@@ -52,10 +55,10 @@ export class CategoriesBreadCrumbsComponent implements OnChanges {
   }
 
   private buildBreadCrumbsText(breadCrumbRoot: CategoryBreadCrumb): string {
-    let breadCrumbText = breadCrumbRoot.name;
+    let breadCrumbText = breadCrumbRoot.name + ' > ';
 
     if (breadCrumbRoot.child != null) {
-      breadCrumbText += (' > ' + this.buildBreadCrumbsText(breadCrumbRoot.child));
+      breadCrumbText += (this.buildBreadCrumbsText(breadCrumbRoot.child));
     }
     return breadCrumbText;
   }

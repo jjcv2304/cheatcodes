@@ -1,20 +1,21 @@
 /* tslint:disable:member-ordering */
-import { Component, Input, OnInit } from "@angular/core";
-import { CategoryTree } from "../model/category";
-import { FlatTreeControl } from "@angular/cdk/tree";
-import { MatTreeFlatDataSource, MatTreeFlattener } from "@angular/material/tree";
+import {Component, Input, OnInit} from '@angular/core';
+import {CategoryTree} from '../model/category';
+import {FlatTreeControl} from '@angular/cdk/tree';
+import {MatTreeFlatDataSource, MatTreeFlattener} from '@angular/material/tree';
 
 interface FlatNode {
   expandable: boolean;
   name: string;
   description: string;
+  parentId: number;
   level: number;
 }
 
 @Component({
-  selector: "app-categories-search-tree-detail-result",
-  templateUrl: "./categories-search-tree-detail-result.component.html",
-  styleUrls: ["./categories-search-tree-detail-result.component.scss"]
+  selector: 'app-categories-search-tree-detail-result',
+  templateUrl: './categories-search-tree-detail-result.component.html',
+  styleUrls: ['./categories-search-tree-detail-result.component.scss']
 })
 export class CategoriesSearchTreeDetailResultComponent implements OnInit {
 
@@ -27,9 +28,10 @@ export class CategoriesSearchTreeDetailResultComponent implements OnInit {
       expandable: !!node.childs && node.childs.length > 0,
       name: node.name,
       description: node.description,
+      parentId: node.parentId,
       level: level,
     };
-  };
+  }
 
   treeControl = new FlatTreeControl<FlatNode>(node => node.level, node => node.expandable);
 

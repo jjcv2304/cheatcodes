@@ -30,6 +30,7 @@ import {EffectsModule} from '@ngrx/effects';
 import {CategoriesSearchEffects} from './state/categories-search.effects';
 import {AppModule} from '../app.module';
 import {CategoriesBreadCrumbsModule} from '../categories-bread-crumbs/categories-bread-crumbs.module';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
 
 @NgModule({
   declarations: [
@@ -40,29 +41,30 @@ import {CategoriesBreadCrumbsModule} from '../categories-bread-crumbs/categories
     CardResultBasicComponent,
     CardResultDetailComponent
   ],
-    imports: [
-        CommonModule,
-        MatSliderModule,
-        LayoutModule,
-        MatToolbarModule,
-        MatButtonModule,
-        MatSidenavModule,
-        MatIconModule,
-        MatListModule,
-        RouterModule.forChild([
-            {path: '', component: CategoriesSearchContainerComponent},
-        ]),
-        MatFormFieldModule,
-        MatInputModule,
-        ReactiveFormsModule,
-        MatCardModule,
-        MatTreeModule,
-        MatCheckboxModule,
-        FormsModule,
-        StoreModule.forFeature('categoriesSearchReducer', reducer),
-        EffectsModule.forFeature([CategoriesSearchEffects]),
-      CategoriesBreadCrumbsModule
-    ],
+  imports: [
+    CommonModule,
+    MatSliderModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
+    RouterModule.forChild([
+      {path: '', component: CategoriesSearchContainerComponent},
+    ]),
+    MatFormFieldModule,
+    MatInputModule,
+    ReactiveFormsModule,
+    MatCardModule,
+    MatTreeModule,
+    MatCheckboxModule,
+    FormsModule,
+    StoreModule.forFeature('categoriesSearchReducer', reducer),
+    EffectsModule.forFeature([CategoriesSearchEffects]),
+    CategoriesBreadCrumbsModule,
+    MatButtonToggleModule
+  ],
   providers: [CategoriesSearchHttpService],
 })
 export class CategoriesSearchModule {

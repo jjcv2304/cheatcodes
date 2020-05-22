@@ -1,11 +1,13 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
+import {AfterViewInit, Component, OnDestroy, OnInit, ViewChild} from '@angular/core';
 import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
-import {Observable, Subscription} from 'rxjs';
+import {Observable, of, Subscription} from 'rxjs';
 import {map, shareReplay, takeWhile} from 'rxjs/operators';
 import {CategoryBasic, CategoryTree} from '../model/category';
 import {CategoriesSearchHttpService} from '../categories-search-http.service';
 import {select, Store} from '@ngrx/store';
 import * as fromCategorySearch from '../state';
+import {MatSidenav} from '@angular/material/sidenav';
+import * as searchActions from '../state/categories-search.actions';
 
 @Component({
   selector: 'app-categories-search-container',
@@ -13,7 +15,9 @@ import * as fromCategorySearch from '../state';
   styleUrls: ['./categories-search-container.component.scss']
 })
 export class CategoriesSearchContainerComponent implements OnInit, OnDestroy {
+  @ViewChild('drawer') drawer: MatSidenav;
   showDetailView = false;
+  showButtonShowSideNav: boolean;
   componentActive = true;
   newCardDetailsResultSubscription: Subscription;
 
@@ -34,25 +38,46 @@ export class CategoriesSearchContainerComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
 
+    // contains the results from a search
     this.store.pipe(select(fromCategorySearch.getFilteredCategories),
       takeWhile(() => this.componentActive))
       .subscribe((result: CategoryBasic[]) => this.cardsSearchResult = result);
 
+    // contains the results of clicking into a card.details-> shows treeView
     this.newCardDetailsResultSubscription = this.categoriesSearchService.newCardDetailsResult.subscribe({
       next: (v) => {
         if (v === true) {
+          console.log('------------------->newCardDetailsResultSubscription  TRUE');
           this.cardDetails = this.categoriesSearchService.currentCategoryDetail;
-          this.showDetailView = true;
+          this.SetSideNavShow(false);
         } else {
-          this.showDetailView = false;
+          console.log('------------------->newCardDetailsResultSubscription  FALSE');
           this.cardDetails = null;
         }
       }
     });
 
+    this.store.pipe(select(fromCategorySearch.getShowButtonShowSideNav), takeWhile(() => this.componentActive)).subscribe(
+      showButtonShowSideNav => {
+        this.showButtonShowSideNav = showButtonShowSideNav;
+        console.log('------------------->getShowButtonShowSideNav');
+        if (this.showButtonShowSideNav) {
+          this.showDetailView = true;
+        } else {
+          this.showDetailView = false;
+        }
+      });
   }
 
-
+  SetSideNavShow(setSideNavShow: boolean) {
+    if (setSideNavShow === true) {
+      this.drawer?.open();
+      this.store.dispatch(new searchActions.ShowButtonShowSideNav(false));
+    } else {
+      this.drawer?.close();
+      this.store.dispatch(new searchActions.ShowButtonShowSideNav(true));
+    }
+  }
 
   ngOnDestroy(): void {
     this.componentActive = false;
