@@ -33,8 +33,11 @@
     </button>
 
 
-    <app-categories-search-list-result *ngIf="!showDetailView" [cards]="cardsSearchResult">
+    <app-categories-search-list-result *ngIf="!showDetailView" [cards]="cardsSearchResult" (showCardDetailsClicked)="onShowCardDetailsClicked()">
     </app-categories-search-list-result>
+
+<!--    <app-categories-search-tree-detail-result *ngIf="!!showDetailView" [cardDetail$]="(categoriesSearchService.newCardDetailsResult | async)">-->
+<!--    </app-categories-search-tree-detail-result>-->
 
     <app-categories-search-tree-detail-result *ngIf="!!showDetailView" [cardDetail]="cardDetails">
     </app-categories-search-tree-detail-result>

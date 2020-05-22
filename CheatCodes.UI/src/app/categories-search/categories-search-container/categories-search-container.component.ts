@@ -14,7 +14,7 @@ import * as searchActions from '../state/categories-search.actions';
   templateUrl: './categories-search-container.component.html',
   styleUrls: ['./categories-search-container.component.scss']
 })
-export class CategoriesSearchContainerComponent implements OnInit, OnDestroy {
+export class CategoriesSearchContainerComponent implements OnInit, OnDestroy, AfterViewInit {
   @ViewChild('drawer') drawer: MatSidenav;
   showDetailView = false;
   showButtonShowSideNav: boolean;
@@ -36,6 +36,10 @@ export class CategoriesSearchContainerComponent implements OnInit, OnDestroy {
     this.currentParentId = 0;
   }
 
+  ngAfterViewInit(): void {
+    this.showHideSideNav();
+  }
+
   ngOnInit(): void {
 
     // contains the results from a search
@@ -47,12 +51,7 @@ export class CategoriesSearchContainerComponent implements OnInit, OnDestroy {
     this.newCardDetailsResultSubscription = this.categoriesSearchService.newCardDetailsResult.subscribe({
       next: (v) => {
         if (v === true) {
-          console.log('------------------->newCardDetailsResultSubscription  TRUE');
           this.cardDetails = this.categoriesSearchService.currentCategoryDetail;
-          this.SetSideNavShow(false);
-        } else {
-          console.log('------------------->newCardDetailsResultSubscription  FALSE');
-          this.cardDetails = null;
         }
       }
     });
@@ -60,21 +59,27 @@ export class CategoriesSearchContainerComponent implements OnInit, OnDestroy {
     this.store.pipe(select(fromCategorySearch.getShowButtonShowSideNav), takeWhile(() => this.componentActive)).subscribe(
       showButtonShowSideNav => {
         this.showButtonShowSideNav = showButtonShowSideNav;
-        console.log('------------------->getShowButtonShowSideNav');
         if (this.showButtonShowSideNav) {
           this.showDetailView = true;
         } else {
           this.showDetailView = false;
         }
+        this.showHideSideNav();
       });
+  }
+
+  private showHideSideNav() {
+    if (this.showButtonShowSideNav) {
+      this.drawer?.close();
+    } else {
+      this.drawer?.open();
+    }
   }
 
   SetSideNavShow(setSideNavShow: boolean) {
     if (setSideNavShow === true) {
-      this.drawer?.open();
       this.store.dispatch(new searchActions.ShowButtonShowSideNav(false));
     } else {
-      this.drawer?.close();
       this.store.dispatch(new searchActions.ShowButtonShowSideNav(true));
     }
   }
@@ -86,4 +91,7 @@ export class CategoriesSearchContainerComponent implements OnInit, OnDestroy {
     }
   }
 
+  onShowCardDetailsClicked() {
+    this.SetSideNavShow(false);
+  }
 }
