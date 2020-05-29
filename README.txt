@@ -13,7 +13,10 @@ Patterns(UOW, Repository, Builder,..), DDD, Layers(Api, Domain, Persistance,..),
 Https, Extension points(SecurityHeadersMiddleware, Global error catch), Docker(branch Docker_support)
 
 
-****CheatCodes.UI****
+*******************
+** CheatCodes.UI **
+*******************
+
 Froent end of the application using Angular
 
 oidc-client, Angular Material, NgRx, UnitTest,...
