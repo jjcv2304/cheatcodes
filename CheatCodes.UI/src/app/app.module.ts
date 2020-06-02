@@ -21,52 +21,53 @@ import {AuthService} from './security/auth-service.component';
 import {SignoutRedirectCallbackComponent} from './security/signout-redirect-callback.component';
 import {SigninRedirectCallbackComponent} from './security/signin-redirect-callback.component';
 import {AuthInterceptorService} from './security/auth-interceptor.service';
-import { UnauthorizedComponent } from './security/unauthorized/unauthorized.component';
+import {UnauthorizedComponent} from './security/unauthorized/unauthorized.component';
 import {StoreModule} from '@ngrx/store';
 import {StoreDevtoolsModule} from '@ngrx/store-devtools';
 import {environment} from '../environments/environment';
 import {EffectsModule} from '@ngrx/effects';
 import {CategoriesBreadCrumbsModule} from './categories-bread-crumbs/categories-bread-crumbs.module';
 
+export const storeDevTools = !environment.production ? StoreDevtoolsModule.instrument({
+  name: 'Dev tools ngrx for CheatCodes',
+  maxAge: 25,
+  logOnly: environment.production
+}) : [];
 
 @NgModule({
-    declarations: [
-        AppComponent,
-        CategoriesListComponent,
-        MainMenuComponent,
-        CategoryCardComponent,
-        CategoryEditComponent,
-        FieldEditComponent,
-        CardMoveMenuComponent,
-        CategoriesContainerComponent,
-        SignoutRedirectCallbackComponent,
-        SigninRedirectCallbackComponent,
-        UnauthorizedComponent
-    ],
-    imports: [
-        BrowserModule,
-        HttpClientModule,
-        FlipModule,
-        AppRoutingModule,
-        FormsModule,
-        BrowserAnimationsModule,
-        MatSliderModule,
-        MatProgressSpinnerModule,
-        StoreModule.forRoot({}),
-        EffectsModule.forRoot([]),
-        StoreDevtoolsModule.instrument({
-            name: 'Dev tools ngrx for CheatCodes',
-            maxAge: 25,
-            logOnly: environment.production
-        }),
-      CategoriesBreadCrumbsModule
-    ],
-    providers: [
-        CategoriesService,
-        AuthService,
-        {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptorService, multi: true}
-    ],
-    bootstrap: [AppComponent]
+  declarations: [
+    AppComponent,
+    CategoriesListComponent,
+    MainMenuComponent,
+    CategoryCardComponent,
+    CategoryEditComponent,
+    FieldEditComponent,
+    CardMoveMenuComponent,
+    CategoriesContainerComponent,
+    SignoutRedirectCallbackComponent,
+    SigninRedirectCallbackComponent,
+    UnauthorizedComponent
+  ],
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    FlipModule,
+    AppRoutingModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    MatSliderModule,
+    MatProgressSpinnerModule,
+    StoreModule.forRoot({}),
+    EffectsModule.forRoot([]),
+    storeDevTools,
+    CategoriesBreadCrumbsModule
+  ],
+  providers: [
+    CategoriesService,
+    AuthService,
+    {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptorService, multi: true}
+  ],
+  bootstrap: [AppComponent]
 })
 export class AppModule {
 }

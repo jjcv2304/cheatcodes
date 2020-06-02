@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, OnDestroy, OnInit, ViewChild} from '@angular/core';
+import {AfterViewInit, ChangeDetectorRef, Component, OnDestroy, OnInit, ViewChild} from '@angular/core';
 import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
 import {Observable, of, Subscription} from 'rxjs';
 import {map, shareReplay, takeWhile} from 'rxjs/operators';
@@ -32,12 +32,14 @@ export class CategoriesSearchContainerComponent implements OnInit, OnDestroy, Af
 
   constructor(private breakpointObserver: BreakpointObserver,
               private categoriesSearchService: CategoriesSearchHttpService,
-              private store: Store<fromCategorySearch.State>) {
+              private store: Store<fromCategorySearch.State>,
+              private cdr: ChangeDetectorRef) {
     this.currentParentId = 0;
   }
 
   ngAfterViewInit(): void {
     this.showHideSideNav();
+    this.cdr.detectChanges();
   }
 
   ngOnInit(): void {
