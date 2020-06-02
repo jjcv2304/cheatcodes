@@ -29,7 +29,6 @@ namespace Api.Test.Categories
       var serviceDescriptorUOW = new ServiceDescriptor(typeof(IUnitOfWork), mockUOW.Object);
       return serviceDescriptorUOW;
     }
-
     private static ByteArrayContent GetByteContent(object dto)
     {
       var categoryCreateDto = JsonConvert.SerializeObject(dto);
@@ -38,17 +37,14 @@ namespace Api.Test.Categories
       byteContent.Headers.ContentType = new MediaTypeHeaderValue("application/json");
       return byteContent;
     }
-
     private static CategoryCreateDto GetCategoryCreateDto()
     {
       return new CategoryCreateDto();
     }
-
     private static CategoryUpdateDto GetCategoryUpdateDto()
     {
       return new CategoryUpdateDto();
     }
-
     private static IList<Category> GetTypicalCategories()
     {
       return new List<Category>
@@ -83,7 +79,6 @@ namespace Api.Test.Categories
         Assert.Equal(HttpStatusCode.OK, value.StatusCode);
       }
     }
-
     [Fact]
     public async Task DeleteCategory_ReturnOk_IfNoIssues()
     {
@@ -109,7 +104,6 @@ namespace Api.Test.Categories
         Assert.Equal(HttpStatusCode.OK, response.StatusCode);
       }
     }
-
     [Fact]
     public async Task Get_ReturnOk_IfNoIssues()
     {
@@ -125,7 +119,6 @@ namespace Api.Test.Categories
         Assert.Equal(HttpStatusCode.OK, value.StatusCode);
       }
     }
-
     [Fact]
     public async Task GetCategory_ReturnOk_IfNoIssues()
     {
@@ -141,7 +134,6 @@ namespace Api.Test.Categories
         Assert.Equal(HttpStatusCode.OK, value.StatusCode);
       }
     }
-
     [Fact]
     public async Task GetChildsOf_ReturnOk_IfNoIssues()
     {
@@ -158,7 +150,6 @@ namespace Api.Test.Categories
         Assert.Equal(HttpStatusCode.OK, value.StatusCode);
       }
     }
-
     [Fact]
     public async Task GetSiblingsOf_ReturnOk_IfNoIssues()
     {
@@ -178,7 +169,6 @@ namespace Api.Test.Categories
         Assert.Equal(HttpStatusCode.OK, value.StatusCode);
       }
     }
-
     [Fact]
     public async Task UpdateCategory_ReturnOk_IfNoIssues()
     {

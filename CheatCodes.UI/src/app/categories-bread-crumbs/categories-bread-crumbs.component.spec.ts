@@ -8,13 +8,27 @@ import {CategoriesService} from '../categories-generation/categories/categories.
 import {of} from 'rxjs';
 import {CategoryBreadCrumb, CategoryBreadCrumbBuilder, CategoryBuilder} from '../categories-generation/models/category';
 import {GetRandom} from '../test-utils/GetRandom';
+import Mock = jest.Mock;
+
+
+export const createSpyObj = (baseName, methodNames): { [key: string]: Mock<any> } => {
+  let obj: any = {};
+
+  for (let i = 0; i < methodNames.length; i++) {
+    obj[methodNames[i]] = jest.fn();
+  }
+
+  return obj;
+};
 
 describe('CategoriesBreadCrumbsComponent', () => {
   let fixture: ComponentFixture<CategoriesBreadCrumbsComponent>;
   let mockCategoryService;
 
   beforeEach(async(() => {
-    mockCategoryService = jasmine.createSpyObj(['getCategoryBreadCrumbs']);
+    mockCategoryService = createSpyObj('CategoriesService', ['getCategoryBreadCrumbs']);
+    // mockCategoryService = jest.mock('', () => ({getCategoryBreadCrumbs: jest.fn()}));
+    // mockCategoryService = jest.spyOn(CategoriesService, 'getCategoryBreadCrumbs');
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule, RouterTestingModule.withRoutes([])],
       declarations: [CategoriesBreadCrumbsComponent],
@@ -27,15 +41,17 @@ describe('CategoriesBreadCrumbsComponent', () => {
     expect(fixture.componentInstance).toBeTruthy();
   });
   it('ngInit should call getCategoryBreadCrumbs', () => {
-    mockCategoryService.getCategoryBreadCrumbs.and.returnValue(of(new CategoryBreadCrumb()));
+     mockCategoryService.getCategoryBreadCrumbs.mockReturnValue(of(new CategoryBreadCrumb()));
     fixture = TestBed.createComponent(CategoriesBreadCrumbsComponent);
     fixture.detectChanges();
 
+    // expect(mockCategoryService.getCategoryBreadCrumbs).toHaveBeenCalledTimes(1);
     expect(mockCategoryService.getCategoryBreadCrumbs).toHaveBeenCalledTimes(1);
   });
   it('should populate breadCrumbsText(1)', () => {
     const fakeBreadCrumb = CategoryBreadCrumbBuilder.basic();
-    mockCategoryService.getCategoryBreadCrumbs.and.returnValue(of(fakeBreadCrumb));
+    // mockCategoryService.getCategoryBreadCrumbs.and.returnValue(of(fakeBreadCrumb));
+    mockCategoryService.getCategoryBreadCrumbs.mockReturnValue(of(fakeBreadCrumb));
     fixture = TestBed.createComponent(CategoriesBreadCrumbsComponent);
     fixture.detectChanges();
 

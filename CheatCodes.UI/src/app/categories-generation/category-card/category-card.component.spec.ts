@@ -8,6 +8,17 @@ import {ActivatedRoute} from '@angular/router';
 import {Category, CategoryBuilder} from '../models/category';
 import {GetRandom} from '../../test-utils/GetRandom';
 import {of} from 'rxjs';
+import Mock = jest.Mock;
+
+export const createSpyObj = (baseName, methodNames): { [key: string]: Mock<any> } => {
+  let obj: any = {};
+
+  for (let i = 0; i < methodNames.length; i++) {
+    obj[methodNames[i]] = jest.fn();
+  }
+
+  return obj;
+};
 
 describe('CategoryCardComponent',
   () => {
@@ -15,7 +26,8 @@ describe('CategoryCardComponent',
     let mockCategoryService;
 
     beforeEach(async(() => {
-      mockCategoryService = jasmine.createSpyObj(['SetCategoryFilter', 'moveCategoryUp', 'moveCategoryToSibling', 'updateCategory', 'updateCategoryField', 'deleteCategory', 'GetCurrentCategories']);
+      mockCategoryService = createSpyObj('CategoriesService', ['SetCategoryFilter', 'moveCategoryUp', 'moveCategoryToSibling',
+        'updateCategory', 'updateCategoryField', 'deleteCategory', 'GetCurrentCategories']);
       TestBed.configureTestingModule({
         imports: [HttpClientTestingModule, RouterTestingModule.withRoutes([])],
         declarations: [CategoryCardComponent],
