@@ -8,6 +8,9 @@ import {HttpClientTestingModule} from '@angular/common/http/testing';
 import {CategoryBuilder} from '../models/category';
 import {CategoryCardComponent} from '../category-card/category-card.component';
 import {By} from '@angular/platform-browser';
+import {createSpyObj} from '../../utils/testUtils';
+import {FormsModule} from '@angular/forms';
+import {CardMoveMenuComponent} from '../category-card/card-move-menu/card-move-menu.component';
 
 describe('CategoriesListComponent',
   () => {
@@ -18,15 +21,15 @@ describe('CategoriesListComponent',
 
     beforeEach(async(() => {
       mockActivatedRoute = {snapshot: {paramMap: {get: () => false}}};
-      mockCategoryService = jasmine.createSpyObj(['SetCategoryFilter', 'RefreshCategoryLastFilter', 'GetCurrentCategories']);
+      mockCategoryService = createSpyObj('CategoriesService', ['SetCategoryFilter', 'RefreshCategoryLastFilter', 'GetCurrentCategories']);
       CATEGORIES = [
         new CategoryBuilder().simple().build(),
         new CategoryBuilder().simple().build(),
         new CategoryBuilder().simple().build()
       ];
       TestBed.configureTestingModule({
-        imports: [HttpClientTestingModule, RouterTestingModule.withRoutes([])],
-        declarations: [CategoriesListComponent, CategoryCardComponent],
+        imports: [FormsModule, HttpClientTestingModule, RouterTestingModule.withRoutes([])],
+        declarations: [CategoriesListComponent, CategoryCardComponent, CardMoveMenuComponent],
         providers: [
           {provide: CategoriesService, useValue: mockCategoryService},
           {provide: ActivatedRoute, useValue: mockActivatedRoute}
@@ -56,7 +59,7 @@ describe('CategoriesListComponent',
     });
 
     it('should generate 3 cards when 3 cards are returned', () => {
-       mockCategoryService.GetCurrentCategories.and.returnValue(CATEGORIES);
+       mockCategoryService.GetCurrentCategories.mockReturnValue(CATEGORIES);
        TestBed.compileComponents();
        fixture = TestBed.createComponent(CategoriesListComponent);
 

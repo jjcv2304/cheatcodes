@@ -6,6 +6,7 @@ import {RouterTestingModule} from '@angular/router/testing';
 import {CategoriesService} from '../categories/categories.service';
 import {ActivatedRoute} from '@angular/router';
 import {FormsModule} from '@angular/forms';
+import {createSpyObj} from '../../utils/testUtils';
 
 describe('FieldEditComponent',
   () => {
@@ -15,7 +16,7 @@ describe('FieldEditComponent',
 
     beforeEach(async(() => {
       mockActivatedRoute = {snapshot: {paramMap: {get: () => false}}};
-      mockCategoryService = jasmine.createSpyObj(['SetCategoryFilter', 'RefreshCategoryLastFilter', 'GetCurrentCategories']);
+      mockCategoryService = createSpyObj('CategoriesService', ['SetCategoryFilter', 'RefreshCategoryLastFilter', 'GetCurrentCategories']);
 
       TestBed.configureTestingModule({
         imports: [HttpClientTestingModule, RouterTestingModule.withRoutes([]), FormsModule],

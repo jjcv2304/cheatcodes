@@ -9,16 +9,9 @@ import {Category, CategoryBuilder} from '../models/category';
 import {GetRandom} from '../../test-utils/GetRandom';
 import {of} from 'rxjs';
 import Mock = jest.Mock;
-
-export const createSpyObj = (baseName, methodNames): { [key: string]: Mock<any> } => {
-  let obj: any = {};
-
-  for (let i = 0; i < methodNames.length; i++) {
-    obj[methodNames[i]] = jest.fn();
-  }
-
-  return obj;
-};
+import {createSpyObj} from '../../utils/testUtils';
+import {FormsModule} from '@angular/forms';
+import {CardMoveMenuComponent} from './card-move-menu/card-move-menu.component';
 
 describe('CategoryCardComponent',
   () => {
@@ -29,8 +22,8 @@ describe('CategoryCardComponent',
       mockCategoryService = createSpyObj('CategoriesService', ['SetCategoryFilter', 'moveCategoryUp', 'moveCategoryToSibling',
         'updateCategory', 'updateCategoryField', 'deleteCategory', 'GetCurrentCategories']);
       TestBed.configureTestingModule({
-        imports: [HttpClientTestingModule, RouterTestingModule.withRoutes([])],
-        declarations: [CategoryCardComponent],
+        imports: [FormsModule, HttpClientTestingModule, RouterTestingModule.withRoutes([])],
+        declarations: [CategoryCardComponent, CardMoveMenuComponent],
         providers: [{provide: CategoriesService, useValue: mockCategoryService}]
       }).compileComponents();
     }));
@@ -71,7 +64,7 @@ describe('CategoryCardComponent',
       expect(mockCategoryService.SetCategoryFilter).toHaveBeenCalledTimes(1);
     });
     it('moveCardUp should call moveCardUp', () => {
-      mockCategoryService.moveCategoryUp.and.returnValue(of(true));
+      mockCategoryService.moveCategoryUp.mockReturnValue(of(true));
       fixture = TestBed.createComponent(CategoryCardComponent);
       fixture.componentInstance.card = CategoryBuilder.basic().setParentId(GetRandom.Number()).build();
       fixture.detectChanges();
@@ -81,7 +74,7 @@ describe('CategoryCardComponent',
       expect(mockCategoryService.moveCategoryUp).toHaveBeenCalledTimes(1);
     });
     it('moveCardToSibling should call moveCardToSibling', () => {
-      mockCategoryService.moveCategoryToSibling.and.returnValue(of(true));
+      mockCategoryService.moveCategoryToSibling.mockReturnValue(of(true));
       fixture = TestBed.createComponent(CategoryCardComponent);
       fixture.componentInstance.card = CategoryBuilder.basic().setParentId(GetRandom.Number()).build();
       fixture.detectChanges();
