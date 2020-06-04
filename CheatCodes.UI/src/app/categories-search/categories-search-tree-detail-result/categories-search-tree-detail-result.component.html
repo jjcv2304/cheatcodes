@@ -1,8 +1,12 @@
-<div class="expand-button-container">
+<div class="expand-button-container" >
   <button mat-mini-fab color="basic" (click)="toggleTreeWidth()">
     <mat-icon>swap_horiz</mat-icon>
   </button>
 </div>
+<div class="expand-button-container" >
+  <input matInput class="form-control" (input)="filterByName($event.target.value)" placeholder="Search">
+</div>
+
 <div class="content-container">
 
   <div class="card-details-tree" [style.flex-basis]="treeWidth">
@@ -10,13 +14,13 @@
     <mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
       <!-- This is the tree node template for leaf nodes -->
       <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding (click)="showDetail(node)"
-                     [ngClass]="{ 'background-highlight': activeNode === node }">
+                     [ngClass]="{ 'background-highlight': activeNode === node, 'filtered-node': node.isVisible === false }">
         <!-- use a disabled button to provide padding for tree leaf -->
         <button mat-icon-button disabled></button>
         {{node.name}}
       </mat-tree-node>
       <!-- This is the tree node template for expandable nodes -->
-      <mat-tree-node (click)="showDetail(node)" *matTreeNodeDef="let node;when: hasChild " [ngClass]="{ 'background-highlight': activeNode === node }"
+      <mat-tree-node (click)="showDetail(node)" *matTreeNodeDef="let node;when: hasChild " [ngClass]="{ 'background-highlight': activeNode === node, 'filtered-node': node.isVisible === false  }"
                      matTreeNodePadding>
         <button mat-icon-button matTreeNodeToggle
                 [attr.aria-label]="'toggle ' + node.name">
