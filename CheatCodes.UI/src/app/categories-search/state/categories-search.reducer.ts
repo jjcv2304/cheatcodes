@@ -6,6 +6,9 @@ export interface CategoriesSearchState {
   categoryNameFilterAnd: boolean;
   categoryNameFilter: string;
   categoryName2Filter: string;
+  categoryDescriptionFilterOr: boolean;
+  categoryDescriptionFilterAnd: boolean;
+  categoryDescriptionFilter: string;
   showButtonShowSideNav: boolean;
   filteredCategories: CategoryBasic[];
   error: string;
@@ -16,6 +19,9 @@ const initialState: CategoriesSearchState = {
   categoryNameFilterOr: false,
   categoryNameFilter: '',
   categoryName2Filter: '',
+  categoryDescriptionFilterAnd: false,
+  categoryDescriptionFilterOr: false,
+  categoryDescriptionFilter: '',
   showButtonShowSideNav: false,
   filteredCategories: [],
   error: ''
@@ -49,6 +55,26 @@ export function reducer(state = initialState, action: CategoriesSearchActions): 
       return {
         ...state,
         categoryName2Filter: action.payload,
+      };
+
+    case CategoriesSearchActionTypes.CategoryDescriptionFilterOrClicked:
+      return {
+        ...state,
+        categoryDescriptionFilterOr: action.payload,
+        categoryDescriptionFilterAnd: false
+      };
+
+    case CategoriesSearchActionTypes.CategoryDescriptionFilterAndClicked:
+      return {
+        ...state,
+        categoryDescriptionFilterAnd: action.payload,
+        categoryDescriptionFilterOr: false
+      };
+
+    case CategoriesSearchActionTypes.CategoryDescriptionFilterEnter:
+      return {
+        ...state,
+        categoryDescriptionFilter: action.payload,
       };
 
     case CategoriesSearchActionTypes.ShowButtonShowSideNav:

@@ -32,5 +32,8 @@ namespace CheatCodes.Search.ViewModels
     public bool CategoryNameFilterOr { get; set; }
     public bool CategoryNameFilterAnd { get; set; }
     public string CategoryName2Filter { get; set; }
+    public bool CategoryDescriptionFilterOr { get; set; }
+    public bool CategoryDescriptionFilterAnd { get; set; }
+    public string CategoryDescriptionFilter { get; set; }
   }
 }

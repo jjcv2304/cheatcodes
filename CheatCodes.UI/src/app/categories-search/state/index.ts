@@ -24,7 +24,18 @@ export const getCategoryNameFilter = createSelector(
   getCategoriesSearchFeatureState,
   state => state.categoryNameFilter
 );
-
+export const getCategoryDescriptionFilterAnd = createSelector(
+  getCategoriesSearchFeatureState,
+  state => state.categoryDescriptionFilterAnd
+);
+export const getCategoryDescriptionFilterOr = createSelector(
+  getCategoriesSearchFeatureState,
+  state => state.categoryDescriptionFilterOr
+);
+export const getCategoryDescriptionFilter = createSelector(
+  getCategoriesSearchFeatureState,
+  state => state.categoryDescriptionFilter
+);
 export const getCategoryName2Filter = createSelector(
   getCategoriesSearchFeatureState,
   state => state.categoryName2Filter

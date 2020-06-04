@@ -55,11 +55,20 @@ namespace CheatCodes.Search.Repositories
         var oldPredicate = predicate;
         predicate = p => oldPredicate(p) && p.Name.ToLower().Contains(filtersVM.CategoryName2Filter.ToLower());
       }
-
       if (filtersVM.CategoryNameFilterOr)
       {
         var oldPredicate = predicate;
         predicate = p => oldPredicate(p) || p.Name.ToLower().Contains(filtersVM.CategoryName2Filter.ToLower());
+      }
+      if (filtersVM.CategoryDescriptionFilterAnd)
+      {
+        var oldPredicate = predicate;
+        predicate = p => oldPredicate(p) && p.Description.ToLower().Contains(filtersVM.CategoryDescriptionFilter.ToLower());
+      }
+      if (filtersVM.CategoryDescriptionFilterOr)
+      {
+        var oldPredicate = predicate;
+        predicate = p => oldPredicate(p) || p.Description.ToLower().Contains(filtersVM.CategoryDescriptionFilter.ToLower());
       }
 
       var result = _context
