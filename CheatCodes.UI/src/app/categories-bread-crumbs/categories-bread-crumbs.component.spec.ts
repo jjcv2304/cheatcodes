@@ -1,71 +1,76 @@
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
-
 import {CategoriesBreadCrumbsComponent} from './categories-bread-crumbs.component';
-import {HttpClientTestingModule} from '@angular/common/http/testing';
+import {HttpClientTestingModule, HttpTestingController} from '@angular/common/http/testing';
 import {RouterTestingModule} from '@angular/router/testing';
-import {CategoryCardComponent} from '../categories-generation/category-card/category-card.component';
-import {CategoriesService} from '../categories-generation/categories/categories.service';
-import {of} from 'rxjs';
-import {CategoryBreadCrumb, CategoryBreadCrumbBuilder, CategoryBuilder} from '../categories-generation/models/category';
+import {CategoryBreadCrumbBuilder, CategoryBuilder} from '../categories-generation/models/category';
 import {GetRandom} from '../test-utils/GetRandom';
-import Mock = jest.Mock;
-import {createSpyObj} from '../utils/testUtils';
-
 
 describe('CategoriesBreadCrumbsComponent', () => {
   let fixture: ComponentFixture<CategoriesBreadCrumbsComponent>;
-  let mockCategoryService;
+  let httpTestingController: HttpTestingController;
+  const categoryUrl = 'https://localhost:44326/api/categories';
 
   beforeEach(async(() => {
-    mockCategoryService = createSpyObj('CategoriesService', ['getCategoryBreadCrumbs']);
-    // mockCategoryService = jest.mock('', () => ({getCategoryBreadCrumbs: jest.fn()}));
-    // mockCategoryService = jest.spyOn(CategoriesService, 'getCategoryBreadCrumbs');
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule, RouterTestingModule.withRoutes([])],
       declarations: [CategoriesBreadCrumbsComponent],
-      providers: [{provide: CategoriesService, useValue: mockCategoryService}]
     }).compileComponents();
+    httpTestingController = TestBed.inject(HttpTestingController);
   }));
+
+  afterEach(() => {
+    httpTestingController.verify();
+  });
 
   it('should create', () => {
     fixture = TestBed.createComponent(CategoriesBreadCrumbsComponent);
     expect(fixture.componentInstance).toBeTruthy();
   });
-  // it('ngInit should call getCategoryBreadCrumbs', () => {
-  //    mockCategoryService.getCategoryBreadCrumbs.mockReturnValue(of(new CategoryBreadCrumb()));
-  //   fixture = TestBed.createComponent(CategoriesBreadCrumbsComponent);
-  //   fixture.detectChanges();
-  //
-  //   // expect(mockCategoryService.getCategoryBreadCrumbs).toHaveBeenCalledTimes(1);
-  //   expect(mockCategoryService.getCategoryBreadCrumbs).toHaveBeenCalledTimes(1);
-  // });
-  // it('should populate breadCrumbsText(1)', () => {
-  //   const fakeBreadCrumb = CategoryBreadCrumbBuilder.basic();
-  //   // mockCategoryService.getCategoryBreadCrumbs.and.returnValue(of(fakeBreadCrumb));
-  //   mockCategoryService.getCategoryBreadCrumbs.mockReturnValue(of(fakeBreadCrumb));
-  //   fixture = TestBed.createComponent(CategoriesBreadCrumbsComponent);
-  //   fixture.detectChanges();
-  //
-  //   expect(fixture.componentInstance.breadCrumbsText).toEqual(fakeBreadCrumb.name);
-  // });
-  // it('should populate breadCrumbsText(2)', () => {
-  //   const fakeChildBreadCrumb = CategoryBreadCrumbBuilder.basic();
-  //   const fakeBreadCrumb = CategoryBreadCrumbBuilder.basic().setChild(fakeChildBreadCrumb);
-  //   mockCategoryService.getCategoryBreadCrumbs.and.returnValue(of(fakeBreadCrumb));
-  //   fixture = TestBed.createComponent(CategoriesBreadCrumbsComponent);
-  //   fixture.detectChanges();
-  //
-  //   expect(fixture.componentInstance.breadCrumbsText).toEqual(fakeBreadCrumb.name + '>' + fakeChildBreadCrumb.name);
-  // });
-  // it('should populate breadCrumbsText(3)', () => {
-  //   const fakeGrandChildBreadCrumb = CategoryBreadCrumbBuilder.basic();
-  //   const fakeChildBreadCrumb = CategoryBreadCrumbBuilder.basic().setChild(fakeGrandChildBreadCrumb);
-  //   const fakeBreadCrumb = CategoryBreadCrumbBuilder.basic().setChild(fakeChildBreadCrumb);
-  //   mockCategoryService.getCategoryBreadCrumbs.and.returnValue(of(fakeBreadCrumb));
-  //   fixture = TestBed.createComponent(CategoriesBreadCrumbsComponent);
-  //   fixture.detectChanges();
-  //
-  //   expect(fixture.componentInstance.breadCrumbsText)
-  //     .toEqual(fakeBreadCrumb.name + '>' + fakeChildBreadCrumb.name + '>' + fakeGrandChildBreadCrumb.name);
-  // });
+  it('ngInit should call getCategoryBreadCrumbs', () => {
+    fixture = TestBed.createComponent(CategoriesBreadCrumbsComponent);
+    const category = CategoryBuilder.basic().setParentId(GetRandom.Number()).build();
+    fixture.componentInstance.categoryId = category.id;
+    fixture.detectChanges();
+
+    fixture.componentInstance.ngOnChanges();
+
+    const req = httpTestingController.expectOne(categoryUrl + '/GetBreadCrumbs/' + category.id);
+    expect(req.request.method).toEqual('GET');
+  });
+
+  function mockHttpResponseReturningFakeReturnBreadCrumb(fakeReturnBreadCrumb: CategoryBreadCrumbBuilder) {
+    fixture = TestBed.createComponent(CategoriesBreadCrumbsComponent);
+    // usually we sent the parentId but here we mock the http response so doesnt matter
+    const categoryId = GetRandom.Number();
+    fixture.componentInstance.categoryId = categoryId;
+    fixture.detectChanges();
+    fixture.componentInstance.ngOnChanges();
+
+    const req = httpTestingController.expectOne(categoryUrl + '/GetBreadCrumbs/' + categoryId);
+    req.flush({result: fakeReturnBreadCrumb});
+  }
+
+  it('should populate breadCrumbsText(1)', () => {
+    const fakeBreadCrumb = CategoryBreadCrumbBuilder.basic();
+    mockHttpResponseReturningFakeReturnBreadCrumb(fakeBreadCrumb);
+
+    expect(fakeBreadCrumb.name + ' > ').toEqual(fixture.componentInstance.breadCrumbsText);
+  });
+  it('should populate breadCrumbsText(2)', () => {
+    const fakeChildBreadCrumb = CategoryBreadCrumbBuilder.basic();
+    const fakeBreadCrumb = CategoryBreadCrumbBuilder.basic().setChild(fakeChildBreadCrumb);
+    mockHttpResponseReturningFakeReturnBreadCrumb(fakeBreadCrumb);
+
+    expect(fakeBreadCrumb.name + ' > ' + fakeChildBreadCrumb.name + ' > ').toEqual(fixture.componentInstance.breadCrumbsText);
+  });
+
+  it('should populate breadCrumbsText(3)', () => {
+    const fakeGrandChildBreadCrumb = CategoryBreadCrumbBuilder.basic();
+    const fakeChildBreadCrumb = CategoryBreadCrumbBuilder.basic().setChild(fakeGrandChildBreadCrumb);
+    const fakeBreadCrumb = CategoryBreadCrumbBuilder.basic().setChild(fakeChildBreadCrumb);
+    mockHttpResponseReturningFakeReturnBreadCrumb(fakeBreadCrumb);
+
+    expect(fakeBreadCrumb.name + ' > ' + fakeChildBreadCrumb.name + ' > ' + fakeGrandChildBreadCrumb.name + ' > ')
+      .toEqual(fixture.componentInstance.breadCrumbsText);
+  });
 });

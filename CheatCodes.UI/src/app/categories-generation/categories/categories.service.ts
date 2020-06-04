@@ -1,13 +1,12 @@
 /* tslint:disable:member-ordering */
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
-import {Category, CategoryBreadCrumb, ICategory} from '../models/category';
+import {Category, ICategory} from '../models/category';
 import {Envelope} from '../../utils/envelope';
 import {CategoryFilter} from '../models/CategoryFilter';
-import {BehaviorSubject, EMPTY, Observable, of, Subscription} from 'rxjs';
+import {BehaviorSubject, EMPTY, Observable} from 'rxjs';
 import {ICategoryFieldValue} from '../models/categoryFieldValue';
 import {NewField} from '../models/NewField';
-import {catchError, map} from 'rxjs/operators';
 
 @Injectable()
 export class CategoriesService {

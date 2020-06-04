@@ -37,21 +37,21 @@ export class CategoriesBreadCrumbsComponent implements OnChanges {
 
   private getCategoryBreadCrumbs(categoryId: number): Observable<CategoryBreadCrumb> {
 
+    function handleError(methodName: string, err: any) {
+      console.log('Error on ' + methodName);
+      return EMPTY;
+    }
+
     return this.http.get<Envelope<CategoryBreadCrumb>>(this.categoryUrl + '/GetBreadCrumbs/' + categoryId)
       .pipe(
         map(res => {
-          if (res.errorMessage !== null) {
-            this.handleError('getCategoryBreadCrumbs', res);
+          if (res.errorMessage !== null && res.errorMessage !== undefined) {
+            handleError('getCategoryBreadCrumbs', res);
           }
           return res.result;
         }),
-        catchError(err => this.handleError('getCategoryBreadCrumbs', err))
+        catchError(err => handleError('getCategoryBreadCrumbs', err))
       );
-  }
-
-  private handleError(methodName: string, err: any) {
-    console.log('Error on ' + methodName);
-    return EMPTY;
   }
 
   private buildBreadCrumbsText(breadCrumbRoot: CategoryBreadCrumb): string {
