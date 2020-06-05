@@ -6,7 +6,7 @@ import {RouterTestingModule} from '@angular/router/testing';
 import {CategoriesService} from '../categories/categories.service';
 import {ActivatedRoute} from '@angular/router';
 import {FormsModule} from '@angular/forms';
-import {createSpyObj} from '../../utils/testUtils';
+import {createSpyObj} from '../../test-utils/testUtils';
 
 describe('FieldEditComponent',
   () => {

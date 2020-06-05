@@ -9,7 +9,7 @@ import {Category, CategoryBuilder} from '../models/category';
 import {GetRandom} from '../../test-utils/GetRandom';
 import {of} from 'rxjs';
 import Mock = jest.Mock;
-import {createSpyObj} from '../../utils/testUtils';
+import {createSpyObj} from '../../test-utils/testUtils';
 import {FormsModule} from '@angular/forms';
 import {CardMoveMenuComponent} from './card-move-menu/card-move-menu.component';
 import {cold, getTestScheduler} from 'jasmine-marbles';

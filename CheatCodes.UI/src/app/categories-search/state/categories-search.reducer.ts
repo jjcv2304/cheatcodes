@@ -29,6 +29,9 @@ const initialState: CategoriesSearchState = {
 
 
 export function reducer(state = initialState, action: CategoriesSearchActions): CategoriesSearchState {
+  if (action === undefined) {
+    return state;
+  }
   switch (action.type) {
 
     case CategoriesSearchActionTypes.CategoryNameFilterOrClicked:
