@@ -1,6 +1,7 @@
 ﻿using CheatCodes.Search.DB;
 using CheatCodes.Search.RabbitMQ.Models;
 using CheatCodes.Search.Repositories;
+using Microsoft.EntityFrameworkCore;
 
 namespace CheatCodes.Search.RabbitMQ.Handlers
 {
