@@ -13,10 +13,11 @@
     <e p="C:\Users\jjcv2\.nuget\packages\xunit.runner.visualstudio\2.4.1\build\netcoreapp1.0\xunit.runner.reporters.netcoreapp10.dll" t="Include" />
     <e p="C:\Users\jjcv2\.nuget\packages\xunit.runner.visualstudio\2.4.1\build\netcoreapp1.0\xunit.runner.utility.netcoreapp10.dll" t="Include" />
     <e p="C:\Users\jjcv2\.nuget\packages\xunit.runner.visualstudio\2.4.1\build\netcoreapp1.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll" t="Include" />
-    <e p="C:\Users\jjcv2\.Rider2019.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\jjcv2\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_CheatCodes.467908422.00" t="ExcludeRecursive" />
+    <e p="C:\Users\jjcv2\AppData\local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\jjcv2\AppData\local\JetBrains\Rider2020.1\resharper-host\local\Transient\ReSharperHost\v201\SolutionCaches\_CheatCodes.467908422.00" t="ExcludeRecursive" />
     <e p="D:\GIT\CheatCodes" t="IncludeFlat">
       <e p="Api" t="IncludeRecursive">
+        <e p=".filenesting.json" t="Include" />
         <e p="Api.csproj" t="IncludeRecursive" />
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />
@@ -24,6 +25,7 @@
         <e p="Categories" t="Include">
           <e p="CategoriesController.cs" t="Include" />
         </e>
+        <e p="healthchecksdb" t="Include" />
         <e p="Linux_Windows_Config.txt" t="Include" />
         <e p="Logs" t="Include">
           <e p="Attributes" t="Include">
@@ -45,9 +47,8 @@
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
-            <e p="netcoreapp2.1" t="Include">
+            <e p="netcoreapp3.1" t="Include">
               <e p="Api.AssemblyInfo.cs" t="Include" />
-              <e p="Api.RazorAssemblyInfo.cs" t="Include" />
             </e>
           </e>
         </e>
@@ -55,12 +56,17 @@
         <e p="Properties" t="Include">
           <e p="launchSettings.json" t="Include" />
         </e>
+        <e p="Security" t="Include">
+          <e p="MyConfig.cs" t="Include" />
+          <e p="SecurityHeadersMiddleware.cs" t="Include" />
+        </e>
         <e p="Startup.cs" t="Include" />
         <e p="Utils" t="Include">
           <e p="BaseController.cs" t="Include" />
           <e p="Envelope.cs" t="Include" />
           <e p="HandlerRegistration.cs" t="Include" />
         </e>
+        <e p="web.config" t="Include" />
         <e p="wwwroot" t="Include">
           <e p="swagger" t="Include">
             <e p="ui" t="Include">
@@ -89,13 +95,29 @@
         </e>
         <e p="ConfigurableServer.cs" t="Include" />
         <e p="ConfigurableStartup.cs" t="Include" />
+        <e p="Framework" t="Include">
+          <e p="Builders" t="Include">
+            <e p="Builder.cs" t="Include" />
+            <e p="Builders.cs" t="Include" />
+            <e p="Builders.csx" t="Include" />
+            <e p="CategoryBuilder.cs" t="Include" />
+          </e>
+          <e p="GetRandom.cs" t="Include" />
+          <e p="Mothers" t="Include">
+            <e p="CategoryMother.cs" t="Include" />
+          </e>
+        </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
-            <e p="netcoreapp2.1" t="Include">
+            <e p="netcoreapp3.1" t="Include">
               <e p="Api.Test.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
         </e>
+        <e p="Properties" t="Include">
+          <e p="launchSettings.json" t="Include" />
+        </e>
+        <e p="Scratch.cs" t="Include" />
       </e>
       <e p="Application" t="IncludeRecursive">
         <e p="Application.csproj" t="IncludeRecursive" />
@@ -110,19 +132,31 @@
           <e p="AuditLogAttribute.cs" t="Include" />
           <e p="AuditLoggingDecorator.cs" t="Include" />
         </e>
+        <e p="ExportCategoriesToJsonQuery.cs" t="Include" />
         <e p="FieldCreateCommand.cs" t="Include" />
         <e p="GetCategoryAllChildsQuery.cs" t="Include" />
         <e p="GetCategoryAllParentsQuery.cs" t="Include" />
+        <e p="GetCategoryBreadCrumbs.cs" t="Include" />
         <e p="GetCategoryByExactNameQuery.cs" t="Include" />
         <e p="GetCategoryByIdQuery.cs" t="Include" />
         <e p="GetCategoryByPartialNameQuery.cs" t="Include" />
         <e p="GetCategorySiblingsQuery.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
-            <e p="netcoreapp2.1" t="Include">
+            <e p="netcoreapp3.1" t="Include">
               <e p="Application.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
+        </e>
+        <e p="Properties" t="Include">
+          <e p="launchSettings.json" t="Include" />
+        </e>
+        <e p="RabbitMQ" t="Include">
+          <e p="models" t="Include">
+            <e p="NewCategoryEvent.cs" t="Include" />
+          </e>
+          <e p="ObjectSerialize.cs" t="Include" />
+          <e p="RabbitMQClient.cs" t="Include" />
         </e>
         <e p="Utils" t="Include">
           <e p="ConnectionString.cs" t="Include" />
@@ -131,7 +165,6 @@
             <e p="ICategoryQueryRepository.cs" t="Include" />
             <e p="ICommand.cs" t="Include" />
             <e p="ICommandHandler.cs" t="Include" />
-            <e p="IDatabaseService.cs" t="Include" />
             <e p="IQuery.cs" t="Include" />
             <e p="IQueryHandler.cs" t="Include" />
             <e p="IUnitOfWork.cs" t="Include" />
@@ -140,16 +173,342 @@
           <e p="Messages.cs" t="Include" />
         </e>
       </e>
+      <e p="CheatCodes.Search" t="IncludeRecursive">
+        <e p="appsettings.Development.json" t="Include" />
+        <e p="appsettings.json" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="CheatCodes.Search.csproj" t="IncludeRecursive" />
+        <e p="Controllers" t="Include">
+          <e p="CategoriesSearchController.cs" t="Include" />
+        </e>
+        <e p="DB" t="Include">
+          <e p="CheatCodesDatabase.db" t="Include" />
+          <e p="CheatCodesDatabaseBackup.db" t="Include" />
+          <e p="CheatCodesDatabaseBackup2.db" t="Include" />
+          <e p="CheatCodesDbContext.cs" t="Include" />
+          <e p="CheatCodesDbContext2.cs" t="Include" />
+          <e p="DatabaseSetting.cs" t="Include" />
+          <e p="models" t="Include">
+            <e p="Category.cs" t="Include" />
+            <e p="CategoryField.cs" t="Include" />
+            <e p="Field.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Logs" t="Include">
+          <e p="Attributes" t="Include">
+            <e p="TrackPerformanceAttribute.cs" t="Include" />
+          </e>
+          <e p="Extensions" t="Include">
+            <e p="ScopeInformation.cs" t="Include" />
+          </e>
+          <e p="Filters" t="Include">
+            <e p="LogMessages.cs" t="Include" />
+            <e p="TrackActionPerformanceFilter.cs" t="Include" />
+          </e>
+          <e p="Middleware" t="Include">
+            <e p="ApiError.cs" t="Include" />
+            <e p="ApiExceptionMiddleware.cs" t="Include" />
+            <e p="ApiExceptionMiddlewareExtensions.cs" t="Include" />
+            <e p="ApiExceptionOptions.cs" t="Include" />
+          </e>
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="CheatCodes.Search.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="launchSettings.json" t="Include" />
+        </e>
+        <e p="RabbitMQ" t="Include">
+          <e p="Handlers" t="Include">
+            <e p="DeleteCategoryEventHandler.cs" t="Include" />
+            <e p="NewCategoryEventHandler.cs" t="Include" />
+            <e p="UpdateCategoryEventHandler.cs" t="Include" />
+          </e>
+          <e p="IRabbitMQConsumer.cs" t="Include" />
+          <e p="models" t="Include">
+            <e p="DeleteCategoryEvent.cs" t="Include" />
+            <e p="NewCategoryEvent.cs" t="Include" />
+            <e p="UpdateCategoryEvent.cs" t="Include" />
+          </e>
+          <e p="ObjectSerialize.cs" t="Include" />
+          <e p="RabbitMQConsumer.cs" t="Include" />
+        </e>
+        <e p="Repositories" t="Include">
+          <e p="CategoriesChangesRepository.cs" t="Include" />
+          <e p="CategoriesSearchRepository.cs" t="Include" />
+          <e p="CategoriesSearchRepository.TreeUtils.cs" t="Include" />
+          <e p="ICategoriesChangesRepository.cs" t="Include" />
+          <e p="ICategoriesSearchRepository.cs" t="Include" />
+        </e>
+        <e p="Security" t="Include">
+          <e p="MyConfig.cs" t="Include" />
+          <e p="SecurityHeadersMiddleware.cs" t="Include" />
+        </e>
+        <e p="Startup.cs" t="Include" />
+        <e p="Utils" t="Include">
+          <e p="BaseController.cs" t="Include" />
+          <e p="Envelope.cs" t="Include" />
+        </e>
+        <e p="ViewModels" t="Include">
+          <e p="CategoryVM.cs" t="Include" />
+        </e>
+        <e p="web.config" t="Include" />
+      </e>
       <e p="CheatCodes.sln" t="IncludeFlat" />
       <e p="CheatCodes.UI" t="IncludeRecursive">
         <e p=".editorconfig" t="Include" />
         <e p=".gitignore" t="Include" />
         <e p="angular.json" t="Include" />
+        <e p="coverage" t="Include">
+          <e p="my-app" t="Include">
+            <e p="app" t="Include">
+              <e p="app.component.html.html" t="Include" />
+              <e p="app.component.ts.html" t="Include" />
+              <e p="categories-bread-crumbs" t="Include">
+                <e p="categories-bread-crumbs.component.html.html" t="Include" />
+                <e p="categories-bread-crumbs.component.ts.html" t="Include" />
+                <e p="index.html" t="Include" />
+              </e>
+              <e p="categories-generation" t="Include">
+                <e p="Categories" t="Include">
+                  <e p="categories.service.ts.html" t="Include" />
+                  <e p="index.html" t="Include" />
+                </e>
+                <e p="categories-list" t="Include">
+                  <e p="categories-list.component.html.html" t="Include" />
+                  <e p="categories-list.component.ts.html" t="Include" />
+                  <e p="index.html" t="Include" />
+                </e>
+                <e p="category-card" t="Include">
+                  <e p="card-move-menu" t="Include">
+                    <e p="card-move-menu.component.html.html" t="Include" />
+                    <e p="card-move-menu.component.ts.html" t="Include" />
+                    <e p="index.html" t="Include" />
+                  </e>
+                  <e p="category-card.component.html.html" t="Include" />
+                  <e p="category-card.component.ts.html" t="Include" />
+                  <e p="index.html" t="Include" />
+                </e>
+                <e p="category-edit" t="Include">
+                  <e p="category-edit.component.html.html" t="Include" />
+                  <e p="category-edit.component.ts.html" t="Include" />
+                  <e p="index.html" t="Include" />
+                </e>
+                <e p="field-edit" t="Include">
+                  <e p="field-edit.component.html.html" t="Include" />
+                  <e p="field-edit.component.ts.html" t="Include" />
+                  <e p="index.html" t="Include" />
+                </e>
+                <e p="models" t="Include">
+                  <e p="category.ts.html" t="Include" />
+                  <e p="categoryFieldValue.ts.html" t="Include" />
+                  <e p="CategoryFilter.ts.html" t="Include" />
+                  <e p="index.html" t="Include" />
+                  <e p="NewField.ts.html" t="Include" />
+                </e>
+              </e>
+              <e p="categories-search" t="Include">
+                <e p="card-result-basic" t="Include">
+                  <e p="card-result-basic.component.html.html" t="Include" />
+                  <e p="card-result-basic.component.ts.html" t="Include" />
+                  <e p="index.html" t="Include" />
+                </e>
+                <e p="card-result-detail" t="Include">
+                  <e p="card-result-detail.component.html.html" t="Include" />
+                  <e p="card-result-detail.component.ts.html" t="Include" />
+                  <e p="index.html" t="Include" />
+                </e>
+                <e p="categories-search-container" t="Include">
+                  <e p="categories-search-container.component.html.html" t="Include" />
+                  <e p="categories-search-container.component.ts.html" t="Include" />
+                  <e p="index.html" t="Include" />
+                </e>
+                <e p="categories-search-filters" t="Include">
+                  <e p="categories-search-filters.component.html.html" t="Include" />
+                  <e p="categories-search-filters.component.ts.html" t="Include" />
+                  <e p="index.html" t="Include" />
+                </e>
+                <e p="categories-search-http.service.ts.html" t="Include" />
+                <e p="categories-search-list-result" t="Include">
+                  <e p="categories-search-list-result.component.html.html" t="Include" />
+                  <e p="categories-search-list-result.component.ts.html" t="Include" />
+                  <e p="index.html" t="Include" />
+                </e>
+                <e p="categories-search-tree-detail-result" t="Include">
+                  <e p="categories-search-tree-detail-result.component.html.html" t="Include" />
+                  <e p="categories-search-tree-detail-result.component.ts.html" t="Include" />
+                  <e p="index.html" t="Include" />
+                </e>
+                <e p="index.html" t="Include" />
+                <e p="model" t="Include">
+                  <e p="category.ts.html" t="Include" />
+                  <e p="categorySearchFilters.ts.html" t="Include" />
+                  <e p="index.html" t="Include" />
+                </e>
+                <e p="state" t="Include">
+                  <e p="categories-search.actions.ts.html" t="Include" />
+                  <e p="index.html" t="Include" />
+                  <e p="index.ts.html" t="Include" />
+                </e>
+              </e>
+              <e p="guards" t="Include">
+                <e p="category-edit.guard.ts.html" t="Include" />
+                <e p="index.html" t="Include" />
+                <e p="logged-in.guard.ts.html" t="Include" />
+              </e>
+              <e p="index.html" t="Include" />
+              <e p="main-menu" t="Include">
+                <e p="index.html" t="Include" />
+                <e p="main-menu.component.html.html" t="Include" />
+                <e p="main-menu.component.ts.html" t="Include" />
+              </e>
+              <e p="Security" t="Include">
+                <e p="auth-service.component.ts.html" t="Include" />
+                <e p="Constants.ts.html" t="Include" />
+                <e p="index.html" t="Include" />
+              </e>
+              <e p="test-utils" t="Include">
+                <e p="GetRandom.ts.html" t="Include" />
+                <e p="index.html" t="Include" />
+              </e>
+              <e p="Utils" t="Include">
+                <e p="index.html" t="Include" />
+                <e p="testUtils.ts.html" t="Include" />
+              </e>
+            </e>
+            <e p="app.component.html.html" t="Include" />
+            <e p="app.component.ts.html" t="Include" />
+            <e p="base.css" t="Include" />
+            <e p="block-navigation.js" t="Include" />
+            <e p="categories-bread-crumbs" t="Include">
+              <e p="categories-bread-crumbs.component.html.html" t="Include" />
+              <e p="categories-bread-crumbs.component.ts.html" t="Include" />
+              <e p="index.html" t="Include" />
+            </e>
+            <e p="categories-generation" t="Include">
+              <e p="Categories" t="Include">
+                <e p="categories.service.ts.html" t="Include" />
+                <e p="index.html" t="Include" />
+              </e>
+              <e p="categories-list" t="Include">
+                <e p="categories-list.component.html.html" t="Include" />
+                <e p="categories-list.component.ts.html" t="Include" />
+                <e p="index.html" t="Include" />
+              </e>
+              <e p="category-card" t="Include">
+                <e p="card-move-menu" t="Include">
+                  <e p="card-move-menu.component.html.html" t="Include" />
+                  <e p="card-move-menu.component.ts.html" t="Include" />
+                  <e p="index.html" t="Include" />
+                </e>
+                <e p="category-card.component.html.html" t="Include" />
+                <e p="category-card.component.ts.html" t="Include" />
+                <e p="index.html" t="Include" />
+              </e>
+              <e p="category-edit" t="Include">
+                <e p="category-edit.component.html.html" t="Include" />
+                <e p="category-edit.component.ts.html" t="Include" />
+                <e p="index.html" t="Include" />
+              </e>
+              <e p="field-edit" t="Include">
+                <e p="field-edit.component.html.html" t="Include" />
+                <e p="field-edit.component.ts.html" t="Include" />
+                <e p="index.html" t="Include" />
+              </e>
+              <e p="models" t="Include">
+                <e p="category.ts.html" t="Include" />
+                <e p="categoryFieldValue.ts.html" t="Include" />
+                <e p="CategoryFilter.ts.html" t="Include" />
+                <e p="index.html" t="Include" />
+                <e p="NewField.ts.html" t="Include" />
+              </e>
+            </e>
+            <e p="categories-search" t="Include">
+              <e p="card-result-basic" t="Include">
+                <e p="card-result-basic.component.html.html" t="Include" />
+                <e p="card-result-basic.component.ts.html" t="Include" />
+                <e p="index.html" t="Include" />
+              </e>
+              <e p="card-result-detail" t="Include">
+                <e p="card-result-detail.component.html.html" t="Include" />
+                <e p="card-result-detail.component.ts.html" t="Include" />
+                <e p="index.html" t="Include" />
+              </e>
+              <e p="categories-search-http.service.ts.html" t="Include" />
+              <e p="index.html" t="Include" />
+              <e p="model" t="Include">
+                <e p="category.ts.html" t="Include" />
+                <e p="categorySearchFilters.ts.html" t="Include" />
+                <e p="index.html" t="Include" />
+              </e>
+              <e p="state" t="Include">
+                <e p="categories-search.actions.ts.html" t="Include" />
+                <e p="categories-search.effects.ts.html" t="Include" />
+                <e p="categories-search.reducer.ts.html" t="Include" />
+                <e p="index.html" t="Include" />
+              </e>
+            </e>
+            <e p="categories-search-http.service.ts.html" t="Include" />
+            <e p="categories-search-tree-detail-result" t="Include">
+              <e p="categories-search-tree-detail-result.component.html.html" t="Include" />
+              <e p="categories-search-tree-detail-result.component.ts.html" t="Include" />
+              <e p="index.html" t="Include" />
+            </e>
+            <e p="categories-search.actions.ts.html" t="Include" />
+            <e p="categories-search.reducer.ts.html" t="Include" />
+            <e p="favicon.png" t="Include" />
+            <e p="guards" t="Include">
+              <e p="category-edit.guard.ts.html" t="Include" />
+              <e p="index.html" t="Include" />
+              <e p="logged-in.guard.ts.html" t="Include" />
+            </e>
+            <e p="index.html" t="Include" />
+            <e p="main-menu" t="Include">
+              <e p="index.html" t="Include" />
+              <e p="main-menu.component.html.html" t="Include" />
+              <e p="main-menu.component.ts.html" t="Include" />
+            </e>
+            <e p="model" t="Include">
+              <e p="category.ts.html" t="Include" />
+              <e p="index.html" t="Include" />
+            </e>
+            <e p="prettify.css" t="Include" />
+            <e p="prettify.js" t="Include" />
+            <e p="Security" t="Include">
+              <e p="auth-service.component.ts.html" t="Include" />
+              <e p="Constants.ts.html" t="Include" />
+              <e p="index.html" t="Include" />
+            </e>
+            <e p="sort-arrow-sprite.png" t="Include" />
+            <e p="sorter.js" t="Include" />
+            <e p="test-utils" t="Include">
+              <e p="GetRandom.ts.html" t="Include" />
+              <e p="index.html" t="Include" />
+              <e p="testUtils.ts.html" t="Include" />
+            </e>
+            <e p="Utils" t="Include">
+              <e p="envelope.ts.html" t="Include" />
+              <e p="index.html" t="Include" />
+              <e p="testUtils.ts.html" t="Include" />
+            </e>
+          </e>
+        </e>
         <e p="dist" t="Include">
+          <e p="3rdpartylicenses.txt" t="Include" />
+          <e p="5.6c16096a6d0f893df226.js" t="Include" />
           <e p="assets" t="Include">
             <e p="all.css" t="Include" />
             <e p="forms.css" t="Include" />
             <e p="forms.scss" t="Include" />
+            <e p="js" t="Include">
+              <e p="oidc-client.min.js" t="Include" />
+            </e>
+            <e p="silent-callback.html" t="Include" />
             <e p="webfonts" t="Include">
               <e p="fa-brands-400.eot" t="Include" />
               <e p="fa-brands-400.svg" t="Include" />
@@ -170,33 +529,221 @@
           </e>
           <e p="favicon.ico" t="Include" />
           <e p="index.html" t="Include" />
-          <e p="main.js" t="Include" />
-          <e p="main.js.map" t="Include" />
-          <e p="polyfills-es5.js" t="Include" />
-          <e p="polyfills-es5.js.map" t="Include" />
-          <e p="polyfills.js" t="Include" />
-          <e p="polyfills.js.map" t="Include" />
-          <e p="runtime.js" t="Include" />
-          <e p="runtime.js.map" t="Include" />
-          <e p="styles.js" t="Include" />
-          <e p="styles.js.map" t="Include" />
-          <e p="vendor.js" t="Include" />
-          <e p="vendor.js.map" t="Include" />
+          <e p="main.228468099c182e1e0601.js" t="Include" />
+          <e p="out-tsc" t="Include">
+            <e p="e2e" t="Include">
+              <e p="app.e2e-spec.js" t="Include" />
+              <e p="app.e2e-spec.js.map" t="Include" />
+              <e p="app.po.js" t="Include" />
+              <e p="app.po.js.map" t="Include" />
+            </e>
+            <e p="src" t="Include">
+              <e p="app" t="Include">
+                <e p="app-routing.module.js" t="Include" />
+                <e p="app-routing.module.js.map" t="Include" />
+                <e p="app.component.js" t="Include" />
+                <e p="app.component.js.map" t="Include" />
+                <e p="app.module.js" t="Include" />
+                <e p="app.module.js.map" t="Include" />
+                <e p="categories-bread-crumbs" t="Include">
+                  <e p="categories-bread-crumbs-routing.module.js" t="Include" />
+                  <e p="categories-bread-crumbs-routing.module.js.map" t="Include" />
+                  <e p="categories-bread-crumbs.component.js" t="Include" />
+                  <e p="categories-bread-crumbs.component.js.map" t="Include" />
+                  <e p="categories-bread-crumbs.component.spec.js" t="Include" />
+                  <e p="categories-bread-crumbs.component.spec.js.map" t="Include" />
+                  <e p="categories-bread-crumbs.module.js" t="Include" />
+                  <e p="categories-bread-crumbs.module.js.map" t="Include" />
+                </e>
+                <e p="categories-generation" t="Include">
+                  <e p="Categories" t="Include">
+                    <e p="categories.service.js" t="Include" />
+                    <e p="categories.service.js.map" t="Include" />
+                    <e p="categories.service.spec.js" t="Include" />
+                    <e p="categories.service.spec.js.map" t="Include" />
+                  </e>
+                  <e p="categories-container" t="Include">
+                    <e p="categories-container.component.js" t="Include" />
+                    <e p="categories-container.component.js.map" t="Include" />
+                  </e>
+                  <e p="categories-list" t="Include">
+                    <e p="categories-list.component.js" t="Include" />
+                    <e p="categories-list.component.js.map" t="Include" />
+                    <e p="categories-list.component.spec.js" t="Include" />
+                    <e p="categories-list.component.spec.js.map" t="Include" />
+                  </e>
+                  <e p="category-card" t="Include">
+                    <e p="card-move-menu" t="Include">
+                      <e p="card-move-menu.component.js" t="Include" />
+                      <e p="card-move-menu.component.js.map" t="Include" />
+                    </e>
+                    <e p="category-card.component.js" t="Include" />
+                    <e p="category-card.component.js.map" t="Include" />
+                    <e p="category-card.component.spec.js" t="Include" />
+                    <e p="category-card.component.spec.js.map" t="Include" />
+                  </e>
+                  <e p="category-edit" t="Include">
+                    <e p="category-edit.component.js" t="Include" />
+                    <e p="category-edit.component.js.map" t="Include" />
+                    <e p="category-edit.component.spec.js" t="Include" />
+                    <e p="category-edit.component.spec.js.map" t="Include" />
+                  </e>
+                  <e p="field-edit" t="Include">
+                    <e p="field-edit.component.js" t="Include" />
+                    <e p="field-edit.component.js.map" t="Include" />
+                    <e p="field-edit.component.spec.js" t="Include" />
+                    <e p="field-edit.component.spec.js.map" t="Include" />
+                  </e>
+                  <e p="models" t="Include">
+                    <e p="category.js" t="Include" />
+                    <e p="category.js.map" t="Include" />
+                    <e p="categoryFieldValue.js" t="Include" />
+                    <e p="categoryFieldValue.js.map" t="Include" />
+                    <e p="CategoryFilter.js" t="Include" />
+                    <e p="CategoryFilter.js.map" t="Include" />
+                    <e p="NewField.js" t="Include" />
+                    <e p="NewField.js.map" t="Include" />
+                  </e>
+                </e>
+                <e p="categories-search" t="Include">
+                  <e p="card-result-basic" t="Include">
+                    <e p="card-result-basic.component.js" t="Include" />
+                    <e p="card-result-basic.component.js.map" t="Include" />
+                  </e>
+                  <e p="card-result-detail" t="Include">
+                    <e p="card-result-detail.component.js" t="Include" />
+                    <e p="card-result-detail.component.js.map" t="Include" />
+                    <e p="card-result-detail.component.spec.js" t="Include" />
+                    <e p="card-result-detail.component.spec.js.map" t="Include" />
+                  </e>
+                  <e p="categories-search-container" t="Include">
+                    <e p="categories-search-container.component.js" t="Include" />
+                    <e p="categories-search-container.component.js.map" t="Include" />
+                  </e>
+                  <e p="categories-search-filters" t="Include">
+                    <e p="categories-search-filters.component.js" t="Include" />
+                    <e p="categories-search-filters.component.js.map" t="Include" />
+                  </e>
+                  <e p="categories-search-http.service.js" t="Include" />
+                  <e p="categories-search-http.service.js.map" t="Include" />
+                  <e p="categories-search-http.service.spec.js" t="Include" />
+                  <e p="categories-search-http.service.spec.js.map" t="Include" />
+                  <e p="categories-search-list-result" t="Include">
+                    <e p="categories-search-list-result.component.js" t="Include" />
+                    <e p="categories-search-list-result.component.js.map" t="Include" />
+                  </e>
+                  <e p="categories-search-tree-detail-result" t="Include">
+                    <e p="categories-search-tree-detail-result.component.js" t="Include" />
+                    <e p="categories-search-tree-detail-result.component.js.map" t="Include" />
+                  </e>
+                  <e p="categories-search.module.js" t="Include" />
+                  <e p="categories-search.module.js.map" t="Include" />
+                  <e p="model" t="Include">
+                    <e p="category.js" t="Include" />
+                    <e p="category.js.map" t="Include" />
+                    <e p="categoryFieldValue.js" t="Include" />
+                    <e p="categoryFieldValue.js.map" t="Include" />
+                    <e p="categorySearchFilters.js" t="Include" />
+                    <e p="categorySearchFilters.js.map" t="Include" />
+                  </e>
+                  <e p="state" t="Include">
+                    <e p="categories-search.actions.js" t="Include" />
+                    <e p="categories-search.actions.js.map" t="Include" />
+                    <e p="categories-search.effects.js" t="Include" />
+                    <e p="categories-search.effects.js.map" t="Include" />
+                    <e p="categories-search.effects.spec.js" t="Include" />
+                    <e p="categories-search.effects.spec.js.map" t="Include" />
+                    <e p="categories-search.reducer.js" t="Include" />
+                    <e p="categories-search.reducer.js.map" t="Include" />
+                    <e p="categories-search.reducer.spec.js" t="Include" />
+                    <e p="categories-search.reducer.spec.js.map" t="Include" />
+                    <e p="index.js" t="Include" />
+                    <e p="index.js.map" t="Include" />
+                  </e>
+                </e>
+                <e p="guards" t="Include">
+                  <e p="category-edit.guard.js" t="Include" />
+                  <e p="category-edit.guard.js.map" t="Include" />
+                  <e p="category-edit.guard.spec.js" t="Include" />
+                  <e p="category-edit.guard.spec.js.map" t="Include" />
+                  <e p="loged-in.guard.spec.js" t="Include" />
+                  <e p="loged-in.guard.spec.js.map" t="Include" />
+                  <e p="logged-in.guard.js" t="Include" />
+                  <e p="logged-in.guard.js.map" t="Include" />
+                </e>
+                <e p="main-menu" t="Include">
+                  <e p="main-menu.component.js" t="Include" />
+                  <e p="main-menu.component.js.map" t="Include" />
+                </e>
+                <e p="Security" t="Include">
+                  <e p="auth-interceptor.service.js" t="Include" />
+                  <e p="auth-interceptor.service.js.map" t="Include" />
+                  <e p="auth-service.component.js" t="Include" />
+                  <e p="auth-service.component.js.map" t="Include" />
+                  <e p="Constants.js" t="Include" />
+                  <e p="Constants.js.map" t="Include" />
+                  <e p="signin-redirect-callback.component.js" t="Include" />
+                  <e p="signin-redirect-callback.component.js.map" t="Include" />
+                  <e p="signout-redirect-callback.component.js" t="Include" />
+                  <e p="signout-redirect-callback.component.js.map" t="Include" />
+                  <e p="unauthorized" t="Include">
+                    <e p="unauthorized.component.js" t="Include" />
+                    <e p="unauthorized.component.js.map" t="Include" />
+                  </e>
+                </e>
+                <e p="state" t="Include">
+                  <e p="app.state.js" t="Include" />
+                  <e p="app.state.js.map" t="Include" />
+                </e>
+                <e p="test-utils" t="Include">
+                  <e p="GetRandom.js" t="Include" />
+                  <e p="GetRandom.js.map" t="Include" />
+                  <e p="testUtils.js" t="Include" />
+                  <e p="testUtils.js.map" t="Include" />
+                </e>
+                <e p="Utils" t="Include">
+                  <e p="envelope.js" t="Include" />
+                  <e p="envelope.js.map" t="Include" />
+                </e>
+              </e>
+              <e p="environments" t="Include">
+                <e p="environment.js" t="Include" />
+                <e p="environment.js.map" t="Include" />
+                <e p="environment.prod.js" t="Include" />
+                <e p="environment.prod.js.map" t="Include" />
+              </e>
+              <e p="jestGlobalMocks.js" t="Include" />
+              <e p="jestGlobalMocks.js.map" t="Include" />
+              <e p="main.js" t="Include" />
+              <e p="main.js.map" t="Include" />
+              <e p="polyfills.js" t="Include" />
+              <e p="polyfills.js.map" t="Include" />
+              <e p="setupJest.js" t="Include" />
+              <e p="setupJest.js.map" t="Include" />
+              <e p="test.js" t="Include" />
+              <e p="test.js.map" t="Include" />
+            </e>
+          </e>
+          <e p="polyfills-es5.1c502a2cd2f26b2d9a11.js" t="Include" />
+          <e p="polyfills.6227cdfceec1167ac25d.js" t="Include" />
+          <e p="runtime.1ace78ddbe1325e9bb53.js" t="Include" />
+          <e p="styles.15dd37f00d31933ffd1b.css" t="Include" />
         </e>
         <e p="e2e" t="Include">
           <e p="app.e2e-spec.ts" t="Include" />
           <e p="app.po.ts" t="Include" />
           <e p="tsconfig.e2e.json" t="Include" />
         </e>
-        <e p="karma.conf.js" t="Include" />
+        <e p="jest.config.js" t="Include" />
         <e p="node_modules\@angular\animations" t="IncludeRecursive" />
+        <e p="node_modules\@angular\cdk" t="IncludeRecursive" />
         <e p="node_modules\@angular\cli" t="IncludeRecursive" />
         <e p="node_modules\@angular\Common" t="IncludeRecursive" />
         <e p="node_modules\@angular\compiler" t="IncludeRecursive" />
         <e p="node_modules\@angular\compiler-cli" t="IncludeRecursive" />
         <e p="node_modules\@angular\core" t="IncludeRecursive" />
         <e p="node_modules\@angular\forms" t="IncludeRecursive" />
-        <e p="node_modules\@angular\http" t="IncludeRecursive" />
+        <e p="node_modules\@angular\material" t="IncludeRecursive" />
         <e p="node_modules\@angular\platform-browser" t="IncludeRecursive" />
         <e p="node_modules\@angular\platform-browser-dynamic" t="IncludeRecursive" />
         <e p="node_modules\@angular\router" t="IncludeRecursive" />
@@ -206,51 +753,122 @@
         <e p="node_modules\@angular-devkit\build-webpack" t="IncludeRecursive" />
         <e p="node_modules\@angular-devkit\core" t="IncludeRecursive" />
         <e p="node_modules\@angular-devkit\schematics" t="IncludeRecursive" />
+        <e p="node_modules\@babel\parser" t="IncludeRecursive" />
+        <e p="node_modules\@babel\types" t="IncludeRecursive" />
+        <e p="node_modules\@bcoe\v8-coverage" t="IncludeRecursive" />
+        <e p="node_modules\@jest\console" t="IncludeRecursive" />
+        <e p="node_modules\@jest\core" t="IncludeRecursive" />
+        <e p="node_modules\@jest\environment" t="IncludeRecursive" />
+        <e p="node_modules\@jest\fake-timers" t="IncludeRecursive" />
+        <e p="node_modules\@jest\globals" t="IncludeRecursive" />
+        <e p="node_modules\@jest\reporters" t="IncludeRecursive" />
+        <e p="node_modules\@jest\source-map" t="IncludeRecursive" />
+        <e p="node_modules\@jest\test-result" t="IncludeRecursive" />
+        <e p="node_modules\@jest\test-sequencer" t="IncludeRecursive" />
+        <e p="node_modules\@jest\transform" t="IncludeRecursive" />
+        <e p="node_modules\@jest\types" t="IncludeRecursive" />
+        <e p="node_modules\@jsdevtools\coverage-istanbul-loader" t="IncludeRecursive" />
+        <e p="node_modules\@ngrx\effects" t="IncludeRecursive" />
+        <e p="node_modules\@ngrx\store" t="IncludeRecursive" />
+        <e p="node_modules\@ngrx\store-devtools" t="IncludeRecursive" />
         <e p="node_modules\@ngtools\webpack" t="IncludeRecursive" />
         <e p="node_modules\@types" t="IncludeRecursive">
+          <e p="anymatch" t="IncludeRecursive" />
+          <e p="babel__generator" t="IncludeRecursive" />
+          <e p="babel__template" t="IncludeRecursive" />
+          <e p="babel__traverse" t="IncludeRecursive" />
           <e p="events" t="IncludeRecursive" />
+          <e p="istanbul-lib-coverage" t="IncludeRecursive" />
+          <e p="istanbul-lib-report" t="IncludeRecursive" />
           <e p="jasmine" t="IncludeRecursive" />
           <e p="jasminewd2" t="IncludeRecursive" />
+          <e p="jest" t="IncludeRecursive" />
           <e p="minimatch" t="IncludeRecursive" />
           <e p="node" t="IncludeRecursive" />
           <e p="source-list-map" t="IncludeRecursive" />
+          <e p="tapable" t="IncludeRecursive" />
+          <e p="uglify-js" t="IncludeRecursive" />
+          <e p="webpack-sources" t="IncludeRecursive" />
+          <e p="yargs-parser" t="IncludeRecursive" />
         </e>
+        <e p="node_modules\acorn-walk" t="IncludeRecursive" />
+        <e p="node_modules\adm-zip" t="IncludeRecursive" />
+        <e p="node_modules\agent-base" t="IncludeRecursive" />
         <e p="node_modules\ajv" t="IncludeRecursive" />
+        <e p="node_modules\arg" t="IncludeRecursive" />
+        <e p="node_modules\babel-jest" t="IncludeRecursive" />
         <e p="node_modules\blocking-proxy" t="IncludeRecursive" />
+        <e p="node_modules\bs-logger" t="IncludeRecursive" />
         <e p="node_modules\canonical-path" t="IncludeRecursive" />
-        <e p="node_modules\chalk" t="IncludeRecursive" />
         <e p="node_modules\chokidar" t="IncludeRecursive" />
         <e p="node_modules\codelyzer" t="IncludeRecursive" />
+        <e p="node_modules\collect-v8-coverage" t="IncludeRecursive" />
         <e p="node_modules\commander" t="IncludeRecursive" />
         <e p="node_modules\core-js" t="IncludeRecursive" />
-        <e p="node_modules\coverage-istanbul-loader" t="IncludeRecursive" />
         <e p="node_modules\dependency-graph" t="IncludeRecursive" />
-        <e p="node_modules\es6-promise" t="IncludeRecursive" />
+        <e p="node_modules\diff-sequences" t="IncludeRecursive" />
+        <e p="node_modules\expect" t="IncludeRecursive" />
         <e p="node_modules\fast-deep-equal" t="IncludeRecursive" />
+        <e p="node_modules\fast-json-stable-stringify" t="IncludeRecursive" />
+        <e p="node_modules\fibers" t="IncludeRecursive" />
+        <e p="node_modules\hash.js" t="IncludeRecursive" />
+        <e p="node_modules\html-webpack-plugin" t="IncludeRecursive" />
+        <e p="node_modules\https-proxy-agent" t="IncludeRecursive" />
         <e p="node_modules\jasmine-core" t="IncludeRecursive" />
+        <e p="node_modules\jasmine-marbles" t="IncludeRecursive" />
         <e p="node_modules\jasmine-spec-reporter" t="IncludeRecursive" />
+        <e p="node_modules\jest" t="IncludeRecursive" />
+        <e p="node_modules\jest-changed-files" t="IncludeRecursive" />
+        <e p="node_modules\jest-config" t="IncludeRecursive" />
+        <e p="node_modules\jest-diff" t="IncludeRecursive" />
+        <e p="node_modules\jest-docblock" t="IncludeRecursive" />
+        <e p="node_modules\jest-each" t="IncludeRecursive" />
+        <e p="node_modules\jest-environment-jsdom" t="IncludeRecursive" />
+        <e p="node_modules\jest-environment-node" t="IncludeRecursive" />
+        <e p="node_modules\jest-get-type" t="IncludeRecursive" />
+        <e p="node_modules\jest-haste-map" t="IncludeRecursive" />
+        <e p="node_modules\jest-jasmine2" t="IncludeRecursive" />
+        <e p="node_modules\jest-leak-detector" t="IncludeRecursive" />
+        <e p="node_modules\jest-matcher-utils" t="IncludeRecursive" />
+        <e p="node_modules\jest-message-util" t="IncludeRecursive" />
+        <e p="node_modules\jest-mock" t="IncludeRecursive" />
+        <e p="node_modules\jest-preset-angular" t="IncludeRecursive" />
+        <e p="node_modules\jest-regex-util" t="IncludeRecursive" />
+        <e p="node_modules\jest-resolve" t="IncludeRecursive" />
+        <e p="node_modules\jest-resolve-dependencies" t="IncludeRecursive" />
+        <e p="node_modules\jest-runner" t="IncludeRecursive" />
+        <e p="node_modules\jest-runtime" t="IncludeRecursive" />
+        <e p="node_modules\jest-serializer" t="IncludeRecursive" />
+        <e p="node_modules\jest-snapshot" t="IncludeRecursive" />
+        <e p="node_modules\jest-util" t="IncludeRecursive" />
+        <e p="node_modules\jest-validate" t="IncludeRecursive" />
+        <e p="node_modules\jest-watcher" t="IncludeRecursive" />
         <e p="node_modules\jest-worker" t="IncludeRecursive" />
-        <e p="node_modules\karma" t="IncludeRecursive" />
-        <e p="node_modules\karma-chrome-launcher" t="IncludeRecursive" />
-        <e p="node_modules\karma-coverage-istanbul-reporter" t="IncludeRecursive" />
-        <e p="node_modules\karma-jasmine" t="IncludeRecursive" />
-        <e p="node_modules\karma-jasmine-html-reporter" t="IncludeRecursive" />
         <e p="node_modules\license-webpack-plugin" t="IncludeRecursive" />
         <e p="node_modules\magic-string" t="IncludeRecursive" />
+        <e p="node_modules\minimist" t="IncludeRecursive" />
         <e p="node_modules\ngx-flip" t="IncludeRecursive" />
+        <e p="node_modules\node-sass" t="IncludeRecursive" />
+        <e p="node_modules\npm-force-resolutions" t="IncludeRecursive" />
+        <e p="node_modules\oidc-client" t="IncludeRecursive" />
+        <e p="node_modules\pirates" t="IncludeRecursive" />
         <e p="node_modules\portfinder" t="IncludeRecursive" />
         <e p="node_modules\postcss" t="IncludeRecursive" />
+        <e p="node_modules\pretty-error" t="IncludeRecursive" />
+        <e p="node_modules\pretty-format" t="IncludeRecursive" />
         <e p="node_modules\protractor" t="IncludeRecursive" />
         <e p="node_modules\reflect-metadata" t="IncludeRecursive" />
+        <e p="node_modules\rollup" t="IncludeRecursive" />
         <e p="node_modules\rxjs" t="IncludeRecursive" />
         <e p="node_modules\rxjs-compat" t="IncludeRecursive" />
+        <e p="node_modules\schema-utils" t="IncludeRecursive" />
         <e p="node_modules\source-map" t="IncludeRecursive" />
         <e p="node_modules\sourcemap-codec" t="IncludeRecursive" />
         <e p="node_modules\symbol-observable" t="IncludeRecursive" />
         <e p="node_modules\terser" t="IncludeRecursive" />
         <e p="node_modules\tree-kill" t="IncludeRecursive" />
+        <e p="node_modules\ts-jest" t="IncludeRecursive" />
         <e p="node_modules\ts-node" t="IncludeRecursive" />
-        <e p="node_modules\tsconfig" t="IncludeRecursive" />
         <e p="node_modules\tslib" t="IncludeRecursive" />
         <e p="node_modules\tslint" t="IncludeRecursive" />
         <e p="node_modules\typescript\lib\lib.d.ts" t="IncludeRecursive" />
@@ -276,6 +894,7 @@
         <e p="node_modules\typescript\lib\lib.es2017.sharedmemory.d.ts" t="IncludeRecursive" />
         <e p="node_modules\typescript\lib\lib.es2017.string.d.ts" t="IncludeRecursive" />
         <e p="node_modules\typescript\lib\lib.es2017.typedarrays.d.ts" t="IncludeRecursive" />
+        <e p="node_modules\typescript\lib\lib.es2018.asyncgenerator.d.ts" t="IncludeRecursive" />
         <e p="node_modules\typescript\lib\lib.es2018.asynciterable.d.ts" t="IncludeRecursive" />
         <e p="node_modules\typescript\lib\lib.es2018.d.ts" t="IncludeRecursive" />
         <e p="node_modules\typescript\lib\lib.es2018.full.d.ts" t="IncludeRecursive" />
@@ -288,8 +907,10 @@
         <e p="node_modules\typescript\lib\lib.es2019.object.d.ts" t="IncludeRecursive" />
         <e p="node_modules\typescript\lib\lib.es2019.string.d.ts" t="IncludeRecursive" />
         <e p="node_modules\typescript\lib\lib.es2019.symbol.d.ts" t="IncludeRecursive" />
+        <e p="node_modules\typescript\lib\lib.es2020.bigint.d.ts" t="IncludeRecursive" />
         <e p="node_modules\typescript\lib\lib.es2020.d.ts" t="IncludeRecursive" />
         <e p="node_modules\typescript\lib\lib.es2020.full.d.ts" t="IncludeRecursive" />
+        <e p="node_modules\typescript\lib\lib.es2020.promise.d.ts" t="IncludeRecursive" />
         <e p="node_modules\typescript\lib\lib.es2020.string.d.ts" t="IncludeRecursive" />
         <e p="node_modules\typescript\lib\lib.es2020.symbol.wellknown.d.ts" t="IncludeRecursive" />
         <e p="node_modules\typescript\lib\lib.es5.d.ts" t="IncludeRecursive" />
@@ -304,10 +925,320 @@
         <e p="node_modules\typescript\lib\lib.scripthost.d.ts" t="IncludeRecursive" />
         <e p="node_modules\typescript\lib\lib.webworker.d.ts" t="IncludeRecursive" />
         <e p="node_modules\typescript\lib\lib.webworker.importscripts.d.ts" t="IncludeRecursive" />
+        <e p="node_modules\upath" t="IncludeRecursive" />
         <e p="node_modules\uri-js" t="IncludeRecursive" />
+        <e p="node_modules\v8-to-istanbul" t="IncludeRecursive" />
         <e p="node_modules\webdriver-js-extender" t="IncludeRecursive" />
         <e p="node_modules\worker-farm" t="IncludeRecursive" />
         <e p="node_modules\zone.js" t="IncludeRecursive" />
+        <e p="out-tsc" t="Include">
+          <e p="app" t="Include">
+            <e p="app" t="Include">
+              <e p="app-routing.module.js" t="Include" />
+              <e p="app-routing.module.js.map" t="Include" />
+              <e p="app.component.js" t="Include" />
+              <e p="app.component.js.map" t="Include" />
+              <e p="app.module.js" t="Include" />
+              <e p="app.module.js.map" t="Include" />
+              <e p="categories-generation" t="Include">
+                <e p="Categories" t="Include">
+                  <e p="categories.service.js" t="Include" />
+                  <e p="categories.service.js.map" t="Include" />
+                </e>
+                <e p="categories-container" t="Include">
+                  <e p="categories-container.component.js" t="Include" />
+                  <e p="categories-container.component.js.map" t="Include" />
+                </e>
+                <e p="categories-list" t="Include">
+                  <e p="categories-list.component.js" t="Include" />
+                  <e p="categories-list.component.js.map" t="Include" />
+                </e>
+                <e p="category-card" t="Include">
+                  <e p="card-move-menu" t="Include">
+                    <e p="card-move-menu.component.js" t="Include" />
+                    <e p="card-move-menu.component.js.map" t="Include" />
+                  </e>
+                  <e p="category-card.component.js" t="Include" />
+                  <e p="category-card.component.js.map" t="Include" />
+                </e>
+                <e p="category-edit" t="Include">
+                  <e p="category-edit.component.js" t="Include" />
+                  <e p="category-edit.component.js.map" t="Include" />
+                </e>
+                <e p="field-edit" t="Include">
+                  <e p="field-edit.component.js" t="Include" />
+                  <e p="field-edit.component.js.map" t="Include" />
+                </e>
+                <e p="models" t="Include">
+                  <e p="category.js" t="Include" />
+                  <e p="category.js.map" t="Include" />
+                  <e p="categoryFieldValue.js" t="Include" />
+                  <e p="categoryFieldValue.js.map" t="Include" />
+                  <e p="CategoryFilter.js" t="Include" />
+                  <e p="CategoryFilter.js.map" t="Include" />
+                  <e p="NewField.js" t="Include" />
+                  <e p="NewField.js.map" t="Include" />
+                </e>
+              </e>
+              <e p="categories-search" t="Include">
+                <e p="card-result-basic" t="Include">
+                  <e p="card-result-basic.component.js" t="Include" />
+                  <e p="card-result-basic.component.js.map" t="Include" />
+                </e>
+                <e p="card-result-detail" t="Include">
+                  <e p="card-result-detail.component.js" t="Include" />
+                  <e p="card-result-detail.component.js.map" t="Include" />
+                </e>
+                <e p="categories-search-container" t="Include">
+                  <e p="categories-search-container.component.js" t="Include" />
+                  <e p="categories-search-container.component.js.map" t="Include" />
+                </e>
+                <e p="categories-search-filters" t="Include">
+                  <e p="categories-search-filters.component.js" t="Include" />
+                  <e p="categories-search-filters.component.js.map" t="Include" />
+                </e>
+                <e p="categories-search-http.service.js" t="Include" />
+                <e p="categories-search-http.service.js.map" t="Include" />
+                <e p="categories-search-list-result" t="Include">
+                  <e p="categories-search-list-result.component.js" t="Include" />
+                  <e p="categories-search-list-result.component.js.map" t="Include" />
+                </e>
+                <e p="categories-search-tree-detail-result" t="Include">
+                  <e p="categories-search-tree-detail-result.component.js" t="Include" />
+                  <e p="categories-search-tree-detail-result.component.js.map" t="Include" />
+                </e>
+                <e p="categories-search.module.js" t="Include" />
+                <e p="categories-search.module.js.map" t="Include" />
+                <e p="model" t="Include">
+                  <e p="category.js" t="Include" />
+                  <e p="category.js.map" t="Include" />
+                  <e p="categorySearchFilters.js" t="Include" />
+                  <e p="categorySearchFilters.js.map" t="Include" />
+                </e>
+                <e p="state" t="Include">
+                  <e p="categories-search.actions.js" t="Include" />
+                  <e p="categories-search.actions.js.map" t="Include" />
+                  <e p="categories-search.effects.js" t="Include" />
+                  <e p="categories-search.effects.js.map" t="Include" />
+                  <e p="categories-search.reducer.js" t="Include" />
+                  <e p="categories-search.reducer.js.map" t="Include" />
+                  <e p="index.js" t="Include" />
+                  <e p="index.js.map" t="Include" />
+                </e>
+              </e>
+              <e p="guards" t="Include">
+                <e p="category-edit.guard.js" t="Include" />
+                <e p="category-edit.guard.js.map" t="Include" />
+                <e p="logged-in.guard.js" t="Include" />
+                <e p="logged-in.guard.js.map" t="Include" />
+              </e>
+              <e p="main-menu" t="Include">
+                <e p="main-menu.component.js" t="Include" />
+                <e p="main-menu.component.js.map" t="Include" />
+              </e>
+              <e p="Security" t="Include">
+                <e p="auth-interceptor.service.js" t="Include" />
+                <e p="auth-interceptor.service.js.map" t="Include" />
+                <e p="auth-service.component.js" t="Include" />
+                <e p="auth-service.component.js.map" t="Include" />
+                <e p="Constants.js" t="Include" />
+                <e p="Constants.js.map" t="Include" />
+                <e p="signin-redirect-callback.component.js" t="Include" />
+                <e p="signin-redirect-callback.component.js.map" t="Include" />
+                <e p="signout-redirect-callback.component.js" t="Include" />
+                <e p="signout-redirect-callback.component.js.map" t="Include" />
+                <e p="unauthorized" t="Include">
+                  <e p="unauthorized.component.js" t="Include" />
+                  <e p="unauthorized.component.js.map" t="Include" />
+                </e>
+              </e>
+              <e p="state" t="Include">
+                <e p="app.state.js" t="Include" />
+                <e p="app.state.js.map" t="Include" />
+              </e>
+              <e p="test-utils" t="Include">
+                <e p="GetRandom.js" t="Include" />
+                <e p="GetRandom.js.map" t="Include" />
+              </e>
+              <e p="TestUtils" t="Include">
+                <e p="GetRandom.js" t="Include" />
+                <e p="GetRandom.js.map" t="Include" />
+              </e>
+              <e p="Utils" t="Include">
+                <e p="envelope.js" t="Include" />
+                <e p="envelope.js.map" t="Include" />
+              </e>
+            </e>
+            <e p="environments" t="Include">
+              <e p="environment.js" t="Include" />
+              <e p="environment.js.map" t="Include" />
+            </e>
+            <e p="main.js" t="Include" />
+            <e p="main.js.map" t="Include" />
+            <e p="polyfills.js" t="Include" />
+            <e p="polyfills.js.map" t="Include" />
+          </e>
+          <e p="e2e" t="Include">
+            <e p="app.e2e-spec.js" t="Include" />
+            <e p="app.e2e-spec.js.map" t="Include" />
+            <e p="app.po.js" t="Include" />
+            <e p="app.po.js.map" t="Include" />
+          </e>
+          <e p="spec" t="Include">
+            <e p="app" t="Include">
+              <e p="app.component.js" t="Include" />
+              <e p="app.component.js.map" t="Include" />
+              <e p="app.component.spec.js" t="Include" />
+              <e p="app.component.spec.js.map" t="Include" />
+              <e p="categories-generation" t="Include">
+                <e p="Categories" t="Include">
+                  <e p="categories.service.js" t="Include" />
+                  <e p="categories.service.js.map" t="Include" />
+                  <e p="categories.service.spec.js" t="Include" />
+                  <e p="categories.service.spec.js.map" t="Include" />
+                </e>
+                <e p="categories-list" t="Include">
+                  <e p="categories-list.component.js" t="Include" />
+                  <e p="categories-list.component.js.map" t="Include" />
+                  <e p="categories-list.component.spec.js" t="Include" />
+                  <e p="categories-list.component.spec.js.map" t="Include" />
+                </e>
+                <e p="category-card" t="Include">
+                  <e p="card-move-menu" t="Include">
+                    <e p="card-move-menu.component.js" t="Include" />
+                    <e p="card-move-menu.component.js.map" t="Include" />
+                    <e p="card-move-menu.component.spec.js" t="Include" />
+                    <e p="card-move-menu.component.spec.js.map" t="Include" />
+                  </e>
+                  <e p="category-card.component.js" t="Include" />
+                  <e p="category-card.component.js.map" t="Include" />
+                  <e p="category-card.component.spec.js" t="Include" />
+                  <e p="category-card.component.spec.js.map" t="Include" />
+                </e>
+                <e p="category-edit" t="Include">
+                  <e p="category-edit.component.js" t="Include" />
+                  <e p="category-edit.component.js.map" t="Include" />
+                  <e p="category-edit.component.spec.js" t="Include" />
+                  <e p="category-edit.component.spec.js.map" t="Include" />
+                </e>
+                <e p="field-edit" t="Include">
+                  <e p="field-edit.component.js" t="Include" />
+                  <e p="field-edit.component.js.map" t="Include" />
+                  <e p="field-edit.component.spec.js" t="Include" />
+                  <e p="field-edit.component.spec.js.map" t="Include" />
+                </e>
+                <e p="models" t="Include">
+                  <e p="category.js" t="Include" />
+                  <e p="category.js.map" t="Include" />
+                  <e p="categoryFieldValue.js" t="Include" />
+                  <e p="categoryFieldValue.js.map" t="Include" />
+                  <e p="CategoryFilter.js" t="Include" />
+                  <e p="CategoryFilter.js.map" t="Include" />
+                  <e p="NewField.js" t="Include" />
+                  <e p="NewField.js.map" t="Include" />
+                </e>
+              </e>
+              <e p="categories-search" t="Include">
+                <e p="card-result-basic" t="Include">
+                  <e p="card-result-basic.component.js" t="Include" />
+                  <e p="card-result-basic.component.js.map" t="Include" />
+                  <e p="card-result-basic.component.spec.js" t="Include" />
+                  <e p="card-result-basic.component.spec.js.map" t="Include" />
+                </e>
+                <e p="card-result-detail" t="Include">
+                  <e p="card-result-detail.component.js" t="Include" />
+                  <e p="card-result-detail.component.js.map" t="Include" />
+                  <e p="card-result-detail.component.spec.js" t="Include" />
+                  <e p="card-result-detail.component.spec.js.map" t="Include" />
+                </e>
+                <e p="categories-search-container" t="Include">
+                  <e p="categories-search-container.component.js" t="Include" />
+                  <e p="categories-search-container.component.js.map" t="Include" />
+                  <e p="categories-search-container.component.spec.js" t="Include" />
+                  <e p="categories-search-container.component.spec.js.map" t="Include" />
+                </e>
+                <e p="categories-search-filters" t="Include">
+                  <e p="categories-search-filters.component.js" t="Include" />
+                  <e p="categories-search-filters.component.js.map" t="Include" />
+                  <e p="categories-search-filters.component.spec.js" t="Include" />
+                  <e p="categories-search-filters.component.spec.js.map" t="Include" />
+                </e>
+                <e p="categories-search-http.service.js" t="Include" />
+                <e p="categories-search-http.service.js.map" t="Include" />
+                <e p="categories-search-http.service.spec.js" t="Include" />
+                <e p="categories-search-http.service.spec.js.map" t="Include" />
+                <e p="categories-search-list-result" t="Include">
+                  <e p="categories-search-list-result.component.js" t="Include" />
+                  <e p="categories-search-list-result.component.js.map" t="Include" />
+                  <e p="categories-search-list-result.component.spec.js" t="Include" />
+                  <e p="categories-search-list-result.component.spec.js.map" t="Include" />
+                </e>
+                <e p="categories-search-tree-detail-result" t="Include">
+                  <e p="categories-search-tree-detail-result.component.js" t="Include" />
+                  <e p="categories-search-tree-detail-result.component.js.map" t="Include" />
+                  <e p="categories-search-tree-detail-result.component.spec.js" t="Include" />
+                  <e p="categories-search-tree-detail-result.component.spec.js.map" t="Include" />
+                </e>
+                <e p="model" t="Include">
+                  <e p="category.js" t="Include" />
+                  <e p="category.js.map" t="Include" />
+                  <e p="categorySearchFilters.js" t="Include" />
+                  <e p="categorySearchFilters.js.map" t="Include" />
+                </e>
+                <e p="state" t="Include">
+                  <e p="categories-search.actions.js" t="Include" />
+                  <e p="categories-search.actions.js.map" t="Include" />
+                  <e p="categories-search.reducer.js" t="Include" />
+                  <e p="categories-search.reducer.js.map" t="Include" />
+                  <e p="index.js" t="Include" />
+                  <e p="index.js.map" t="Include" />
+                </e>
+              </e>
+              <e p="guards" t="Include">
+                <e p="category-edit.guard.js" t="Include" />
+                <e p="category-edit.guard.js.map" t="Include" />
+                <e p="category-edit.guard.spec.js" t="Include" />
+                <e p="category-edit.guard.spec.js.map" t="Include" />
+                <e p="loged-in.guard.spec.js" t="Include" />
+                <e p="loged-in.guard.spec.js.map" t="Include" />
+                <e p="logged-in.guard.js" t="Include" />
+                <e p="logged-in.guard.js.map" t="Include" />
+              </e>
+              <e p="main-menu" t="Include">
+                <e p="main-menu.component.js" t="Include" />
+                <e p="main-menu.component.js.map" t="Include" />
+                <e p="main-menu.component.spec.js" t="Include" />
+                <e p="main-menu.component.spec.js.map" t="Include" />
+              </e>
+              <e p="Security" t="Include">
+                <e p="auth-service.component.js" t="Include" />
+                <e p="auth-service.component.js.map" t="Include" />
+                <e p="Constants.js" t="Include" />
+                <e p="Constants.js.map" t="Include" />
+              </e>
+              <e p="state" t="Include">
+                <e p="app.state.js" t="Include" />
+                <e p="app.state.js.map" t="Include" />
+              </e>
+              <e p="test-utils" t="Include">
+                <e p="GetRandom.js" t="Include" />
+                <e p="GetRandom.js.map" t="Include" />
+              </e>
+              <e p="TestUtils" t="Include">
+                <e p="GetRandom.js" t="Include" />
+                <e p="GetRandom.js.map" t="Include" />
+              </e>
+              <e p="Utils" t="Include">
+                <e p="envelope.js" t="Include" />
+                <e p="envelope.js.map" t="Include" />
+              </e>
+            </e>
+            <e p="polyfills.js" t="Include" />
+            <e p="polyfills.js.map" t="Include" />
+            <e p="test.js" t="Include" />
+            <e p="test.js.map" t="Include" />
+          </e>
+        </e>
         <e p="package-lock.json" t="Include" />
         <e p="package.json" t="Include" />
         <e p="protractor.conf.js" t="Include" />
@@ -320,68 +1251,155 @@
             <e p="app.component.css.map" t="Include" />
             <e p="app.component.html" t="Include" />
             <e p="app.component.scss" t="Include" />
-            <e p="app.component.spec.ts" t="Include" />
             <e p="app.component.ts" t="Include" />
             <e p="app.module.ts" t="Include" />
-            <e p="Categories" t="Include">
-              <e p="categories.service.spec.ts" t="Include" />
-              <e p="categories.service.ts" t="Include" />
+            <e p="categories-bread-crumbs" t="Include">
+              <e p="categories-bread-crumbs-routing.module.ts" t="Include" />
+              <e p="categories-bread-crumbs.component.html" t="Include" />
+              <e p="categories-bread-crumbs.component.scss" t="Include" />
+              <e p="categories-bread-crumbs.component.spec.ts" t="Include" />
+              <e p="categories-bread-crumbs.component.ts" t="Include" />
+              <e p="categories-bread-crumbs.module.ts" t="Include" />
             </e>
-            <e p="categories-list" t="Include">
-              <e p="categories-list.component.css" t="Include" />
-              <e p="categories-list.component.css.map" t="Include" />
-              <e p="categories-list.component.html" t="Include" />
-              <e p="categories-list.component.scss" t="Include" />
-              <e p="categories-list.component.spec.ts" t="Include" />
-              <e p="categories-list.component.ts" t="Include" />
-            </e>
-            <e p="category-card" t="Include">
-              <e p=".sass-cache" t="Include">
-                <e p="87992336fede03285e07338d7ffcd74a0cde2f31" t="Include">
-                  <e p="category-card.component.scssc" t="Include" />
+            <e p="categories-generation" t="Include">
+              <e p="Categories" t="Include">
+                <e p="categories.service.spec.ts" t="Include" />
+                <e p="categories.service.ts" t="Include" />
+              </e>
+              <e p="categories-container" t="Include">
+                <e p="categories-container.component.html" t="Include" />
+                <e p="categories-container.component.scss" t="Include" />
+                <e p="categories-container.component.ts" t="Include" />
+              </e>
+              <e p="categories-list" t="Include">
+                <e p="categories-list.component.css" t="Include" />
+                <e p="categories-list.component.css.map" t="Include" />
+                <e p="categories-list.component.html" t="Include" />
+                <e p="categories-list.component.scss" t="Include" />
+                <e p="categories-list.component.spec.ts" t="Include" />
+                <e p="categories-list.component.ts" t="Include" />
+              </e>
+              <e p="category-card" t="Include">
+                <e p=".sass-cache" t="Include">
+                  <e p="87992336fede03285e07338d7ffcd74a0cde2f31" t="Include">
+                    <e p="category-card.component.scssc" t="Include" />
+                  </e>
                 </e>
+                <e p="card-move-menu" t="Include">
+                  <e p="card-move-menu.component.html" t="Include" />
+                  <e p="card-move-menu.component.scss" t="Include" />
+                  <e p="card-move-menu.component.ts" t="Include" />
+                </e>
+                <e p="category-card.component.css" t="Include" />
+                <e p="category-card.component.css.map" t="Include" />
+                <e p="category-card.component.html" t="Include" />
+                <e p="category-card.component.scss" t="Include" />
+                <e p="category-card.component.spec.ts" t="Include" />
+                <e p="category-card.component.ts" t="Include" />
               </e>
-              <e p="card-move-menu" t="Include">
-                <e p="card-move-menu.component.html" t="Include" />
-                <e p="card-move-menu.component.scss" t="Include" />
-                <e p="card-move-menu.component.spec.ts" t="Include" />
-                <e p="card-move-menu.component.ts" t="Include" />
+              <e p="category-edit" t="Include">
+                <e p="category-edit.component.css" t="Include" />
+                <e p="category-edit.component.css.map" t="Include" />
+                <e p="category-edit.component.html" t="Include" />
+                <e p="category-edit.component.scss" t="Include" />
+                <e p="category-edit.component.spec.ts" t="Include" />
+                <e p="category-edit.component.ts" t="Include" />
               </e>
-              <e p="category-card.component.css" t="Include" />
-              <e p="category-card.component.css.map" t="Include" />
-              <e p="category-card.component.html" t="Include" />
-              <e p="category-card.component.scss" t="Include" />
-              <e p="category-card.component.spec.ts" t="Include" />
-              <e p="category-card.component.ts" t="Include" />
+              <e p="field-edit" t="Include">
+                <e p="field-edit.component.html" t="Include" />
+                <e p="field-edit.component.scss" t="Include" />
+                <e p="field-edit.component.spec.ts" t="Include" />
+                <e p="field-edit.component.ts" t="Include" />
+              </e>
+              <e p="models" t="Include">
+                <e p="category.ts" t="Include" />
+                <e p="categoryFieldValue.ts" t="Include" />
+                <e p="CategoryFilter.ts" t="Include" />
+                <e p="NewField.ts" t="Include" />
+              </e>
             </e>
-            <e p="category-edit" t="Include">
-              <e p="category-edit.component.css" t="Include" />
-              <e p="category-edit.component.css.map" t="Include" />
-              <e p="category-edit.component.html" t="Include" />
-              <e p="category-edit.component.scss" t="Include" />
-              <e p="category-edit.component.spec.ts" t="Include" />
-              <e p="category-edit.component.ts" t="Include" />
+            <e p="categories-search" t="Include">
+              <e p="card-result-basic" t="Include">
+                <e p="card-result-basic.component.html" t="Include" />
+                <e p="card-result-basic.component.scss" t="Include" />
+                <e p="card-result-basic.component.ts" t="Include" />
+              </e>
+              <e p="card-result-detail" t="Include">
+                <e p="card-result-detail.component.html" t="Include" />
+                <e p="card-result-detail.component.scss" t="Include" />
+                <e p="card-result-detail.component.spec.ts" t="Include" />
+                <e p="card-result-detail.component.ts" t="Include" />
+              </e>
+              <e p="categories-search-container" t="Include">
+                <e p="categories-search-container.component.html" t="Include" />
+                <e p="categories-search-container.component.scss" t="Include" />
+                <e p="categories-search-container.component.ts" t="Include" />
+              </e>
+              <e p="categories-search-filters" t="Include">
+                <e p="categories-search-filters.component.html" t="Include" />
+                <e p="categories-search-filters.component.scss" t="Include" />
+                <e p="categories-search-filters.component.ts" t="Include" />
+              </e>
+              <e p="categories-search-http.service.spec.ts" t="Include" />
+              <e p="categories-search-http.service.ts" t="Include" />
+              <e p="categories-search-list-result" t="Include">
+                <e p="categories-search-list-result.component.html" t="Include" />
+                <e p="categories-search-list-result.component.scss" t="Include" />
+                <e p="categories-search-list-result.component.ts" t="Include" />
+              </e>
+              <e p="categories-search-tree-detail-result" t="Include">
+                <e p="categories-search-tree-detail-result.component.html" t="Include" />
+                <e p="categories-search-tree-detail-result.component.scss" t="Include" />
+                <e p="categories-search-tree-detail-result.component.ts" t="Include" />
+              </e>
+              <e p="categories-search.module.ts" t="Include" />
+              <e p="model" t="Include">
+                <e p="category.ts" t="Include" />
+                <e p="categoryFieldValue.ts" t="Include" />
+                <e p="categorySearchFilters.ts" t="Include" />
+              </e>
+              <e p="state" t="Include">
+                <e p="categories-search.actions.ts" t="Include" />
+                <e p="categories-search.effects.spec.ts" t="Include" />
+                <e p="categories-search.effects.ts" t="Include" />
+                <e p="categories-search.reducer.spec.ts" t="Include" />
+                <e p="categories-search.reducer.ts" t="Include" />
+                <e p="index.ts" t="Include" />
+              </e>
             </e>
-            <e p="field-edit" t="Include">
-              <e p="field-edit.component.html" t="Include" />
-              <e p="field-edit.component.scss" t="Include" />
-              <e p="field-edit.component.spec.ts" t="Include" />
-              <e p="field-edit.component.ts" t="Include" />
+            <e p="guards" t="Include">
+              <e p="category-edit.guard.spec.ts" t="Include" />
+              <e p="category-edit.guard.ts" t="Include" />
+              <e p="loged-in.guard.spec.ts" t="Include" />
+              <e p="logged-in.guard.ts" t="Include" />
             </e>
             <e p="main-menu" t="Include">
               <e p="main-menu.component.css" t="Include" />
               <e p="main-menu.component.css.map" t="Include" />
               <e p="main-menu.component.html" t="Include" />
               <e p="main-menu.component.scss" t="Include" />
-              <e p="main-menu.component.spec.ts" t="Include" />
               <e p="main-menu.component.ts" t="Include" />
             </e>
-            <e p="models" t="Include">
-              <e p="category.ts" t="Include" />
-              <e p="categoryFieldValue.ts" t="Include" />
-              <e p="CategoryFilter.ts" t="Include" />
+            <e p="Security" t="Include">
+              <e p="auth-interceptor.service.ts" t="Include" />
+              <e p="auth-service.component.ts" t="Include" />
+              <e p="Constants.ts" t="Include" />
+              <e p="signin-redirect-callback.component.ts" t="Include" />
+              <e p="signout-redirect-callback.component.ts" t="Include" />
+              <e p="unauthorized" t="Include">
+                <e p="unauthorized.component.html" t="Include" />
+                <e p="unauthorized.component.ts" t="Include" />
+              </e>
+            </e>
+            <e p="state" t="Include">
+              <e p="app.state.ts" t="Include" />
+            </e>
+            <e p="test-utils" t="Include">
+              <e p="GetRandom.ts" t="Include" />
+              <e p="testUtils.ts" t="Include" />
+            </e>
+            <e p="Utils" t="Include">
               <e p="envelope.ts" t="Include" />
-              <e p="NewField.ts" t="Include" />
             </e>
           </e>
           <e p="assets" t="Include">
@@ -389,6 +1407,10 @@
             <e p="all.css" t="Include" />
             <e p="forms.css" t="Include" />
             <e p="forms.scss" t="Include" />
+            <e p="js" t="Include">
+              <e p="oidc-client.min.js" t="Include" />
+            </e>
+            <e p="silent-callback.html" t="Include" />
             <e p="webfonts" t="Include">
               <e p="fa-brands-400.eot" t="Include" />
               <e p="fa-brands-400.svg" t="Include" />
@@ -413,12 +1435,15 @@
           </e>
           <e p="favicon.ico" t="Include" />
           <e p="index.html" t="Include" />
+          <e p="jestGlobalMocks.ts" t="Include" />
           <e p="main.ts" t="Include" />
           <e p="polyfills.ts" t="Include" />
+          <e p="setupJest.ts" t="Include" />
           <e p="styles" t="Include">
             <e p="_dropdown.scss" t="Include" />
             <e p="_functions.scss" t="Include" />
             <e p="_mixins.scss" t="Include" />
+            <e p="_myVariables.scss" t="Include" />
             <e p="_variables.scss" t="Include" />
             <e p="bootstrap.min.css" t="Include" />
             <e p="bootstrap.min.css.map" t="Include" />
@@ -480,6 +1505,7 @@
           <e p="typings.d.ts" t="Include" />
         </e>
         <e p="tsconfig.json" t="Include" />
+        <e p="tsconfig.spec.json" t="Include" />
         <e p="tslint.json" t="Include" />
       </e>
       <e p="Common" t="IncludeRecursive">
@@ -491,10 +1517,13 @@
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
-            <e p="netcoreapp2.1" t="Include">
+            <e p="netcoreapp3.1" t="Include">
               <e p="Common.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
+        </e>
+        <e p="Properties" t="Include">
+          <e p="launchSettings.json" t="Include" />
         </e>
         <e p="Utils" t="Include">
           <e p="Entity.cs" t="Include" />
@@ -510,10 +1539,13 @@
         <e p="Item.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
-            <e p="netcoreapp2.1" t="Include">
+            <e p="netcoreapp3.1" t="Include">
               <e p="Domain.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
+        </e>
+        <e p="Properties" t="Include">
+          <e p="launchSettings.json" t="Include" />
         </e>
       </e>
       <e p="Dtos" t="IncludeRecursive">
@@ -524,10 +1556,13 @@
         <e p="FieldDto.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
-            <e p="netcoreapp2.1" t="Include">
+            <e p="netcoreapp3.1" t="Include">
               <e p="Dtos.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
+        </e>
+        <e p="Properties" t="Include">
+          <e p="launchSettings.json" t="Include" />
         </e>
       </e>
       <e p="MainApp" t="Include" />
@@ -538,18 +1573,20 @@
         <e p="CategoryQueryRepository.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
-            <e p="netcoreapp2.1" t="Include">
+            <e p="netcoreapp3.1" t="Include">
               <e p="Persistance.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
         </e>
         <e p="Persistance.csproj" t="IncludeRecursive" />
+        <e p="Properties" t="Include">
+          <e p="launchSettings.json" t="Include" />
+        </e>
         <e p="RepositoryBase.cs" t="Include" />
         <e p="Utils" t="Include">
-          <e p="CheatCodesDatabase - Copy (2).db" t="Include" />
-          <e p="CheatCodesDatabase - Copy (3).db" t="Include" />
-          <e p="CheatCodesDatabase - Copy.db" t="Include" />
+          <e p="CheatCodesDatabase Backup.db" t="Include" />
           <e p="CheatCodesDatabase.db" t="Include" />
+          <e p="CheatCodesDatabaseBackup.db" t="Include" />
           <e p="DatabaseSetting.cs" t="Include" />
           <e p="restoring_db_data_and_structure.sql" t="Include" />
           <e p="UnitOfWork.cs" t="Include" />
@@ -581,71 +1618,243 @@
         <e p="Reports.All.fsproj" t="IncludeRecursive" />
         <e p="Startup.fs" t="Include" />
       </e>
-      <e p="Reports.All.UI\node_modules\@angular\animations" t="IncludeRecursive" />
-      <e p="Reports.All.UI\node_modules\@angular\cli" t="IncludeRecursive" />
-      <e p="Reports.All.UI\node_modules\@angular\Common" t="IncludeRecursive" />
-      <e p="Reports.All.UI\node_modules\@angular\compiler" t="IncludeRecursive" />
-      <e p="Reports.All.UI\node_modules\@angular\compiler-cli" t="IncludeRecursive" />
-      <e p="Reports.All.UI\node_modules\@angular\core" t="IncludeRecursive" />
-      <e p="Reports.All.UI\node_modules\@angular\forms" t="IncludeRecursive" />
-      <e p="Reports.All.UI\node_modules\@angular\platform-browser" t="IncludeRecursive" />
-      <e p="Reports.All.UI\node_modules\@angular\platform-browser-dynamic" t="IncludeRecursive" />
-      <e p="Reports.All.UI\node_modules\@angular\router" t="IncludeRecursive" />
-      <e p="Reports.All.UI\node_modules\@angular-devkit\architect" t="IncludeRecursive" />
-      <e p="Reports.All.UI\node_modules\@angular-devkit\build-angular" t="IncludeRecursive" />
-      <e p="Reports.All.UI\node_modules\@angular-devkit\build-optimizer" t="IncludeRecursive" />
-      <e p="Reports.All.UI\node_modules\@angular-devkit\build-webpack" t="IncludeRecursive" />
-      <e p="Reports.All.UI\node_modules\@angular-devkit\core" t="IncludeRecursive" />
-      <e p="Reports.All.UI\node_modules\@angular-devkit\schematics" t="IncludeRecursive" />
-      <e p="Reports.All.UI\node_modules\@ngtools\webpack" t="IncludeRecursive" />
-      <e p="Reports.All.UI\node_modules\@types" t="IncludeRecursive">
-        <e p="events" t="IncludeRecursive" />
-        <e p="jasmine" t="IncludeRecursive" />
-        <e p="jasminewd2" t="IncludeRecursive" />
-        <e p="minimatch" t="IncludeRecursive" />
-        <e p="node" t="IncludeRecursive" />
-        <e p="source-list-map" t="IncludeRecursive" />
-      </e>
-      <e p="Reports.All.UI\node_modules\ajv" t="IncludeRecursive" />
-      <e p="Reports.All.UI\node_modules\blocking-proxy" t="IncludeRecursive" />
-      <e p="Reports.All.UI\node_modules\bootstrap" t="IncludeRecursive" />
-      <e p="Reports.All.UI\node_modules\canonical-path" t="IncludeRecursive" />
-      <e p="Reports.All.UI\node_modules\chalk" t="IncludeRecursive" />
-      <e p="Reports.All.UI\node_modules\chokidar" t="IncludeRecursive" />
-      <e p="Reports.All.UI\node_modules\codelyzer" t="IncludeRecursive" />
-      <e p="Reports.All.UI\node_modules\commander" t="IncludeRecursive" />
-      <e p="Reports.All.UI\node_modules\dependency-graph" t="IncludeRecursive" />
-      <e p="Reports.All.UI\node_modules\es6-promise" t="IncludeRecursive" />
-      <e p="Reports.All.UI\node_modules\fast-deep-equal" t="IncludeRecursive" />
-      <e p="Reports.All.UI\node_modules\jasmine-core" t="IncludeRecursive" />
-      <e p="Reports.All.UI\node_modules\jasmine-spec-reporter" t="IncludeRecursive" />
-      <e p="Reports.All.UI\node_modules\jest-worker" t="IncludeRecursive" />
-      <e p="Reports.All.UI\node_modules\karma" t="IncludeRecursive" />
-      <e p="Reports.All.UI\node_modules\karma-chrome-launcher" t="IncludeRecursive" />
-      <e p="Reports.All.UI\node_modules\karma-coverage-istanbul-reporter" t="IncludeRecursive" />
-      <e p="Reports.All.UI\node_modules\karma-jasmine" t="IncludeRecursive" />
-      <e p="Reports.All.UI\node_modules\karma-jasmine-html-reporter" t="IncludeRecursive" />
-      <e p="Reports.All.UI\node_modules\license-webpack-plugin" t="IncludeRecursive" />
-      <e p="Reports.All.UI\node_modules\magic-string" t="IncludeRecursive" />
-      <e p="Reports.All.UI\node_modules\portfinder" t="IncludeRecursive" />
-      <e p="Reports.All.UI\node_modules\postcss" t="IncludeRecursive" />
-      <e p="Reports.All.UI\node_modules\protractor" t="IncludeRecursive" />
-      <e p="Reports.All.UI\node_modules\reflect-metadata" t="IncludeRecursive" />
-      <e p="Reports.All.UI\node_modules\rxjs" t="IncludeRecursive" />
-      <e p="Reports.All.UI\node_modules\source-map" t="IncludeRecursive" />
-      <e p="Reports.All.UI\node_modules\sourcemap-codec" t="IncludeRecursive" />
-      <e p="Reports.All.UI\node_modules\symbol-observable" t="IncludeRecursive" />
-      <e p="Reports.All.UI\node_modules\terser" t="IncludeRecursive" />
-      <e p="Reports.All.UI\node_modules\tree-kill" t="IncludeRecursive" />
-      <e p="Reports.All.UI\node_modules\ts-node" t="IncludeRecursive" />
-      <e p="Reports.All.UI\node_modules\tslib" t="IncludeRecursive" />
-      <e p="Reports.All.UI\node_modules\tslint" t="IncludeRecursive" />
-      <e p="Reports.All.UI\node_modules\upath" t="IncludeRecursive" />
-      <e p="Reports.All.UI\node_modules\uri-js" t="IncludeRecursive" />
-      <e p="Reports.All.UI\node_modules\webdriver-js-extender" t="IncludeRecursive" />
-      <e p="Reports.All.UI\node_modules\worker-farm" t="IncludeRecursive" />
-      <e p="Reports.All.UI\node_modules\zone.js" t="IncludeRecursive" />
+      <e p="Search" t="Include" />
       <e p="Solution Items" t="Include" />
+      <e p="STS" t="Include">
+        <e p="IdSNet" t="IncludeRecursive">
+          <e p="appsettings.json" t="Include" />
+          <e p="Areas" t="Include">
+            <e p="Identity" t="Include">
+              <e p="IdentityHostingStartup.cs" t="Include" />
+              <e p="Pages" t="Include">
+                <e p="_ValidationScriptsPartial.cshtml" t="Include" />
+                <e p="_ViewImports.cshtml" t="Include" />
+                <e p="_ViewStart.cshtml" t="Include" />
+                <e p="Account" t="Include">
+                  <e p="_StatusMessage.cshtml" t="Include" />
+                  <e p="_ViewImports.cshtml" t="Include" />
+                  <e p="AccessDenied.cshtml" t="Include" />
+                  <e p="AccessDenied.cshtml.cs" t="Include" />
+                  <e p="ConfirmEmail.cshtml" t="Include" />
+                  <e p="ConfirmEmail.cshtml.cs" t="Include" />
+                  <e p="ConfirmEmailChange.cshtml" t="Include" />
+                  <e p="ConfirmEmailChange.cshtml.cs" t="Include" />
+                  <e p="ExternalLogin.cshtml" t="Include" />
+                  <e p="ExternalLogin.cshtml.cs" t="Include" />
+                  <e p="ForgotPassword.cshtml" t="Include" />
+                  <e p="ForgotPassword.cshtml.cs" t="Include" />
+                  <e p="ForgotPasswordConfirmation.cshtml" t="Include" />
+                  <e p="ForgotPasswordConfirmation.cshtml.cs" t="Include" />
+                  <e p="Lockout.cshtml" t="Include" />
+                  <e p="Lockout.cshtml.cs" t="Include" />
+                  <e p="Login.cshtml" t="Include" />
+                  <e p="Login.cshtml.cs" t="Include" />
+                  <e p="LoginWith2fa.cshtml" t="Include" />
+                  <e p="LoginWith2fa.cshtml.cs" t="Include" />
+                  <e p="LoginWithRecoveryCode.cshtml" t="Include" />
+                  <e p="LoginWithRecoveryCode.cshtml.cs" t="Include" />
+                  <e p="Logout.cshtml" t="Include" />
+                  <e p="Logout.cshtml.cs" t="Include" />
+                  <e p="Manage" t="Include">
+                    <e p="_Layout.cshtml" t="Include" />
+                    <e p="_ManageNav.cshtml" t="Include" />
+                    <e p="_StatusMessage.cshtml" t="Include" />
+                    <e p="_ViewImports.cshtml" t="Include" />
+                    <e p="ChangePassword.cshtml" t="Include" />
+                    <e p="ChangePassword.cshtml.cs" t="Include" />
+                    <e p="DeletePersonalData.cshtml" t="Include" />
+                    <e p="DeletePersonalData.cshtml.cs" t="Include" />
+                    <e p="Disable2fa.cshtml" t="Include" />
+                    <e p="Disable2fa.cshtml.cs" t="Include" />
+                    <e p="DownloadPersonalData.cshtml" t="Include" />
+                    <e p="DownloadPersonalData.cshtml.cs" t="Include" />
+                    <e p="Email.cshtml" t="Include" />
+                    <e p="Email.cshtml.cs" t="Include" />
+                    <e p="EnableAuthenticator.cshtml" t="Include" />
+                    <e p="EnableAuthenticator.cshtml.cs" t="Include" />
+                    <e p="ExternalLogins.cshtml" t="Include" />
+                    <e p="ExternalLogins.cshtml.cs" t="Include" />
+                    <e p="GenerateRecoveryCodes.cshtml" t="Include" />
+                    <e p="GenerateRecoveryCodes.cshtml.cs" t="Include" />
+                    <e p="Index.cshtml" t="Include" />
+                    <e p="Index.cshtml.cs" t="Include" />
+                    <e p="ManageNavPages.cs" t="Include" />
+                    <e p="PersonalData.cshtml" t="Include" />
+                    <e p="PersonalData.cshtml.cs" t="Include" />
+                    <e p="ResetAuthenticator.cshtml" t="Include" />
+                    <e p="ResetAuthenticator.cshtml.cs" t="Include" />
+                    <e p="SetPassword.cshtml" t="Include" />
+                    <e p="SetPassword.cshtml.cs" t="Include" />
+                    <e p="ShowRecoveryCodes.cshtml" t="Include" />
+                    <e p="ShowRecoveryCodes.cshtml.cs" t="Include" />
+                    <e p="TwoFactorAuthentication.cshtml" t="Include" />
+                    <e p="TwoFactorAuthentication.cshtml.cs" t="Include" />
+                  </e>
+                  <e p="Register.cshtml" t="Include" />
+                  <e p="Register.cshtml.cs" t="Include" />
+                  <e p="RegisterConfirmation.cshtml" t="Include" />
+                  <e p="RegisterConfirmation.cshtml.cs" t="Include" />
+                  <e p="ResetPassword.cshtml" t="Include" />
+                  <e p="ResetPassword.cshtml.cs" t="Include" />
+                  <e p="ResetPasswordConfirmation.cshtml" t="Include" />
+                  <e p="ResetPasswordConfirmation.cshtml.cs" t="Include" />
+                </e>
+                <e p="Error.cshtml" t="Include" />
+                <e p="Error.cshtml.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="AspIdUsers.db" t="Include" />
+          <e p="bin" t="ExcludeRecursive" />
+          <e p="Config.cs" t="Include" />
+          <e p="Data" t="Include">
+            <e p="ApplicationDbContext.cs" t="Include" />
+            <e p="Migrations" t="Include">
+              <e p="20180109192453_CreateIdentitySchema.cs" t="Include" />
+              <e p="20180109192453_CreateIdentitySchema.Designer.cs" t="Include" />
+              <e p="ApplicationDbContextModelSnapshot.cs" t="Include" />
+            </e>
+          </e>
+          <e p="IdSNet.csproj" t="IncludeRecursive" />
+          <e p="models" t="Include">
+            <e p="ApplicationUser.cs" t="Include" />
+            <e p="AuthMessageSenderOptions.cs" t="Include" />
+            <e p="EmailSender.cs" t="Include" />
+          </e>
+          <e p="obj" t="ExcludeRecursive">
+            <e p="Debug" t="Include">
+              <e p="netcoreapp3.1" t="Include">
+                <e p="IdSNet.AssemblyInfo.cs" t="Include" />
+                <e p="IdSNet.RazorAssemblyInfo.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="Program.cs" t="Include" />
+          <e p="Properties" t="Include">
+            <e p="launchSettings.json" t="Include" />
+          </e>
+          <e p="Quickstart" t="Include">
+            <e p="Account" t="Include">
+              <e p="AccountController.cs" t="Include" />
+              <e p="AccountOptions.cs" t="Include" />
+              <e p="ExternalController.cs" t="Include" />
+              <e p="ExternalProvider.cs" t="Include" />
+              <e p="LoggedOutViewModel.cs" t="Include" />
+              <e p="LoginInputModel.cs" t="Include" />
+              <e p="LoginViewModel.cs" t="Include" />
+              <e p="LogoutInputModel.cs" t="Include" />
+              <e p="LogoutViewModel.cs" t="Include" />
+              <e p="RedirectViewModel.cs" t="Include" />
+            </e>
+            <e p="Consent" t="Include">
+              <e p="ConsentController.cs" t="Include" />
+              <e p="ConsentInputModel.cs" t="Include" />
+              <e p="ConsentOptions.cs" t="Include" />
+              <e p="ConsentViewModel.cs" t="Include" />
+              <e p="ProcessConsentResult.cs" t="Include" />
+              <e p="ScopeViewModel.cs" t="Include" />
+            </e>
+            <e p="Device" t="Include">
+              <e p="DeviceAuthorizationInputModel.cs" t="Include" />
+              <e p="DeviceAuthorizationViewModel.cs" t="Include" />
+              <e p="DeviceController.cs" t="Include" />
+            </e>
+            <e p="Diagnostics" t="Include">
+              <e p="DiagnosticsController.cs" t="Include" />
+              <e p="DiagnosticsViewModel.cs" t="Include" />
+            </e>
+            <e p="Extensions.cs" t="Include" />
+            <e p="Grants" t="Include">
+              <e p="GrantsController.cs" t="Include" />
+              <e p="GrantsViewModel.cs" t="Include" />
+            </e>
+            <e p="Home" t="Include">
+              <e p="ErrorViewModel.cs" t="Include" />
+              <e p="HomeController.cs" t="Include" />
+            </e>
+            <e p="SecurityHeadersAttribute.cs" t="Include" />
+          </e>
+          <e p="ScaffoldingReadMe.txt" t="Include" />
+          <e p="SeedData.cs" t="Include" />
+          <e p="Startup.cs" t="Include" />
+          <e p="tempkey.rsa" t="Include" />
+          <e p="updateUI.ps1" t="Include" />
+          <e p="Views" t="Include">
+            <e p="_ViewImports.cshtml" t="Include" />
+            <e p="_ViewStart.cshtml" t="Include" />
+            <e p="Account" t="Include">
+              <e p="AccessDenied.cshtml" t="Include" />
+              <e p="LoggedOut.cshtml" t="Include" />
+              <e p="Login.cshtml" t="Include" />
+              <e p="Logout.cshtml" t="Include" />
+            </e>
+            <e p="Consent" t="Include">
+              <e p="Index.cshtml" t="Include" />
+            </e>
+            <e p="Device" t="Include">
+              <e p="Success.cshtml" t="Include" />
+              <e p="UserCodeCapture.cshtml" t="Include" />
+              <e p="UserCodeConfirmation.cshtml" t="Include" />
+            </e>
+            <e p="Diagnostics" t="Include">
+              <e p="Index.cshtml" t="Include" />
+            </e>
+            <e p="Grants" t="Include">
+              <e p="Index.cshtml" t="Include" />
+            </e>
+            <e p="Home" t="Include">
+              <e p="Index.cshtml" t="Include" />
+            </e>
+            <e p="Shared" t="Include">
+              <e p="_Layout.cshtml" t="Include" />
+              <e p="_LoginPartial.cshtml" t="Include" />
+              <e p="_ScopeListItem.cshtml" t="Include" />
+              <e p="_ValidationSummary.cshtml" t="Include" />
+              <e p="Error.cshtml" t="Include" />
+              <e p="Redirect.cshtml" t="Include" />
+            </e>
+          </e>
+          <e p="wwwroot" t="Include">
+            <e p="css" t="Include">
+              <e p="site.css" t="Include" />
+              <e p="site.less" t="Include" />
+              <e p="site.min.css" t="Include" />
+            </e>
+            <e p="favicon.ico" t="Include" />
+            <e p="icon.jpg" t="Include" />
+            <e p="icon.png" t="Include" />
+            <e p="js" t="Include">
+              <e p="signin-redirect.js" t="Include" />
+              <e p="signout-redirect.js" t="Include" />
+            </e>
+            <e p="lib" t="Include">
+              <e p="bootstrap" t="Include">
+                <e p="css" t="Include">
+                  <e p="bootstrap.css" t="Include" />
+                  <e p="bootstrap.css.map" t="Include" />
+                  <e p="bootstrap.min.css" t="Include" />
+                </e>
+                <e p="fonts" t="Include">
+                  <e p="glyphicons-halflings-regular.eot" t="Include" />
+                  <e p="glyphicons-halflings-regular.svg" t="Include" />
+                  <e p="glyphicons-halflings-regular.ttf" t="Include" />
+                  <e p="glyphicons-halflings-regular.woff" t="Include" />
+                  <e p="glyphicons-halflings-regular.woff2" t="Include" />
+                </e>
+                <e p="js" t="Include">
+                  <e p="bootstrap.js" t="Include" />
+                  <e p="bootstrap.min.js" t="Include" />
+                </e>
+              </e>
+              <e p="jquery" t="Include">
+                <e p="jquery.js" t="Include" />
+                <e p="jquery.min.js" t="Include" />
+                <e p="jquery.min.map" t="Include" />
+              </e>
+            </e>
+          </e>
+        </e>
+      </e>
     </e>
   </component>
 </project>

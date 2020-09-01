@@ -7,7 +7,7 @@ namespace Api.Utils
     protected internal Envelope(T result, string errorMessage)
     {
       Result = result;
-      ErrorMessage = errorMessage;
+      ErrorMessage = errorMessage?? string.Empty;
       TimeGenerated = DateTime.UtcNow;
     }
 

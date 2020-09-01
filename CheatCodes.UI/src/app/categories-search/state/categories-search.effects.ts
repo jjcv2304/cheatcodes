@@ -28,7 +28,8 @@ export class CategoriesSearchEffects {
             return new searchActions.CategoriesFilterFail(data.errorMessage);
           }
         }),
-        catchError(err => of(new searchActions.CategoriesFilterFail(err.message)))
+        catchError(err =>
+          of(new searchActions.CategoriesFilterFail(err.message)))
       );
     })
   );
