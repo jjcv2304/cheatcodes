@@ -85,7 +85,7 @@ namespace Api
       //  o.AddPolicy("HealthCheckPolicy", policy => policy.RequireClaim("mainApp-api", "healthChecks"));
       //});
 
-      var connectionString = Configuration.GetConnectionString("CheatCodesDatabase");
+      var connectionString = Configuration.GetConnectionString("CheatCodesDatabase");//using secrets.json
       var con = new DatabaseSetting(connectionString);
       services.AddSingleton(con);
       var queriesConnectionString = new QueriesConnectionString(connectionString);
