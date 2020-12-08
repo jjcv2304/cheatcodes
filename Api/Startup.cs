@@ -15,15 +15,11 @@ using Api.Utils;
 using Application.Utils;
 using Application.Utils.Interfaces;
 using HealthChecks.UI.Client;
-using IdentityServer4.AccessTokenValidation;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Internal;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
@@ -49,11 +45,7 @@ namespace Api
     {
       services.AddMvc(options =>
         {
-          var policy = new AuthorizationPolicyBuilder()
-            .RequireAuthenticatedUser()
-            .Build();
           options.EnableEndpointRouting = false;
-          options.Filters.Add(new AuthorizeFilter(policy));
           options.Filters.Add(typeof(TrackActionPerformanceFilter));
         }
       ).SetCompatibilityVersion(CompatibilityVersion.Latest);
@@ -71,19 +63,6 @@ namespace Api
         });
       });
 
-      services.AddAuthentication(IdentityServerAuthenticationDefaults.AuthenticationScheme)
-        .AddIdentityServerAuthentication(options =>
-        {
-          //options.Authority = "http://localhost:5000";
-          options.Authority = "https://localhost:5002";
-          options.ApiName = "mainApp-api";
-          options.RequireHttpsMetadata = false;
-        });
-
-      //services.AddAuthorization(o =>
-      //{
-      //  o.AddPolicy("HealthCheckPolicy", policy => policy.RequireClaim("mainApp-api", "healthChecks"));
-      //});
 
       var connectionString = Configuration.GetConnectionString("CheatCodesDatabase");
       var con = new DatabaseSetting(connectionString);
@@ -144,7 +123,7 @@ namespace Api
 
       app.UseHsts();
       app.UseHttpsRedirection();
-      app.UseAuthentication();
+      
       app.UseMvc(routes =>
       {
         routes.MapRoute(
@@ -159,15 +138,15 @@ namespace Api
       {
         endpoints.MapHealthChecks("/health", new HealthCheckOptions()
         {
-          ResultStatusCodes = {
+          ResultStatusCodes =
+          {
             [HealthStatus.Healthy] = StatusCodes.Status200OK,
             [HealthStatus.Degraded] = StatusCodes.Status500InternalServerError,
-            [HealthStatus.Unhealthy] =StatusCodes.Status503ServiceUnavailable
+            [HealthStatus.Unhealthy] = StatusCodes.Status503ServiceUnavailable
           },
           ResponseWriter = WriteHealthCheckReadyResponse,
           AllowCachingResponses = false
-        }).RequireAuthorization();
-        // }).RequireAuthorization("HealthCheckPolicy"); //TODO
+        });
 
         endpoints.MapHealthChecks("/healthui", new HealthCheckOptions()
         {
