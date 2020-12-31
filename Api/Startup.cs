@@ -14,15 +14,12 @@ using Api.Security;
 using Api.Utils;
 using Application.Utils;
 using Application.Utils.Interfaces;
-using HealthChecks.UI.Client;
 using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Microsoft.OpenApi.Models;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -106,7 +103,6 @@ namespace Api
         c.IncludeXmlComments(xmlPath);
       });
       services.Configure<MyConfig>(Configuration.GetSection("MyConfig"));
-      ConfigureAdditionalServices(services);
     }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -133,81 +129,6 @@ namespace Api
 
       app.UseRouting();
 
-
-      app.UseEndpoints(endpoints =>
-      {
-        endpoints.MapHealthChecks("/health", new HealthCheckOptions()
-        {
-          ResultStatusCodes =
-          {
-            [HealthStatus.Healthy] = StatusCodes.Status200OK,
-            [HealthStatus.Degraded] = StatusCodes.Status500InternalServerError,
-            [HealthStatus.Unhealthy] = StatusCodes.Status503ServiceUnavailable
-          },
-          ResponseWriter = WriteHealthCheckReadyResponse,
-          AllowCachingResponses = false
-        });
-
-        endpoints.MapHealthChecks("/healthui", new HealthCheckOptions()
-        {
-          Predicate = _ => true,
-          ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
-        });
-
-        app.UseHealthChecksUI();
-      });
-
-    }
-    private Task WriteHealthCheckReadyResponse(HttpContext httpContext, HealthReport result)
-    {
-      httpContext.Response.ContentType = "application/json";
-
-      var json = new JObject(
-        new JProperty("OverallStatus", result.Status.ToString()),
-        new JProperty("TotalChecksDuration", result.TotalDuration.TotalSeconds.ToString("0:0.00")),
-        new JProperty("DependencyHealthChecks", new JObject(result.Entries.Select(dicItem =>
-          new JProperty(dicItem.Key, new JObject(
-            new JProperty("Status", dicItem.Value.Status.ToString()),
-            new JProperty("Duration", dicItem.Value.Duration.TotalSeconds.ToString("0:0.00")),
-            new JProperty("Exception", dicItem.Value.Exception?.Message),
-            new JProperty("Data", new JObject(dicItem.Value.Data.Select(dicData =>
-              new JProperty(dicData.Key, dicData.Value))))
-          ))
-        )))
-      );
-
-      return httpContext.Response.WriteAsync(json.ToString(Formatting.Indented));
-    }
-
-    protected virtual void ConfigureAdditionalServices(IServiceCollection services)
-    {
-      var connectionString = Configuration.GetConnectionString("CheatCodesDatabase");
-      var con = new DatabaseSetting(connectionString);
-
-      services.AddHealthChecks()
-        .AddCheck("Sql Check", () =>
-      {
-        try
-        {
-          using (var connection = new SQLiteConnection(connectionString))
-          {
-            connection.Open();
-            connection.Close();
-            return HealthCheckResult.Healthy();
-          }
-        }
-        catch (Exception e)
-        {
-          return HealthCheckResult.Unhealthy();
-        }
-      });
-
-      //services.AddHealthChecks()
-      //  .Add(connectionString, failureStatus: HealthStatus.Unhealthy, tags: new[] { "ready" })
-      //  .AddUrlGroup(new Uri($"{stockIndexServiceUrl}/api/StockIndexes"),
-      //    "Stock Index Api Health Check", HealthStatus.Degraded, tags: new[] { "ready" }, timeout: new TimeSpan(0, 0, 5))
-      //  .AddFilePathWrite(securityLogFilePath, HealthStatus.Unhealthy, tags: new[] { "ready" });
-      services.AddHealthChecksUI();
     }
 
     private void UpdateApiErrorResponse(HttpContext context, Exception ex, ApiError error)

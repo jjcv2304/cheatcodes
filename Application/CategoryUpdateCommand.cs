@@ -1,5 +1,4 @@
-﻿using Application.RabbitMQ;
-using Application.Utils;
+﻿using Application.Utils;
 using Application.Utils.Interfaces;
 using CSharpFunctionalExtensions;
 
@@ -32,18 +31,11 @@ namespace Application
         var categoryRepository = _unitOfWork.CategoryCommandRepository;
         var category = MapService.Map(categoryUpdateCommand);
         categoryRepository.Update(category);
-        SendNotification(categoryUpdateCommand);
 
         _unitOfWork.Commit();
         return Result.Ok();
       }
 
-      private void SendNotification(CategoryUpdateCommand categoryUpdateCommand)
-      {
-        var client = new RabbitMQClient();
-        client.UpdateCategory(categoryUpdateCommand);
-        client.Close();
-      }
     }
   }
 }

@@ -1,5 +1,4 @@
-﻿using Application.RabbitMQ;
-using Application.Utils;
+﻿using Application.Utils;
 using Application.Utils.Interfaces;
 using CSharpFunctionalExtensions;
 
@@ -28,17 +27,9 @@ namespace Application
         var categoryRepository = _unitOfWork.CategoryCommandRepository;
         var category = MapService.Map(categoryDeleteCommand);
         categoryRepository.Delete(category);
-        SendNotification(categoryDeleteCommand);
 
         _unitOfWork.Commit();
         return Result.Ok();
-      }
-
-      private void SendNotification(CategoryDeleteCommand categoryDeleteCommand)
-      {
-        var client = new RabbitMQClient();
-        client.DeleteCategory(categoryDeleteCommand);
-        client.Close();
       }
     }
   }

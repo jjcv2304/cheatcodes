@@ -1,6 +1,4 @@
 ﻿using Application.Decorators;
-using Application.RabbitMQ;
-using Application.RabbitMQ.Models;
 using Application.Utils;
 using Application.Utils.Interfaces;
 using CSharpFunctionalExtensions;
@@ -36,17 +34,8 @@ namespace Application
         var category = MapService.Map(categoryCreateCommand);
         var newCategoryId = categoryRepository.Create(category);
         categoryRepository.LinkToFieldsFromSameLevel(newCategoryId, categoryCreateCommand.ParentId);
-        SendNotification(newCategoryId, categoryCreateCommand);
         _unitOfWork.Commit();
         return Result.Ok();
-      }
-
-      private void SendNotification(int id, CategoryCreateCommand category)
-      {
-        var newCategoryEvent = new NewCategoryEvent(id, category.Name, category.Description, category.ParentId);
-        var client = new RabbitMQClient();
-        client.CreateCategory(newCategoryEvent);
-        client.Close();
       }
     }
   }

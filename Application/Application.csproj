@@ -6,8 +6,12 @@
 
     <ItemGroup>
       <Compile Remove="Items\**" />
+      <Compile Remove="RabbitMQ\**" />
+      <Content Remove="RabbitMQ\**" />
       <EmbeddedResource Remove="Items\**" />
+      <EmbeddedResource Remove="RabbitMQ\**" />
       <None Remove="Items\**" />
+      <None Remove="RabbitMQ\**" />
     </ItemGroup>
 
     <ItemGroup>

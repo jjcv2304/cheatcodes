@@ -6,7 +6,6 @@ using Api.Security;
 using CheatCodes.Search.DB;
 using CheatCodes.Search.Logs.Extensions;
 using CheatCodes.Search.Logs.Middleware;
-using CheatCodes.Search.RabbitMQ.Handlers;
 using CheatCodes.Search.Repositories;
 using CheatCodes.Search.Security;
 using Microsoft.AspNetCore.Builder;
@@ -49,10 +48,6 @@ namespace CheatCodes.Search
       });
 
       services.AddTransient<ICategoriesSearchRepository, CategoriesSearchRepository>();
-      services.AddTransient<ICategoriesChangesRepository, CategoriesChangesRepository>();
-      services.AddTransient<INewCategoryEventHandler, NewCategoryEventHandler>();
-      services.AddTransient<IUpdateCategoryEventHandler, UpdateCategoryEventHandler>();
-      services.AddTransient<IDeleteCategoryEventHandler, DeleteCategoryEventHandler>();
 
       var connectionString = Configuration.GetConnectionString("CheatCodesDatabase");
       services.AddDbContext<CheatCodesDbContext>(options =>options

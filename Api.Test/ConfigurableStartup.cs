@@ -14,9 +14,9 @@ namespace Api.Test
       this.configureAction = configureAction;
     }
 
-    protected override void ConfigureAdditionalServices(IServiceCollection services)
-    {
-      configureAction(services);
-    }
+    //protected override void ConfigureAdditionalServices(IServiceCollection services)
+    //{
+    //  configureAction(services);
+    //}
   }
 }

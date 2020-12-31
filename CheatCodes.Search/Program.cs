@@ -1,6 +1,5 @@
 using System;
 using System.IO;
-using CheatCodes.Search.RabbitMQ;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -30,7 +29,6 @@ namespace CheatCodes.Search
       {
         Log.Information("Starting web host search");
         var host = CreateHostBuilder(args).Build();
-        InitializeRabbitMq(host);
         host.Run();
       }
       catch (Exception ex)
@@ -44,14 +42,7 @@ namespace CheatCodes.Search
     }
 
 
-    private static void InitializeRabbitMq(IHost host)
-    {
-      var serviceScope = host.Services.CreateScope();
-      var services = serviceScope.ServiceProvider;
-      var client = new RabbitMQConsumer(services);
-      client.CreateConnection();
-      client.ProcessMessages();
-    }
+
 
     public static IHostBuilder CreateHostBuilder(string[] args)
     {

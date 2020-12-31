@@ -5,15 +5,12 @@
 	<s:String x:Key="/Default/CodeStyle/Naming/CSharpNaming/AutoDetectedNamingRules/=PrivateInstanceFields/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="_" Suffix="" Style="aaBb" /&gt;</s:String>
 	<s:String x:Key="/Default/CodeStyle/Naming/CSharpNaming/AutoDetectedNamingRules/=Property/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="AaBb" /&gt;</s:String>
 	<s:String x:Key="/Default/CodeStyle/Naming/CSharpNaming/AutoDetectedNamingRules/=TypesAndNamespaces/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="AaBb" /&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=1f3583a8_002De30f_002D4040_002Da16f_002D727b7b462109/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="RandomCategories" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=6259d64b_002Dc626_002D476d_002Dbf1e_002D7dc13bff29a9/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="CategoriesControllerTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;xUnit::2631318D-2499-4B04-AD88-248CBDCC1BFD::.NETCoreApp,Version=v3.1::Api.Test.Categories.CategoriesControllerTests_AutoFixture.RandomCategories&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::2631318D-2499-4B04-AD88-248CBDCC1BFD::.NETCoreApp,Version=v3.1::Api.Test.Categories.CategoriesControllerTests_Selenium.LoadCategoriesPage&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::2631318D-2499-4B04-AD88-248CBDCC1BFD::.NETCoreApp,Version=v3.1::Api.Test.Categories.CategoriesControllerTests_Selenium&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::2631318D-2499-4B04-AD88-248CBDCC1BFD::.NETCoreApp,Version=v3.1::Api.Test.Categories.CategoryListSelenium.LoadCategoriesPage&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::2631318D-2499-4B04-AD88-248CBDCC1BFD::.NETCoreApp,Version=v3.1::Api.Test.Categories.CategoryListSelenium&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::2631318D-2499-4B04-AD88-248CBDCC1BFD::.NETCoreApp,Version=v3.1::Api.Test.Categories.CategoriesControllerTest&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
+	
 	<s:Boolean x:Key="/Default/UserDictionary/Words/=categorie/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/UserDictionary/Words/=Childs/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/UserDictionary/Words/=Dtos/@EntryIndexedValue">True</s:Boolean>
