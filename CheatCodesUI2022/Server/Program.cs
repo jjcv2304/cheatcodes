@@ -1,8 +1,25 @@
+using Api.Logs.Extensions;
+using Application.Utils;
+using Application.Utils.Interfaces;
 using Microsoft.AspNetCore.ResponseCompression;
+using Persistance;
+using Persistance.Utils;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// Add builder.Services to the container.
+builder.Services.AddSingleton<IScopeInformation, ScopeInformation>();
+var connectionString = builder.Configuration.GetConnectionString("CheatCodesDatabase");//using secrets.json
+var con = new DatabaseSetting(connectionString);
+builder.Services.AddSingleton(con);
+var queriesConnectionString = new QueriesConnectionString(connectionString);
+builder.Services.AddSingleton(queriesConnectionString);
+// builder.Services.AddTransient<IDbTransaction, DbTransaction>();
+builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
+builder.Services.AddTransient<ICategoryQueryRepository, CategoryQueryRepository>();
+builder.Services.AddTransient<ICategoryCommandRepository, CategoryCommandRepository>();
+builder.Services.AddSingleton<Messages>();
+
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
