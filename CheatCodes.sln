@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29411.108
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32328.378
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Persistance", "Persistance\Persistance.csproj", "{D3E96283-44F6-4EFC-9746-E5F33D8C7A9B}"
 EndProject
@@ -27,27 +27,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MainApp", "MainApp", "{3528
 EndProject
 Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Reports.All", "Reports.All\Reports.All.fsproj", "{8C28FC74-BE64-49D0-9276-82062CC34869}"
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "CheatCodes.UI", "CheatCodes.UI\", "{B711190E-2D10-4846-8186-04BE83CF8807}"
-	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_4200"
-		Debug.AspNetCompiler.PhysicalPath = "CheatCodes.UI\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_4200\"
-		Debug.AspNetCompiler.Updateable = "true"
-		Debug.AspNetCompiler.ForceOverwrite = "true"
-		Debug.AspNetCompiler.FixedNames = "false"
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_4200"
-		Release.AspNetCompiler.PhysicalPath = "CheatCodes.UI\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_4200\"
-		Release.AspNetCompiler.Updateable = "true"
-		Release.AspNetCompiler.ForceOverwrite = "true"
-		Release.AspNetCompiler.FixedNames = "false"
-		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "58063"
-		SlnRelativePath = "CheatCodes.UI\"
-	EndProjectSection
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Search", "Search", "{90E333B3-4814-4471-B3A2-E165BF7D8A6B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CheatCodes.Search", "CheatCodes.Search\CheatCodes.Search.csproj", "{213CBC6F-F7F4-4ECF-AE2C-28E8080FC8AD}"
@@ -58,7 +37,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdSNet", "STS\IdSNet\IdSNet
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Metadata", "Metadata\Metadata.csproj", "{F1B69EDF-6C77-4AED-AD2D-04EBFEF17EF4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Apiv2.Test", "Apiv2.Test\Apiv2.Test.csproj", "{BEB6CEAE-1BA4-4515-8E1A-B41AF2516BEC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Apiv2.Test", "Apiv2.Test\Apiv2.Test.csproj", "{BEB6CEAE-1BA4-4515-8E1A-B41AF2516BEC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -94,9 +73,6 @@ Global
 		{8C28FC74-BE64-49D0-9276-82062CC34869}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C28FC74-BE64-49D0-9276-82062CC34869}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8C28FC74-BE64-49D0-9276-82062CC34869}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B711190E-2D10-4846-8186-04BE83CF8807}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B711190E-2D10-4846-8186-04BE83CF8807}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{B711190E-2D10-4846-8186-04BE83CF8807}.Release|Any CPU.Build.0 = Debug|Any CPU
 		{213CBC6F-F7F4-4ECF-AE2C-28E8080FC8AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{213CBC6F-F7F4-4ECF-AE2C-28E8080FC8AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{213CBC6F-F7F4-4ECF-AE2C-28E8080FC8AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
