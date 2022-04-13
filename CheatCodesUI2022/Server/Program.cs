@@ -1,4 +1,5 @@
 using Api.Logs.Extensions;
+using Api.Utils;
 using Application.Utils;
 using Application.Utils.Interfaces;
 using Microsoft.AspNetCore.ResponseCompression;
@@ -19,6 +20,7 @@ builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
 builder.Services.AddTransient<ICategoryQueryRepository, CategoryQueryRepository>();
 builder.Services.AddTransient<ICategoryCommandRepository, CategoryCommandRepository>();
 builder.Services.AddSingleton<Messages>();
+builder.Services.AddHandlers();
 
 
 builder.Services.AddControllersWithViews();
