@@ -8,6 +8,7 @@ using Persistance.Utils;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddAutoMapper();
 // Add builder.Services to the container.
 builder.Services.AddSingleton<IScopeInformation, ScopeInformation>();
 var connectionString = builder.Configuration.GetConnectionString("CheatCodesDatabase");//using secrets.json
@@ -20,6 +21,7 @@ builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
 builder.Services.AddTransient<ICategoryQueryRepository, CategoryQueryRepository>();
 builder.Services.AddTransient<ICategoryCommandRepository, CategoryCommandRepository>();
 builder.Services.AddSingleton<Messages>();
+
 builder.Services.AddHandlers();
 
 
