@@ -6,7 +6,7 @@
 
 <h1>Categories</h1>
 
-@if (forecasts == null)
+@if (categories == null)
 {
     <p><em>Loading...</em></p>
 }
@@ -14,21 +14,23 @@ else
 {
     <table class="table">
         <thead>
-            <tr>
-                <th>Date</th>
-                <th>Temp. (C)</th>
-                <th>Temp. (F)</th>
-                <th>Summary</th>
-            </tr>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Has parent</th>
+            <th>Has child</th>
+        </tr>
         </thead>
         <tbody>
-            @foreach (var forecast in forecasts)
+            @foreach (var category in categories)
             {
                 <tr>
-                    <td>@forecast.Date.ToShortDateString()</td>
-                    <td>@forecast.TemperatureC</td>
-                    <td>@forecast.TemperatureF</td>
-                    <td>@forecast.Summary</td>
+                    <td>@category.Id</td>
+                    <td>@category.Name</td>
+                    <td>@category.Description</td>
+                    <td>@category.HasParent</td>
+                    <td>@category.HasChild</td>
                 </tr>
             }
         </tbody>
@@ -36,10 +38,12 @@ else
 }
 
 @code {
-    private WeatherForecast[]? forecasts;
+    private CategoryVM[]? categories;
 
     protected override async Task OnInitializedAsync()
     {
-        forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>("WeatherForecast");
+        string parentId = "266";
+        //categories = await Http.GetFromJsonAsync<CategoryVM[]>($"api/Categories/GetChildsOf/{parentId}");
+      
     }
 }
