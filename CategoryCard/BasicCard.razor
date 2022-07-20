@@ -1,0 +1,28 @@
+﻿@using Microsoft.JSInterop
+@inject IJSRuntime JSRuntime
+
+
+<div class="card-container">
+    <div class="card-container__header">@Name</div>
+    <div class="card-container__body">@Description</div>
+    <div class="card-container__footer">footer</div>
+    <div ></div>
+</div>
+
+
+@code {
+  
+    [Parameter] 
+    public int Id { get; set; }
+    [Parameter]
+    public string? Name { get; set; }
+    [Parameter]
+    public string? Description { get; set; }
+    [Parameter]
+    public int? ParentId { get; set; }
+    [Parameter]
+    public bool HasParent { get; set; }
+    [Parameter]
+    public bool HasChild { get; set; }
+
+}

@@ -1,0 +1,19 @@
+﻿.card-container {
+    height: 50px;
+    width: 200px;
+    border: 1px solid orange;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-container__header {
+    align-content: flex-start;
+}
+
+.card-container__body {
+    flex-grow: 8;
+}
+
+.card-container__footer {
+    align-content: flex-end;
+}
