@@ -26,16 +26,23 @@ namespace Api.Categories
         }
 
         // GET api/values
+        //[HttpGet]
+        ////public IActionResult Get()
+        //public IEnumerable<CategoryVM> Get()
+        //{
+        //    var result = _messages.Dispatch(new GetCategoryAllParentsQuery());
+
+        //    var categoryVms = _mapper.Map<List<CategoryDto>, List<CategoryVM>>(result!);
+        //    return categoryVms;
+        //}
+
         [HttpGet]
         public IActionResult Get()
         {
-            //_logger.LogDebug("CategoriesController Get Debug");
-            //_logger.LogInformation("CategoriesController Get Information");
-            //_logger.LogWarning("CategoriesController Get Warning");
-            //_logger.LogError("CategoriesController Get Error");
-
             var result = _messages.Dispatch(new GetCategoryAllParentsQuery());
-            return Ok(result);
+
+            var categoryVms = _mapper.Map<List<CategoryDto>, List<CategoryVM>>(result!);
+            return Ok(categoryVms);
         }
 
         [HttpGet]
@@ -50,13 +57,15 @@ namespace Api.Categories
 
         [HttpGet]
         [Route("[action]/{parentId}")]
-        public IActionResult GetChildsOf(int parentId)
+        //  public IActionResult GetChildsOf(int parentId)
+        public IEnumerable<CategoryVM> GetChildsOf(int parentId)
         {
             var result = _messages.Dispatch(new GetCategoryAllChildsQuery(parentId));
 
             var categoryVms = _mapper.Map<List<CategoryDto>, List<CategoryVM>>(result!);
 
-            return Ok(categoryVms);
+          //  return Ok(categoryVms);
+          return categoryVms;
         }
 
         /// <summary>
@@ -81,14 +90,19 @@ namespace Api.Categories
         }
 
         // GET api/values/name
-        [HttpGet("{name}")]
-        public IActionResult Get(string name, bool exactMatch = true)
+        //[HttpGet("{name}")]
+        [Route("[action]/{name}")]
+        //public IActionResult Get(string name, bool exactMatch = false)
+        public IEnumerable<CategoryVM> GetByName(string name)
         {
+            bool exactMatch = false;
             var result = exactMatch
               ? _messages.Dispatch(new GetCategoryByExactNameQuery(name))
               : _messages.Dispatch(new GetCategoryByPartialNameQuery(name));
 
-            return Ok(result);
+            //return Ok(result);
+            var categoryVms = _mapper.Map<List<CategoryDto>, List<CategoryVM>>(result!);
+            return categoryVms;
         }
 
         [HttpPost]

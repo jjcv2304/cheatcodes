@@ -1,22 +1,28 @@
+using System.Data;
+using System.Data.Common;
 using Api.Logs.Extensions;
 using Api.Utils;
 using Application.Utils;
 using Application.Utils.Interfaces;
+using CheatCodesUI2022.Client.Services;
+using CheatCodesUI2022.Server;
 using Microsoft.AspNetCore.ResponseCompression;
 using Persistance;
 using Persistance.Utils;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddAutoMapper();
+builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
 // Add builder.Services to the container.
 builder.Services.AddSingleton<IScopeInformation, ScopeInformation>();
+
 var connectionString = builder.Configuration.GetConnectionString("CheatCodesDatabase");//using secrets.json
-var con = new DatabaseSetting(connectionString);
-builder.Services.AddSingleton(con);
+var dbDatabaseSetting = new DatabaseSetting(connectionString);
+builder.Services.AddSingleton(dbDatabaseSetting);
+
 var queriesConnectionString = new QueriesConnectionString(connectionString);
 builder.Services.AddSingleton(queriesConnectionString);
-// builder.Services.AddTransient<IDbTransaction, DbTransaction>();
+
 builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
 builder.Services.AddTransient<ICategoryQueryRepository, CategoryQueryRepository>();
 builder.Services.AddTransient<ICategoryCommandRepository, CategoryCommandRepository>();

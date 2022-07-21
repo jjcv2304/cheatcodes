@@ -60,7 +60,7 @@ namespace Api
         });
       });
 
-
+//Server DI
       var connectionString = Configuration.GetConnectionString("CheatCodesDatabase");//using secrets.json
       var con = new DatabaseSetting(connectionString);
       services.AddSingleton(con);
@@ -73,6 +73,8 @@ namespace Api
 
 
       services.AddSingleton<Messages>();
+
+
 
 
       services.AddHandlers();
