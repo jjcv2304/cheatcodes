@@ -4,7 +4,7 @@ namespace Api.Utils
 {
   public class Envelope<T>
   {
-    protected internal Envelope(T result, string errorMessage)
+      public Envelope(T result, string errorMessage)
     {
       Result = result;
       ErrorMessage = errorMessage?? string.Empty;
@@ -18,7 +18,7 @@ namespace Api.Utils
 
   public class Envelope : Envelope<string>
   {
-    protected Envelope(string errorMessage)
+      public Envelope(string errorMessage)
       : base(null, errorMessage)
     {
     }
