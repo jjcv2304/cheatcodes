@@ -42,5 +42,27 @@ namespace CheatCodesUI2022.Client.Services
                 throw;
             }
         }
+
+        public async Task<IEnumerable<CategoryVM>?> GetChilds(int parentId)
+        {
+            try
+            {
+                var envelope = await JsonSerializer.DeserializeAsync<Envelope<List<CategoryVM>>>
+                    (await _httpClient.GetStreamAsync($"api/Categories/GetChildsOf/{parentId}"), new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
+
+                if (!string.IsNullOrEmpty(envelope?.ErrorMessage))
+                {
+                    throw new ApplicationException("There was an error on the envelope");
+                }
+
+                return envelope?.Result;
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+        }
     }
 }
